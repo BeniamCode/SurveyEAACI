@@ -194,9 +194,9 @@
           "visibleIf": "{q10} = 'yes' or {q11} = 'yes'",
           "elements": [
             {
-              "type": "html",
-              "name": "food-picker-placeholder",
-              "html": "<div style='padding: 1em; border: 1px dashed #ccc; background-color: #f9f9f9; text-align: center;'><strong>Custom Component Area</strong><br/>Your custom 'drag-and-drop-timeline' component will be rendered here. You will need to register a custom widget with SurveyJS and use the 'customData' property of this panel to populate it.</div>"
+              "type": "drag-drop-timeline",
+              "name": "food-timeline",
+              "title": "Food Introduction Timeline"
             }
           ],
           "customData": {
@@ -221,6 +221,96 @@
                   {"label": "Root vegetables like celery", "value": "g_veg_3"},
                   {"label": "Tomato", "value": "g_veg_7"},
                   {"label": "Zucchini or courgette οr other squashes", "value": "g_veg_8"}
+              ]},
+              { "name": "LEGUMES", "items": [
+                  {"label": "Beans (all types)", "value": "g_legumes_1"},
+                  {"label": "Chickpeas", "value": "g_legumes_2"},
+                  {"label": "Lentils", "value": "g_legumes_3"},
+                  {"label": "Peanut/peanut butter", "value": "g_legumes_5"},
+                  {"label": "Soya", "value": "g_legumes_4"}
+              ]},
+              { "name": "MEAT", "items": [
+                  {"label": "Beef", "value": "g_meat_7"},
+                  {"label": "Chicken/turkey/duck", "value": "g_meat_1"},
+                  {"label": "Lamb", "value": "g_meat_3"},
+                  {"label": "Liver pate", "value": "g_meat_4"},
+                  {"label": "Pork", "value": "g_meat_5"},
+                  {"label": "Processed meat like cold cuts/ham/salami", "value": "g_meat_2"},
+                  {"label": "Rabbit", "value": "g_meat_6"},
+                  {"label": "Venison", "value": "g_meat_8"}
+              ]},
+              { "name": "FISH/SHELLFISH", "items": [
+                  {"label": "Crustaceans (shrimps, crayfish, crab, lobster)", "value": "g_fish_1"},
+                  {"label": "Fish", "value": "g_fish_2"},
+                  {"label": "Mollusks (clams, scallops, oysters, mussels, octopus, snails, kalamari, cuttlefish)", "value": "g_fish_3"}
+              ]},
+              { "name": "FRUIT", "items": [
+                  {"label": "Apple (and products made from apple like apple sauce)", "value": "g_fruit_1"},
+                  {"label": "Banana", "value": "g_fruit_3"},
+                  {"label": "Berries including strawberry", "value": "g_fruit_4"},
+                  {"label": "Dried fruits", "value": "g_fruit_5"},
+                  {"label": "Figs", "value": "g_fruit_6"},
+                  {"label": "Fresh fruit juice", "value": "g_fruit_7"},
+                  {"label": "Fruit juice (with or without sugar)", "value": "g_fruit_8"},
+                  {"label": "Grapes", "value": "g_fruit_9"},
+                  {"label": "Kiwi", "value": "g_fruit_10"},
+                  {"label": "Mango", "value": "g_fruit_2"},
+                  {"label": "Melon, watermelon", "value": "g_fruit_11"},
+                  {"label": "Orange, mantarine", "value": "g_fruit_12"},
+                  {"label": "Peach, apricot", "value": "g_fruit_13"},
+                  {"label": "Pear", "value": "g_fruit_14"}
+              ]},
+              { "name": "DAIRY PRODUCTS / SUBSTITUTES", "items": [
+                  {"label": "Cheese (i.e cheddar, edam, Comte, parmesan)", "value": "g_dairy_14"},
+                  {"label": "Cow's milk yogurt", "value": "g_dairy_2"},
+                  {"label": "Cream cheese", "value": "g_dairy_3"},
+                  {"label": "Feta cheese", "value": "g_dairy_4"},
+                  {"label": "Fresh cow's milk", "value": "g_dairy_5"},
+                  {"label": "Fresh goat/sheep milk", "value": "g_dairy_6"},
+                  {"label": "Kephir/Airani", "value": "g_dairy_7"},
+                  {"label": "Kids yogurt", "value": "g_dairy_8"},
+                  {"label": "Plant-based milk (specify here fortified/non-fortified)", "value": "g_dairy_1"},
+                  {"label": "Rice milk", "value": "g_dairy_9"},
+                  {"label": "Sheep/ goat yogurt", "value": "g_dairy_10"},
+                  {"label": "Soy cheese", "value": "g_dairy_11"},
+                  {"label": "Soy milk", "value": "g_dairy_12"},
+                  {"label": "Soy yogurt", "value": "g_dairy_13"}
+              ]},
+              { "name": "EGG", "items": [
+                  {"label": "Hard boiled egg (boiling >6min)", "value": "g_egg_1"},
+                  {"label": "Partially cooked like scrambled egg and sunny side egg", "value": "g_egg_3"},
+                  {"label": "Raw egg", "value": "g_egg_2"}
+              ]},
+              { "name": "FAT/OIL", "items": [
+                  {"label": "Butter", "value": "g_fat_1"},
+                  {"label": "Corn oil/vegetable oils", "value": "g_fat_2"},
+                  {"label": "Margarine", "value": "g_fat_3"},
+                  {"label": "Nut and seed oils", "value": "g_fat_5"},
+                  {"label": "Olive oil", "value": "g_fat_4"}
+              ]},
+              { "name": "SWEETS", "items": [
+                  {"label": "Baby biscuits without sugar", "value": "g_sweets_1"},
+                  {"label": "Fruit spread (i.e. jam)", "value": "g_sweets_2"},
+                  {"label": "Honey", "value": "g_sweets_3"},
+                  {"label": "Sweets, cake, biscuits", "value": "g_sweets_4"}
+              ]},
+              { "name": "NUTS/SEEDS", "items": [
+                  {"label": "Mustard", "value": "g_nuts_seeds_1"},
+                  {"label": "Sesame/tahini", "value": "g_nuts_seeds_2"},
+                  {"label": "Tree nuts (and nut butters)", "value": "g_nuts_seeds_3"}
+              ]},
+              { "name": "SALT/SPICES", "items": [
+                  {"label": "Salt", "value": "g_spices_salt_1"},
+                  {"label": "Spices/herbs (e.g. pepper, cinammon, etc)", "value": "g_spices_salt_2"}
+              ]},
+              { "name": "ADDITIONAL GUIDANCE", "items": [
+                  {"label": "Baby-led weaning", "value": "g_addit_guid_7"},
+                  {"label": "Food in pieces and finger food", "value": "g_addit_guid_6"},
+                  {"label": "Mashed Food", "value": "g_addit_guid_4"},
+                  {"label": "Preprepared baby food - Baby jars, pouches", "value": "g_addit_guid_1"},
+                  {"label": "Pureed food", "value": "g_addit_guid_5"},
+                  {"label": "Share family meal with salt", "value": "g_addit_guid_2"},
+                  {"label": "Share family meal without salt", "value": "g_addit_guid_3"}
               ]}
             ],
             "target_lists": [
