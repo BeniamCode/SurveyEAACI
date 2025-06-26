@@ -191,7 +191,7 @@
           "type": "panel",
           "name": "food-picker-panel",
           "title": "Please indicate the preferred order by dragging & dropping an item from the 'ADVICE' list to any other list",
-          "visibleIf": "{q10} = 'yes' or {q11} = 'yes'",
+          "visible": false,
           "elements": [
             {
               "type": "drag-drop-timeline",

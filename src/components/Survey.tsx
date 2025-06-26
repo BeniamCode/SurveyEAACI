@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Model, settings } from "survey-core";
 import { Survey } from "survey-react-ui";
 import "survey-core/survey-core.min.css";
@@ -34,6 +34,34 @@ export default function SurveyComponent() {
         console.log("Creating survey model with JSON:", surveyJson);
         const surveyModel = new Model(surveyJson);
         console.log("Survey model created:", surveyModel);
+
+        // Add value change listener to force panel visibility when q10/q11 change
+        surveyModel.onValueChanged.add((sender, options) => {
+          if (options.name === "q10" || options.name === "q11") {
+            const panel = sender.getPanelByName("food-picker-panel");
+            if (panel) {
+              // Force visibility calculation
+              const q10IsYes = sender.data.q10 === "yes";
+              const q11IsYes = sender.data.q11 === "yes";
+              const shouldBeVisible = q10IsYes || q11IsYes;
+              
+              if (shouldBeVisible) {
+                // Override the visibility logic
+                panel.visible = true;
+                
+                // Also make sure the child elements are visible
+                panel.elements.forEach(element => {
+                  element.visible = true;
+                });
+                
+                // Force UI update
+                setTimeout(() => {
+                  sender.render();
+                }, 100);
+              }
+            }
+          }
+        });
 
         const saveSurveyResults = (survey: Model) => {
           const results = survey.data;

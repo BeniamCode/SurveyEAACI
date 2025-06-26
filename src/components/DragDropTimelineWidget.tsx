@@ -12,17 +12,41 @@ const dragDropTimelineWidget = {
     return true;
   },
   isFit: function (question: any) {
+    console.log(
+      "isFit called for question:",
+      question.name,
+      "type:",
+      question.getType()
+    );
     // This widget will be used for any question with type "drag-drop-timeline"
-    return question.getType() === "drag-drop-timeline";
+    const fits = question.getType() === "drag-drop-timeline";
+    console.log("Widget fits:", fits);
+    return fits;
   },
   htmlTemplate: "<div class='sv-drag-drop-timeline-root'></div>",
   afterRender: function (question: any, el: HTMLElement) {
+    console.log(
+      "afterRender called for drag-drop-timeline question:",
+      question.name
+    );
     const rootElement = el.querySelector(".sv-drag-drop-timeline-root");
-    if (!rootElement) return;
+    if (!rootElement) {
+      console.error("Root element not found!");
+      return;
+    }
+
+    console.log("Root element found:", rootElement);
 
     // Get custom data from the question's panel parent
     const panel = question.parent;
-    const customData = panel?.customData || {};
+    console.log("Panel:", panel);
+    console.log("Panel customData:", panel?.customData);
+
+    // Access the customData from the panel's JSON definition
+    const panelJson = panel?.getOriginalJson?.() || panel?.jsonObj || {};
+    const customData = panelJson.customData || panel?.customData || {};
+
+    console.log("Custom data:", customData);
 
     const {
       source_list_title = "Advice",
