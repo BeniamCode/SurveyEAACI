@@ -1,0 +1,316 @@
+{
+  "title": "Complementary feeding: a survey on the Healthcare Professional practices",
+  "showQuestionNumbers": "off",
+  "pages": [
+    {
+      "name": "basic_information_page",
+      "title": "Basic Information",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "q1",
+          "title": "Sex",
+          "isRequired": true,
+          "choices": [
+            { "text": "Male", "value": "q1_a1" },
+            { "text": "Female", "value": "q1_a2" }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "q2",
+          "title": "Profession",
+          "isRequired": true,
+          "choices": [
+            { "text": "Paediatrician", "value": "q2_a1" },
+            { "text": "Dietitian", "value": "q2_a2" },
+            { "text": "Allergist", "value": "q2_a3" },
+            { "text": "Nurse", "value": "q2_a4" }
+          ],
+          "showOtherItem": true,
+          "otherText": "Other",
+          "otherPlaceholder": "Please specify"
+        },
+        {
+          "type": "text",
+          "name": "q3",
+          "title": "Age (years)",
+          "isRequired": true,
+          "inputType": "number"
+        },
+        {
+          "type": "text",
+          "name": "q4",
+          "title": "Years of practice within your specialty",
+          "isRequired": true,
+          "inputType": "number"
+        },
+        {
+          "type": "radiogroup",
+          "name": "q5",
+          "title": "Do you have additional education in allergy?",
+          "isRequired": true,
+          "choices": [
+            { "text": "Yes", "value": "yes" },
+            { "text": "No", "value": "no" }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "q5a",
+          "title": "Please specify",
+          "isRequired": true,
+          "visibleIf": "{q5} = 'yes'",
+          "choices": [
+            { "text": "Online Course", "value": "q5a_a1" },
+            { "text": "University Course", "value": "q5a_a2" },
+            { "text": "MSc", "value": "q5a_a3" },
+            { "text": "PhD", "value": "q5a_a4" }
+          ],
+          "showOtherItem": true,
+          "otherText": "Other",
+          "otherPlaceholder": "Please specify"
+        },
+        {
+          "type": "text",
+          "name": "q6",
+          "title": "Country of work",
+          "isRequired": true
+        }
+      ]
+    },
+    {
+      "name": "complementary_feeding_page",
+      "title": "Complementary feeding",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "q7_group",
+          "title": "At what age do you advise the introduction of complementary food for an infant",
+          "elements": [
+            { "type": "text", "name": "q7a", "title": "Breast-fed infant:", "titleLocation": "left", "isRequired": true, "inputType": "number", "description": "months" },
+            { "type": "text", "name": "q7b", "title": "Formula-fed/mixed feed infant:", "titleLocation": "left", "isRequired": true, "inputType": "number", "description": "months" },
+            { "type": "text", "name": "q7c", "title": "At increased risk to develop food allergy:", "titleLocation": "left", "isRequired": true, "inputType": "number", "description": "months" }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "q8",
+          "title": "When do you consider an infant at 'increased risk to develop food allergy'? (multiple choices possible)",
+          "isRequired": true,
+          "choices": [
+            { "text": "Coexisting eczema", "value": "q8_a1" },
+            { "text": "Recurrent Bronchiolitis/wheeze", "value": "q8_a2" },
+            { "text": "Direct family history (i.e. parents, siblings) of any allergy, atopic dermatitis, asthma or rhinoconjuctivitis", "value": "q8_a3" }
+          ],
+          "showOtherItem": true,
+          "otherText": "Other",
+          "otherPlaceholder": "Please specify"
+        },
+        {
+          "type": "radiogroup",
+          "name": "q9a_main",
+          "title": "Do you apply further measures in order to prevent food allergy in infants and young children at low risk for food allergy?",
+          "isRequired": true,
+          "choices": [
+            { "text": "Yes", "value": "yes" },
+            { "text": "No", "value": "no" }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "q9a_elaborate",
+          "title": "Please elaborate on the measures applied:",
+          "isRequired": true,
+          "visibleIf": "{q9a_main} = 'yes'",
+          "choices": [
+            { "text": "Introducing soy protein-based formula in the first 6 mo of life to prevent cow's milk allergy", "value": "q9a_a1" },
+            { "text": "Partially or extensively hydrolysed formula", "value": "q9a_a2" },
+            { "text": "Restricting consumption of potential food allergens during pregnancy or breastfeeding", "value": "q9a_a3" },
+            { "text": "Using emollients as skin barriers", "value": "q9a_a4" },
+            { "text": "Prebiotics, probiotics or synbiotics for pregnant and/or breastfeeding women and/ or infants", "value": "q9a_a5" },
+            { "text": "Vitamin supplementation or fish oil supplementation during pregnancy and/or breastfeeding women and/or infants", "value": "q9a_a6" },
+            { "text": "Regular cow's milk–based infant formula after the first week of life to prevent food allergy", "value": "q9a_a7" },
+            { "text": "Motivate exclusive breastfeeding until 6 months", "value": "q9a_a8" }
+          ],
+          "showOtherItem": true,
+          "otherText": "Other",
+          "otherPlaceholder": "Please explain"
+        },
+        {
+          "type": "radiogroup",
+          "name": "q9b_main",
+          "title": "Do you apply further measures in order to prevent food allergy in infants and young children at high risk for food allergy?",
+          "isRequired": true,
+          "choices": [
+            { "text": "Yes", "value": "yes" },
+            { "text": "No", "value": "no" }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "q9b_elaborate",
+          "title": "Please elaborate on the measures applied:",
+          "isRequired": true,
+          "visibleIf": "{q9b_main} = 'yes'",
+          "choices": [
+            { "text": "Introducing soy protein-based formula in the first 6 mo of life to prevent cow's milk allergy", "value": "q9b_a1" },
+            { "text": "Partially or extensively hydrolysed formula", "value": "q9b_a2" },
+            { "text": "Restricting consumption of potential food allergens during pregnancy or breastfeeding", "value": "q9b_a3" },
+            { "text": "Using emollients as skin barriers", "value": "q9b_a4" },
+            { "text": "Prebiotics, probiotics or synbiotics for pregnant and/or breastfeeding women and/ or infants", "value": "q9b_a5" },
+            { "text": "Vitamin supplementation or fish oil supplementation during pregnancy and/or breastfeeding women and/or infants", "value": "q9b_a6" },
+            { "text": "Regular cow's milk–based infant formula after the first week of life to prevent food allergy", "value": "q9b_a7" },
+            { "text": "Motivate exclusive breastfeeding until 6 months", "value": "q9b_a8" }
+          ],
+          "showOtherItem": true,
+          "otherText": "Other",
+          "otherPlaceholder": "Please explain"
+        },
+        {
+          "type": "radiogroup",
+          "name": "q10",
+          "title": "Do you advise parents to introduce foods during complementary feeding in a specific order, when the child is not allergic or is at low risk for food allergy?",
+          "isRequired": true,
+          "choices": [
+            { "text": "Yes", "value": "yes" },
+            { "text": "No", "value": "no" }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "q11",
+          "title": "Do you advise parents to introduce foods during complementary feeding in a specific order, when the child is at high risk for food allergy?",
+          "isRequired": true,
+          "choices": [
+            { "text": "Yes", "value": "yes" },
+            { "text": "No", "value": "no" }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "food-picker-panel",
+          "title": "Please indicate the preferred order by dragging & dropping an item from the 'ADVICE' list to any other list",
+          "visibleIf": "{q10} = 'yes' or {q11} = 'yes'",
+          "elements": [
+            {
+              "type": "html",
+              "name": "food-picker-placeholder",
+              "html": "<div style='padding: 1em; border: 1px dashed #ccc; background-color: #f9f9f9; text-align: center;'><strong>Custom Component Area</strong><br/>Your custom 'drag-and-drop-timeline' component will be rendered here. You will need to register a custom widget with SurveyJS and use the 'customData' property of this panel to populate it.</div>"
+            }
+          ],
+          "customData": {
+            "source_list_title": "Advice",
+            "food_groups": [
+              { "name": "STARCH/GLUTEN", "items": [
+                  {"label": "Gluten containing grains (wheat, barley, rye eg pasta, bread, etc", "value": "g_starch_1"},
+                  {"label": "Gluten free cereals (buckwheat, quinoa, oat)", "value": "g_starch_2"},
+                  {"label": "Maize products (i.e. pollenta, baby maize snacks)", "value": "g_starch_3"},
+                  {"label": "Potato, Sweet potato", "value": "g_starch_4"},
+                  {"label": "Rice (including rice flour)", "value": "g_starch_5"},
+                  {"label": "Rice pudding (containing milk)", "value": "g_starch_6"},
+                  {"label": "Semolina pudding (containing milk", "value": "g_starch_7"},
+                  {"label": "Trahanas", "value": "g_starch_8"}
+              ]},
+              { "name": "VEGETABLES", "items": [
+                  {"label": "Cabbage, broccoli, cauliflower", "value": "g_veg_1"},
+                  {"label": "Carrot", "value": "g_veg_2"},
+                  {"label": "Green leafy vegetables (spinach, lettuce etc)", "value": "g_veg_4"},
+                  {"label": "Pea, green beans", "value": "g_veg_5"},
+                  {"label": "Pepper", "value": "g_veg_6"},
+                  {"label": "Root vegetables like celery", "value": "g_veg_3"},
+                  {"label": "Tomato", "value": "g_veg_7"},
+                  {"label": "Zucchini or courgette οr other squashes", "value": "g_veg_8"}
+              ]}
+            ],
+            "target_lists": [
+              {
+                "id": "picker-low-risk",
+                "label": "Not Allergic / Low-risk",
+                "conditional_logic": { "depends_on": "q10", "value": "yes" },
+                "timeline": [ "Birth", "Month 1", "Month 2", "Month 3", "Month 4", "Month 5", "Month 6", "Month 7", "Month 8", "Month 9", "Month 10", "Month 11", "Month 12", "Month 13", "Month 14", "Month 15", "Month 16", "Month 17", "Month 18" ]
+              },
+              {
+                "id": "picker-high-risk",
+                "label": "High-risk",
+                "conditional_logic": { "depends_on": "q11", "value": "yes" },
+                "timeline": [ "Birth", "Month 1", "Month 2", "Month 3", "Month 4", "Month 5", "Month 6", "Month 7", "Month 8", "Month 9", "Month 10", "Month 11", "Month 12", "Month 13", "Month 14", "Month 15", "Month 16", "Month 17", "Month 18" ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "comment",
+          "name": "q12",
+          "title": "Please mention here any food (eg traditional food in your area that you introduce in the 1st year of life and is not mentioned above):",
+          "isRequired": false
+        },
+        {
+          "type": "checkbox",
+          "name": "q14",
+          "title": "Which of the following food supplements would you recommend for a child with a high risk of developing allergy",
+          "isRequired": true,
+          "choices": [
+            { "text": "Iron", "value": "q14_a1" },
+            { "text": "Multivitamin", "value": "q14_a2" },
+            { "text": "Omega-3", "value": "q14_a3" },
+            { "text": "Probiotic", "value": "q14_a4" },
+            { "text": "Prebiotic", "value": "q14_a5" },
+            { "text": "Synbiotic", "value": "q14_a6" },
+            { "text": "Vitamin A", "value": "q14_a7" },
+            { "text": "Vitamin C", "value": "q14_a8" },
+            { "text": "Vitamin D", "value": "q14_a9" },
+            { "text": "No Supplements", "value": "q14_a10" }
+          ],
+          "showOtherItem": true,
+          "otherText": "Other",
+          "otherPlaceholder": "Please define"
+        },
+        {
+          "type": "dropdown",
+          "name": "q15",
+          "title": "What is the interval for introducing low-allergenic foods in non-allergic children?",
+          "isRequired": true,
+          "choices": [
+            { "text": "1 day", "value": "q15_18_a1" },
+            { "text": "1-3 days", "value": "q15_18_a2" },
+            { "text": ">3 days", "value": "q15_18_a3" }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "q16",
+          "title": "What is the interval for introducing low-allergenic foods in high risk for food allergy children?",
+          "isRequired": true,
+          "choices": [
+            { "text": "1 day", "value": "q15_18_a1" },
+            { "text": "1-3 days", "value": "q15_18_a2" },
+            { "text": ">3 days", "value": "q15_18_a3" }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "q17",
+          "title": "What is the interval for introducing high-allergenic foods in non-allergic children?",
+          "isRequired": true,
+          "choices": [
+            { "text": "1 day", "value": "q15_18_a1" },
+            { "text": "1-3 days", "value": "q15_18_a2" },
+            { "text": ">3 days", "value": "q15_18_a3" }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "q18",
+          "title": "What is the interval for introducing high-allergenic foods in high risk for food allergy children?",
+          "isRequired": true,
+          "choices": [
+            { "text": "1 day", "value": "q15_18_a1" },
+            { "text": "1-3 days", "value": "q15_18_a2" },
+            { "text": ">3 days", "value": "q15_18_a3" }
+          ]
+        }
+      ]
+    }
+  ]
+}
