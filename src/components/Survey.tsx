@@ -45,10 +45,14 @@ export default function SurveyComponent({
         const container = document.createElement('div');
         container.id = 'timeline-container';
         container.style.marginTop = '20px';
-        container.style.padding = '20px';
+        container.style.marginLeft = '-40px';
+        container.style.marginRight = '-40px';
+        container.style.padding = '30px';
         container.style.backgroundColor = '#f8f9fa';
         container.style.borderRadius = '8px';
         container.style.border = '1px solid #e0e0e0';
+        container.style.width = 'calc(100% + 80px)';
+        container.style.boxSizing = 'border-box';
         
         // Insert after q11's parent row
         const q11Row = q11Element.closest('.sd-page__row');

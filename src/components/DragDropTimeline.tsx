@@ -45,6 +45,9 @@ export default function DragDropTimeline({
     [timelineId: string]: { [month: string]: FoodItem[] };
   }>(value);
   const [isMobile, setIsMobile] = useState(false);
+  const [expandedCategories, setExpandedCategories] = useState<{
+    [categoryName: string]: boolean;
+  }>({});
 
   useEffect(() => {
     const checkMobile = () => {
@@ -61,6 +64,13 @@ export default function DragDropTimeline({
     const dependsOnValue = surveyData[list.conditional_logic.depends_on];
     return dependsOnValue === list.conditional_logic.value;
   });
+
+  const toggleCategory = (categoryName: string) => {
+    setExpandedCategories(prev => ({
+      ...prev,
+      [categoryName]: !prev[categoryName]
+    }));
+  };
 
   const onDragEnd = useCallback(
     (result: DropResult) => {
@@ -111,6 +121,7 @@ export default function DragDropTimeline({
       const newPlacements = { ...placements };
       if (newPlacements[timelineId] && newPlacements[timelineId][month]) {
         const monthItems = [...newPlacements[timelineId][month]];
+        const removedItem = monthItems[itemIndex];
         monthItems.splice(itemIndex, 1);
         newPlacements[timelineId][month] = monthItems;
 
@@ -123,16 +134,46 @@ export default function DragDropTimeline({
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <div style={{ 
-        display: "flex", 
-        flexDirection: isMobile ? "column" : "row",
-        gap: isMobile ? "15px" : "20px", 
-        padding: isMobile ? "10px" : "20px" 
-      }}>
+      <div style={{ width: "100%" }}>
+        {/* Title Section */}
+        <div style={{
+          backgroundColor: "#e6f7ff",
+          padding: isMobile ? "15px" : "20px",
+          borderRadius: "8px",
+          marginBottom: isMobile ? "15px" : "20px",
+          border: "1px solid #91d5ff",
+          textAlign: "center"
+        }}>
+          <h2 style={{
+            margin: 0,
+            color: "#1890ff",
+            fontSize: isMobile ? "18px" : "22px",
+            marginBottom: "8px"
+          }}>
+            📋 Food Introduction Timeline
+          </h2>
+          <p style={{
+            margin: 0,
+            fontSize: isMobile ? "14px" : "16px",
+            color: "#0050b3",
+            fontWeight: "500",
+          }}>
+            Drag & drop food items from the 'Advice' list to the appropriate month timeline(s)
+          </p>
+        </div>
+
+        <div style={{ 
+          display: "flex", 
+          flexDirection: isMobile ? "column" : "row",
+          gap: isMobile ? "15px" : "25px", 
+          padding: isMobile ? "10px" : "0px",
+          width: "100%"
+        }}>
         {/* Source List */}
         <div style={{ 
-          flex: isMobile ? "none" : "1", 
-          maxWidth: isMobile ? "100%" : "300px",
+          flex: isMobile ? "none" : "0 0 280px", 
+          minWidth: isMobile ? "100%" : "280px",
+          maxWidth: isMobile ? "100%" : "280px",
           order: isMobile ? 2 : 1
         }}>
           <h3 style={{ 
@@ -151,23 +192,40 @@ export default function DragDropTimeline({
               padding: isMobile ? "12px" : "16px",
             }}
           >
-            {foodGroups.map((group, groupIndex) => (
-              <div key={group.name} style={{ 
-                marginBottom: isMobile ? "15px" : "20px" 
-              }}>
-                <h4
-                  style={{
-                    fontSize: isMobile ? "12px" : "14px",
-                    fontWeight: "bold",
-                    color: "#555",
-                    marginBottom: isMobile ? "6px" : "8px",
-                    textTransform: "uppercase",
-                    borderBottom: "1px solid #eee",
-                    paddingBottom: "4px",
-                  }}
-                >
-                  {group.name}
-                </h4>
+            {foodGroups.map((group, groupIndex) => {
+              const isExpanded = expandedCategories[group.name] ?? false;
+              
+              return (
+                <div key={group.name} style={{ 
+                  marginBottom: isMobile ? "15px" : "20px" 
+                }}>
+                  <h4
+                    onClick={() => toggleCategory(group.name)}
+                    style={{
+                      fontSize: isMobile ? "12px" : "14px",
+                      fontWeight: "bold",
+                      color: "#555",
+                      marginBottom: isMobile ? "6px" : "8px",
+                      textTransform: "uppercase",
+                      borderBottom: "1px solid #eee",
+                      paddingBottom: "4px",
+                      cursor: "pointer",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      userSelect: "none",
+                    }}
+                  >
+                    <span>{group.name}</span>
+                    <span style={{ 
+                      fontSize: "16px", 
+                      transition: "transform 0.2s",
+                      transform: isExpanded ? "rotate(90deg)" : "rotate(0deg)"
+                    }}>
+                      ▶
+                    </span>
+                  </h4>
+                  {isExpanded && group.items.length > 0 && (
                 <Droppable droppableId={`source-${groupIndex}`}>
                   {(provided) => (
                     <div
@@ -211,53 +269,72 @@ export default function DragDropTimeline({
                     </div>
                   )}
                 </Droppable>
-              </div>
-            ))}
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
 
         {/* Target Timelines */}
         <div style={{ 
-          flex: isMobile ? "none" : "2",
-          order: isMobile ? 1 : 2
+          flex: isMobile ? "none" : "1",
+          order: isMobile ? 1 : 2,
+          display: "flex",
+          flexDirection: isMobile ? "column" : "row",
+          gap: isMobile ? "20px" : "20px",
+          width: "100%"
         }}>
           {visibleTargetLists.map((targetList) => (
             <div key={targetList.id} style={{ 
-              marginBottom: isMobile ? "20px" : "30px" 
+              flex: isMobile ? "none" : "1",
+              minWidth: isMobile ? "100%" : "300px"
             }}>
               <h3 style={{ 
                 marginBottom: isMobile ? "12px" : "16px", 
                 color: "#333",
-                fontSize: isMobile ? "14px" : "16px"
+                fontSize: isMobile ? "14px" : "16px",
+                textAlign: "center",
+                backgroundColor: "#e6f7ff",
+                padding: "10px",
+                borderRadius: "6px",
+                border: "1px solid #91d5ff"
               }}>
                 {targetList.label}
               </h3>
               <div
                 style={{
-                  display: "grid",
-                  gridTemplateColumns: isMobile 
-                    ? "repeat(auto-fit, minmax(80px, 1fr))" 
-                    : "repeat(auto-fit, minmax(120px, 1fr))",
-                  gap: isMobile ? "6px" : "8px",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: isMobile ? "8px" : "12px",
                   border: "1px solid #ddd",
                   borderRadius: "8px",
                   padding: isMobile ? "12px" : "16px",
                   backgroundColor: "#fafafa",
-                  maxHeight: isMobile ? "400px" : "none",
-                  overflowY: isMobile ? "auto" : "visible",
+                  maxHeight: isMobile ? "500px" : "600px",
+                  overflowY: "auto",
                 }}
               >
                 {targetList.timeline.map((month) => (
                   <div key={month} style={{ 
-                    minHeight: isMobile ? "80px" : "100px" 
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: isMobile ? "8px" : "12px",
+                    padding: isMobile ? "8px" : "10px",
+                    backgroundColor: "#ffffff",
+                    borderRadius: "6px",
+                    border: "1px solid #e0e0e0",
+                    minHeight: isMobile ? "60px" : "70px"
                   }}>
                     <div
                       style={{
-                        fontSize: isMobile ? "10px" : "12px",
+                        fontSize: isMobile ? "11px" : "13px",
                         fontWeight: "bold",
-                        marginBottom: isMobile ? "6px" : "8px",
-                        textAlign: "center",
                         color: "#666",
+                        minWidth: isMobile ? "60px" : "80px",
+                        textAlign: "left",
+                        paddingTop: "4px",
+                        flexShrink: 0
                       }}
                     >
                       {month}
@@ -270,15 +347,21 @@ export default function DragDropTimeline({
                           {...provided.droppableProps}
                           ref={provided.innerRef}
                           style={{
-                            minHeight: isMobile ? "50px" : "60px",
+                            flex: 1,
+                            minHeight: isMobile ? "40px" : "50px",
                             backgroundColor: snapshot.isDraggingOver
                               ? "#e6f7ff"
-                              : "#ffffff",
+                              : "#f9f9f9",
                             border: "2px dashed #ddd",
                             borderRadius: "4px",
-                            padding: isMobile ? "3px" : "4px",
+                            padding: isMobile ? "6px" : "8px",
+                            display: "flex",
+                            flexWrap: "wrap",
+                            gap: isMobile ? "4px" : "6px",
                             transition: "background-color 0.2s",
-                            touchAction: "none", // Better mobile touch handling
+                            touchAction: "none",
+                            alignItems: "flex-start",
+                            alignContent: "flex-start"
                           }}
                         >
                           {placements[targetList.id]?.[month]?.map(
@@ -288,14 +371,15 @@ export default function DragDropTimeline({
                                 style={{
                                   backgroundColor: "#52c41a",
                                   color: "white",
-                                  padding: isMobile ? "3px 6px" : "4px 8px",
-                                  marginBottom: "2px",
+                                  padding: isMobile ? "4px 6px" : "6px 8px",
                                   borderRadius: "3px",
-                                  fontSize: isMobile ? "9px" : "11px",
+                                  fontSize: isMobile ? "10px" : "12px",
                                   display: "flex",
                                   justifyContent: "space-between",
                                   alignItems: "center",
                                   lineHeight: "1.2",
+                                  maxWidth: "fit-content",
+                                  whiteSpace: "nowrap"
                                 }}
                               >
                                 <span
@@ -351,6 +435,7 @@ export default function DragDropTimeline({
             </div>
           ))}
         </div>
+      </div>
       </div>
     </DragDropContext>
   );
