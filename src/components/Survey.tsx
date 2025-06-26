@@ -2,11 +2,21 @@ import { useEffect, useState } from "react";
 import { Model, settings } from "survey-core";
 import { Survey } from "survey-react-ui";
 import "survey-core/survey-core.min.css";
+import { Typography } from "antd";
+import { useTranslation } from 'react-i18next';
 import surveyJson from "../survey-questions.json";
 import { registerDragDropTimelineWidget } from "./DragDropTimelineWidget";
+import LanguageDropdown from "./LanguageDropdown";
 
-export default function SurveyComponent() {
+const { Title, Text } = Typography;
+
+interface SurveyComponentProps {
+  onLanguageChange: (language: string) => void;
+}
+
+export default function SurveyComponent({ onLanguageChange }: SurveyComponentProps) {
   const [survey, setSurvey] = useState<Model | null>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     console.log("SurveyComponent mounted");
@@ -84,5 +94,41 @@ export default function SurveyComponent() {
     return <div>Loading survey...</div>;
   }
 
-  return <Survey model={survey} />;
+  return (
+    <div style={{ backgroundColor: '#f5f5f5', minHeight: '100vh' }}>
+      <div style={{ 
+        backgroundColor: 'white', 
+        padding: '20px', 
+        borderBottom: '1px solid #e8e8e8',
+        marginBottom: '20px'
+      }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
+          <Title level={2} style={{ margin: 0, color: '#1890ff', flex: 1 }}>
+            {t('title')}
+          </Title>
+          <LanguageDropdown onLanguageChange={onLanguageChange} />
+        </div>
+        
+        <div style={{ marginBottom: '10px' }}>
+          <Text>
+            {t('survey.thanks')}
+          </Text>
+        </div>
+        
+        <Text style={{ fontStyle: 'italic' }}>
+          {t('survey.guidance')}
+        </Text>
+        
+        <div style={{ marginTop: '20px', paddingTop: '15px', borderTop: '1px solid #e8e8e8' }}>
+          <Title level={3} style={{ margin: 0, color: '#333' }}>
+            {t('survey.basicInfo')}
+          </Title>
+        </div>
+      </div>
+      
+      <div style={{ padding: '0 20px' }}>
+        <Survey model={survey} />
+      </div>
+    </div>
+  );
 }

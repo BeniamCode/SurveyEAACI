@@ -1,14 +1,10 @@
-import React from 'react';
 import { ConfigProvider } from 'antd';
-import AppLayout from './AppLayout';
-import SurveyComponent from './Survey';
+import SurveyFlow from './SurveyFlow';
 
 export default function SurveyPage() {
   return (
     <ConfigProvider>
-      <AppLayout>
-        <SurveyComponent />
-      </AppLayout>
+      <SurveyFlow />
     </ConfigProvider>
   );
 }
