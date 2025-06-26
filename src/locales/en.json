@@ -1,0 +1,41 @@
+{
+  "title": "Complementary feeding: a survey on the Healthcare Professional practices",
+  "introduction": {
+    "description": "The introduction of solid foods and drinks other than milk (complementary feeding) is a key developmental milestone that exerts powerful changes in terms of functional changes to the gastrointestinal tract, the immune system and metabolic processes. Moreover, the timing of food introduction appears crucial for the prevention of food allergy. The aim of the current survey is to collect information on the usual practices of healthcare professionals from different countries about the order of solid foods' introduction into the infants diet and the how this differs for infants at low or high risk for development of food allergy.",
+    "duration": "Completion of the questionnaire will take approximately 10 minutes.",
+    "passwordPrompt": "If you agree to participate in this research, please type the password that was provided to you:",
+    "continue": "Continue"
+  },
+  "foodGroups": {
+    "starch": "STARCH/GLUTEN",
+    "veg": "VEGETABLES",
+    "legume": "LEGUMES",
+    "meat": "MEAT",
+    "fish": "FISH/SHELLFISH",
+    "fruit": "FRUIT",
+    "dairy": "DAIRY PRODUCTS / SUBSTITUTES",
+    "egg": "EGG",
+    "fat": "FAT/OIL",
+    "sweets": "SWEETS",
+    "nuts": "NUTS/SEEDS",
+    "spices": "SALT/SPICES",
+    "additional": "ADDITIONAL GUIDANCE"
+  },
+  "app": {
+    "title": "Complementary feeding: a survey on the Healthcare Professional practices",
+    "description": "The introduction of solid foods and drinks other than milk (complementary feeding) is a key developmental milestone that exerts powerful changes in terms of functional changes to the gastrointestinal tract, the immune system and metabolic processes. Moreover, the timing of food introduction appears crucial for the prevention of food allergy. The aim of the current survey is to collect information on the usual practices of healthcare professionals from different countries about the order of solid foods' introduction into the infants diet and the how this differs for infants at low or high risk for development of food allergy.",
+    "duration": "Completion of the questionnaire will take approximately 10 minutes.",
+    "password_prompt": "If you agree to participate in this research, please type the password that was provided to you:",
+    "month": "Month",
+    "complementary_feeding": "Complementary feeding"
+  },
+  "survey": {
+    "thanks": "Thank you for your participation in this research study.",
+    "guidance": "Please answer all questions as accurately as possible. Your responses will remain confidential.",
+    "basicInfo": "Basic Information"
+  },
+  "navigation": {
+    "home": "Home",
+    "survey": "Survey"
+  }
+}

@@ -192,13 +192,7 @@
           "name": "food-picker-panel",
           "title": "Please indicate the preferred order by dragging & dropping an item from the 'ADVICE' list to any other list",
           "visible": false,
-          "elements": [
-            {
-              "type": "drag-drop-timeline",
-              "name": "food-timeline",
-              "title": "Food Introduction Timeline"
-            }
-          ],
+          "elements": [],
           "customData": {
             "source_list_title": "Advice",
             "food_groups": [

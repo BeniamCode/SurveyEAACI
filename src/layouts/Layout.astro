@@ -28,7 +28,33 @@ const { title } = Astro.props;
   body {
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlights on mobile */
+    -webkit-touch-callout: none; /* Disable callout on mobile */
   }
+  
+  /* Mobile-specific improvements */
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    
+    /* Improve touch targets */
+    button, .ant-btn, .ant-select-selector {
+      min-height: 44px !important; /* Apple's recommended minimum touch target */
+    }
+    
+    /* Better form inputs on mobile */
+    input, textarea, select {
+      font-size: 16px !important; /* Prevent zoom on iOS */
+    }
+    
+    /* Improve scroll performance */
+    * {
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  
   code {
     font-family:
       Menlo,

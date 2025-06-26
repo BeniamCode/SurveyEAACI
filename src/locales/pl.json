@@ -1,0 +1,41 @@
+{
+  "title": "Rozszerzanie diety: badanie praktyk profesjonalistów medycznych",
+  "introduction": {
+    "description": "Wprowadzanie pokarmów stałych oraz napojów innych niż mleko matki lub mleko modyfikowane do diety dziecka (rozszerzanie diety) jest kluczowym kamieniem milowym w rozwoju, który wywołuje istotne zmiany funkcjonalne w przewodzie pokarmowym, systemie immunologicznym oraz procesach metabolicznych. Ponadto, odpowiedni czas wprowadzania pokarmów wydaje się mieć kluczowe znaczenie w zapobieganiu alergiom pokarmowym. Celem niniejszej ankiety jest zebranie informacji na temat zwyczajowych praktyk profesjonalistów medycznych z różnych krajów dotyczących kolejności wprowadzania pokarmów stałych do diety niemowląt oraz jak ta decyzja jest modyfikowana w przypadku niemowląt z niskim lub wysokim ryzykiem wystąpienia alergii.",
+    "duration": "Wypełnienie ankiety zajmuje około 10 minut.",
+    "passwordPrompt": "Jeśli wyraża Pani/Pan zgodę na udział w ankiecie, proszę wpisać hasło, które zostało Pani/Panu przekazane:",
+    "continue": "Kontynuuj"
+  },
+  "foodGroups": {
+    "starch": "SKROBIA/GLUTEN",
+    "veg": "WARZYWA",
+    "legume": "STRĄCZKI",
+    "meat": "MIĘSO",
+    "fish": "RYBY/OWOCE MORZA",
+    "fruit": "OWOCE",
+    "dairy": "PRODUKTY MLECZNE/PRODUKTY ZASTĘPUJĄCE PRODUKTY MLECZNE",
+    "egg": "JAJKO",
+    "fat": "TŁUSZCZ/OLEJ",
+    "sweets": "SŁODYCZE",
+    "nuts": "ORZECHY/NASIONA",
+    "spices": "SÓL/PRZYPRAWY",
+    "additional": "DODATKOWE ZALECENIA"
+  },
+  "app": {
+    "title": "Rozszerzanie diety: badanie praktyk profesjonalistów medycznych",
+    "description": "Wprowadzanie pokarmów stałych oraz napojów innych niż mleko matki lub mleko modyfikowane do diety dziecka (rozszerzanie diety) jest kluczowym kamieniem milowym w rozwoju, który wywołuje istotne zmiany funkcjonalne w przewodzie pokarmowym, systemie immunologicznym oraz procesach metabolicznych. Ponadto, odpowiedni czas wprowadzania pokarmów wydaje się mieć kluczowe znaczenie w zapobieganiu alergiom pokarmowym. Celem niniejszej ankiety jest zebranie informacji na temat zwyczajowych praktyk profesjonalistów medycznych z różnych krajów dotyczących kolejności wprowadzania pokarmów stałych do diety niemowląt oraz jak ta decyzja jest modyfikowana w przypadku niemowląt z niskim lub wysokim ryzykiem wystąpienia alergii.",
+    "duration": "Wypełnienie ankiety zajmuje około 10 minut.",
+    "password_prompt": "Jeśli wyraża Pani/Pan zgodę na udział w ankiecie, proszę wpisać hasło, które zostało Pani/Panu przekazane:",
+    "month": "Miesiąc",
+    "complementary_feeding": "Rozszerzanie diety"
+  },
+  "survey": {
+    "thanks": "Dziękujemy za udział w tym badaniu naukowym.",
+    "guidance": "Proszę odpowiedzieć na wszystkie pytania jak najdokładniej. Państwa odpowiedzi pozostaną poufne.",
+    "basicInfo": "Podstawowe informacje"
+  },
+  "navigation": {
+    "home": "Strona główna",
+    "survey": "Ankieta"
+  }
+}
