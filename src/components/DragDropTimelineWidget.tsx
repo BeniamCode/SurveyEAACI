@@ -35,21 +35,49 @@ const dragDropTimelineWidget = {
       const panelJson = panel?.getOriginalJson?.() || panel?.jsonObj || {};
       const customData = panelJson.customData || panel?.customData || {};
 
-      const {
+      let {
         source_list_title = "Advice",
-        food_groups = [],
-        target_lists = [],
+        food_categories = [],
+        timeline_months = [],
       } = customData;
+
+      // Fallback data for testing
+      if (!food_categories || food_categories.length === 0) {
+        food_categories = [
+          {
+            "name": "VEGETABLES",
+            "items": [
+              {"label": "Carrot", "value": "carrot"},
+              {"label": "Pepper", "value": "pepper"},
+              {"label": "Tomato", "value": "tomato"}
+            ]
+          },
+          {
+            "name": "FRUIT", 
+            "items": [
+              {"label": "Apple", "value": "apple"},
+              {"label": "Banana", "value": "banana"},
+              {"label": "Orange", "value": "orange"}
+            ]
+          },
+          {
+            "name": "MEAT",
+            "items": [
+              {"label": "Chicken", "value": "chicken"},
+              {"label": "Beef", "value": "beef"},
+              {"label": "Fish", "value": "fish"}
+            ]
+          }
+        ];
+      }
+
+      console.log("Custom data:", customData);
+      console.log("Food categories:", food_categories);
 
       // Get current survey data for conditional logic
       const surveyData = question.survey?.data || {};
 
-      // Filter target lists based on conditional logic
-      const filteredTargetLists = target_lists.filter((list: any) => {
-        if (!list.conditional_logic) return true;
-        const dependsOnValue = surveyData[list.conditional_logic.depends_on];
-        return dependsOnValue === list.conditional_logic.value;
-      });
+      // No filtering needed for the simplified timeline
 
       // Only create root once
       if (!(question as any)._reactRoot) {
@@ -74,8 +102,8 @@ const dragDropTimelineWidget = {
             },
           },
           React.createElement(DragDropTimeline, {
-            foodGroups: food_groups,
-            targetLists: filteredTargetLists,
+            foodGroups: food_categories,
+            targetLists: [],
             sourceListTitle: source_list_title,
             onChange: handleChange,
             value: question.value || {},
@@ -131,6 +159,7 @@ export function registerDragDropTimelineWidget() {
     try {
       // Register the question type
       ElementFactory.Instance.registerElement("drag-drop-timeline", (name: string) => {
+        console.log("Creating DragDropTimelineQuestion with name:", name);
         return new DragDropTimelineQuestion(name);
       });
 
@@ -140,6 +169,7 @@ export function registerDragDropTimelineWidget() {
         "customtype"
       );
       console.log("Widget registered successfully");
+      console.log("Available widgets:", CustomWidgetCollection.Instance.widgets.map(w => w.name));
     } catch (error) {
       console.error("Error registering widget:", error);
     }
