@@ -188,6 +188,36 @@
           ]
         },
         {
+          "type": "panel",
+          "name": "food-timeline-low-risk-panel",
+          "title": "Food Introduction Timeline - Not Allergic / Low-risk",
+          "description": "Expand food categories to browse, then drag items to specific months. You can put multiple foods from different categories in the same month.",
+          "visibleIf": "{q10} = 'yes'",
+          "elements": [
+            {
+              "type": "comment",
+              "name": "food-timeline-low-risk",
+              "title": "Please describe your recommended food introduction timeline for low-risk children:",
+              "description": "List the foods and the months when you would recommend introducing them (e.g., 'Month 4: Rice cereal, Month 6: Vegetables, etc.')"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "food-timeline-high-risk-panel",
+          "title": "Food Introduction Timeline - High-risk",
+          "description": "Expand food categories to browse, then drag items to specific months. You can put multiple foods from different categories in the same month.",
+          "visibleIf": "{q11} = 'yes'",
+          "elements": [
+            {
+              "type": "comment",
+              "name": "food-timeline-high-risk", 
+              "title": "Please describe your recommended food introduction timeline for high-risk children:",
+              "description": "List the foods and the months when you would recommend introducing them (e.g., 'Month 4: Rice cereal, Month 6: Vegetables, etc.')"
+            }
+          ]
+        },
+        {
           "type": "comment",
           "name": "q12",
           "title": "Please mention here any food (eg traditional food in your area that you introduce in the 1st year of life and is not mentioned above):",

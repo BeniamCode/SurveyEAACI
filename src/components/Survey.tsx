@@ -6,7 +6,6 @@ import { Typography } from "antd";
 import { useTranslation } from "react-i18next";
 import surveyJson from "../survey-questions.json";
 import LanguageDropdown from "./LanguageDropdown";
-import { registerDragDropTimelineWidget } from "./DragDropTimelineWidget";
 
 const { Title, Text } = Typography;
 
@@ -50,177 +49,52 @@ export default function SurveyComponent({
 
         console.log("Environment settings initialized:", settings.environment);
 
-        // Register the custom widget
-        registerDragDropTimelineWidget();
-        console.log("Custom widget registered");
-
-        // Manual injection after q11 as backup
-        const injectTimeline = () => {
-          console.log("Attempting manual timeline injection");
-          const q11Element = document.querySelector('[data-name="q11"]');
-          if (q11Element && surveyModel.data.q11 === "yes") {
-            console.log("q11 found and answered yes, injecting timeline");
-            
-            let timelineContainer = document.getElementById("manual-timeline-high-risk");
-            if (!timelineContainer) {
-              timelineContainer = document.createElement("div");
-              timelineContainer.id = "manual-timeline-high-risk";
-              timelineContainer.innerHTML = `
-                <div style="margin-top: 20px; padding: 20px; background: #f8f9fa; border-radius: 8px; border: 1px solid #e0e0e0;">
-                  <div id="timeline-high-risk-root"></div>
-                </div>
-              `;
-              q11Element.parentNode?.insertBefore(timelineContainer, q11Element.nextSibling);
-              
-              // Import and render React component
-              const rootElement = document.getElementById("timeline-high-risk-root");
-              if (rootElement) {
-                import("react").then((React) => {
-                  import("react-dom/client").then((ReactDOM) => {
-                    import("./DragDropTimeline").then((module) => {
-                      const DragDropTimeline = module.default;
-                      
-                      const root = ReactDOM.createRoot(rootElement);
-                      const foodGroups = [
-                        {
-                          "name": "VEGETABLES",
-                          "items": [
-                            {"label": "Carrot", "value": "carrot"},
-                            {"label": "Pepper", "value": "pepper"},
-                            {"label": "Tomato", "value": "tomato"}
-                          ]
-                        },
-                        {
-                          "name": "FRUIT", 
-                          "items": [
-                            {"label": "Apple", "value": "apple"},
-                            {"label": "Banana", "value": "banana"},
-                            {"label": "Orange", "value": "orange"}
-                          ]
-                        }
-                      ];
-                      
-                      console.log("Rendering DragDropTimeline with foodGroups:", foodGroups);
-                      
-                      root.render(React.createElement(DragDropTimeline, {
-                        foodGroups: foodGroups,
-                        targetLists: [],
-                        sourceListTitle: "Advice",
-                        onChange: (result: any) => {
-                          console.log("Timeline result:", result);
-                          surveyModel.setValue("food-timeline-high-risk", result);
-                        },
-                        value: surveyModel.getValue("food-timeline-high-risk") || {},
-                        surveyData: surveyModel.data,
-                      }));
-                    }).catch(err => console.error("Error importing DragDropTimeline:", err));
-                  }).catch(err => console.error("Error importing ReactDOM:", err));
-                }).catch(err => console.error("Error importing React:", err));
-              }
-            }
-          }
-          
-          // Same for q10
-          const q10Element = document.querySelector('[data-name="q10"]');
-          if (q10Element && surveyModel.data.q10 === "yes") {
-            console.log("q10 found and answered yes, injecting timeline");
-            
-            let timelineContainer = document.getElementById("manual-timeline-low-risk");
-            if (!timelineContainer) {
-              timelineContainer = document.createElement("div");
-              timelineContainer.id = "manual-timeline-low-risk";
-              timelineContainer.innerHTML = `
-                <div style="margin-top: 20px; padding: 20px; background: #f8f9fa; border-radius: 8px; border: 1px solid #e0e0e0;">
-                  <div id="timeline-low-risk-root"></div>
-                </div>
-              `;
-              q10Element.parentNode?.insertBefore(timelineContainer, q10Element.nextSibling);
-              
-              // Import and render React component
-              const rootElement = document.getElementById("timeline-low-risk-root");
-              if (rootElement) {
-                import("react").then((React) => {
-                  import("react-dom/client").then((ReactDOM) => {
-                    import("./DragDropTimeline").then((module) => {
-                      const DragDropTimeline = module.default;
-                      
-                      const root = ReactDOM.createRoot(rootElement);
-                      const foodGroups = [
-                        {
-                          "name": "VEGETABLES",
-                          "items": [
-                            {"label": "Carrot", "value": "carrot"},
-                            {"label": "Pepper", "value": "pepper"},
-                            {"label": "Tomato", "value": "tomato"}
-                          ]
-                        },
-                        {
-                          "name": "FRUIT", 
-                          "items": [
-                            {"label": "Apple", "value": "apple"},
-                            {"label": "Banana", "value": "banana"},
-                            {"label": "Orange", "value": "orange"}
-                          ]
-                        }
-                      ];
-                      
-                      console.log("Rendering DragDropTimeline with foodGroups:", foodGroups);
-                      
-                      root.render(React.createElement(DragDropTimeline, {
-                        foodGroups: foodGroups,
-                        targetLists: [],
-                        sourceListTitle: "Advice",
-                        onChange: (result: any) => {
-                          console.log("Timeline result:", result);
-                          surveyModel.setValue("food-timeline-low-risk", result);
-                        },
-                        value: surveyModel.getValue("food-timeline-low-risk") || {},
-                        surveyData: surveyModel.data,
-                      }));
-                    }).catch(err => console.error("Error importing DragDropTimeline:", err));
-                  }).catch(err => console.error("Error importing ReactDOM:", err));
-                }).catch(err => console.error("Error importing React:", err));
-              }
-            }
-          }
-        };
-
-        // Create survey model
+        // Create survey model directly (no custom widgets needed)
         console.log("Creating survey model with JSON:", surveyJson);
         const surveyModel = new Model(surveyJson);
         console.log("Survey model created:", surveyModel);
+        
+        // Debug panels right after creation
+        console.log("Panels after creation:", surveyModel.getAllPanels().map(p => ({
+          name: p.name, 
+          visible: p.isVisible,
+          visibleIf: p.visibleIf,
+          elements: p.elements?.map(e => ({type: e.getType(), name: e.name}))
+        })));
 
         const saveSurveyResults = (survey: Model) => {
-          const results = survey.data;
-          console.log("Survey results:", results);
+            const results = survey.data;
+            console.log("Survey results:", results);
 
-          // Display results in a simple alert for this healthcare survey
-          alert("Survey completed! Check the console for detailed results.");
-        };
+            // Display results in a simple alert for this healthcare survey
+            alert("Survey completed! Check the console for detailed results.");
+          };
 
-        surveyModel.onComplete.add(saveSurveyResults);
+          surveyModel.onComplete.add(saveSurveyResults);
 
-        // Add value change listener to debug conditional logic
-        surveyModel.onValueChanged.add((survey: Model, options: any) => {
-          console.log(
-            "Survey value changed:",
-            options.name,
-            "=",
-            options.value
-          );
-          console.log("Current survey data:", survey.data);
-          
-          // Debug panel visibility
-          if (options.name === "q10" || options.name === "q11") {
-            const panel10 = survey.getPanelByName("food-timeline-low-risk-panel");
-            const panel11 = survey.getPanelByName("food-timeline-high-risk-panel");
-            console.log("Panel 10 visibility:", panel10?.isVisible);
-            console.log("Panel 11 visibility:", panel11?.isVisible);
+          // Add value change listener to debug conditional logic
+          surveyModel.onValueChanged.add((survey: Model, options: any) => {
+            console.log(
+              "Survey value changed:",
+              options.name,
+              "=",
+              options.value
+            );
+            console.log("Current survey data:", survey.data);
             
-            // Try manual injection
-            setTimeout(() => injectTimeline(), 100);
-          }
-        });
+            // Debug panel visibility
+            if (options.name === "q10" || options.name === "q11") {
+              const panel10 = survey.getPanelByName("food-timeline-low-risk-panel");
+              const panel11 = survey.getPanelByName("food-timeline-high-risk-panel");
+              console.log("Panel 10 visibility:", panel10?.isVisible);
+              console.log("Panel 11 visibility:", panel11?.isVisible);
+              console.log("Panel 10 object:", panel10);
+              console.log("Panel 11 object:", panel11);
+              
+              // Check all panels
+              console.log("All panels:", survey.getAllPanels().map(p => ({name: p.name, visible: p.isVisible})));
+            }
+          });
 
         setSurvey(surveyModel);
         console.log("Survey component initialization complete");

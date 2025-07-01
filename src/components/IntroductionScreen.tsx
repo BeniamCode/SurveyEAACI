@@ -54,6 +54,43 @@ export default function IntroductionScreen({ onPasswordSubmit, onLanguageChange 
         width: '100%',
         margin: '0 auto'
       }}>
+        {/* Organization Logos */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: isMobile ? '15px' : '30px',
+          marginBottom: isMobile ? '20px' : '30px',
+          flexWrap: 'wrap'
+        }}>
+          <img 
+            src="/eaaci.jpg" 
+            alt="EAACI Logo" 
+            style={{ 
+              height: isMobile ? '40px' : '60px', 
+              width: 'auto',
+              objectFit: 'contain'
+            }} 
+          />
+          <img 
+            src="/IHU.jpg" 
+            alt="IHU Logo" 
+            style={{ 
+              height: isMobile ? '40px' : '60px', 
+              width: 'auto',
+              objectFit: 'contain'
+            }} 
+          />
+          <img 
+            src="/Apaaci.png" 
+            alt="APAACI Logo" 
+            style={{ 
+              height: isMobile ? '40px' : '60px', 
+              width: 'auto',
+              objectFit: 'contain'
+            }} 
+          />
+        </div>
         <div style={{ 
           display: 'flex', 
           flexDirection: isMobile ? 'column' : 'row',

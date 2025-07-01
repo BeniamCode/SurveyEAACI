@@ -52,6 +52,7 @@ export default function DragDropTimeline({
   const [expandedCategories, setExpandedCategories] = useState<{
     [categoryName: string]: boolean;
   }>({});
+  const [forceUpdate, setForceUpdate] = useState(0);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -100,13 +101,17 @@ export default function DragDropTimeline({
         if (existingIndex === -1) {
           monthItems.push(draggedItem);
           newPlacements[month] = monthItems;
-
-          setPlacements(newPlacements);
-          onChange(newPlacements);
         }
+
+        // Always update state and call onChange to ensure UI updates
+        setPlacements(newPlacements);
+        onChange(newPlacements);
+        setForceUpdate(prev => prev + 1); // Force re-render
+        
+        console.log("Drag completed, new placements:", newPlacements);
       }
     },
-    [placements, onChange]
+    [placements, onChange, forceUpdate]
   );
 
   const removeItem = useCallback(
@@ -119,9 +124,10 @@ export default function DragDropTimeline({
 
         setPlacements(newPlacements);
         onChange(newPlacements);
+        setForceUpdate(prev => prev + 1); // Force re-render
       }
     },
-    [placements, onChange]
+    [placements, onChange, forceUpdate]
   );
 
   return (
