@@ -13,7 +13,7 @@ export default function SurveyFlow() {
   useEffect(() => {
     // Initialize with browser language or fallback to English
     const browserLang = navigator.language.split('-')[0];
-    const supportedLangs = ['en', 'de', 'el', 'es', 'fr', 'it', 'pl', 'pt', 'ro'];
+    const supportedLangs = ['en', 'de', 'el', 'es', 'fr', 'it', 'pl', 'pt', 'ro', 'zh-tw'];
     const defaultLang = supportedLangs.includes(browserLang) ? browserLang : 'en';
     i18n.changeLanguage(defaultLang);
   }, [i18n]);

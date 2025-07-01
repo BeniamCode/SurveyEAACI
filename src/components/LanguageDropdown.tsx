@@ -34,6 +34,7 @@ export default function LanguageDropdown({
     { value: "pl", label: "Polski" },
     { value: "pt", label: "Português" },
     { value: "ro", label: "Română" },
+    { value: "zh-tw", label: "繁體中文" },
   ];
 
   const handleChange = (value: string) => {
