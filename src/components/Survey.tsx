@@ -6,6 +6,7 @@ import { Typography } from "antd";
 import { useTranslation } from "react-i18next";
 import surveyJson from "../survey-questions.json";
 import LanguageDropdown from "./LanguageDropdown";
+import { registerCollapsibleFoodTimelineWidget } from "./CollapsibleFoodTimelineWidget";
 
 const { Title, Text } = Typography;
 
@@ -49,7 +50,11 @@ export default function SurveyComponent({
 
         console.log("Environment settings initialized:", settings.environment);
 
-        // Create survey model directly (no custom widgets needed)
+        // Register the custom collapsible food timeline widget
+        registerCollapsibleFoodTimelineWidget();
+        console.log("CollapsibleFoodTimeline widget registered");
+
+        // Create survey model
         console.log("Creating survey model with JSON:", surveyJson);
         const surveyModel = new Model(surveyJson);
         console.log("Survey model created:", surveyModel);
