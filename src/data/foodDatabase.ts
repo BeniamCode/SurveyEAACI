@@ -1,9 +1,9 @@
-export interface FoodItem {
+interface FoodItem {
   label: string;
   value: string;
 }
 
-export interface FoodCategory {
+interface FoodCategory {
   name: string;
   code: string;
   items: FoodItem[];
@@ -276,17 +276,17 @@ export const foodDatabase: FoodCategory[] = [
 ];
 
 // Helper function to get food category by code
-export function getFoodCategoryByCode(code: string): FoodCategory | undefined {
+export function getFoodCategoryByCode(code: string) {
   return foodDatabase.find(category => category.code === code);
 }
 
 // Helper function to get all food items as flat list
-export function getAllFoodItems(): FoodItem[] {
+export function getAllFoodItems() {
   return foodDatabase.flatMap(category => category.items);
 }
 
 // Helper function to get food items by category codes
-export function getFoodItemsByCategoryCodes(codes: string[]): FoodItem[] {
+export function getFoodItemsByCategoryCodes(codes: string[]) {
   return foodDatabase
     .filter(category => codes.includes(category.code))
     .flatMap(category => category.items);

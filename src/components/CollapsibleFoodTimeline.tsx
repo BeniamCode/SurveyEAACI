@@ -1,7 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Collapse, Checkbox, Typography, Card, Space, Divider } from 'antd';
 import { CaretRightOutlined } from '@ant-design/icons';
-import { foodDatabase, FoodCategory, FoodItem } from '../data/foodDatabase';
+import { foodDatabase } from '../data/foodDatabase';
+
+interface FoodItem {
+  label: string;
+  value: string;
+}
+
+interface FoodCategory {
+  name: string;
+  code: string;
+  items: FoodItem[];
+}
 
 const { Title, Text } = Typography;
 const { Panel } = Collapse;
