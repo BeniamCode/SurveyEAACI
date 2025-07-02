@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complementary Feeding Survey</title>
+    
+    <!-- SurveyJS Scripts and Styles -->
+    <script src="https://unpkg.com/survey-core@1.9.143/survey.core.min.js"></script>
+    <script src="https://unpkg.com/survey-core@1.9.143/survey.i18n.min.js"></script>
+    <script src="https://unpkg.com/survey-knockout-ui@1.9.143/survey-knockout-ui.min.js"></script>
+    <link href="https://unpkg.com/survey-core@1.9.143/defaultV2.min.css" type="text/css" rel="stylesheet" />
+    
+    <!-- Bootstrap for consistent styling (optional, but recommended) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Optional: Add some padding to the survey container */
+        #surveyContainer {
+            padding: 20px;
+        }
+        .sv-string-viewer { /* Make sure question titles wrap */
+            white-space: normal !important; 
+        }
+    </style>
+</head>
+<body>
+    <div id="surveyContainer" class="container"></div>
+
+    <script>
+        // Data object containing all food categories and items, parsed from your HTML.
+        const foodData = {
+            "STARCH/GLUTEN": [
+                "Gluten containing grains (wheat, barley, rye eg pasta, bread, etc)",
+                "Gluten free cereals (buckwheat, quinoa, oat)",
+                "Maize products (i.e. pollenta, baby maize snacks)",
+                "Potato, Sweet potato",
+                "Rice (including rice flour)",
+                "Rice pudding (containing milk)",
+                "Semolina pudding (containing milk)",
+                "Trahanas"
+            ],
+            "VEGETABLES": [
+                "Cabbage, broccoli, cauliflower",
+                "Carrot",
+                "Green leafy vegetables (spinach, lettuce etc)",
+                "Pea, green beans",
+                "Pepper",
+                "Root vegetables like celery",
+                "Tomato",
+                "Zucchini or courgette or other squashes"
+            ],
+            "LEGUMES": [
+                "Beans (all types)",
+                "Chickpeas",
+                "Lentils",
+                "Peanut/peanut butter",
+                "Soya"
+            ],
+            "MEAT": [
+                "Beef",
+                "Chicken/turkey/duck",
+                "Lamb",
+                "Liver pate",
+                "Pork",
+                "Processed meat like cold cuts/ham/salami",
+                "Rabbit",
+                "Venison"
+            ],
+            "FISH/SHELLFISH": [
+                "Crustaceans (shrimps, crayfish, crab, lobster)",
+                "Fish",
+                "Mollusks (clams, scallops, oysters, mussels, octopus, snails, kalamari, cuttlefish)"
+            ],
+            "FRUIT": [
+                "Apple (and products made from apple like apple sauce)",
+                "Banana",
+                "Berries including strawberry",
+                "Dried fruits",
+                "Figs",
+                "Fresh fruit juice",
+                "Fruit juice (with or without sugar)",
+                "Grapes",
+                "Kiwi",
+                "Mango",
+                "Melon, watermelon",
+                "Orange, mantarine",
+                "Peach, apricot",
+                "Pear"
+            ],
+            "DAIRY PRODUCTS / SUBSTITUTES": [
+                "Cheese (i.e cheddar, edam, Comte, parmesan)",
+                "Cow's milk yogurt",
+                "Cream cheese",
+                "Feta cheese",
+                "Fresh cow's milk",
+                "Fresh goat/sheep milk",
+                "Kephir/Airani",
+                "Kids yogurt",
+                "Plant-based milk (specify here fortified/non-fortified)",
+                "Rice milk",
+                "Sheep/ goat yogurt",
+                "Soy cheese",
+                "Soy milk",
+                "Soy yogurt"
+            ],
+            "EGG": [
+                "Hard boiled egg (boiling >6min)",
+                "Partially cooked like scrambled egg and sunny side egg",
+                "Raw egg"
+            ],
+            "FAT/OIL": [
+                "Butter",
+                "Corn oil/vegetable oils",
+                "Margarine",
+                "Nut and seed oils",
+                "Olive oil"
+            ],
+            "SWEETS": [
+                "Baby biscuits without sugar",
+                "Fruit spread (i.e. jam)",
+                "Honey",
+                "Sweets, cake, biscuits"
+            ],
+            "NUTS/SEEDS": [
+                "Mustard",
+                "Sesame/tahini",
+                "Tree nuts (and nut butters)"
+            ],
+            "SALT/SPICES": [
+                "Salt",
+                "Spices/herbs (e.g. pepper, cinammon, etc)"
+            ],
+            "ADDITIONAL GUIDANCE": [
+                "Baby-led weaning",
+                "Food in pieces and finger food",
+                "Mashed Food",
+                "Preprepared baby food - Baby jars, pouches",
+                "Pureed food",
+                "Share family meal with salt",
+                "Share family meal without salt"
+            ]
+        };
+
+        // This custom function is registered with SurveyJS to dynamically provide food items based on the selected category.
+        function getFoodItems(params) {
+            if (!params || !params[0]) return [];
+            const category = params[0];
+            return foodData[category] || [];
+        }
+        Survey.FunctionFactory.Instance.register("getFoodItems", getFoodItems);
+
+
+        // --- SURVEY JSON DEFINITION ---
+        const surveyJson = {
+            "title": "Complementary Feeding Guidance Survey",
+            "description": "Thank you for agreeing to participate. Please answer all the questions below and then click on the 'Complete' button at the end. While we acknowledge that individualized guidance is essential, please provide a general indication of when it is typically appropriate to consider introducing complementary foods to these infants.",
+            "logoPosition": "right",
+            "pages": [{
+                "name": "basicInfoPage",
+                "title": "Basic Information",
+                "elements": [{
+                    "type": "radiogroup",
+                    "name": "q1_sex",
+                    "title": "Sex",
+                    "isRequired": true,
+                    "choices": [{
+                        "value": "male",
+                        "text": "Male"
+                    }, {
+                        "value": "female",
+                        "text": "Female"
+                    }]
+                }, {
+                    "type": "dropdown",
+                    "name": "q2_profession",
+                    "title": "Profession",
+                    "isRequired": true,
+                    "choices": [
+                        "Paediatrician", "Dietitian", "Allergist", "Nurse", "Other"
+                    ],
+                    "showOtherItem": true,
+                    "otherText": "Please specify"
+                }, {
+                    "type": "text",
+                    "name": "q3_age",
+                    "title": "Age (years)",
+                    "isRequired": true,
+                    "inputType": "number",
+                    "min": 18,
+                    "max": 99
+                }, {
+                    "type": "text",
+                    "name": "q4_years_practice",
+                    "title": "Years of practice within your specialty",
+                    "isRequired": true,
+                    "inputType": "number",
+                    "min": 0,
+                    "max": 80
+                }, {
+                    "type": "radiogroup",
+                    "name": "q5_allergy_education",
+                    "title": "Do you have additional education in allergy?",
+                    "isRequired": true,
+                    "choices": ["Yes", "No"]
+                }, {
+                    "type": "checkbox",
+                    "name": "q5a_education_specify",
+                    "title": "Please specify",
+                    "isRequired": true,
+                    "visibleIf": "{q5_allergy_education} = 'Yes'",
+                    "choices": [
+                        "Online Course", "University Course", "MSc", "PhD"
+                    ],
+                    "showOtherItem": true,
+                    "otherText": "Please specify"
+                }, {
+                    "type": "text",
+                    "name": "q6_country",
+                    "title": "Country of work",
+                    "isRequired": true
+                }]
+            }, {
+                "name": "complementaryFeedingPage",
+                "title": "Complementary Feeding - General Guidance",
+                "elements": [{
+                    "type": "panel",
+                    "name": "introduction_age_panel",
+                    "title": "At what age do you advise the introduction of complementary food for an infant?",
+                    "elements": [{
+                        "type": "text",
+                        "name": "q7a_breast_fed",
+                        "title": "Breast-fed infant (months):",
+                        "isRequired": true,
+                        "inputType": "number",
+                        "min": 0
+                    }, {
+                        "type": "text",
+                        "name": "q7b_formula_fed",
+                        "title": "Formula-fed/mixed feed infant (months):",
+                        "isRequired": true,
+                        "inputType": "number",
+                        "min": 0
+                    }, {
+                        "type": "text",
+                        "name": "q7c_increased_risk",
+                        "title": "At increased risk to develop food allergy (months):",
+                        "isRequired": true,
+                        "inputType": "number",
+                        "min": 0
+                    }]
+                }, {
+                    "type": "checkbox",
+                    "name": "q8_increased_risk_conditions",
+                    "title": "When do you consider an infant at 'increased risk to develop food allergy'? (multiple choices possible)",
+                    "isRequired": true,
+                    "choices": [
+                        "Coexisting eczema",
+                        "Recurrent Bronchiolitis/wheeze",
+                        "Direct family history (i.e. parents, siblings) of any allergy, atopic dermatitis, asthma or rhinoconjuctivitis"
+                    ],
+                    "showOtherItem": true,
+                    "otherText": "Please specify"
+                }]
+            }, {
+                "name": "preventiveMeasuresPage",
+                "title": "Complementary Feeding - Preventive Measures",
+                "elements": [{
+                    "type": "radiogroup",
+                    "name": "q9a_measures_low_risk",
+                    "title": "Do you apply further measures in order to prevent food allergy in infants and young children at low risk for food allergy?",
+                    "isRequired": true,
+                    "choices": ["Yes", "No"]
+                }, {
+                    "type": "checkbox",
+                    "name": "q9a_measures_low_risk_details",
+                    "title": "Please elaborate on the measures applied:",
+                    "isRequired": true,
+                    "visibleIf": "{q9a_measures_low_risk} = 'Yes'",
+                    "choices": [
+                        "Introducing soy protein-based formula in the first 6 mo of life to prevent cow's milk allergy",
+                        "Partially or extensively hydrolysed formula",
+                        "Restricting consumption of potential food allergens during pregnancy or breastfeeding",
+                        "Using emollients as skin barriers",
+                        "Prebiotics, probiotics or synbiotics for pregnant and/or breastfeeding women and/ or infants",
+                        "Vitamin supplementation or fish oil supplementation during pregnancy and/or breastfeeding women and/or infants",
+                        "Regular cow's milk–based infant formula after the first week of life to prevent food allergy",
+                        "Motivate exclusive breastfeeding until 6 months"
+                    ],
+                    "showOtherItem": true,
+                    "otherText": "Please explain"
+                }, {
+                    "type": "radiogroup",
+                    "name": "q9b_measures_high_risk",
+                    "title": "Do you apply further measures in order to prevent food allergy in infants and young children at high risk for food allergy?",
+                    "isRequired": true,
+                    "choices": ["Yes", "No"]
+                }, {
+                    "type": "checkbox",
+                    "name": "q9b_measures_high_risk_details",
+                    "title": "Please elaborate on the measures applied:",
+                    "isRequired": true,
+                    "visibleIf": "{q9b_measures_high_risk} = 'Yes'",
+                    "choices": [
+                        "Introducing soy protein-based formula in the first 6 mo of life to prevent cow's milk allergy",
+                        "Partially or extensively hydrolysed formula",
+                        "Restricting consumption of potential food allergens during pregnancy or breastfeeding",
+                        "Using emollients as skin barriers",
+                        "Prebiotics, probiotics or synbiotics for pregnant and/or breastfeeding women and/ or infants",
+                        "Vitamin supplementation or fish oil supplementation during pregnancy and/or breastfeeding women and/or infants",
+                        "Regular cow's milk–based infant formula after the first week of life to prevent food allergy",
+                        "Motivate exclusive breastfeeding until 6 months"
+                    ],
+                    "showOtherItem": true,
+                    "otherText": "Please explain"
+                }]
+            }, {
+                "name": "foodIntroductionOrderPage",
+                "title": "Food Introduction Order",
+                "elements": [{
+                    "type": "radiogroup",
+                    "name": "q10_advise_order_low_risk",
+                    "title": "Do you advise parents to introduce foods during complementary feeding in a specific order, when the child is not allergic or is at low risk for food allergy?",
+                    "isRequired": true,
+                    "choices": ["Yes", "No"]
+                }, {
+                    "type": "paneldynamic",
+                    "name": "food_plan_low_risk",
+                    "title": "Please specify the introduction order for a low-risk child.",
+                    "description": "Add an entry for each month and category you wish to specify.",
+                    "visibleIf": "{q10_advise_order_low_risk} = 'Yes'",
+                    "templateElements": [{
+                        "type": "dropdown",
+                        "name": "month",
+                        "title": "Month of Introduction",
+                        "isRequired": true,
+                        "choices": [
+                            "Birth", "Month 1", "Month 2", "Month 3", "Month 4", "Month 5", "Month 6", "Month 7", "Month 8", "Month 9", "Month 10", "Month 11", "Month 12", "Month 13", "Month 14", "Month 15", "Month 16", "Month 17", "Month 18"
+                        ]
+                    }, {
+                        "type": "dropdown",
+                        "name": "food_category",
+                        "title": "Food Category",
+                        "isRequired": true,
+                        "choices": Object.keys(foodData)
+                    }, {
+                        "type": "tagbox",
+                        "name": "food_items",
+                        "title": "Food Items to Introduce",
+                        "description": "Select one or more items from the list.",
+                        "isRequired": true,
+                        "choicesFromQuestion": "food_items_source_low_risk"
+                    }, {
+                         "type": "calculated",
+                         "name": "food_items_source_low_risk",
+                         "expression": "getFoodItems({panel.food_category})",
+                         "includeIntoResult": false
+                    }],
+                    "panelAddText": "Add Entry",
+                    "panelRemoveText": "Remove Entry"
+                }, {
+                    "type": "radiogroup",
+                    "name": "q11_advise_order_high_risk",
+                    "title": "Do you advise parents to introduce foods during complementary feeding in a specific order, when the child is at high risk for food allergy?",
+                    "isRequired": true,
+                    "choices": ["Yes", "No"]
+                }, {
+                    "type": "paneldynamic",
+                    "name": "food_plan_high_risk",
+                    "title": "Please specify the introduction order for a high-risk child.",
+                    "description": "Add an entry for each month and category you wish to specify.",
+                    "visibleIf": "{q11_advise_order_high_risk} = 'Yes'",
+                    "templateElements": [{
+                        "type": "dropdown",
+                        "name": "month",
+                        "title": "Month of Introduction",
+                        "isRequired": true,
+                        "choices": [
+                            "Birth", "Month 1", "Month 2", "Month 3", "Month 4", "Month 5", "Month 6", "Month 7", "Month 8", "Month 9", "Month 10", "Month 11", "Month 12", "Month 13", "Month 14", "Month 15", "Month 16", "Month 17", "Month 18"
+                        ]
+                    }, {
+                        "type": "dropdown",
+                        "name": "food_category",
+                        "title": "Food Category",
+                        "isRequired": true,
+                        "choices": Object.keys(foodData)
+                    }, {
+                        "type": "tagbox",
+                        "name": "food_items",
+                        "title": "Food Items to Introduce",
+                        "description": "Select one or more items from the list.",
+                        "isRequired": true,
+                        "choicesFromQuestion": "food_items_source_high_risk"
+                    }, {
+                         "type": "calculated",
+                         "name": "food_items_source_high_risk",
+                         "expression": "getFoodItems({panel.food_category})",
+                         "includeIntoResult": false
+                    }],
+                    "panelAddText": "Add Entry",
+                    "panelRemoveText": "Remove Entry"
+                }]
+            }, {
+                "name": "finalQuestionsPage",
+                "title": "Final Questions",
+                "elements": [{
+                    "type": "comment",
+                    "name": "q12_other_foods",
+                    "title": "Please mention here any food (eg traditional food in your area that you introduce in the 1st year of life and is not mentioned above):"
+                }, {
+                    "type": "checkbox",
+                    "name": "q14_supplements_high_risk",
+                    "title": "Which of the following food supplements would you recommend for a child with a high risk of developing allergy?",
+                    "isRequired": true,
+                    "choices": [
+                        "Iron", "Multivitamin", "Omega-3", "Probiotic", "Prebiotic", "Synbiotic", "Vitamin A", "Vitamin C", "Vitamin D", "No Supplements"
+                    ],
+                    "showOtherItem": true,
+                    "otherText": "Please define"
+                }, {
+                    "type": "dropdown",
+                    "name": "q15_interval_low_allergenic_low_risk",
+                    "title": "What is the interval for introducing low-allergenic foods in non-allergic children?",
+                    "isRequired": true,
+                    "choices": ["1 day", "1-3 days", ">3 days"]
+                }, {
+                    "type": "dropdown",
+                    "name": "q16_interval_low_allergenic_high_risk",
+                    "title": "What is the interval for introducing low-allergenic foods in high risk for food allergy children?",
+                    "isRequired": true,
+                    "choices": ["1 day", "1-3 days", ">3 days"]
+                }, {
+                    "type": "dropdown",
+                    "name": "q17_interval_high_allergenic_low_risk",
+                    "title": "What is the interval for introducing high-allergenic foods in non-allergic children?",
+                    "isRequired": true,
+                    "choices": ["1 day", "1-3 days", ">3 days"]
+                }, {
+                    "type": "dropdown",
+                    "name": "q18_interval_high_allergenic_high_risk",
+                    "title": "What is the interval for introducing high-allergenic foods in high risk for food allergy children?",
+                    "isRequired": true,
+                    "choices": ["1 day", "1-3 days", ">3 days"]
+                }]
+            }],
+            "showQuestionNumbers": "off",
+            "questionErrorLocation": "bottom"
+        };
+        
+        // Create a SurveyJS model from the JSON
+        const survey = new Survey.Model(surveyJson);
+        
+        // Add a function to log the results to the console upon completion
+        survey.onComplete.add(function(sender, options) {
+            console.log("Survey results:");
+            console.log(JSON.stringify(sender.data, null, 2));
+            // In a real application, you would send sender.data to your server here.
+            document.getElementById('surveyContainer').innerHTML = "<h1>Thank you for completing the survey!</h1>";
+        });
+
+        // Render the survey in the 'surveyContainer' div
+        // We use the Knockout-UI rendering library here
+        survey.render("surveyContainer");
+    </script>
+
+</body>
+</html>

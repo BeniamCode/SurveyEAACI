@@ -26,18 +26,15 @@ export default function LanguageDropdown({
 
   const languages = [
     { value: "en", label: "English" },
-    { value: "de", label: "Deutsch" },
     { value: "el", label: "Ελληνικά" },
-    { value: "es", label: "Español" },
-    { value: "fr", label: "Français" },
-    { value: "it", label: "Italiano" },
     { value: "pl", label: "Polski" },
-    { value: "pt", label: "Português" },
-    { value: "ro", label: "Română" },
+    { value: "zh-tw", label: "繁體中文" },
   ];
 
   const handleChange = (value: string) => {
+    console.log('Language changing to:', value);
     i18n.changeLanguage(value);
+    console.log('Current i18n language after change:', i18n.language);
     onLanguageChange?.(value);
   };
 

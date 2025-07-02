@@ -1,41 +1,376 @@
 {
-  "title": "Rozszerzanie diety: badanie praktyk profesjonalistów medycznych",
+  "title": "Żywienie uzupełniające: badanie praktyk pracowników ochrony zdrowia",
   "introduction": {
-    "description": "Wprowadzanie pokarmów stałych oraz napojów innych niż mleko matki lub mleko modyfikowane do diety dziecka (rozszerzanie diety) jest kluczowym kamieniem milowym w rozwoju, który wywołuje istotne zmiany funkcjonalne w przewodzie pokarmowym, systemie immunologicznym oraz procesach metabolicznych. Ponadto, odpowiedni czas wprowadzania pokarmów wydaje się mieć kluczowe znaczenie w zapobieganiu alergiom pokarmowym. Celem niniejszej ankiety jest zebranie informacji na temat zwyczajowych praktyk profesjonalistów medycznych z różnych krajów dotyczących kolejności wprowadzania pokarmów stałych do diety niemowląt oraz jak ta decyzja jest modyfikowana w przypadku niemowląt z niskim lub wysokim ryzykiem wystąpienia alergii.",
-    "duration": "Wypełnienie ankiety zajmuje około 10 minut.",
-    "passwordPrompt": "Jeśli wyraża Pani/Pan zgodę na udział w ankiecie, proszę wpisać hasło, które zostało Pani/Panu przekazane:",
+    "description": "Wprowadzanie pokarmów stałych i napojów innych niż mleko (żywienie uzupełniające) jest kluczowym kamieniem milowym rozwojowym, który wywołuje silne zmiany w zakresie funkcjonowania przewodu pokarmowego, układu odpornościowego i procesów metabolicznych. Ponadto, czas wprowadzania pokarmów wydaje się kluczowy dla zapobiegania alergii pokarmowej. Celem niniejszego badania jest zebranie informacji na temat zwykłych praktyk pracowników ochrony zdrowia z różnych krajów dotyczących kolejności wprowadzania pokarmów stałych do diety niemowląt oraz tego, jak różni się to w przypadku niemowląt o niskim lub wysokim ryzyku rozwoju alergii pokarmowej.",
+    "duration": "Wypełnienie kwestionariusza zajmie około 10 minut.",
+    "passwordPrompt": "Jeśli zgadzasz się na udział w tym badaniu, wpisz hasło, które zostało Ci przekazane:",
     "continue": "Kontynuuj"
-  },
-  "foodGroups": {
-    "starch": "SKROBIA/GLUTEN",
-    "veg": "WARZYWA",
-    "legume": "STRĄCZKI",
-    "meat": "MIĘSO",
-    "fish": "RYBY/OWOCE MORZA",
-    "fruit": "OWOCE",
-    "dairy": "PRODUKTY MLECZNE/PRODUKTY ZASTĘPUJĄCE PRODUKTY MLECZNE",
-    "egg": "JAJKO",
-    "fat": "TŁUSZCZ/OLEJ",
-    "sweets": "SŁODYCZE",
-    "nuts": "ORZECHY/NASIONA",
-    "spices": "SÓL/PRZYPRAWY",
-    "additional": "DODATKOWE ZALECENIA"
-  },
-  "app": {
-    "title": "Rozszerzanie diety: badanie praktyk profesjonalistów medycznych",
-    "description": "Wprowadzanie pokarmów stałych oraz napojów innych niż mleko matki lub mleko modyfikowane do diety dziecka (rozszerzanie diety) jest kluczowym kamieniem milowym w rozwoju, który wywołuje istotne zmiany funkcjonalne w przewodzie pokarmowym, systemie immunologicznym oraz procesach metabolicznych. Ponadto, odpowiedni czas wprowadzania pokarmów wydaje się mieć kluczowe znaczenie w zapobieganiu alergiom pokarmowym. Celem niniejszej ankiety jest zebranie informacji na temat zwyczajowych praktyk profesjonalistów medycznych z różnych krajów dotyczących kolejności wprowadzania pokarmów stałych do diety niemowląt oraz jak ta decyzja jest modyfikowana w przypadku niemowląt z niskim lub wysokim ryzykiem wystąpienia alergii.",
-    "duration": "Wypełnienie ankiety zajmuje około 10 minut.",
-    "password_prompt": "Jeśli wyraża Pani/Pan zgodę na udział w ankiecie, proszę wpisać hasło, które zostało Pani/Panu przekazane:",
-    "month": "Miesiąc",
-    "complementary_feeding": "Rozszerzanie diety"
   },
   "survey": {
     "thanks": "Dziękujemy za udział w tym badaniu naukowym.",
-    "guidance": "Proszę odpowiedzieć na wszystkie pytania jak najdokładniej. Państwa odpowiedzi pozostaną poufne.",
-    "basicInfo": "Podstawowe informacje"
+    "guidance": "Prosimy odpowiedzieć na wszystkie pytania możliwie najdokładniej. Twoje odpowiedzi pozostaną poufne.",
+    "basicInfo": "Podstawowe informacje",
+    "title": "Żywienie uzupełniające: badanie praktyk pracowników ochrony zdrowia",
+    "pages": {
+      "basic_information": {
+        "title": "Podstawowe informacje"
+      },
+      "complementary_feeding": {
+        "title": "Żywienie uzupełniające"
+      }
+    },
+    "questions": {
+      "q1": {
+        "title": "Płeć",
+        "choices": {
+          "male": "Mężczyzna",
+          "female": "Kobieta"
+        }
+      },
+      "q2": {
+        "title": "Zawód",
+        "choices": {
+          "paediatrician": "Pediatra",
+          "dietitian": "Dietetyk",
+          "allergist": "Alergolog",
+          "nurse": "Pielęgniarka/Pielęgniarz"
+        },
+        "other": "Inny",
+        "otherPlaceholder": "Proszę określić"
+      },
+      "q3": {
+        "title": "Wiek (lata)"
+      },
+      "q4": {
+        "title": "Lata praktyki w ramach swojej specjalności"
+      },
+      "q5": {
+        "title": "Czy posiadasz dodatkowe wykształcenie w dziedzinie alergii?",
+        "choices": {
+          "yes": "Tak",
+          "no": "Nie"
+        }
+      },
+      "q5a": {
+        "title": "Proszę określić",
+        "choices": {
+          "online_course": "Kurs online",
+          "university_course": "Kurs uniwersytecki",
+          "msc": "Studia magisterskie",
+          "phd": "Doktorat"
+        },
+        "other": "Inne",
+        "otherPlaceholder": "Proszę określić"
+      },
+      "q6": {
+        "title": "Kraj pracy"
+      },
+      "q7": {
+        "title": "W jakim wieku zalecasz wprowadzenie żywności uzupełniającej dla niemowlęcia",
+        "breast_fed": "Niemowlę karmione piersią:",
+        "formula_fed": "Niemowlę karmione mlekiem modyfikowanym/mieszane:",
+        "increased_risk": "Ze zwiększonym ryzykiem rozwoju alergii pokarmowej:",
+        "months": "miesiące"
+      },
+      "q8": {
+        "title": "Kiedy uważasz, że niemowlę jest w 'zwiększonym ryzyku rozwoju alergii pokarmowej'? (możliwe wielokrotne wybory)",
+        "choices": {
+          "eczema": "Współistniejący wyprysk",
+          "bronchiolitis": "Nawracające zapalenie oskrzelików/świszczący oddech",
+          "family_history": "Bezpośrednia historia rodzinna (tj. rodzice, rodzeństwo) jakiejkolwiek alergii, atopowego zapalenia skóry, astmy lub alergicznego zapalenia błony śluzowej nosa i spojówek"
+        },
+        "other": "Inne",
+        "otherPlaceholder": "Proszę określić"
+      },
+      "q9a": {
+        "title": "Czy stosujesz dodatkowe środki w celu zapobiegania alergii pokarmowej u niemowląt i małych dzieci o niskim ryzyku alergii pokarmowej?",
+        "choices": {
+          "yes": "Tak",
+          "no": "Nie"
+        },
+        "elaborate": {
+          "title": "Proszę opisać stosowane środki:",
+          "choices": {
+            "soy_formula": "Wprowadzanie preparatu na bazie białka sojowego w pierwszych 6 miesiącach życia w celu zapobiegania alergii na mleko krowie",
+            "hydrolysed_formula": "Częściowo lub ekstensywnie hydrolizowany preparat",
+            "restrict_allergens": "Ograniczanie spożycia potencjalnych alergenów pokarmowych podczas ciąży lub karmienia piersią",
+            "emollients": "Stosowanie emolientów jako barier skórnych",
+            "prebiotics": "Prebiotyki, probiotyki lub synbiotyki dla kobiet w ciąży i/lub karmiących piersią i/lub niemowląt",
+            "vitamin_supplements": "Suplementacja witaminowa lub olejem rybim podczas ciąży i/lub dla kobiet karmiących piersią i/lub niemowląt",
+            "regular_formula": "Zwykły preparat dla niemowląt na bazie mleka krowiego po pierwszym tygodniu życia w celu zapobiegania alergii pokarmowej",
+            "exclusive_breastfeeding": "Motywowanie do wyłącznego karmienia piersią do 6 miesiąca życia"
+          },
+          "other": "Inne",
+          "otherPlaceholder": "Proszę wyjaśnić"
+        }
+      },
+      "q9b": {
+        "title": "Czy stosujesz dodatkowe środki w celu zapobiegania alergii pokarmowej u niemowląt i małych dzieci o wysokim ryzyku alergii pokarmowej?",
+        "choices": {
+          "yes": "Tak",
+          "no": "Nie"
+        },
+        "elaborate": {
+          "title": "Proszę opisać stosowane środki:",
+          "choices": {
+            "soy_formula": "Wprowadzanie preparatu na bazie białka sojowego w pierwszych 6 miesiącach życia w celu zapobiegania alergii na mleko krowie",
+            "hydrolysed_formula": "Częściowo lub ekstensywnie hydrolizowany preparat",
+            "restrict_allergens": "Ograniczanie spożycia potencjalnych alergenów pokarmowych podczas ciąży lub karmienia piersią",
+            "emollients": "Stosowanie emolientów jako barier skórnych",
+            "prebiotics": "Prebiotyki, probiotyki lub synbiotyki dla kobiet w ciąży i/lub karmiących piersią i/lub niemowląt",
+            "vitamin_supplements": "Suplementacja witaminowa lub olejem rybim podczas ciąży i/lub dla kobiet karmiących piersią i/lub niemowląt",
+            "regular_formula": "Zwykły preparat dla niemowląt na bazie mleka krowiego po pierwszym tygodniu życia w celu zapobiegania alergii pokarmowej",
+            "exclusive_breastfeeding": "Motywowanie do wyłącznego karmienia piersią do 6 miesiąca życia"
+          },
+          "other": "Inne",
+          "otherPlaceholder": "Proszę wyjaśnić"
+        }
+      },
+      "q10": {
+        "title": "Czy doradzasz rodzicom wprowadzanie pokarmów podczas żywienia uzupełniającego w określonej kolejności, gdy dziecko nie jest alergikiem lub ma niskie ryzyko alergii pokarmowej?",
+        "choices": {
+          "yes": "Tak",
+          "no": "Nie"
+        }
+      },
+      "q11": {
+        "title": "Czy doradzasz rodzicom wprowadzanie pokarmów podczas żywienia uzupełniającego w określonej kolejności, gdy dziecko jest w grupie wysokiego ryzyka alergii pokarmowej?",
+        "choices": {
+          "yes": "Tak",
+          "no": "Nie"
+        }
+      },
+      "food_plan_low_risk": {
+        "title": "Proszę określić kolejność wprowadzania dla dziecka o niskim ryzyku.",
+        "description": "Dodaj wpis dla każdego miesiąca i kategorii, którą chcesz określić."
+      },
+      "food_plan_high_risk": {
+        "title": "Proszę określić kolejność wprowadzania dla dziecka o wysokim ryzyku.",
+        "description": "Dodaj wpis dla każdego miesiąca i kategorii, którą chcesz określić."
+      },
+      "q12": {
+        "title": "Proszę wymienić tutaj wszelkie pokarmy (np. tradycyjne jedzenie w Twoim regionie, które wprowadzasz w 1. roku życia i nie jest wymienione powyżej):"
+      },
+      "q14": {
+        "title": "Które z poniższych suplementów diety poleciłbyś dla dziecka o wysokim ryzyku rozwoju alergii",
+        "choices": {
+          "iron": "Żelazo",
+          "multivitamin": "Multiwitamina",
+          "omega3": "Omega-3",
+          "probiotic": "Probiotyk",
+          "prebiotic": "Prebiotyk",
+          "synbiotic": "Synbiotyk",
+          "vitamin_a": "Witamina A",
+          "vitamin_c": "Witamina C",
+          "vitamin_d": "Witamina D",
+          "no_supplements": "Brak suplementów"
+        },
+        "other": "Inne",
+        "otherPlaceholder": "Proszę określić"
+      },
+      "q15": {
+        "title": "Jaki jest odstęp czasowy dla wprowadzania pokarmów o niskiej alergenności u dzieci niealergicznych?",
+        "choices": {
+          "1_day": "1 dzień",
+          "1_3_days": "1-3 dni",
+          "more_3_days": ">3 dni"
+        }
+      },
+      "q16": {
+        "title": "Jaki jest odstęp czasowy dla wprowadzania pokarmów o niskiej alergenności u dzieci o wysokim ryzyku alergii pokarmowej?",
+        "choices": {
+          "1_day": "1 dzień",
+          "1_3_days": "1-3 dni",
+          "more_3_days": ">3 dni"
+        }
+      },
+      "q17": {
+        "title": "Jaki jest odstęp czasowy dla wprowadzania pokarmów o wysokiej alergenności u dzieci niealergicznych?",
+        "choices": {
+          "1_day": "1 dzień",
+          "1_3_days": "1-3 dni",
+          "more_3_days": ">3 dni"
+        }
+      },
+      "q18": {
+        "title": "Jaki jest odstęp czasowy dla wprowadzania pokarmów o wysokiej alergenności u dzieci o wysokim ryzyku alergii pokarmowej?",
+        "choices": {
+          "1_day": "1 dzień",
+          "1_3_days": "1-3 dni",
+          "more_3_days": ">3 dni"
+        }
+      }
+    },
+    "dynamic_panel": {
+      "month": {
+        "title": "Miesiąc wprowadzenia",
+        "choices": {
+          "birth": "Narodziny",
+          "month_1": "Miesiąc 1",
+          "month_2": "Miesiąc 2",
+          "month_3": "Miesiąc 3",
+          "month_4": "Miesiąc 4",
+          "month_5": "Miesiąc 5",
+          "month_6": "Miesiąc 6",
+          "month_7": "Miesiąc 7",
+          "month_8": "Miesiąc 8",
+          "month_9": "Miesiąc 9",
+          "month_10": "Miesiąc 10",
+          "month_11": "Miesiąc 11",
+          "month_12": "Miesiąc 12",
+          "month_13": "Miesiąc 13",
+          "month_14": "Miesiąc 14",
+          "month_15": "Miesiąc 15",
+          "month_16": "Miesiąc 16",
+          "month_17": "Miesiąc 17",
+          "month_18": "Miesiąc 18"
+        }
+      },
+      "food_category": {
+        "title": "Kategoria żywności"
+      },
+      "food_items": {
+        "title": "Produkty spożywcze do wprowadzenia",
+        "description": "Wybierz jeden lub więcej elementów z listy. Elementy pojawią się na podstawie wybranej kategorii żywności."
+      },
+      "add_entry": "Dodaj wpis",
+      "remove_entry": "Usuń wpis"
+    }
+  },
+  "foodCategories": {
+    "starch_gluten": "SKROBIA/GLUTEN",
+    "vegetables": "WARZYWA",
+    "legumes": "ROŚLINY STRĄCZKOWE",
+    "meat": "MIĘSO",
+    "fish_shellfish": "RYBY/OWOCE MORZA",
+    "fruit": "OWOCE",
+    "dairy": "PRODUKTY MLECZNE / SUBSTYTUTY",
+    "egg": "JAJKO",
+    "fat_oil": "TŁUSZCZ/OLEJ",
+    "sweets": "SŁODYCZE",
+    "nuts_seeds": "ORZECHY/NASIONA",
+    "salt_spices": "SÓL/PRZYPRAWY",
+    "additional_guidance": "DODATKOWE WSKAZÓWKI"
+  },
+  "foodItems": {
+    "starch": {
+      "gluten_grains": "Zboża zawierające gluten (pszenica, jęczmień, żyto np. makaron, chleb itp.)",
+      "gluten_free_cereals": "Zboża bezglutenowe (gryka, komosa ryżowa, owies)",
+      "maize_products": "Produkty kukurydziane (np. polenta, przekąski kukurydziane dla niemowląt)",
+      "potato_sweet_potato": "Ziemniak, batat",
+      "rice": "Ryż (w tym mąka ryżowa)",
+      "rice_pudding": "Pudding ryżowy (zawierający mleko)",
+      "semolina_pudding": "Pudding z kaszy manny (zawierający mleko)",
+      "trahanas": "Trahanas"
+    },
+    "vegetables": {
+      "cabbage_broccoli": "Kapusta, brokuły, kalafior",
+      "carrot": "Marchew",
+      "root_vegetables": "Warzywa korzeniowe jak seler",
+      "leafy_vegetables": "Zielone warzywa liściaste (szpinak, sałata itp.)",
+      "pea_beans": "Groszek, fasolka szparagowa",
+      "pepper": "Papryka",
+      "tomato": "Pomidor",
+      "zucchini": "Cukinia lub inne dynie"
+    },
+    "legumes": {
+      "beans": "Fasola (wszystkie rodzaje)",
+      "chickpeas": "Ciecierzyca",
+      "lentils": "Soczewica",
+      "soya": "Soja",
+      "peanut": "Orzeszki ziemne/masło orzechowe"
+    },
+    "meat": {
+      "poultry": "Kurczak/indyk/kaczka",
+      "processed_meat": "Przetworzone mięso jak wędliny/szynka/salami",
+      "lamb": "Jagnięcina",
+      "liver_pate": "Pasztet z wątróbki",
+      "pork": "Wieprzowina",
+      "rabbit": "Królik",
+      "beef": "Wołowina",
+      "venison": "Dziczyzna"
+    },
+    "fish": {
+      "crustaceans": "Skorupiaki (krewetki, raki, kraby, homary)",
+      "fish": "Ryby",
+      "mollusks": "Mięczaki (małże, przegrzebki, ostrygi, omułki, ośmiornice, ślimaki, kalmary, mątwy)"
+    },
+    "fruit": {
+      "apple": "Jabłko (i produkty z jabłek jak mus jabłkowy)",
+      "mango": "Mango",
+      "banana": "Banan",
+      "berries": "Jagody w tym truskawki",
+      "dried_fruits": "Suszone owoce",
+      "figs": "Figi",
+      "fresh_juice": "Świeży sok owocowy",
+      "fruit_juice": "Sok owocowy (z cukrem lub bez)",
+      "grapes": "Winogrona",
+      "kiwi": "Kiwi",
+      "melon": "Melon, arbuz",
+      "citrus": "Pomarańcza, mandarynka",
+      "stone_fruits": "Brzoskwinia, morela",
+      "pear": "Gruszka"
+    },
+    "dairy": {
+      "plant_milk": "Mleko roślinne (określ tutaj wzbogacone/niewzbogacone)",
+      "cow_yogurt": "Jogurt z mleka krowiego",
+      "cream_cheese": "Ser śmietankowy",
+      "feta": "Ser feta",
+      "fresh_cow_milk": "Świeże mleko krowie",
+      "goat_sheep_milk": "Świeże mleko kozie/owcze",
+      "kephir": "Kefir/Maślanka",
+      "kids_yogurt": "Jogurt dla dzieci",
+      "rice_milk": "Mleko ryżowe",
+      "goat_sheep_yogurt": "Jogurt owczy/kozi",
+      "soy_cheese": "Ser sojowy",
+      "soy_milk": "Mleko sojowe",
+      "soy_yogurt": "Jogurt sojowy",
+      "cheese": "Ser (np. cheddar, edamski, comte, parmezan)"
+    },
+    "egg": {
+      "hard_boiled": "Jajko na twardo (gotowanie >6 min)",
+      "raw": "Surowe jajko",
+      "partially_cooked": "Częściowo ugotowane jak jajecznica i jajko sadzone"
+    },
+    "fat": {
+      "butter": "Masło",
+      "vegetable_oils": "Olej kukurydziany/oleje roślinne",
+      "margarine": "Margaryna",
+      "olive_oil": "Oliwa z oliwek",
+      "nut_seed_oils": "Oleje z orzechów i nasion"
+    },
+    "sweets": {
+      "baby_biscuits": "Biszkopty dla niemowląt bez cukru",
+      "fruit_spread": "Dżem owocowy",
+      "honey": "Miód",
+      "sweets_cake": "Słodycze, ciasto, ciastka"
+    },
+    "nuts": {
+      "mustard": "Musztarda",
+      "sesame": "Sezam/tahini",
+      "tree_nuts": "Orzechy drzew (i masła orzechowe)"
+    },
+    "spices": {
+      "salt": "Sól",
+      "spices_herbs": "Przyprawy/zioła (np. pieprz, cynamon itp.)"
+    },
+    "additional": {
+      "baby_food": "Gotowa żywność dla niemowląt - słoiczki, saszetki",
+      "family_meal_salt": "Wspólny posiłek rodzinny z solą",
+      "family_meal_no_salt": "Wspólny posiłek rodzinny bez soli",
+      "mashed_food": "Rozgniecione jedzenie",
+      "pureed_food": "Przecier",
+      "finger_food": "Jedzenie w kawałkach i przekąski do rączki",
+      "baby_led_weaning": "Rozszerzanie diety kierowane przez dziecko"
+    }
   },
   "navigation": {
     "home": "Strona główna",
     "survey": "Ankieta"
+  },
+  "common": {
+    "loading": "Ładowanie ankiety...",
+    "required": "To pole jest wymagane",
+    "optional": "Opcjonalne"
   }
 }

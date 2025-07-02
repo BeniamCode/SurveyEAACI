@@ -14,8 +14,10 @@ const dragDropTimelineWidget = {
   },
   isFit: function (question: any) {
     // This widget will be used for any question with type "drag-drop-timeline"
-    const result = question.getType() === "drag-drop-timeline";
-    console.log("Widget isFit called for type:", question.getType(), "result:", result);
+    const questionType = question.getType();
+    const result = questionType === "drag-drop-timeline";
+    console.log("Widget isFit called for type:", questionType, "result:", result);
+    console.log("Available question types:", Object.keys(question.survey?.getAllQuestions?.() || {}));
     return result;
   },
   htmlTemplate: "<div class='sv-drag-drop-timeline-root'></div>",
@@ -29,27 +31,40 @@ const dragDropTimelineWidget = {
 
     // Function to render the component
     const renderComponent = () => {
-      // Get custom data from the question's panel parent
-      const panel = question.parent;
-      // Access the customData from the panel's JSON definition
-      const panelJson = panel?.getOriginalJson?.() || panel?.jsonObj || {};
-      const customData = panelJson.customData || panel?.customData || {};
-
-      const {
-        source_list_title = "Advice",
-        food_groups = [],
-        target_lists = [],
-      } = customData;
+      // Use hardcoded food data for now to ensure it works
+      const food_categories = [
+        {
+          "name": "VEGETABLES",
+          "items": [
+            {"label": "Carrot", "value": "carrot"},
+            {"label": "Pepper", "value": "pepper"},
+            {"label": "Tomato", "value": "tomato"}
+          ]
+        },
+        {
+          "name": "FRUIT", 
+          "items": [
+            {"label": "Apple", "value": "apple"},
+            {"label": "Banana", "value": "banana"},
+            {"label": "Orange", "value": "orange"}
+          ]
+        },
+        {
+          "name": "MEAT",
+          "items": [
+            {"label": "Chicken", "value": "chicken"},
+            {"label": "Beef", "value": "beef"},
+            {"label": "Fish", "value": "fish"}
+          ]
+        }
+      ];
+      
+      console.log("Using hardcoded food categories:", food_categories);
 
       // Get current survey data for conditional logic
       const surveyData = question.survey?.data || {};
 
-      // Filter target lists based on conditional logic
-      const filteredTargetLists = target_lists.filter((list: any) => {
-        if (!list.conditional_logic) return true;
-        const dependsOnValue = surveyData[list.conditional_logic.depends_on];
-        return dependsOnValue === list.conditional_logic.value;
-      });
+      // No filtering needed for the simplified timeline
 
       // Only create root once
       if (!(question as any)._reactRoot) {
@@ -74,9 +89,9 @@ const dragDropTimelineWidget = {
             },
           },
           React.createElement(DragDropTimeline, {
-            foodGroups: food_groups,
-            targetLists: filteredTargetLists,
-            sourceListTitle: source_list_title,
+            foodGroups: food_categories,
+            targetLists: [],
+            sourceListTitle: "Advice",
             onChange: handleChange,
             value: question.value || {},
             surveyData: surveyData,
@@ -131,6 +146,7 @@ export function registerDragDropTimelineWidget() {
     try {
       // Register the question type
       ElementFactory.Instance.registerElement("drag-drop-timeline", (name: string) => {
+        console.log("Creating DragDropTimelineQuestion with name:", name);
         return new DragDropTimelineQuestion(name);
       });
 
@@ -140,6 +156,7 @@ export function registerDragDropTimelineWidget() {
         "customtype"
       );
       console.log("Widget registered successfully");
+      console.log("Available widgets:", CustomWidgetCollection.Instance.widgets.map(w => w.name));
     } catch (error) {
       console.error("Error registering widget:", error);
     }

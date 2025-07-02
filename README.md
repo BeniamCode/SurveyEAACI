@@ -1,14 +1,16 @@
-# Astro + Ant Design + SurveyJS React App
+# Complementary Feeding Survey Application
 
-This is a modern web application built with Astro.js, Ant Design UI components, and SurveyJS React for creating dynamic forms and surveys.
+A comprehensive healthcare survey application built for collecting data about complementary feeding practices from healthcare professionals worldwide.
 
 ## Features
 
 - **Astro.js** - Fast, modern static site generator with React integration
-- **Ant Design** - Enterprise-class UI design language and React components
+- **Ant Design** - Enterprise-class UI design language and React components  
 - **SurveyJS React** - Powerful form library for creating dynamic surveys
+- **Convex.dev** - Real-time database for storing survey responses
 - **TypeScript** - Type-safe development experience
-- **Git** - Version control initialized
+- **Internationalization** - Multi-language support including Traditional Chinese
+- **Collapsible Food Timeline** - Interactive month-by-month food introduction selection
 
 ## Project Structure
 
@@ -109,13 +111,24 @@ Edit `src/components/Survey.tsx` to customize the survey questions and structure
 - SurveyJS themes can be changed by importing different CSS files
 - Global styles are in `src/layouts/Layout.astro`
 
-## Next Steps
+## Database Setup
 
-1. Connect to a backend API to save survey responses
-2. Add user authentication
-3. Create additional survey templates
-4. Implement survey analytics dashboard
-5. Add more Ant Design components for enhanced UI
+This project uses **Convex.dev** for real-time data storage. See [CONVEX_SETUP.md](./CONVEX_SETUP.md) for detailed setup instructions.
+
+### Quick Setup:
+1. `npx convex login`
+2. `npm run convex:init`
+3. Copy the deployment URL to `.env`
+4. `npm run convex:dev` (in separate terminal)
+
+## Survey Features
+
+- **Demographics Collection**: Healthcare professional information
+- **Complementary Feeding Timeline**: Month-by-month food introduction recommendations
+- **Risk Assessment**: Differentiated recommendations for low/high-risk infants
+- **200+ Food Items**: Comprehensive database organized by categories
+- **Auto-Save**: Progress automatically saved every 2 seconds
+- **Multi-Language**: Support for 10+ languages including Traditional Chinese
 
 ## Resources
 
