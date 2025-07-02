@@ -4,9 +4,8 @@ import { Survey } from "survey-react-ui";
 import "survey-core/survey-core.min.css";
 import { Typography } from "antd";
 import { useTranslation } from "react-i18next";
-import surveyJson from "../survey-questions.json";
 import LanguageDropdown from "./LanguageDropdown";
-import { foodDatabase } from "../data/foodDatabase";
+import { getTranslatedSurveyJson, getTranslatedFoodDatabase } from "../utils/surveyTranslation";
 import { convex, generateParticipantId, getSessionMetadata } from "../lib/convex";
 import { useMutation } from "convex/react";
 
@@ -24,6 +23,7 @@ export default function SurveyComponent({
   const [participantId] = useState(() => generateParticipantId());
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { t, i18n } = useTranslation();
+  const [currentFoodDatabase, setCurrentFoodDatabase] = useState(() => getTranslatedFoodDatabase());
   
   // Convex mutation for submitting survey responses
   const submitSurveyResponse = useMutation("surveyResponses:submitSurveyResponse");
@@ -37,6 +37,20 @@ export default function SurveyComponent({
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
+
+  // Handle language changes
+  useEffect(() => {
+    const handleLanguageChange = () => {
+      // Update food database with new translations
+      setCurrentFoodDatabase(getTranslatedFoodDatabase());
+      
+      // Recreate survey with new translations
+      setSurvey(null); // This will trigger a re-render with new translations
+    };
+
+    i18n.on('languageChanged', handleLanguageChange);
+    return () => i18n.off('languageChanged', handleLanguageChange);
+  }, [i18n]);
 
 
   useEffect(() => {
@@ -66,9 +80,9 @@ export default function SurveyComponent({
           }
           const category = params[0];
           console.log("Looking for category:", category);
-          console.log("Available categories:", foodDatabase.map(cat => cat.name));
+          console.log("Available categories:", currentFoodDatabase.map(cat => cat.name));
           
-          const categoryData = foodDatabase.find(cat => cat.name === category);
+          const categoryData = currentFoodDatabase.find(cat => cat.name === category);
           console.log("Found category data:", categoryData);
           
           if (categoryData) {
@@ -89,9 +103,10 @@ export default function SurveyComponent({
 
         // Create survey model
         {
-          // Create survey model
-          console.log("Creating survey model with JSON:", surveyJson);
-          const surveyModel = new Model(surveyJson);
+          // Create survey model with translated content
+          const translatedSurveyJson = getTranslatedSurveyJson();
+          console.log("Creating survey model with translated JSON:", translatedSurveyJson);
+          const surveyModel = new Model(translatedSurveyJson);
           console.log("Survey model created:", surveyModel);
         
           // Debug panels right after creation
@@ -155,7 +170,7 @@ export default function SurveyComponent({
                   console.log(`Updating food items for category: ${options.value}`);
                   
                   // Get food items for the selected category
-                  const categoryData = foodDatabase.find(cat => cat.name === options.value);
+                  const categoryData = currentFoodDatabase.find(cat => cat.name === options.value);
                   
                   if (categoryData) {
                     const newChoices = categoryData.items.map(item => ({
@@ -186,7 +201,7 @@ export default function SurveyComponent({
                   if (selectedCategory && options.question.choices.length === 0) {
                     console.log(`Setting choices for rendered food_items, category: ${selectedCategory}`);
                     
-                    const categoryData = foodDatabase.find(cat => cat.name === selectedCategory);
+                    const categoryData = currentFoodDatabase.find(cat => cat.name === selectedCategory);
                     if (categoryData) {
                       const newChoices = categoryData.items.map(item => ({
                         value: item.value,
@@ -253,10 +268,10 @@ export default function SurveyComponent({
     } catch (err) {
       console.error("Error initializing survey:", err);
     }
-  }, []);
+  }, [currentFoodDatabase]);
 
   if (!survey) {
-    return <div>Loading survey...</div>;
+    return <div>{t('common.loading')}</div>;
   }
 
   return (
