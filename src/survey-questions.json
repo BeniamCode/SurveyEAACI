@@ -184,10 +184,31 @@
         },
         {
           "type": "radiogroup",
-          "name": "q10_advise_order_low_risk",
-          "title": "Do you advise parents to introduce foods during complementary feeding in a specific order, when the child is not allergic or is at low risk for food allergy?",
+          "name": "q10",
+          "title": "survey.questions.q10.title",
           "isRequired": true,
-          "choices": ["Yes", "No"]
+          "choices": [
+            {
+              "value": "yes",
+              "text": {
+                "default": "Yes",
+                "en": "survey.questions.q10.choices.yes",
+                "pl": "survey.questions.q10.choices.yes",
+                "el": "survey.questions.q10.choices.yes",
+                "zh-tw": "survey.questions.q10.choices.yes"
+              }
+            },
+            {
+              "value": "no",
+              "text": {
+                "default": "No",
+                "en": "survey.questions.q10.choices.no",
+                "pl": "survey.questions.q10.choices.no",
+                "el": "survey.questions.q10.choices.no",
+                "zh-tw": "survey.questions.q10.choices.no"
+              }
+            }
+          ]
         },
         {
           "type": "paneldynamic",
@@ -229,10 +250,31 @@
         },
         {
           "type": "radiogroup",
-          "name": "q11_advise_order_high_risk",
-          "title": "Do you advise parents to introduce foods during complementary feeding in a specific order, when the child is at high risk for food allergy?",
+          "name": "q11",
+          "title": "survey.questions.q11.title",
           "isRequired": true,
-          "choices": ["Yes", "No"]
+          "choices": [
+            {
+              "value": "yes",
+              "text": {
+                "default": "Yes",
+                "en": "survey.questions.q11.choices.yes",
+                "pl": "survey.questions.q11.choices.yes",
+                "el": "survey.questions.q11.choices.yes",
+                "zh-tw": "survey.questions.q11.choices.yes"
+              }
+            },
+            {
+              "value": "no",
+              "text": {
+                "default": "No",
+                "en": "survey.questions.q11.choices.no",
+                "pl": "survey.questions.q11.choices.no",
+                "el": "survey.questions.q11.choices.no",
+                "zh-tw": "survey.questions.q11.choices.no"
+              }
+            }
+          ]
         },
         {
           "type": "paneldynamic",
