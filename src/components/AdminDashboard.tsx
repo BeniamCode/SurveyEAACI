@@ -32,21 +32,23 @@ export default function AdminDashboard() {
     },
     {
       title: 'Age',
-      dataIndex: 'age',
+      dataIndex: 'surveyData',
       key: 'age',
+      render: (surveyData: any) => surveyData?.q3 || '-',
     },
     {
       title: 'Experience (years)',
-      dataIndex: 'yearsOfPractice',
+      dataIndex: 'surveyData',
       key: 'yearsOfPractice',
+      render: (surveyData: any) => surveyData?.q4 || '-',
     },
     {
       title: 'Status',
-      dataIndex: 'completedAt',
+      dataIndex: 'isComplete',
       key: 'status',
-      render: (completedAt: number) => (
-        <Tag color={completedAt ? 'green' : 'orange'}>
-          {completedAt ? 'Completed' : 'In Progress'}
+      render: (isComplete: boolean) => (
+        <Tag color={isComplete ? 'green' : 'orange'}>
+          {isComplete ? 'Completed' : 'In Progress'}
         </Tag>
       ),
     },

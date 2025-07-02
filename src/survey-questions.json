@@ -169,55 +169,118 @@
         },
         {
           "type": "radiogroup",
-          "name": "q10",
-          "title": "Do you advise parents to introduce foods during complementary feeding in a specific order, when the child is not allergic or is at low risk for food allergy?",
-          "isRequired": true,
+          "name": "test-conditional",
+          "title": "TEST: Select Yes to see if conditional logic works",
           "choices": [
             { "text": "Yes", "value": "yes" },
             { "text": "No", "value": "no" }
           ]
+        },
+        {
+          "type": "html",
+          "name": "test-conditional-result",
+          "html": "<div style='background: green; color: white; padding: 10px; margin: 10px 0;'><strong>SUCCESS!</strong> Conditional logic is working! You selected YES.</div>",
+          "visibleIf": "{test-conditional} == \"yes\""
         },
         {
           "type": "radiogroup",
-          "name": "q11",
+          "name": "q10_advise_order_low_risk",
+          "title": "Do you advise parents to introduce foods during complementary feeding in a specific order, when the child is not allergic or is at low risk for food allergy?",
+          "isRequired": true,
+          "choices": ["Yes", "No"]
+        },
+        {
+          "type": "paneldynamic",
+          "name": "food_plan_low_risk",
+          "title": "Please specify the introduction order for a low-risk child.",
+          "description": "Add an entry for each month and category you wish to specify.",
+          "visibleIf": "{q10_advise_order_low_risk} = 'Yes'",
+          "templateElements": [
+            {
+              "type": "dropdown",
+              "name": "month",
+              "title": "Month of Introduction",
+              "isRequired": true,
+              "choices": [
+                "Birth", "Month 1", "Month 2", "Month 3", "Month 4", "Month 5", "Month 6", "Month 7", "Month 8", "Month 9", "Month 10", "Month 11", "Month 12", "Month 13", "Month 14", "Month 15", "Month 16", "Month 17", "Month 18"
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "food_category",
+              "title": "Food Category",
+              "isRequired": true,
+              "choices": [
+                "STARCH/GLUTEN", "VEGETABLES", "LEGUMES", "MEAT", "FISH/SHELLFISH", "FRUIT", "DAIRY PRODUCTS / SUBSTITUTES", "EGG", "FAT/OIL", "SWEETS", "NUTS/SEEDS", "SALT/SPICES", "ADDITIONAL GUIDANCE"
+              ]
+            },
+            {
+              "type": "tagbox",
+              "name": "food_items",
+              "title": "Food Items to Introduce",
+              "description": "Select one or more items from the list.",
+              "isRequired": true,
+              "choicesFromQuestion": "food_items_source_low_risk"
+            },
+            {
+              "type": "expression",
+              "name": "food_items_source_low_risk",
+              "expression": "getFoodItems({panel.food_category})",
+              "includeIntoResult": false
+            }
+          ],
+          "panelAddText": "Add Entry",
+          "panelRemoveText": "Remove Entry"
+        },
+        {
+          "type": "radiogroup",
+          "name": "q11_advise_order_high_risk",
           "title": "Do you advise parents to introduce foods during complementary feeding in a specific order, when the child is at high risk for food allergy?",
           "isRequired": true,
-          "choices": [
-            { "text": "Yes", "value": "yes" },
-            { "text": "No", "value": "no" }
-          ]
+          "choices": ["Yes", "No"]
         },
         {
-          "type": "panel",
-          "name": "food-timeline-low-risk-panel",
-          "title": "Food Introduction Timeline - Not Allergic / Low-risk",
-          "description": "Expand months and food categories to select specific foods you recommend introducing at each stage.",
-          "visibleIf": "{q10} = 'yes'",
-          "elements": [
+          "type": "paneldynamic",
+          "name": "food_plan_high_risk",
+          "title": "Please specify the introduction order for a high-risk child.",
+          "description": "Add an entry for each month and category you wish to specify.",
+          "visibleIf": "{q11_advise_order_high_risk} = 'Yes'",
+          "templateElements": [
             {
-              "type": "collapsible-food-timeline",
-              "name": "food-timeline-low-risk",
-              "title": "Food Introduction Timeline - Low Risk Children",
-              "description": "Select specific foods you recommend introducing month by month for children at low risk for food allergy.",
-              "riskLevel": "low"
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "food-timeline-high-risk-panel",
-          "title": "Food Introduction Timeline - High-risk",
-          "description": "Expand months and food categories to select specific foods you recommend introducing at each stage for high-risk children.",
-          "visibleIf": "{q11} = 'yes'",
-          "elements": [
+              "type": "dropdown",
+              "name": "month",
+              "title": "Month of Introduction",
+              "isRequired": true,
+              "choices": [
+                "Birth", "Month 1", "Month 2", "Month 3", "Month 4", "Month 5", "Month 6", "Month 7", "Month 8", "Month 9", "Month 10", "Month 11", "Month 12", "Month 13", "Month 14", "Month 15", "Month 16", "Month 17", "Month 18"
+              ]
+            },
             {
-              "type": "collapsible-food-timeline",
-              "name": "food-timeline-high-risk",
-              "title": "Food Introduction Timeline - High Risk Children",
-              "description": "Select specific foods you recommend introducing month by month for children at high risk for food allergy.",
-              "riskLevel": "high"
+              "type": "dropdown",
+              "name": "food_category",
+              "title": "Food Category",
+              "isRequired": true,
+              "choices": [
+                "STARCH/GLUTEN", "VEGETABLES", "LEGUMES", "MEAT", "FISH/SHELLFISH", "FRUIT", "DAIRY PRODUCTS / SUBSTITUTES", "EGG", "FAT/OIL", "SWEETS", "NUTS/SEEDS", "SALT/SPICES", "ADDITIONAL GUIDANCE"
+              ]
+            },
+            {
+              "type": "tagbox",
+              "name": "food_items",
+              "title": "Food Items to Introduce",
+              "description": "Select one or more items from the list.",
+              "isRequired": true,
+              "choicesFromQuestion": "food_items_source_high_risk"
+            },
+            {
+              "type": "expression",
+              "name": "food_items_source_high_risk",
+              "expression": "getFoodItems({panel.food_category})",
+              "includeIntoResult": false
             }
-          ]
+          ],
+          "panelAddText": "Add Entry",
+          "panelRemoveText": "Remove Entry"
         },
         {
           "type": "comment",

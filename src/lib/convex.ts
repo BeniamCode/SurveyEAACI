@@ -1,8 +1,9 @@
 import { ConvexReactClient } from "convex/react";
 
 // Initialize the Convex client
-// You'll need to replace this URL with your actual Convex deployment URL
-const convexUrl = import.meta.env.PUBLIC_CONVEX_URL || "https://your-convex-deployment.convex.cloud";
+const convexUrl = import.meta.env.PUBLIC_CONVEX_URL || 
+                  import.meta.env.CONVEX_URL || 
+                  "https://blissful-lemur-655.convex.cloud";
 
 export const convex = new ConvexReactClient(convexUrl);
 

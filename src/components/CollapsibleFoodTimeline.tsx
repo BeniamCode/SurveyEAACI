@@ -32,6 +32,10 @@ interface MonthFoodData {
 }
 
 const months = [
+  { key: 'birth', label: 'Birth' },
+  { key: 'month1', label: 'Month 1' },
+  { key: 'month2', label: 'Month 2' },
+  { key: 'month3', label: 'Month 3' },
   { key: 'month4', label: 'Month 4' },
   { key: 'month5', label: 'Month 5' },
   { key: 'month6', label: 'Month 6' },
@@ -41,6 +45,12 @@ const months = [
   { key: 'month10', label: 'Month 10' },
   { key: 'month11', label: 'Month 11' },
   { key: 'month12', label: 'Month 12' },
+  { key: 'month13', label: 'Month 13' },
+  { key: 'month14', label: 'Month 14' },
+  { key: 'month15', label: 'Month 15' },
+  { key: 'month16', label: 'Month 16' },
+  { key: 'month17', label: 'Month 17' },
+  { key: 'month18', label: 'Month 18' },
 ];
 
 export default function CollapsibleFoodTimeline({
