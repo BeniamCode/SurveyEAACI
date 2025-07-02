@@ -1,5 +1,5 @@
 {
-  "title": "輔食餵養：醫護及專職醫療人員實務操作調查",
+  "title": "輔食餵養(Complementary Feeding)：醫護及專職醫療人員實務操作調查",
   "introduction": {
     "description": "引進固體食物及除母乳/配方奶以外的飲品 (輔食餵養) 是嬰兒發展過程中的一個重要里程碑，對於胃腸道功能、免疫系統及新陳代謝過程帶來深遠影響。此外，食物引入的時間對於預防食物過敏至關重要。是次調查的目的是搜集來自不同國家的醫護及專職醫療人員有關引進固體食物的常規次序，以及這些做法如何影響嬰兒發生食物敏感的風險。",
     "duration": "完成問卷大約需要 10 分鐘。",
@@ -8,9 +8,9 @@
   },
   "survey": {
     "thanks": "謝謝您參與本研究。",
-    "guidance": "請盡可能準確地回答所有問題。您的回答將保密。",
+    "guidance": "感謝您同意參加。請回答以下所有問題，然後點擊「提交表格」按鈕",
     "basicInfo": "基本資料",
-    "title": "輔食餵養：醫護及專職醫療人員實務操作調查",
+    "title": "輔食餵養(Complementary Feeding)：醫護及專職醫療人員實務操作調查",
     "pages": {
       "basic_information": {
         "title": "基本資料"
@@ -70,7 +70,7 @@
         "breast_fed": "母乳餵養嬰兒：",
         "formula_fed": "配方奶餵養/混合餵養嬰兒：",
         "increased_risk": "食物過敏高風險嬰兒：",
-        "months": "月"
+        "months": "月份"
       },
       "q8": {
         "title": "您在什麼情況下會認為嬰兒屬於食物過敏「高風險」？（可選擇多項）",
@@ -249,8 +249,8 @@
     "fat_oil": "脂肪/食油",
     "sweets": "糖類",
     "nuts_seeds": "果仁/種籽",
-    "salt_spices": "鹽/香料",
-    "additional_guidance": "額外指導"
+    "salt_spices": "食鹽/香料",
+    "additional_guidance": "額外指引"
   },
   "foodItems": {
     "starch": {
