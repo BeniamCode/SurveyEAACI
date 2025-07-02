@@ -67,7 +67,7 @@ export default function IntroductionScreen({ onPasswordSubmit, onLanguageChange 
             src="/eaaci.jpg" 
             alt="EAACI Logo" 
             style={{ 
-              height: isMobile ? '40px' : '60px', 
+              height: isMobile ? '80px' : '120px', 
               width: 'auto',
               objectFit: 'contain'
             }} 
@@ -76,7 +76,7 @@ export default function IntroductionScreen({ onPasswordSubmit, onLanguageChange 
             src="/IHU.jpg" 
             alt="IHU Logo" 
             style={{ 
-              height: isMobile ? '40px' : '60px', 
+              height: isMobile ? '80px' : '120px', 
               width: 'auto',
               objectFit: 'contain'
             }} 
@@ -85,7 +85,7 @@ export default function IntroductionScreen({ onPasswordSubmit, onLanguageChange 
             src="/Apaaci.png" 
             alt="APAACI Logo" 
             style={{ 
-              height: isMobile ? '40px' : '60px', 
+              height: isMobile ? '80px' : '120px', 
               width: 'auto',
               objectFit: 'contain'
             }} 
