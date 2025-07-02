@@ -7,6 +7,8 @@ import { useTranslation } from "react-i18next";
 import surveyJson from "../survey-questions.json";
 import LanguageDropdown from "./LanguageDropdown";
 import { registerCollapsibleFoodTimelineWidget } from "./CollapsibleFoodTimelineWidget";
+import { convex, generateParticipantId, getSessionMetadata } from "../lib/convex";
+import { useMutation } from "convex/react";
 
 const { Title, Text } = Typography;
 
@@ -19,7 +21,12 @@ export default function SurveyComponent({
 }: SurveyComponentProps) {
   const [survey, setSurvey] = useState<Model | null>(null);
   const [isMobile, setIsMobile] = useState(false);
-  const { t } = useTranslation();
+  const [participantId] = useState(() => generateParticipantId());
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { t, i18n } = useTranslation();
+  
+  // Convex mutation for submitting survey responses
+  const submitSurveyResponse = useMutation("surveyResponses:submitSurveyResponse");
 
   useEffect(() => {
     const checkMobile = () => {
@@ -67,17 +74,46 @@ export default function SurveyComponent({
           elements: p.elements?.map(e => ({type: e.getType(), name: e.name}))
         })));
 
-        const saveSurveyResults = (survey: Model) => {
+        const saveSurveyResults = async (survey: Model) => {
             const results = survey.data;
             console.log("Survey results:", results);
 
-            // Display results in a simple alert for this healthcare survey
-            alert("Survey completed! Check the console for detailed results.");
+            setIsSubmitting(true);
+            
+            try {
+              // Submit to Convex
+              const responseId = await submitSurveyResponse({
+                participantId: participantId,
+                surveyData: {
+                  ...results,
+                  isComplete: true
+                },
+                metadata: {
+                  ...getSessionMetadata(),
+                  language: i18n.language,
+                }
+              });
+              
+              console.log("Survey submitted to Convex with ID:", responseId);
+              
+              // Display success message
+              alert(`Survey completed successfully! Your response has been recorded.\n\nParticipant ID: ${participantId}\nSubmission ID: ${responseId}`);
+              
+            } catch (error) {
+              console.error("Error submitting survey to Convex:", error);
+              
+              // Fallback: show results in alert
+              alert("Survey completed! There was an issue saving to the database, but your responses have been logged locally. Please contact support if needed.");
+            } finally {
+              setIsSubmitting(false);
+            }
           };
 
           surveyModel.onComplete.add(saveSurveyResults);
 
-          // Add value change listener to debug conditional logic
+          // Add value change listener for auto-save and debugging
+          let autoSaveTimeout: NodeJS.Timeout;
+          
           surveyModel.onValueChanged.add((survey: Model, options: any) => {
             console.log(
               "Survey value changed:",
@@ -86,6 +122,27 @@ export default function SurveyComponent({
               options.value
             );
             console.log("Current survey data:", survey.data);
+            
+            // Auto-save after 2 seconds of inactivity
+            clearTimeout(autoSaveTimeout);
+            autoSaveTimeout = setTimeout(async () => {
+              try {
+                await submitSurveyResponse({
+                  participantId: participantId,
+                  surveyData: {
+                    ...survey.data,
+                    isComplete: false
+                  },
+                  metadata: {
+                    ...getSessionMetadata(),
+                    language: i18n.language,
+                  }
+                });
+                console.log("Auto-saved survey progress");
+              } catch (error) {
+                console.log("Auto-save failed (this is normal):", error);
+              }
+            }, 2000);
             
             // Debug panel visibility
             if (options.name === "q10" || options.name === "q11") {
