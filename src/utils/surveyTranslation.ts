@@ -200,21 +200,6 @@ export const getTranslatedSurveyJson = () => {
           },
           {
             type: 'radiogroup',
-            name: 'test-conditional',
-            title: t('survey.questions.test_conditional.title'),
-            choices: [
-              { text: t('survey.questions.q10.choices.yes'), value: 'yes' },
-              { text: t('survey.questions.q10.choices.no'), value: 'no' }
-            ]
-          },
-          {
-            type: 'html',
-            name: 'test-conditional-result',
-            html: `<div style='background: green; color: white; padding: 10px; margin: 10px 0;'><strong>${t('common.success')}</strong></div>`,
-            visibleIf: '{test-conditional} == "yes"'
-          },
-          {
-            type: 'radiogroup',
             name: 'q10_advise_order_low_risk',
             title: t('survey.questions.q10.title'),
             isRequired: true,

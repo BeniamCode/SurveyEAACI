@@ -126,9 +126,6 @@
           "otherPlaceholder": "Please explain"
         }
       },
-      "test_conditional": {
-        "title": "TEST: Select Yes to see if conditional logic works"
-      },
       "q10": {
         "title": "Do you advise parents to introduce foods during complementary feeding in a specific order, when the child is not allergic or is at low risk for food allergy?",
         "choices": {
@@ -373,7 +370,6 @@
   },
   "common": {
     "loading": "Loading survey...",
-    "success": "SUCCESS! Conditional logic is working! You selected YES.",
     "required": "This field is required",
     "optional": "Optional"
   }
