@@ -72,9 +72,13 @@ export default function SurveyComponent({
           console.log("Found category data:", categoryData);
           
           if (categoryData) {
-            const items = categoryData.items.map(item => item.label);
-            console.log("Returning food items:", items);
-            return items;
+            // Return choices in the format SurveyJS expects
+            const choices = categoryData.items.map(item => ({
+              value: item.value,
+              text: item.label
+            }));
+            console.log("Returning food choices:", choices);
+            return choices;
           } else {
             console.log("No category found for:", category);
             return [];
@@ -139,6 +143,64 @@ export default function SurveyComponent({
             // Store food selections per panel to maintain state
             const panelFoodSelections = new Map();
             
+            // Set up dynamic choice loading for food items
+            surveyModel.onDynamicPanelItemValueChanged.add((survey: Model, options: any) => {
+              console.log("Dynamic panel item value changed:", options);
+              
+              if (options.name === "food_category") {
+                const panel = options.panel;
+                const foodItemsQuestion = panel.getQuestionByName("food_items");
+                
+                if (foodItemsQuestion && options.value) {
+                  console.log(`Updating food items for category: ${options.value}`);
+                  
+                  // Get food items for the selected category
+                  const categoryData = foodDatabase.find(cat => cat.name === options.value);
+                  
+                  if (categoryData) {
+                    const newChoices = categoryData.items.map(item => ({
+                      value: item.value,
+                      text: item.label
+                    }));
+                    
+                    console.log(`Setting ${newChoices.length} choices:`, newChoices);
+                    
+                    // Clear value and set new choices
+                    foodItemsQuestion.value = [];
+                    foodItemsQuestion.choices = newChoices;
+                  }
+                }
+              }
+            });
+
+            // Also handle when food_items question is rendered
+            surveyModel.onAfterRenderQuestion.add((survey: Model, options: any) => {
+              if (options.question.name === "food_items") {
+                console.log("food_items question rendered");
+                
+                const panel = options.question.parent;
+                if (panel) {
+                  const categoryQuestion = panel.getQuestionByName("food_category");
+                  const selectedCategory = categoryQuestion?.value;
+                  
+                  if (selectedCategory && options.question.choices.length === 0) {
+                    console.log(`Setting choices for rendered food_items, category: ${selectedCategory}`);
+                    
+                    const categoryData = foodDatabase.find(cat => cat.name === selectedCategory);
+                    if (categoryData) {
+                      const newChoices = categoryData.items.map(item => ({
+                        value: item.value,
+                        text: item.label
+                      }));
+                      
+                      options.question.choices = newChoices;
+                      console.log(`Set ${newChoices.length} choices on render`);
+                    }
+                  }
+                }
+              }
+            });
+
             surveyModel.onValueChanged.add((survey: Model, options: any) => {
               console.log(
                 "Survey value changed:",
@@ -147,58 +209,6 @@ export default function SurveyComponent({
                 options.value
               );
               console.log("Current survey data:", survey.data);
-              
-              // Handle food selection persistence and dynamic choice loading for dynamic panels
-              if (options.name.includes("food_category") && options.question && options.question.parent) {
-                const panelId = options.question.parent.id;
-                const panelType = options.question.parent.parent?.name; // food_plan_low_risk or food_plan_high_risk
-                
-                console.log(`Food category changed in panel ${panelId} (${panelType}) to: ${options.value}`);
-                
-                // Save current food selections before category change
-                const foodItemsQuestion = options.question.parent.getQuestionByName("food_items");
-                if (foodItemsQuestion && foodItemsQuestion.value && options.oldValue) {
-                  const key = `${panelType}_${panelId}`;
-                  if (!panelFoodSelections.has(key)) {
-                    panelFoodSelections.set(key, new Map());
-                  }
-                  const panelSelections = panelFoodSelections.get(key);
-                  
-                  // Store selections by previous category
-                  panelSelections.set(options.oldValue, foodItemsQuestion.value);
-                  console.log(`Saved selections for ${options.oldValue}:`, foodItemsQuestion.value);
-                }
-                
-                // Update choices and restore selections for new category
-                if (options.value && foodItemsQuestion) {
-                  // Get food items for the selected category
-                  const categoryData = foodDatabase.find(cat => cat.name === options.value);
-                  if (categoryData) {
-                    // Update choices for this food_items question
-                    const newChoices = categoryData.items.map(item => ({
-                      value: item.value,
-                      text: item.label
-                    }));
-                    
-                    console.log(`Setting choices for ${options.value}:`, newChoices);
-                    foodItemsQuestion.choices = newChoices;
-                    
-                    // Restore previously saved selections for this category
-                    const key = `${panelType}_${panelId}`;
-                    setTimeout(() => {
-                      if (panelFoodSelections.has(key)) {
-                        const panelSelections = panelFoodSelections.get(key);
-                        const savedSelections = panelSelections.get(options.value);
-                        
-                        if (savedSelections && savedSelections.length > 0) {
-                          console.log(`Restoring selections for ${options.value}:`, savedSelections);
-                          foodItemsQuestion.value = savedSelections;
-                        }
-                      }
-                    }, 50); // Small delay to ensure UI is updated
-                  }
-                }
-              }
               
               // Auto-save after 2 seconds of inactivity
               clearTimeout(autoSaveTimeout);
