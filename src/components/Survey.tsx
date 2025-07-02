@@ -276,79 +276,95 @@ export default function SurveyComponent({
 
   return (
     <div style={{ backgroundColor: "#f5f5f5", minHeight: "100vh" }}>
+      {/* Header Section with constrained width */}
       <div
         style={{
           backgroundColor: "white",
-          padding: isMobile ? "15px 10px" : "20px",
           borderBottom: "1px solid #e8e8e8",
           marginBottom: isMobile ? "10px" : "20px",
         }}
       >
         <div
           style={{
-            display: "flex",
-            flexDirection: isMobile ? "column" : "row",
-            justifyContent: "space-between",
-            alignItems: isMobile ? "stretch" : "center",
-            marginBottom: isMobile ? "10px" : "15px",
-            gap: "10px",
+            maxWidth: "900px",
+            margin: "0 auto",
+            padding: isMobile ? "15px 10px" : "20px",
           }}
         >
-          <Title
-            level={isMobile ? 4 : 2}
+          <div
             style={{
-              margin: 0,
-              color: "#1890ff",
-              flex: 1,
-              fontSize: isMobile ? "16px" : undefined,
-              lineHeight: isMobile ? "1.3" : undefined,
-              textAlign: isMobile ? "center" : "left",
+              display: "flex",
+              flexDirection: isMobile ? "column" : "row",
+              justifyContent: "space-between",
+              alignItems: isMobile ? "stretch" : "center",
+              marginBottom: isMobile ? "10px" : "15px",
+              gap: "10px",
             }}
           >
-            {t("title")}
-          </Title>
-          <div style={{ alignSelf: isMobile ? "center" : "flex-start" }}>
-            <LanguageDropdown onLanguageChange={onLanguageChange} />
+            <Title
+              level={isMobile ? 4 : 2}
+              style={{
+                margin: 0,
+                color: "#1890ff",
+                flex: 1,
+                fontSize: isMobile ? "16px" : undefined,
+                lineHeight: isMobile ? "1.3" : undefined,
+                textAlign: isMobile ? "center" : "left",
+              }}
+            >
+              {t("title")}
+            </Title>
+            <div style={{ alignSelf: isMobile ? "center" : "flex-start" }}>
+              <LanguageDropdown onLanguageChange={onLanguageChange} />
+            </div>
+          </div>
+
+          <div style={{ marginBottom: isMobile ? "8px" : "10px" }}>
+            <Text style={{ fontSize: isMobile ? "13px" : "14px" }}>
+              {t("survey.thanks")}
+            </Text>
+          </div>
+
+          <Text
+            style={{
+              fontStyle: "italic",
+              fontSize: isMobile ? "12px" : "14px",
+              display: "block",
+              lineHeight: "1.4",
+            }}
+          >
+            {t("survey.guidance")}
+          </Text>
+
+          <div
+            style={{
+              marginTop: isMobile ? "15px" : "20px",
+              paddingTop: isMobile ? "10px" : "15px",
+              borderTop: "1px solid #e8e8e8",
+            }}
+          >
+            <Title
+              level={isMobile ? 5 : 3}
+              style={{
+                margin: 0,
+                color: "#333",
+                fontSize: isMobile ? "14px" : undefined,
+              }}
+            >
+              {t("survey.basicInfo")}
+            </Title>
           </div>
         </div>
-
-        <div style={{ marginBottom: isMobile ? "8px" : "10px" }}>
-          <Text style={{ fontSize: isMobile ? "13px" : "14px" }}>
-            {t("survey.thanks")}
-          </Text>
-        </div>
-
-        <Text
-          style={{
-            fontStyle: "italic",
-            fontSize: isMobile ? "12px" : "14px",
-            display: "block",
-            lineHeight: "1.4",
-          }}
-        >
-          {t("survey.guidance")}
-        </Text>
-
-        <div
-          style={{
-            marginTop: isMobile ? "15px" : "20px",
-            paddingTop: isMobile ? "10px" : "15px",
-            borderTop: "1px solid #e8e8e8",
-          }}
-        >
-          <Title
-            level={isMobile ? 5 : 3}
-            style={{
-              margin: 0,
-              color: "#333",
-              fontSize: isMobile ? "14px" : undefined,
-            }}
-          >
-            {t("survey.basicInfo")}
-          </Title>
-        </div>
-      </div>{" "}
-      <div style={{ padding: isMobile ? "0 10px" : "0 20px" }}>
+      </div>
+      
+      {/* Survey Content with constrained width */}
+      <div 
+        style={{ 
+          maxWidth: "900px",
+          margin: "0 auto",
+          padding: isMobile ? "0 10px" : "0 20px",
+        }}
+      >
         <Survey model={survey} />
       </div>
     </div>
