@@ -14,7 +14,12 @@ export default function IntroductionScreen({ onPasswordSubmit, onLanguageChange 
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isMobile, setIsMobile] = useState(false);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  
+  // Debug logging for translations
+  console.log('IntroductionScreen - Current language:', i18n.language);
+  console.log('IntroductionScreen - Title translation:', t('title'));
+  console.log('IntroductionScreen - Continue translation:', t('introduction.continue'));
 
   useEffect(() => {
     const checkMobile = () => {
@@ -49,11 +54,13 @@ export default function IntroductionScreen({ onPasswordSubmit, onLanguageChange 
       padding: '10px',
       backgroundColor: '#f5f5f5'
     }}>
-      <Card style={{ 
-        maxWidth: '900px', 
-        width: '100%',
-        margin: '0 auto'
-      }}>
+      <Card 
+        key={i18n.language}
+        style={{ 
+          maxWidth: '900px', 
+          width: '100%',
+          margin: '0 auto'
+        }}>
         {/* Organization Logos */}
         <div style={{
           display: 'flex',

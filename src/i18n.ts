@@ -16,6 +16,7 @@ i18n
       en: { translation: en },
       el: { translation: el },
       pl: { translation: pl },
+      zh: { translation: zhTw },
       "zh-tw": { translation: zhTw },
     },
     fallbackLng: "en",

@@ -32,7 +32,9 @@ export default function LanguageDropdown({
   ];
 
   const handleChange = (value: string) => {
+    console.log('Language changing to:', value);
     i18n.changeLanguage(value);
+    console.log('Current i18n language after change:', i18n.language);
     onLanguageChange?.(value);
   };
 

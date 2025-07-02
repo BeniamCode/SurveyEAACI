@@ -23,6 +23,11 @@ export default function SurveyComponent({
   const [participantId] = useState(() => generateParticipantId());
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { t, i18n } = useTranslation();
+  
+  // Debug logging for translations
+  console.log('Survey - Current language:', i18n.language);
+  console.log('Survey - Title translation:', t('title'));
+  console.log('Survey - Loading translation:', t('common.loading'));
   const [currentFoodDatabase, setCurrentFoodDatabase] = useState(() => getTranslatedFoodDatabase());
   
   // Convex mutation for submitting survey responses
@@ -275,7 +280,7 @@ export default function SurveyComponent({
   }
 
   return (
-    <div style={{ backgroundColor: "#f5f5f5", minHeight: "100vh" }}>
+    <div key={i18n.language} style={{ backgroundColor: "#f5f5f5", minHeight: "100vh" }}>
       {/* Header Section with constrained width */}
       <div
         style={{
