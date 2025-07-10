@@ -9,6 +9,8 @@ import { Checkbox } from '../ui/checkbox';
 import { Textarea } from '../ui/textarea';
 import type { SurveyData } from '../../types/survey';
 import { OriginalChoices } from '../../types/survey';
+import FoodPlanningInterface from '../FoodPlanning/FoodPlanningInterface';
+import type { FoodPlacement } from '../../data/foodCategories';
 
 export default function FeedingPracticesStep() {
   const { t } = useTranslation();
@@ -375,19 +377,18 @@ export default function FeedingPracticesStep() {
               <p className="text-sm text-red-600">{errors.q10.message}</p>
             )}
             
-            {/* Q10 Food Plan Details (conditional) */}
+            {/* Q10 Food Plan Interface (conditional) */}
             {q10Value === 'yes' && (
-              <div className="ml-6 p-4 border-l-4 border-green-200 bg-green-50 space-y-4">
-                <Label className="text-base font-semibold">Please specify your recommended food introduction order for low-risk children *</Label>
+              <div className="mt-6">
                 <Controller
-                  name="q10_details"
+                  name="q10_food_plan"
                   control={control}
                   render={({ field }) => (
-                    <textarea
-                      {...field}
-                      className="w-full p-3 border border-green-300 rounded-md text-sm"
-                      rows={4}
-                      placeholder="Please describe your recommended food introduction order for children at low risk for food allergy (e.g., timing, specific foods, sequence)..."
+                    <FoodPlanningInterface
+                      riskLevel="low"
+                      title="Food Introduction Plan for Low-Risk Children"
+                      onPlacementsChange={(placements) => field.onChange(placements)}
+                      initialPlacements={field.value || []}
                     />
                   )}
                 />
@@ -424,19 +425,18 @@ export default function FeedingPracticesStep() {
               <p className="text-sm text-red-600">{errors.q11.message}</p>
             )}
             
-            {/* Q11 Food Plan Details (conditional) */}
+            {/* Q11 Food Plan Interface (conditional) */}
             {q11Value === 'yes' && (
-              <div className="ml-6 p-4 border-l-4 border-red-200 bg-red-50 space-y-4">
-                <Label className="text-base font-semibold">Please specify your recommended food introduction order for high-risk children *</Label>
+              <div className="mt-6">
                 <Controller
-                  name="q11_details"
+                  name="q11_food_plan"
                   control={control}
                   render={({ field }) => (
-                    <textarea
-                      {...field}
-                      className="w-full p-3 border border-red-300 rounded-md text-sm"
-                      rows={4}
-                      placeholder="Please describe your recommended food introduction order for children at high risk for food allergy (e.g., timing, specific foods, precautions, sequence)..."
+                    <FoodPlanningInterface
+                      riskLevel="high"
+                      title="Food Introduction Plan for High-Risk Children"
+                      onPlacementsChange={(placements) => field.onChange(placements)}
+                      initialPlacements={field.value || []}
                     />
                   )}
                 />

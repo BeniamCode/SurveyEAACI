@@ -1,4 +1,13 @@
 import { z } from 'zod';
+import type { FoodPlacement } from '../data/foodCategories';
+
+// Food placement schema
+export const foodPlacementSchema = z.object({
+  foodItemId: z.string(),
+  foodItemName: z.string(),
+  monthId: z.string(),
+  riskLevel: z.enum(['low', 'high']),
+});
 
 // Basic demographic schemas - matching original survey
 export const demographicsSchema = z.object({
@@ -25,9 +34,9 @@ export const feedingPracticesSchema = z.object({
   q9b_elaborate: z.array(z.string()).optional(),
   q9b_elaborate_other: z.string().optional(),
   q10: z.enum(['yes', 'no', '']).refine(val => val !== '', 'Please select Yes or No'),
-  q10_details: z.string().optional(),
+  q10_food_plan: z.array(foodPlacementSchema).optional(),
   q11: z.enum(['yes', 'no', '']).refine(val => val !== '', 'Please select Yes or No'),
-  q11_details: z.string().optional(),
+  q11_food_plan: z.array(foodPlacementSchema).optional(),
   q12: z.string().optional(),
   q14: z.array(z.string()).min(1, 'Please select at least one supplement option'),
   q14_other: z.string().optional(),
@@ -67,10 +76,10 @@ export type FoodPlanEntry = z.infer<typeof foodPlanEntrySchema>;
 export interface FoodCategory {
   name: string;
   code: string;
-  items: FoodItem[];
+  items: SurveyFoodItem[];
 }
 
-export interface FoodItem {
+export interface SurveyFoodItem {
   label: string;
   value: string;
 }
