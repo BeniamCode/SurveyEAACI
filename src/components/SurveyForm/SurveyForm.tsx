@@ -8,13 +8,12 @@ import { useMutation } from 'convex/react';
 import { convex, generateParticipantId, getSessionMetadata } from '../../lib/convex';
 import DemographicsStep from './DemographicsStep';
 import FeedingPracticesStep from './FeedingPracticesStep';
-import FoodPlansStep from './FoodPlansStep';
 import ReviewStep from './ReviewStep';
 import ProgressBar from './ProgressBar';
 import { Button } from '../ui/button';
 import { Card, CardContent } from '../ui/card';
 
-const steps: FormStep[] = ['demographics', 'feeding-practices', 'food-plans', 'review'];
+const steps: FormStep[] = ['demographics', 'feeding-practices', 'review'];
 
 export default function SurveyForm() {
   const [currentStep, setCurrentStep] = useState<FormStep>('demographics');
@@ -45,7 +44,9 @@ export default function SurveyForm() {
       q9b_main: '',
       q9b_elaborate: [],
       q10: '',
+      q10_details: '',
       q11: '',
+      q11_details: '',
       q12: '',
       q14: [],
       q15: '',
@@ -72,23 +73,8 @@ export default function SurveyForm() {
         isValid = await trigger([
           'q7a', 'q7b', 'q7c',
           'q8', 'q9a_main', 'q9b_main', 'q10',
-          'q11', 'q15', 'q16', 'q17', 'q18'
+          'q11', 'q14', 'q15', 'q16', 'q17', 'q18'
         ]);
-        // If valid, check if we should skip food-plans step
-        if (isValid) {
-          const formData = methods.getValues();
-          const q10Value = formData.q10;
-          const q11Value = formData.q11;
-          
-          // If neither Q10 nor Q11 is "yes", skip food-plans step and go directly to review
-          if (q10Value !== 'yes' && q11Value !== 'yes') {
-            setCurrentStep('review');
-            return;
-          }
-        }
-        break;
-      case 'food-plans':
-        isValid = true; // Food plans are optional
         break;
     }
     
@@ -98,18 +84,6 @@ export default function SurveyForm() {
   };
   
   const handlePrevious = () => {
-    if (currentStep === 'review') {
-      const formData = methods.getValues();
-      const q10Value = formData.q10;
-      const q11Value = formData.q11;
-      
-      // If neither Q10 nor Q11 is "yes", go back to feeding-practices instead of food-plans
-      if (q10Value !== 'yes' && q11Value !== 'yes') {
-        setCurrentStep('feeding-practices');
-        return;
-      }
-    }
-    
     if (currentStepIndex > 0) {
       setCurrentStep(steps[currentStepIndex - 1]);
     }
@@ -150,8 +124,6 @@ export default function SurveyForm() {
         return <DemographicsStep />;
       case 'feeding-practices':
         return <FeedingPracticesStep />;
-      case 'food-plans':
-        return <FoodPlansStep />;
       case 'review':
         return <ReviewStep />;
       default:

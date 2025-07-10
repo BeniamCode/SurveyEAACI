@@ -14,6 +14,10 @@ export default function FeedingPracticesStep() {
   const { t } = useTranslation();
   const { control, watch, formState: { errors } } = useFormContext<SurveyData>();
   
+  // Watch Q10 and Q11 values for conditional display
+  const q10Value = watch('q10');
+  const q11Value = watch('q11');
+  
   const q9aMainValue = watch('q9a_main');
   const q9bMainValue = watch('q9b_main');
   const q9aElaborateValues = watch('q9a_elaborate') || [];
@@ -370,6 +374,25 @@ export default function FeedingPracticesStep() {
             {errors.q10 && (
               <p className="text-sm text-red-600">{errors.q10.message}</p>
             )}
+            
+            {/* Q10 Food Plan Details (conditional) */}
+            {q10Value === 'yes' && (
+              <div className="ml-6 p-4 border-l-4 border-green-200 bg-green-50 space-y-4">
+                <Label className="text-base font-semibold">Please specify your recommended food introduction order for low-risk children *</Label>
+                <Controller
+                  name="q10_details"
+                  control={control}
+                  render={({ field }) => (
+                    <textarea
+                      {...field}
+                      className="w-full p-3 border border-green-300 rounded-md text-sm"
+                      rows={4}
+                      placeholder="Please describe your recommended food introduction order for children at low risk for food allergy (e.g., timing, specific foods, sequence)..."
+                    />
+                  )}
+                />
+              </div>
+            )}
           </div>
           
           {/* Q11 - Food introduction order for high risk */}
@@ -399,6 +422,25 @@ export default function FeedingPracticesStep() {
             />
             {errors.q11 && (
               <p className="text-sm text-red-600">{errors.q11.message}</p>
+            )}
+            
+            {/* Q11 Food Plan Details (conditional) */}
+            {q11Value === 'yes' && (
+              <div className="ml-6 p-4 border-l-4 border-red-200 bg-red-50 space-y-4">
+                <Label className="text-base font-semibold">Please specify your recommended food introduction order for high-risk children *</Label>
+                <Controller
+                  name="q11_details"
+                  control={control}
+                  render={({ field }) => (
+                    <textarea
+                      {...field}
+                      className="w-full p-3 border border-red-300 rounded-md text-sm"
+                      rows={4}
+                      placeholder="Please describe your recommended food introduction order for children at high risk for food allergy (e.g., timing, specific foods, precautions, sequence)..."
+                    />
+                  )}
+                />
+              </div>
             )}
           </div>
           

@@ -58,9 +58,9 @@
   color: #374151;
 }
 
-.formGroup .ant-input,
-.formGroup .ant-input-number,
-.formGroup .ant-select {
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
   width: 100%;
 }
 
@@ -134,7 +134,7 @@
   font-style: italic;
 }
 
-.reservedItem .ant-checkbox-wrapper {
+.reservedItem [role="checkbox"] {
   pointer-events: none;
   opacity: 0.6;
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Select } from "antd";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { useTranslation } from "react-i18next";
 
 interface LanguageDropdownProps {
@@ -39,19 +39,17 @@ export default function LanguageDropdown({
   };
 
   return (
-    <Select
-      value={i18n.language}
-      onChange={handleChange}
-      options={languages}
-      style={{
-        minWidth: isMobile ? 100 : 120,
-        fontSize: isMobile ? "12px" : "14px",
-        ...style,
-      }}
-      size={isMobile ? "small" : "small"}
-      dropdownStyle={{
-        fontSize: isMobile ? "12px" : "14px",
-      }}
-    />
+    <Select value={i18n.language} onValueChange={handleChange}>
+      <SelectTrigger className={`${isMobile ? 'w-24 text-xs' : 'w-28 text-sm'}`}>
+        <SelectValue />
+      </SelectTrigger>
+      <SelectContent>
+        {languages.map((lang) => (
+          <SelectItem key={lang.value} value={lang.value} className={isMobile ? 'text-xs' : 'text-sm'}>
+            {lang.label}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
   );
 }

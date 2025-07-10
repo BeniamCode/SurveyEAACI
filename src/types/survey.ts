@@ -25,7 +25,9 @@ export const feedingPracticesSchema = z.object({
   q9b_elaborate: z.array(z.string()).optional(),
   q9b_elaborate_other: z.string().optional(),
   q10: z.enum(['yes', 'no', '']).refine(val => val !== '', 'Please select Yes or No'),
+  q10_details: z.string().optional(),
   q11: z.enum(['yes', 'no', '']).refine(val => val !== '', 'Please select Yes or No'),
+  q11_details: z.string().optional(),
   q12: z.string().optional(),
   q14: z.array(z.string()).min(1, 'Please select at least one supplement option'),
   q14_other: z.string().optional(),
@@ -33,19 +35,6 @@ export const feedingPracticesSchema = z.object({
   q16: z.enum(['q15_18_a1', 'q15_18_a2', 'q15_18_a3', '']).refine(val => val !== '', 'Please select an interval'),
   q17: z.enum(['q15_18_a1', 'q15_18_a2', 'q15_18_a3', '']).refine(val => val !== '', 'Please select an interval'),
   q18: z.enum(['q15_18_a1', 'q15_18_a2', 'q15_18_a3', '']).refine(val => val !== '', 'Please select an interval'),
-}).refine((data) => {
-  // If q9a_main is 'yes', q9a_elaborate must have at least one selection
-  if (data.q9a_main === 'yes' && (!data.q9a_elaborate || data.q9a_elaborate.length === 0)) {
-    return false;
-  }
-  // If q9b_main is 'yes', q9b_elaborate must have at least one selection
-  if (data.q9b_main === 'yes' && (!data.q9b_elaborate || data.q9b_elaborate.length === 0)) {
-    return false;
-  }
-  return true;
-}, {
-  message: 'Please select at least one option when answering Yes',
-  path: ['q9a_elaborate'] // This will show the error on the elaborate field
 });
 
 // Food plan entry schema - matching original survey structure

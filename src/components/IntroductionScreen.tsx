@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Button, Card, Input, Typography, Alert, Space } from 'antd';
 import { useTranslation } from 'react-i18next';
+import { Button } from './ui/button';
+import { Card, CardContent } from './ui/card';
+import { Input } from './ui/input';
 import LanguageDropdown from './LanguageDropdown';
-
-const { Title, Paragraph } = Typography;
 
 interface IntroductionScreenProps {
   onPasswordSubmit: (password: string) => void;
@@ -46,145 +46,83 @@ export default function IntroductionScreen({ onPasswordSubmit, onLanguageChange 
   };
 
   return (
-    <div style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center', 
-      minHeight: '100vh',
-      padding: '10px',
-      backgroundColor: '#f5f5f5'
-    }}>
+    <div className="flex justify-center items-center min-h-screen p-4 bg-gray-50">
       <Card 
         key={i18n.language}
-        style={{ 
-          maxWidth: '900px', 
-          width: '100%',
-          margin: '0 auto'
-        }}>
-        {/* Organization Logos */}
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          gap: isMobile ? '15px' : '30px',
-          marginBottom: isMobile ? '20px' : '30px',
-          flexWrap: 'wrap'
-        }}>
-          <img 
-            src="/eaaci.jpg" 
-            alt="EAACI Logo" 
-            style={{ 
-              height: isMobile ? '80px' : '120px', 
-              width: 'auto',
-              objectFit: 'contain'
-            }} 
-          />
-          <img 
-            src="/IHU.jpg" 
-            alt="IHU Logo" 
-            style={{ 
-              height: isMobile ? '80px' : '120px', 
-              width: 'auto',
-              objectFit: 'contain'
-            }} 
-          />
-          <img 
-            src="/Apaaci.png" 
-            alt="APAACI Logo" 
-            style={{ 
-              height: isMobile ? '80px' : '120px', 
-              width: 'auto',
-              objectFit: 'contain'
-            }} 
-          />
-        </div>
-        <div style={{ 
-          display: 'flex', 
-          flexDirection: isMobile ? 'column' : 'row',
-          justifyContent: 'space-between', 
-          alignItems: isMobile ? 'stretch' : 'center',
-          marginBottom: isMobile ? '15px' : '20px',
-          gap: '10px'
-        }}>
-          <Title level={isMobile ? 4 : 2} style={{ 
-            margin: 0, 
-            color: '#1890ff', 
-            flex: 1, 
-            textAlign: 'center',
-            fontSize: isMobile ? '16px' : undefined,
-            lineHeight: isMobile ? '1.3' : undefined
-          }}>
-            {t('title')}
-          </Title>
-          <div style={{ alignSelf: isMobile ? 'center' : 'flex-start' }}>
-            <LanguageDropdown onLanguageChange={onLanguageChange} />
-          </div>
-        </div>
-        
-        <Paragraph style={{ 
-          fontSize: isMobile ? '14px' : '16px', 
-          lineHeight: '1.6', 
-          textAlign: 'justify',
-          marginBottom: isMobile ? '15px' : '20px'
-        }}>
-          {t('introduction.description')}
-        </Paragraph>
-        
-        <Paragraph style={{ 
-          fontSize: isMobile ? '14px' : '16px', 
-          fontWeight: 'bold', 
-          marginBottom: isMobile ? '20px' : '30px' 
-        }}>
-          {t('introduction.duration')}
-        </Paragraph>
-        
-        <div style={{ textAlign: 'center' }}>
-          <Paragraph style={{ 
-            fontSize: isMobile ? '14px' : '16px', 
-            marginBottom: '20px' 
-          }}>
-            {t('introduction.passwordPrompt')}
-          </Paragraph>
-          
-          <Space direction="vertical" size="large" style={{ 
-            width: '100%', 
-            maxWidth: isMobile ? '300px' : '400px' 
-          }}>
-            <Input.Password
-              placeholder="Enter password"
-              size={isMobile ? 'middle' : 'large'}
-              value={password}
-              onChange={(e) => {
-                setPassword(e.target.value);
-                setError('');
-              }}
-              onKeyPress={handleKeyPress}
-              style={{ textAlign: 'center' }}
+        className="max-w-4xl w-full mx-auto">
+        <CardContent className="p-8">
+          {/* Organization Logos */}
+          <div className={`flex justify-center items-center ${isMobile ? 'gap-4 mb-5' : 'gap-8 mb-8'} flex-wrap`}>
+            <img 
+              src="/eaaci.jpg" 
+              alt="EAACI Logo" 
+              className={`${isMobile ? 'h-20' : 'h-30'} w-auto object-contain`}
             />
+            <img 
+              src="/IHU.jpg" 
+              alt="IHU Logo" 
+              className={`${isMobile ? 'h-20' : 'h-30'} w-auto object-contain`}
+            />
+            <img 
+              src="/Apaaci.png" 
+              alt="APAACI Logo" 
+              className={`${isMobile ? 'h-20' : 'h-30'} w-auto object-contain`}
+            />
+          </div>
+          
+          <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} justify-between ${isMobile ? 'items-stretch' : 'items-center'} ${isMobile ? 'mb-4' : 'mb-5'} gap-3`}>
+            <h1 className={`${isMobile ? 'text-lg' : 'text-3xl'} font-bold text-blue-600 flex-1 text-center m-0 ${isMobile ? 'leading-tight' : ''}`}>
+              {t('title')}
+            </h1>
+            <div className={isMobile ? 'self-center' : 'self-start'}>
+              <LanguageDropdown onLanguageChange={onLanguageChange} />
+            </div>
+          </div>
+          
+          <p className={`${isMobile ? 'text-sm' : 'text-base'} leading-relaxed text-justify ${isMobile ? 'mb-4' : 'mb-5'}`}>
+            {t('introduction.description')}
+          </p>
+          
+          <p className={`${isMobile ? 'text-sm' : 'text-base'} font-bold ${isMobile ? 'mb-5' : 'mb-8'}`}>
+            {t('introduction.duration')}
+          </p>
+          
+          <div className="text-center">
+            <p className={`${isMobile ? 'text-sm' : 'text-base'} mb-5`}>
+              {t('introduction.passwordPrompt')}
+            </p>
             
-            {error && (
-              <Alert
-                message={error}
-                type="error"
-                showIcon
-                style={{ fontSize: isMobile ? '12px' : '14px' }}
+            <div className={`flex flex-col items-center gap-6 w-full ${isMobile ? 'max-w-xs' : 'max-w-sm'} mx-auto`}>
+              <Input
+                type="password"
+                placeholder="Enter password"
+                className={`${isMobile ? 'h-10' : 'h-12'} text-center`}
+                value={password}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                  setError('');
+                }}
+                onKeyPress={handleKeyPress}
               />
-            )}
-            
-            <Button
-              type="primary"
-              size={isMobile ? 'middle' : 'large'}
-              onClick={handleSubmit}
-              disabled={!password.trim()}
-              style={{ 
-                width: isMobile ? '150px' : '200px',
-                fontSize: isMobile ? '14px' : '16px'
-              }}
-            >
-              {t('introduction.continue')}
-            </Button>
-          </Space>
-        </div>
+              
+              {error && (
+                <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-md w-full">
+                  <div className="flex items-center">
+                    <span className={`${isMobile ? 'text-xs' : 'text-sm'}`}>{error}</span>
+                  </div>
+                </div>
+              )}
+              
+              <Button
+                onClick={handleSubmit}
+                disabled={!password.trim()}
+                className={`${isMobile ? 'w-36 text-sm' : 'w-48 text-base'} ${isMobile ? 'h-10' : 'h-12'}`}
+              >
+                {t('introduction.continue')}
+              </Button>
+            </div>
+          </div>
+        </CardContent>
       </Card>
     </div>
   );
