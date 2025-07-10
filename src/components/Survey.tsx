@@ -8,6 +8,7 @@ import LanguageDropdown from "./LanguageDropdown";
 import { getTranslatedSurveyJson, getTranslatedFoodDatabase } from "../utils/surveyTranslation";
 import { convex, generateParticipantId, getSessionMetadata } from "../lib/convex";
 import { useMutation } from "convex/react";
+import { useFoodReservationStore } from "../stores/foodReservationStore";
 
 const { Title, Text } = Typography;
 
@@ -31,7 +32,10 @@ export default function SurveyComponent({
   const [currentFoodDatabase, setCurrentFoodDatabase] = useState(() => getTranslatedFoodDatabase());
   
   // Convex mutation for submitting survey responses
-  const submitSurveyResponse = useMutation("surveyResponses:submitSurveyResponse");
+  const submitSurveyResponse = useMutation("surveyResponses:submitSurveyResponse" as any);
+  
+  // Get food reservation store methods
+  const { getReservedFoods, updateReservations, clearAllReservations } = useFoodReservationStore();
 
   useEffect(() => {
     const checkMobile = () => {
@@ -108,6 +112,9 @@ export default function SurveyComponent({
 
         // Create survey model
         {
+          // Clear any existing reservations when creating new survey
+          clearAllReservations();
+          
           // Create survey model with translated content
           const translatedSurveyJson = getTranslatedSurveyJson();
           console.log("Creating survey model with translated JSON:", translatedSurveyJson);
@@ -142,6 +149,9 @@ export default function SurveyComponent({
                 
                 console.log("Survey submitted to Convex with ID:", responseId);
                 
+                // Clear all food reservations after successful submission
+                clearAllReservations();
+                
                 // Display success message
                 alert(`Survey completed successfully! Your response has been recorded.\n\nParticipant ID: ${participantId}\nSubmission ID: ${responseId}`);
                 
@@ -158,7 +168,7 @@ export default function SurveyComponent({
             surveyModel.onComplete.add(saveSurveyResults);
 
             // Add value change listener for auto-save and debugging
-            let autoSaveTimeout: NodeJS.Timeout;
+            let autoSaveTimeout: any;
             
             // Store food selections per panel to maintain state
             const panelFoodSelections = new Map();
@@ -169,37 +179,127 @@ export default function SurveyComponent({
               
               if (options.name === "food_category") {
                 const panel = options.panel;
+                const panelId = panel.id;
                 const foodItemsQuestion = panel.getQuestionByName("food_items");
                 
                 if (foodItemsQuestion && options.value) {
                   console.log(`Updating food items for category: ${options.value}`);
                   
+                  // Store current selection before changing category
+                  const previousCategory = options.oldValue || categoryQuestion.oldValue;
+                  const currentSelections = foodItemsQuestion.value || [];
+                  if (currentSelections.length > 0 && previousCategory) {
+                    console.log(`Storing selections for ${previousCategory}:`, currentSelections);
+                    panelFoodSelections.set(`${panelId}_${previousCategory}`, currentSelections);
+                  }
+                  
                   // Get food items for the selected category
                   const categoryData = currentFoodDatabase.find(cat => cat.name === options.value);
                   
                   if (categoryData) {
-                    const newChoices = categoryData.items.map(item => ({
-                      value: item.value,
-                      text: item.label
-                    }));
+                    // Get parent question name for reservation tracking
+                    const parentQuestion = panel.parent;
+                    const questionName = parentQuestion?.name || '';
+                    
+                    // Get reserved foods for this question type
+                    const reservedFoods = getReservedFoods(questionName, panelId);
+                    console.log(`Reserved foods for ${questionName} (excluding panel ${panelId}):`, Array.from(reservedFoods.entries()));
+                    
+                    const newChoices = categoryData.items.map(item => {
+                      const reservedMonth = reservedFoods.get(item.value);
+                      return {
+                        value: item.value,
+                        text: reservedMonth ? `${item.label} (Reserved for ${reservedMonth})` : item.label
+                      };
+                    });
+                    
+                    // Set choices
+                    foodItemsQuestion.choices = newChoices;
+                    
+                    // Create a list of reserved items
+                    const reservedItems = Array.from(reservedFoods.keys());
+                    
+                    // Use choicesEnableIf to disable reserved items
+                    foodItemsQuestion.choicesEnableIf = `{item} notin [${reservedItems.map(item => `'${item}'`).join(', ')}]`;
                     
                     console.log(`Setting ${newChoices.length} choices:`, newChoices);
                     
-                    // Clear value and set new choices
-                    foodItemsQuestion.value = [];
-                    foodItemsQuestion.choices = newChoices;
+                    // Restore previous selections for this category if they exist
+                    const previousSelections = panelFoodSelections.get(`${panelId}_${options.value}`) || [];
+                    console.log(`Restoring previous selections for ${options.value}:`, previousSelections);
+                    
+                    // Filter out any items that are now reserved by other panels
+                    const validSelections = previousSelections.filter((val: string) => 
+                      !reservedFoods.has(val)
+                    );
+                    
+                    if (validSelections.length > 0) {
+                      foodItemsQuestion.value = validSelections;
+                    } else {
+                      foodItemsQuestion.value = [];
+                    }
+                    
+                    // Store the old value for next time
+                    categoryQuestion.oldValue = options.value;
                   }
+                }
+              } else if (options.name === "month" || options.name === "food_items") {
+                // Update reservations when month or food items change
+                const panel = options.panel;
+                const panelId = panel.id;
+                const parentQuestion = panel.parent;
+                const questionName = parentQuestion?.name || '';
+                const monthValue = panel.getQuestionByName('month')?.value || '';
+                const foodItems = panel.getQuestionByName('food_items')?.value || [];
+                
+                console.log(`Updating reservations - Panel: ${panelId}, Question: ${questionName}, Month: ${monthValue}, Items:`, foodItems);
+                
+                if (monthValue && Array.isArray(foodItems)) {
+                  updateReservations(panelId, questionName, foodItems, monthValue);
+                  
+                  // Refresh all panels to update reserved items display
+                  const allPanels = parentQuestion?.panels || [];
+                  allPanels.forEach((p: any) => {
+                    if (p.id !== panelId) {
+                      const foodItemsQ = p.getQuestionByName('food_items');
+                      const categoryQ = p.getQuestionByName('food_category');
+                      if (foodItemsQ && categoryQ?.value) {
+                        // Trigger a refresh of the choices
+                        const event = { name: 'food_category', value: categoryQ.value, panel: p, panelData: p.data, panelIndex: 0, question: categoryQ } as any;
+                        surveyModel.onDynamicPanelItemValueChanged.fire(survey, event);
+                      }
+                    }
+                  });
                 }
               }
             });
 
             // Also handle when food_items question is rendered
+            // Add handler to store selections before category changes
+            surveyModel.onMatrixCellValueChanging.add((survey: Model, options: any) => {
+              if (options.columnName === "food_category") {
+                const panel = options.row;
+                if (panel) {
+                  const panelId = panel.id;
+                  const foodItemsQuestion = panel.getQuestionByName("food_items");
+                  const currentCategory = panel.getQuestionByName("food_category")?.value;
+                  const currentSelections = foodItemsQuestion?.value || [];
+                  
+                  if (currentCategory && currentSelections.length > 0) {
+                    console.log(`Storing selections before category change - ${currentCategory}:`, currentSelections);
+                    panelFoodSelections.set(`${panelId}_${currentCategory}`, currentSelections);
+                  }
+                }
+              }
+            });
+            
             surveyModel.onAfterRenderQuestion.add((survey: Model, options: any) => {
               if (options.question.name === "food_items") {
                 console.log("food_items question rendered");
                 
                 const panel = options.question.parent;
                 if (panel) {
+                  const panelId = panel.id;
                   const categoryQuestion = panel.getQuestionByName("food_category");
                   const selectedCategory = categoryQuestion?.value;
                   
@@ -208,10 +308,26 @@ export default function SurveyComponent({
                     
                     const categoryData = currentFoodDatabase.find(cat => cat.name === selectedCategory);
                     if (categoryData) {
-                      const newChoices = categoryData.items.map(item => ({
-                        value: item.value,
-                        text: item.label
-                      }));
+                      // Get parent question name for reservation tracking
+                      const parentQuestion = panel.parent;
+                      const questionName = parentQuestion?.name || '';
+                      
+                      // Get reserved foods for this question type
+                      const reservedFoods = getReservedFoods(questionName, panelId);
+                      
+                      const newChoices = categoryData.items.map(item => {
+                        const reservedMonth = reservedFoods.get(item.value);
+                        return {
+                          value: item.value,
+                          text: reservedMonth ? `${item.label} (Reserved for ${reservedMonth})` : item.label
+                        };
+                      });
+                      
+                      // Create a list of reserved items
+                      const reservedItems = Array.from(reservedFoods.keys());
+                      
+                      // Use choicesEnableIf to disable reserved items
+                      options.question.choicesEnableIf = `{item} notin [${reservedItems.map(item => `'${item}'`).join(', ')}]`;
                       
                       options.question.choices = newChoices;
                       console.log(`Set ${newChoices.length} choices on render`);
@@ -219,6 +335,33 @@ export default function SurveyComponent({
                   }
                 }
               }
+            });
+            
+            // Handle panel removal to clear reservations
+            surveyModel.onDynamicPanelRemoved.add((survey: Model, options: any) => {
+              const panel = options.panel;
+              const panelId = panel.id;
+              const parentQuestion = options.question;
+              const questionName = parentQuestion?.name || '';
+              
+              // Clear reservations for removed panel
+              updateReservations(panelId, questionName, [], '');
+              
+              // Clear stored selections for this panel
+              Array.from(panelFoodSelections.keys())
+                .filter(key => key.startsWith(`${panelId}_`))
+                .forEach(key => panelFoodSelections.delete(key));
+              
+              // Refresh remaining panels
+              const allPanels = parentQuestion?.panels || [];
+              allPanels.forEach((p: any) => {
+                const foodItemsQ = p.getQuestionByName('food_items');
+                const categoryQ = p.getQuestionByName('food_category');
+                if (foodItemsQ && categoryQ?.value) {
+                  const event = { name: 'food_category', value: categoryQ.value, panel: p, panelData: p.data, panelIndex: 0, question: categoryQ } as any;
+                  surveyModel.onDynamicPanelItemValueChanged.fire(survey, event);
+                }
+              });
             });
 
             surveyModel.onValueChanged.add((survey: Model, options: any) => {
@@ -229,6 +372,53 @@ export default function SurveyComponent({
                 options.value
               );
               console.log("Current survey data:", survey.data);
+              
+              // Handle food_items changes directly
+              if (options.name === "food_items" && options.question) {
+                const panel = options.question.parent;
+                if (panel && panel.getType() === "panel") {
+                  const panelId = panel.id;
+                  const parentQuestion = panel.parent;
+                  const questionName = parentQuestion?.name || '';
+                  const monthValue = panel.getQuestionByName('month')?.value || '';
+                  const foodItems = options.value || [];
+                  
+                  console.log(`Direct food_items change - Panel: ${panelId}, Question: ${questionName}, Month: ${monthValue}, Items:`, foodItems);
+                  
+                  if (monthValue && Array.isArray(foodItems) && (questionName === 'food_plan_low_risk' || questionName === 'food_plan_high_risk')) {
+                    updateReservations(panelId, questionName, foodItems, monthValue);
+                    
+                    // Refresh all other panels
+                    const allPanels = parentQuestion?.panels || [];
+                    allPanels.forEach((p: any) => {
+                      if (p.id !== panelId) {
+                        const foodItemsQ = p.getQuestionByName('food_items');
+                        const categoryQ = p.getQuestionByName('food_category');
+                        if (foodItemsQ && categoryQ?.value) {
+                          const categoryData = currentFoodDatabase.find(cat => cat.name === categoryQ.value);
+                          if (categoryData) {
+                            const reservedFoods = getReservedFoods(questionName, p.id);
+                            const newChoices = categoryData.items.map(item => {
+                              const reservedMonth = reservedFoods.get(item.value);
+                              return {
+                                value: item.value,
+                                text: reservedMonth ? `${item.label} (Reserved for ${reservedMonth})` : item.label
+                              };
+                            });
+                            
+                            // Create a list of reserved items
+                            const reservedItems = Array.from(reservedFoods.keys());
+                            
+                            // Use choicesEnableIf to disable reserved items  
+                            foodItemsQ.choicesEnableIf = `{item} notin [${reservedItems.map(item => `'${item}'`).join(', ')}]`;
+                            foodItemsQ.choices = newChoices;
+                          }
+                        }
+                      }
+                    });
+                  }
+                }
+              }
               
               // Auto-save after 2 seconds of inactivity
               clearTimeout(autoSaveTimeout);

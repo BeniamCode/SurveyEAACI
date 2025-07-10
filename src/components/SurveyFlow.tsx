@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import IntroductionScreen from './IntroductionScreen';
-import SurveyComponent from './Survey';
+import SurveyForm from './SurveyForm/SurveyForm';
+import LanguageDropdown from './LanguageDropdown';
 import '../i18n';
 
 type FlowStep = 'introduction' | 'survey';
@@ -50,9 +51,19 @@ export default function SurveyFlow() {
     
     case 'survey':
       return (
-        <SurveyComponent
-          onLanguageChange={handleLanguageChange}
-        />
+        <div className="min-h-screen bg-gray-50">
+          <div className="bg-white border-b border-gray-200 mb-6">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+              <div className="flex justify-between items-center">
+                <h1 className="text-2xl font-bold text-gray-900">
+                  {i18n.t('title')}
+                </h1>
+                <LanguageDropdown onLanguageChange={handleLanguageChange} />
+              </div>
+            </div>
+          </div>
+          <SurveyForm />
+        </div>
       );
     
     default:

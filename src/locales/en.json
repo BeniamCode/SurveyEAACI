@@ -11,6 +11,33 @@
     "guidance": "Please answer all questions as accurately as possible. Your responses will remain confidential.",
     "basicInfo": "Basic Information",
     "title": "Complementary feeding: a survey on the Healthcare Professional practices",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit Survey",
+    "completed": "Survey completed successfully! Your response has been recorded.\\n\\nParticipant ID: {{participantId}}\\nSubmission ID: {{responseId}}",
+    "error": "There was an error submitting your survey. Please try again.",
+    "steps": {
+      "demographics": "Demographics",
+      "feeding_practices": "Feeding Practices",
+      "food_plans": "Food Plans",
+      "review": "Review"
+    },
+    "food_plan": {
+      "instructions": "Please specify the introduction order by adding entries for each month and food category you wish to include.",
+      "low_risk_title": "Food Introduction Plan for Low-Risk Children",
+      "high_risk_title": "Food Introduction Plan for High-Risk Children",
+      "month": "Month of Introduction",
+      "month_placeholder": "Select month",
+      "category": "Food Category",
+      "category_placeholder": "Select food category",
+      "items": "Food Items to Introduce",
+      "items_required": "Please select at least one food item",
+      "add_entry": "Add Entry",
+      "no_plans_needed": "No food plans needed based on your previous answers."
+    },
+    "review": {
+      "instructions": "Please review your answers before submitting the survey."
+    },
     "pages": {
       "basic_information": {
         "title": "Basic Information"
