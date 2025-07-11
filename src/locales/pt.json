@@ -1,0 +1,169 @@
+{
+  "survey": {
+    "foodPlanning": {
+      "foodCategories": "Categorias de Alimentos",
+      "lowRiskTimeline": "Baixo risco Timeline",
+      "highRiskTimeline": "Alto risco Timeline",
+      "dragHere": "Arraste alimentos aqui para {{month}}",
+      "summary": "Resumo: {{count}} alimentos planejados"
+    },
+    "interface": {
+      "str1": "Alimentação complementar: questionário sobre as práticas dos profissionais de saúde.",
+      "str2": "Wprowadzanie pokarmów stałych oraz napojów innych niż mleko matki lub mleko modyfikowane do diety dziecka (rozszerzanie diety) jest kluczowym kamieniem milowym w rozwoju",
+      "str3": "O preenchimento do questionário requer aproximadamente 10 minutos.",
+      "str4": "które zostało Pani/Panu przekazane:",
+      "str5": "Mês",
+      "str6": "alimentação complementar",
+      "str7": "Bitte geben Sie die gewünschte Reihenfolge an",
+      "str8": "Indica il tuo ordine preferito toccando e tenendo premuto un elemento dall'elenco INDICAZIONI fino a quando non viene visualizzato un contorno verde e quindi trascinandolo in qualsiasi altro elenco.",
+      "str9": "Não Alérgico / Baixo risco",
+      "str10": "Alto risco",
+      "str11": "Baixo risco",
+      "str12": "Alto risco",
+      "str13": "Enviar formulário",
+      "str14": "Nascimento",
+      "str15": "dass Sie der Teilnahme zugestimmt haben. Bitte beantworten Sie alle untenstehenden Fragen und klicken Sie anschließend auf die Schaltfläche „Formular absenden“.",
+      "str16": "Enviar formulário",
+      "str17": "Informação geral",
+      "str18": "Já adicionou este item a esta lista",
+      "str19": "Conselho",
+      "str20": "anos",
+      "str21": "meses",
+      "str22": "Proceed",
+      "str23": "Please provide the correct password.",
+      "str24": "aby przedstawiła/ł Pani/Pan ogólne zasady"
+    },
+    "title": "Alimentação complementar: questionário sobre as práticas dos profissionais de saúde.",
+    "submit": "Enviar formulário",
+    "thanks": "dass Sie der Teilnahme zugestimmt haben. Bitte beantworten Sie alle untenstehenden Fragen und klicken Sie anschließend auf die Schaltfläche „Formular absenden“.",
+    "months": "meses",
+    "basicInfo": "Informação geral"
+  },
+  "foodCategories": {
+    "starch_gluten": "AMIDO/GLÚTEN",
+    "vegetables": "HORTÍCOLAS",
+    "legumes": "LEGUMINOSAS",
+    "meat": "CARNE",
+    "fish_shellfish": "PEIXE/MARISCO",
+    "fruit": "FRUTA",
+    "dairy": "PRODUTOS LÁCTEOS/ SUBSTITUTOS DE PRODUTOS LÁCTEOS",
+    "egg": "OVO",
+    "fat_oil": "GORDURA/ÓLEO",
+    "sweets": "DULCES",
+    "nuts_seeds": "SEMENTES DE NOZES",
+    "salt_spices": "SAL/ESPECIARIAS",
+    "additional_guidance": "ORIENTAÇÃO ADICIONAL"
+  },
+  "foodItems": {
+    "starch": {
+      "gluten_grains": "Cereais contendo glúten (trigo, cevada, centeio ex. massa, pão, etc.)",
+      "gluten_free_cereals": "Cereais sem glúten (trigo sarraceno, quinoa, aveia)",
+      "maize_products": "Produtos de milho (ex. polenta, lanches de milho para bebês)",
+      "potato_sweet_potato": "Batata, Batata-doce",
+      "rice": "Arroz (incluindo farinha de arroz)",
+      "rice_pudding": "Pudim de arroz (contendo leite)",
+      "semolina_pudding": "Pudim de sêmola (contendo leite)",
+      "trahanas": "Trahanas"
+    },
+    "vegetables": {
+      "cabbage_broccoli": "Repolho, brócolis, couve-flor",
+      "carrot": "Cenoura",
+      "root_vegetables": "Vegetais de raiz como aipo",
+      "leafy_vegetables": "Vegetais de folha verde (espinafre, alface, etc.)",
+      "pea_beans": "Ervilha, vagem",
+      "pepper": "Pimentão",
+      "tomato": "Tomate",
+      "zucchini": "Abobrinha ou outras abóboras"
+    },
+    "legumes": {
+      "beans": "Feijão (todos os tipos)",
+      "chickpeas": "Grão-de-bico",
+      "lentils": "Lentilhas",
+      "soya": "Soja",
+      "peanut": "Amendoim/manteiga de amendoim"
+    },
+    "meat": {
+      "poultry": "Frango/peru/pato",
+      "processed_meat": "Carne processada como frios/presunto/salame",
+      "lamb": "Cordeiro",
+      "liver_pate": "Patê de fígado",
+      "pork": "Porco",
+      "rabbit": "Coelho",
+      "beef": "Carne bovina",
+      "venison": "Carne de veado"
+    },
+    "fish": {
+      "crustaceans": "Crustáceos (camarões, lagostins, caranguejos, lagostas)",
+      "fish": "Peixe",
+      "mollusks": "Moluscos (amêijoas, vieiras, ostras, mexilhões, polvo, caracóis, lulas, chocos)"
+    },
+    "fruit": {
+      "apple": "Maçã (e produtos de maçã como molho de maçã)",
+      "mango": "Manga",
+      "banana": "Banana",
+      "berries": "Bagas incluindo morango",
+      "dried_fruits": "Frutas secas",
+      "figs": "Figos",
+      "fresh_juice": "Suco de fruta fresco",
+      "fruit_juice": "Suco de fruta (com ou sem açúcar)",
+      "grapes": "Uvas",
+      "kiwi": "Kiwi",
+      "melon": "Melão, melancia",
+      "citrus": "Laranja, tangerina",
+      "stone_fruits": "Pêssego, damasco",
+      "pear": "Pêra"
+    },
+    "dairy": {
+      "plant_milk": "Leite vegetal (especificar aqui fortificado/não fortificado)",
+      "cow_yogurt": "Iogurte de leite de vaca",
+      "cream_cheese": "Queijo cremoso",
+      "feta": "Queijo feta",
+      "fresh_cow_milk": "Leite de vaca fresco",
+      "goat_sheep_milk": "Leite fresco de cabra/ovelha",
+      "kephir": "Kefir",
+      "kids_yogurt": "Iogurte para crianças",
+      "rice_milk": "Leite de arroz",
+      "goat_sheep_yogurt": "Iogurte de ovelha/cabra",
+      "soy_cheese": "Queijo de soja",
+      "soy_milk": "Leite de soja",
+      "soy_yogurt": "Iogurte de soja",
+      "cheese": "Queijo (ex. cheddar, edam, Comte, parmesão)"
+    },
+    "egg": {
+      "hard_boiled": "Ovo cozido duro (ferver >6min)",
+      "raw": "Ovo cru",
+      "partially_cooked": "Parcialmente cozido como ovos mexidos e ovo frito"
+    },
+    "fat": {
+      "butter": "Manteiga",
+      "vegetable_oils": "Óleo de milho/óleos vegetais",
+      "margarine": "Margarina",
+      "olive_oil": "Azeite de oliva",
+      "nut_seed_oils": "Óleos de nozes e sementes"
+    },
+    "sweets": {
+      "baby_biscuits": "Biscoitos para bebês sem açúcar",
+      "fruit_spread": "Pasta de fruta (ex. geleia)",
+      "honey": "Mel",
+      "sweets_cake": "Doces, bolo, biscoitos"
+    },
+    "nuts": {
+      "mustard": "Mostarda",
+      "sesame": "Gergelim/tahini",
+      "tree_nuts": "Nozes (e manteigas de nozes)"
+    },
+    "spices": {
+      "salt": "Sal",
+      "spices_herbs": "Temperos/ervas (ex. pimenta, canela, etc.)"
+    },
+    "additional": {
+      "baby_food": "Comida para bebês preparada - potinhos, sachês",
+      "family_meal_salt": "Compartilhar refeição familiar com sal",
+      "family_meal_no_salt": "Compartilhar refeição familiar sem sal",
+      "mashed_food": "Comida amassada",
+      "pureed_food": "Comida em purê",
+      "finger_food": "Comida em pedaços e finger food",
+      "baby_led_weaning": "Desmame liderado pelo bebê"
+    }
+  }
+}

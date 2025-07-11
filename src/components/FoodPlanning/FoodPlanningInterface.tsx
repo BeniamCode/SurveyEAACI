@@ -25,22 +25,6 @@ export default function FoodPlanningInterface({
   const [expandedCategories, setExpandedCategories] = useState<string[]>(['legumes']); // Start with legumes expanded
   const [placements, setPlacements] = useState<FoodPlacement[]>(initialPlacements);
 
-  // Mapping between category IDs and translation keys
-  const categoryTranslationMap: { [key: string]: string } = {
-    'starch': 'starch_gluten',
-    'vegetables': 'vegetables',
-    'legumes': 'legumes',
-    'meat': 'meat',
-    'fish': 'fish_shellfish',
-    'fruit': 'fruit',
-    'dairy': 'dairy',
-    'egg': 'egg',
-    'fat': 'fat_oil',
-    'sweets': 'sweets',
-    'nuts': 'nuts_seeds',
-    'spices': 'salt_spices',
-    'additional': 'additional_guidance'
-  };
 
   const toggleCategory = (categoryId: string) => {
     setExpandedCategories(prev => 
@@ -135,7 +119,7 @@ export default function FoodPlanningInterface({
                       >
                         <div className="flex items-center gap-2">
                           <i className={`fas ${category.icon} text-sm`}></i>
-                          <span className="text-sm">{t(`foodCategories.${categoryTranslationMap[category.id] || category.id}`, category.name)}</span>
+                          <span className="text-sm">{t(`foodCategories.${category.name}`)}</span>
                         </div>
                         {expandedCategories.includes(category.id) ? (
                           <ChevronDown className="h-4 w-4" />
@@ -172,7 +156,7 @@ export default function FoodPlanningInterface({
                                         <div className="flex items-start justify-between gap-2">
                                           <div className="flex items-start gap-2 flex-1">
                                             <i className={`fas ${item.icon} text-gray-500 mt-0.5 flex-shrink-0`}></i>
-                                            <span className="leading-tight">{t(`foodItems.${item.id}`, item.name)}</span>
+                                            <span className="leading-tight">{t(`foodItems.${item.name}`)}</span>
                                           </div>
                                           {currentPlacement && (
                                             <span className="text-gray-400 text-xs font-medium ml-2 flex-shrink-0">

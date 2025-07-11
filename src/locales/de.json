@@ -1,0 +1,169 @@
+{
+  "survey": {
+    "foodPlanning": {
+      "foodCategories": "Lebensmittelkategorien",
+      "lowRiskTimeline": "Niedriges Risiko Timeline",
+      "highRiskTimeline": "Hohes Risiko Timeline",
+      "dragHere": "Lebensmittel hier hinziehen für {{month}}",
+      "summary": "Zusammenfassung: {{count}} Lebensmittel geplant"
+    },
+    "interface": {
+      "str1": "Ergänzungsernährung: eine Umfrage zu den Praktiken von Gesundheitsfachkräften",
+      "str2": "το χρονοδιάγραμμα της εισαγωγής των τροφών φαίνεται κρίσιμο για την πρωτογενή πρόληψη της τροφικής αλλεργίας. Στόχος της παρούσας έρευνας είναι να συλλέξει πληροφορίες σχετικά με τις συνήθεις πρακτικές των επαγγελματιών υγείας από διάφορες χώρες σχετικά με τη σειρά εισαγωγής των στερεών τροφών στη διατροφή των βρεφών και τον τρόπο αλλαγής αυτής της απόφασης σε περίπτωση αλλεργίας ή υψηλού κινδύνου βρέφη για αλλεργία. Η συμπλήρωση του ερωτηματολογίου απαιτεί περίπου 10 λεπτά.",
+      "str3": "Das Ausfüllen des Fragebogens dauert ca. 10 Minuten.",
+      "str4": "proszę wpisać hasło",
+      "str5": "Monat",
+      "str6": "Ergänzungsfütterung",
+      "str7": "Indique el orden preferido arrastrando y soltando un elemento de la lista SUGERENCIAS' a cualquier otra lista",
+      "str8": "a następnie przeciągnij go do dowolnej innej listy.",
+      "str9": "Nicht allergisch/geringes Risiko",
+      "str10": "Hohes Risiko",
+      "str11": "Niedriges Risiko",
+      "str12": "Hohes Risiko",
+      "str13": "Formular abschicken",
+      "str14": "Geburt",
+      "str15": "Vielen Dank",
+      "str16": "Formular abschicken",
+      "str17": "Grundinformation",
+      "str18": "Sie haben diesen Artikel bereits zu dieser Liste hinzugefügt",
+      "str19": "Beratung",
+      "str20": "Jahre",
+      "str21": "Monate",
+      "str22": "Proceed",
+      "str23": "Please provide the correct password.",
+      "str24": "że wydawane przez Panią/Pana zalecenia dotyczące rozszerzania diety są dostosowywane indywidualnie do każdego pacjenta. Prosimy"
+    },
+    "title": "Ergänzungsernährung: eine Umfrage zu den Praktiken von Gesundheitsfachkräften",
+    "submit": "Formular abschicken",
+    "thanks": "Vielen Dank",
+    "months": "Monate",
+    "basicInfo": "Grundinformation"
+  },
+  "foodCategories": {
+    "starch_gluten": "STÄRKE/GLUTEN",
+    "vegetables": "GEMÜSE",
+    "legumes": "Hülsenfrüchte",
+    "meat": "FLEISCH",
+    "fish_shellfish": "FISCH/SCHALENTIER",
+    "fruit": "FRUCHT",
+    "dairy": "MILCHPRODUKTE/ MILCHERSATZPRODUKTE",
+    "egg": "EI",
+    "fat_oil": "FETT/ÖL",
+    "sweets": "DOLCI",
+    "nuts_seeds": "NÜSSE/SAMEN",
+    "salt_spices": "SALZ/GEWÜRZE",
+    "additional_guidance": "ZUSÄTZLICHE ANLEITUNG"
+  },
+  "foodItems": {
+    "starch": {
+      "gluten_grains": "Glutenhaltige Getreide (Weizen, Gerste, Roggen z.B. Nudeln, Brot, usw.)",
+      "gluten_free_cereals": "Glutenfreie Getreide (Buchweizen, Quinoa, Hafer)",
+      "maize_products": "Maisprodukte (z.B. Polenta, Mais-Snacks für Babys)",
+      "potato_sweet_potato": "Kartoffel, Süßkartoffel",
+      "rice": "Reis (einschließlich Reismehl)",
+      "rice_pudding": "Reispudding (mit Milch)",
+      "semolina_pudding": "Grießpudding (mit Milch)",
+      "trahanas": "Trahanas"
+    },
+    "vegetables": {
+      "cabbage_broccoli": "Kohl, Brokkoli, Blumenkohl",
+      "carrot": "Karotte",
+      "root_vegetables": "Wurzelgemüse wie Sellerie",
+      "leafy_vegetables": "Grünes Blattgemüse (Spinat, Salat usw.)",
+      "pea_beans": "Erbsen, grüne Bohnen",
+      "pepper": "Paprika",
+      "tomato": "Tomate",
+      "zucchini": "Zucchini oder andere Kürbisse"
+    },
+    "legumes": {
+      "beans": "Bohnen (alle Arten)",
+      "chickpeas": "Kichererbsen",
+      "lentils": "Linsen",
+      "soya": "Soja",
+      "peanut": "Erdnüsse/Erdnussbutter"
+    },
+    "meat": {
+      "poultry": "Huhn/Truthahn/Ente",
+      "processed_meat": "Verarbeitetes Fleisch wie Aufschnitt/Schinken/Salami",
+      "lamb": "Lamm",
+      "liver_pate": "Leberpastete",
+      "pork": "Schweinefleisch",
+      "rabbit": "Kaninchen",
+      "beef": "Rindfleisch",
+      "venison": "Wild"
+    },
+    "fish": {
+      "crustaceans": "Krustentiere (Garnelen, Flusskrebse, Krabben, Hummer)",
+      "fish": "Fisch",
+      "mollusks": "Weichtiere (Muscheln, Jakobsmuscheln, Austern, Miesmuscheln, Tintenfisch, Schnecken, Kalmare, Sepia)"
+    },
+    "fruit": {
+      "apple": "Apfel (und Apfelprodukte wie Apfelsauce)",
+      "mango": "Mango",
+      "banana": "Banane",
+      "berries": "Beeren einschließlich Erdbeeren",
+      "dried_fruits": "Trockenfrüchte",
+      "figs": "Feigen",
+      "fresh_juice": "Frischer Fruchtsaft",
+      "fruit_juice": "Fruchtsaft (mit oder ohne Zucker)",
+      "grapes": "Trauben",
+      "kiwi": "Kiwi",
+      "melon": "Melone, Wassermelone",
+      "citrus": "Orange, Mandarine",
+      "stone_fruits": "Pfirsich, Aprikose",
+      "pear": "Birne"
+    },
+    "dairy": {
+      "plant_milk": "Pflanzenmilch (hier angereichert/nicht angereichert angeben)",
+      "cow_yogurt": "Kuhmilch-Joghurt",
+      "cream_cheese": "Frischkäse",
+      "feta": "Feta-Käse",
+      "fresh_cow_milk": "Frische Kuhmilch",
+      "goat_sheep_milk": "Frische Ziegen-/Schafsmilch",
+      "kephir": "Kefir",
+      "kids_yogurt": "Kinderjoghurt",
+      "rice_milk": "Reismilch",
+      "goat_sheep_yogurt": "Schafs-/Ziegenjoghurt",
+      "soy_cheese": "Soja-Käse",
+      "soy_milk": "Sojamilch",
+      "soy_yogurt": "Soja-Joghurt",
+      "cheese": "Käse (z.B. Cheddar, Edam, Comte, Parmesan)"
+    },
+    "egg": {
+      "hard_boiled": "Hartgekochtes Ei (Kochen >6min)",
+      "raw": "Rohes Ei",
+      "partially_cooked": "Teilweise gekocht wie Rührei und Spiegelei"
+    },
+    "fat": {
+      "butter": "Butter",
+      "vegetable_oils": "Maisöl/Pflanzenöle",
+      "margarine": "Margarine",
+      "olive_oil": "Olivenöl",
+      "nut_seed_oils": "Nuss- und Samenöle"
+    },
+    "sweets": {
+      "baby_biscuits": "Baby-Kekse ohne Zucker",
+      "fruit_spread": "Fruchtaufstrich (z.B. Marmelade)",
+      "honey": "Honig",
+      "sweets_cake": "Süßigkeiten, Kuchen, Kekse"
+    },
+    "nuts": {
+      "mustard": "Senf",
+      "sesame": "Sesam/Tahini",
+      "tree_nuts": "Baumnüsse (und Nussbutter)"
+    },
+    "spices": {
+      "salt": "Salz",
+      "spices_herbs": "Gewürze/Kräuter (z.B. Pfeffer, Zimt, usw.)"
+    },
+    "additional": {
+      "baby_food": "Fertige Babynahrung - Gläschen, Beutel",
+      "family_meal_salt": "Familienmahlzeit mit Salz teilen",
+      "family_meal_no_salt": "Familienmahlzeit ohne Salz teilen",
+      "mashed_food": "Püriertef Nahrung",
+      "pureed_food": "Püreeform",
+      "finger_food": "Fingerfood",
+      "baby_led_weaning": "Babygeleitete Beikost"
+    }
+  }
+}

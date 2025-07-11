@@ -28,6 +28,13 @@ export default function LanguageDropdown({
     { value: "en", label: "English" },
     { value: "el", label: "Ελληνικά" },
     { value: "pl", label: "Polski" },
+    { value: "it", label: "Italiano" },
+    { value: "es", label: "Español" },
+    { value: "de", label: "Deutsch" },
+    { value: "pt", label: "Português" },
+    { value: "nl", label: "Nederlands" },
+    { value: "fr", label: "Français" },
+    { value: "ro", label: "Română" },
     { value: "zh-tw", label: "繁體中文" },
   ];
 

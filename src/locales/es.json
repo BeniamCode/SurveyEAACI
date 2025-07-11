@@ -1,0 +1,169 @@
+{
+  "survey": {
+    "foodPlanning": {
+      "foodCategories": "Categorías de Alimentos",
+      "lowRiskTimeline": "No alergénico Timeline",
+      "highRiskTimeline": "Alto riesgo Timeline",
+      "dragHere": "Arrastra alimentos aquí para {{month}}",
+      "summary": "Resumen: {{count}} alimentos planificados"
+    },
+    "interface": {
+      "str1": "Pautas para la introducción de alimentos sólidos a los bebés:",
+      "str2": "το ανοσοποιητικό σύστημα και τις μεταβολικές διεργασίες. Επιπλέον",
+      "str3": "Completar el cuestionario toma aproximadamente 10 minutos.",
+      "str4": "Jeśli wyraża Pani/Pan zgodę na udział w ankiecie",
+      "str5": "Mes",
+      "str6": "Pautas para la introducción de alimentos sólidos a los bebés:",
+      "str7": "Si prega di indicare l'ordine preferito trascinando e rilasciando un articolo dall'elenco 'INDICAZIONI' a qualsiasi altro elenco",
+      "str8": "aż pojawi się zielona ramka",
+      "str9": "No alergénico / Bajo riesgo",
+      "str10": "Alto riesgo",
+      "str11": "No alergénico",
+      "str12": "Alto riesgo",
+      "str13": "Enviar un cuestionario",
+      "str14": "Nacimiento",
+      "str15": "Gracias por aceptar participar. Responda todas las preguntas a continuación y luego haga clic en el botón 'Enviar cuestionario'",
+      "str16": "Enviar un cuestionario",
+      "str17": "Información básica",
+      "str18": "Ya has añadido este artículo a esta lista",
+      "str19": "Instrucciones",
+      "str20": "años",
+      "str21": "meses",
+      "str22": "Proceed",
+      "str23": "Please provide the correct password.",
+      "str24": "Zdajemy sobie sprawę"
+    },
+    "title": "Pautas para la introducción de alimentos sólidos a los bebés:",
+    "submit": "Enviar un cuestionario",
+    "thanks": "Gracias por aceptar participar. Responda todas las preguntas a continuación y luego haga clic en el botón 'Enviar cuestionario'",
+    "months": "meses",
+    "basicInfo": "Información básica"
+  },
+  "foodCategories": {
+    "starch_gluten": "ALMIDÓN/GLUTEN",
+    "vegetables": "VERDURAS",
+    "legumes": "LEGUMBRES",
+    "meat": "CARNE",
+    "fish_shellfish": "PESCADOS/MARISCOS",
+    "fruit": "FRUTA",
+    "dairy": "PRODUCTOS LÁCTEOS/ SUSTITUTOS DE PRODUCTOS LÁCTEOS",
+    "egg": "HUEVO",
+    "fat_oil": "GRASA/ACEITE",
+    "sweets": "SŁODYCZE",
+    "nuts_seeds": "SEMILLAS DE NUEZ",
+    "salt_spices": "SAL/ESPECIAS",
+    "additional_guidance": "ORIENTACIÓN ADICIONAL"
+  },
+  "foodItems": {
+    "starch": {
+      "gluten_grains": "Cereales que contienen gluten (trigo, cebada, centeno ej. pasta, pan, etc.)",
+      "gluten_free_cereals": "Cereales sin gluten (trigo sarraceno, quinoa, avena)",
+      "maize_products": "Productos de maíz (ej. polenta, aperitivos de maíz para bebés)",
+      "potato_sweet_potato": "Patata, Batata",
+      "rice": "Arroz (incluyendo harina de arroz)",
+      "rice_pudding": "Pudín de arroz (que contiene leche)",
+      "semolina_pudding": "Pudín de sémola (que contiene leche)",
+      "trahanas": "Trahanas"
+    },
+    "vegetables": {
+      "cabbage_broccoli": "Repollo, brócoli, coliflor",
+      "carrot": "Zanahoria",
+      "root_vegetables": "Verduras de raíz como apio",
+      "leafy_vegetables": "Verduras de hoja verde (espinaca, lechuga, etc.)",
+      "pea_beans": "Guisantes, judías verdes",
+      "pepper": "Pimiento",
+      "tomato": "Tomate",
+      "zucchini": "Calabacín u otras calabazas"
+    },
+    "legumes": {
+      "beans": "Frijoles (todos los tipos)",
+      "chickpeas": "Garbanzos",
+      "lentils": "Lentejas",
+      "soya": "Soja",
+      "peanut": "Cacahuetes/mantequilla de cacahuete"
+    },
+    "meat": {
+      "poultry": "Pollo/pavo/pato",
+      "processed_meat": "Carne procesada como embutidos/jamón/salami",
+      "lamb": "Cordero",
+      "liver_pate": "Paté de hígado",
+      "pork": "Cerdo",
+      "rabbit": "Conejo",
+      "beef": "Ternera",
+      "venison": "Venado"
+    },
+    "fish": {
+      "crustaceans": "Crustáceos (camarones, cangrejos de río, cangrejos, langostas)",
+      "fish": "Pescado",
+      "mollusks": "Moluscos (almejas, vieiras, ostras, mejillones, pulpo, caracoles, calamares, sepia)"
+    },
+    "fruit": {
+      "apple": "Manzana (y productos de manzana como salsa de manzana)",
+      "mango": "Mango",
+      "banana": "Plátano",
+      "berries": "Bayas incluyendo fresas",
+      "dried_fruits": "Frutas secas",
+      "figs": "Higos",
+      "fresh_juice": "Zumo de fruta fresco",
+      "fruit_juice": "Zumo de fruta (con o sin azúcar)",
+      "grapes": "Uvas",
+      "kiwi": "Kiwi",
+      "melon": "Melón, sandía",
+      "citrus": "Naranja, mandarina",
+      "stone_fruits": "Melocotón, albaricoque",
+      "pear": "Pera"
+    },
+    "dairy": {
+      "plant_milk": "Leche vegetal (especificar aquí fortificada/no fortificada)",
+      "cow_yogurt": "Yogur de leche de vaca",
+      "cream_cheese": "Queso crema",
+      "feta": "Queso feta",
+      "fresh_cow_milk": "Leche de vaca fresca",
+      "goat_sheep_milk": "Leche fresca de cabra/oveja",
+      "kephir": "Kéfir",
+      "kids_yogurt": "Yogur para niños",
+      "rice_milk": "Leche de arroz",
+      "goat_sheep_yogurt": "Yogur de oveja/cabra",
+      "soy_cheese": "Queso de soja",
+      "soy_milk": "Leche de soja",
+      "soy_yogurt": "Yogur de soja",
+      "cheese": "Queso (ej. cheddar, edam, Comte, parmesano)"
+    },
+    "egg": {
+      "hard_boiled": "Huevo cocido duro (hervir >6min)",
+      "raw": "Huevo crudo",
+      "partially_cooked": "Parcialmente cocido como huevos revueltos y huevo frito"
+    },
+    "fat": {
+      "butter": "Mantequilla",
+      "vegetable_oils": "Aceite de maíz/aceites vegetales",
+      "margarine": "Margarina",
+      "olive_oil": "Aceite de oliva",
+      "nut_seed_oils": "Aceites de nueces y semillas"
+    },
+    "sweets": {
+      "baby_biscuits": "Galletas para bebés sin azúcar",
+      "fruit_spread": "Mermelada de frutas",
+      "honey": "Miel",
+      "sweets_cake": "Dulces, pastel, galletas"
+    },
+    "nuts": {
+      "mustard": "Mostaza",
+      "sesame": "Sésamo/tahini",
+      "tree_nuts": "Frutos secos (y mantequillas de frutos secos)"
+    },
+    "spices": {
+      "salt": "Sal",
+      "spices_herbs": "Especias/hierbas (ej. pimienta, canela, etc.)"
+    },
+    "additional": {
+      "baby_food": "Comida para bebés preparada - tarros, bolsas",
+      "family_meal_salt": "Compartir comida familiar con sal",
+      "family_meal_no_salt": "Compartir comida familiar sin sal",
+      "mashed_food": "Comida triturada",
+      "pureed_food": "Comida en puré",
+      "finger_food": "Comida en trozos y finger food",
+      "baby_led_weaning": "Destete dirigido por el bebé"
+    }
+  }
+}

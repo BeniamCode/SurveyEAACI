@@ -7,13 +7,13 @@
     "continue": "Continue"
   },
   "survey": {
-    "thanks": "Thank you for your participation in this research study.",
+    "thanks": "Thank you for agreeing to participate. Please answer all the questions below and then click on the 'Submit Form' button.",
     "guidance": "Please answer all questions as accurately as possible. Your responses will remain confidential.",
     "basicInfo": "Basic Information",
     "title": "Complementary feeding: a survey on the Healthcare Professional practices",
     "next": "Next",
     "previous": "Previous",
-    "submit": "Submit Survey",
+    "submit": "Submit Form",
     "completed": "Survey completed successfully! Your response has been recorded.\\n\\nParticipant ID: {{participantId}}\\nSubmission ID: {{responseId}}",
     "error": "There was an error submitting your survey. Please try again.",
     "placeholders": {
@@ -45,8 +45,8 @@
     },
     "foodPlanning": {
       "foodCategories": "Food Categories",
-      "lowRiskTimeline": "Low-Risk Timeline",
-      "highRiskTimeline": "High-Risk Timeline",
+      "lowRiskTimeline": "Low-risk Timeline",
+      "highRiskTimeline": "High-risk Timeline",
       "dragHere": "Drag foods here for {{month}}",
       "summary": "Summary: {{count}} foods planned"
     },
@@ -283,7 +283,34 @@
       },
       "add_entry": "Add Entry",
       "remove_entry": "Remove Entry"
-    }
+    },
+    "interface": {
+      "str1": "Complementary feeding: a survey on the Healthcare Professional practices",
+      "str2": "The introduction of solid foods and drinks other than milk (complementary feeding) is a key developmental milestone that exerts powerful changes in terms of functional changes to the gastrointestinal tract",
+      "str3": "Completion of the questionnaire will take approximately 10 minutes.",
+      "str4": "If you agree to participate in this research",
+      "str5": "Month",
+      "str6": "Complementary feeding",
+      "str7": "Please indicate the preferred order by dragging & dropping an item from the 'ADVICE' list to any other list",
+      "str8": "Please indicate the preferred order by touching and holding an item from the 'Advice' list until a green border appears and then dragging it to any other list",
+      "str9": "Not Allergic / Low-risk",
+      "str10": "High-risk",
+      "str11": "Low-risk",
+      "str12": "High-risk",
+      "str13": "Submit Form",
+      "str14": "Birth",
+      "str15": "Thank you for agreeing to participate. Please answer all the questions below and then click on the 'Submit Form' button.",
+      "str16": "Submit Form",
+      "str17": "Basic Information",
+      "str18": "You have already added this item to this list",
+      "str19": "Advice",
+      "str20": "years",
+      "str21": "months",
+      "str22": "Proceed",
+      "str23": "Please provide the correct password.",
+      "str24": "While we acknowledge that individualized guidance is essential"
+    },
+    "months": "months"
   },
   "foodCategories": {
     "starch_gluten": "STARCH/GLUTEN",

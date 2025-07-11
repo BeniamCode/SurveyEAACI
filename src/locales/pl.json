@@ -7,10 +7,10 @@
     "continue": "Kontynuuj"
   },
   "survey": {
-    "thanks": "Dziękujemy za udział w tym badaniu naukowym.",
+    "thanks": "Dziękujemy za wyrażenie zgody. Po udzieleniu odpowiedzi na wszystkie poniższe pytania proszę kliknąć przycisk „Prześlij Formularz”.",
     "guidance": "Prosimy odpowiedzieć na wszystkie pytania możliwie najdokładniej. Twoje odpowiedzi pozostaną poufne.",
     "basicInfo": "Podstawowe informacje",
-    "title": "Żywienie uzupełniające: badanie praktyk pracowników ochrony zdrowia",
+    "title": "Rozszerzanie diety: badanie praktyk profesjonalistów medycznych",
     "pages": {
       "basic_information": {
         "title": "Podstawowe informacje"
@@ -235,30 +235,65 @@
       },
       "add_entry": "Dodaj wpis",
       "remove_entry": "Usuń wpis"
-    }
+    },
+    "foodPlanning": {
+      "foodCategories": "Kategorie Żywności",
+      "lowRiskTimeline": "niskie ryzyko alergii pokarmowej Timeline",
+      "highRiskTimeline": "wysokie ryzyko alergii pokarmowej Timeline",
+      "dragHere": "Przeciągnij żywność tutaj dla {{month}}",
+      "summary": "Podsumowanie: {{count}} zaplanowanych pokarmów"
+    },
+    "interface": {
+      "str1": "Rozszerzanie diety: badanie praktyk profesjonalistów medycznych",
+      "str2": "the timing of food introduction appears crucial for the prevention of food allergy. The aim of the current survey is to collect information on the usual practices of healthcare professionals from different countries about the order of solid foods' introduction into the infants diet and the how this differs for infants at low or high risk for development of food allergy.",
+      "str3": "Wypełnienie ankiety zajmuje około 10 minut.",
+      "str4": "Εφόσον συμφωνείτε να συμμετέχετε στην έρευνα",
+      "str5": "Miesiąc",
+      "str6": "Rozszerzanie diety",
+      "str7": "Proszę wskazać preferowaną kolejność",
+      "str8": "Proszę wskazać preferowaną kolejność",
+      "str9": "brak alergii / niskie ryzyko alergii pokarmowej",
+      "str10": "wysokie ryzyko alergii pokarmowej",
+      "str11": "niskie ryzyko alergii pokarmowej",
+      "str12": "wysokie ryzyko alergii pokarmowej",
+      "str13": "Prześlij kwestionariusz",
+      "str14": "Narodziny",
+      "str15": "Dziękujemy za wyrażenie zgody. Po udzieleniu odpowiedzi na wszystkie poniższe pytania proszę kliknąć przycisk „Prześlij Formularz”.",
+      "str16": "Prześlij Formularz",
+      "str17": "Podstawowe informacje",
+      "str18": "Ten element został już dodany do tej listy",
+      "str19": "Zalecenia",
+      "str20": "(lata)",
+      "str21": "miesiące",
+      "str22": "Kontynuuj",
+      "str23": "Proszę podać poprawne hasło.",
+      "str24": "Παρότι κατανοούμε ότι οι συμβουλές είναι εξατομικευμένες"
+    },
+    "submit": "Prześlij kwestionariusz",
+    "months": "miesiące"
   },
   "foodCategories": {
     "starch_gluten": "SKROBIA/GLUTEN",
     "vegetables": "WARZYWA",
-    "legumes": "ROŚLINY STRĄCZKOWE",
+    "legumes": "STRĄCZKI",
     "meat": "MIĘSO",
     "fish_shellfish": "RYBY/OWOCE MORZA",
     "fruit": "OWOCE",
-    "dairy": "PRODUKTY MLECZNE / SUBSTYTUTY",
+    "dairy": "PRODUKTY MLECZNE/PRODUKTY ZASTĘPUJĄCE PRODUKTY MLECZNE",
     "egg": "JAJKO",
     "fat_oil": "TŁUSZCZ/OLEJ",
-    "sweets": "SŁODYCZE",
+    "sweets": "ΓΛΥΚΑΝΤΙΚΑ",
     "nuts_seeds": "ORZECHY/NASIONA",
     "salt_spices": "SÓL/PRZYPRAWY",
-    "additional_guidance": "DODATKOWE WSKAZÓWKI"
+    "additional_guidance": "DODATKOWE ZALECENIA"
   },
   "foodItems": {
     "starch": {
-      "gluten_grains": "Zboża zawierające gluten (pszenica, jęczmień, żyto np. makaron, chleb itp.)",
-      "gluten_free_cereals": "Zboża bezglutenowe (gryka, komosa ryżowa, owies)",
+      "gluten_grains": "Zboża zawierające gluten (pszenica, jęczmień, żyto np. makaron, chleb, itp.)",
+      "gluten_free_cereals": "Zboża bezglutenowe (gryka, quinoa, owies)",
       "maize_products": "Produkty kukurydziane (np. polenta, przekąski kukurydziane dla niemowląt)",
-      "potato_sweet_potato": "Ziemniak, batat",
-      "rice": "Ryż (w tym mąka ryżowa)",
+      "potato_sweet_potato": "Ziemniak, Batat",
+      "rice": "Ryż (włączając mąkę ryżową)",
       "rice_pudding": "Pudding ryżowy (zawierający mleko)",
       "semolina_pudding": "Pudding z kaszy manny (zawierający mleko)",
       "trahanas": "Trahanas"
@@ -266,12 +301,12 @@
     "vegetables": {
       "cabbage_broccoli": "Kapusta, brokuły, kalafior",
       "carrot": "Marchew",
-      "root_vegetables": "Warzywa korzeniowe jak seler",
+      "root_vegetables": "Warzywa korzeniowe takie jak seler",
       "leafy_vegetables": "Zielone warzywa liściaste (szpinak, sałata itp.)",
-      "pea_beans": "Groszek, fasolka szparagowa",
+      "pea_beans": "Groszek, fasola szparagowa",
       "pepper": "Papryka",
       "tomato": "Pomidor",
-      "zucchini": "Cukinia lub inne dynie"
+      "zucchini": "Cukinia lub inne dyniowate"
     },
     "legumes": {
       "beans": "Fasola (wszystkie rodzaje)",
@@ -282,9 +317,9 @@
     },
     "meat": {
       "poultry": "Kurczak/indyk/kaczka",
-      "processed_meat": "Przetworzone mięso jak wędliny/szynka/salami",
+      "processed_meat": "Przetworzone mięso takie jak wędliny/szynka/salami",
       "lamb": "Jagnięcina",
-      "liver_pate": "Pasztet z wątróbki",
+      "liver_pate": "Pasztet wątrobowy",
       "pork": "Wieprzowina",
       "rabbit": "Królik",
       "beef": "Wołowina",
@@ -293,13 +328,13 @@
     "fish": {
       "crustaceans": "Skorupiaki (krewetki, raki, kraby, homary)",
       "fish": "Ryby",
-      "mollusks": "Mięczaki (małże, przegrzebki, ostrygi, omułki, ośmiornice, ślimaki, kalmary, mątwy)"
+      "mollusks": "Mięczaki (małże, przegrzebki, ostrygi, muszle, ośmiornica, ślimaki, kałamarnica, mątwa)"
     },
     "fruit": {
       "apple": "Jabłko (i produkty z jabłek jak mus jabłkowy)",
       "mango": "Mango",
       "banana": "Banan",
-      "berries": "Jagody w tym truskawki",
+      "berries": "Jagody włączając truskawki",
       "dried_fruits": "Suszone owoce",
       "figs": "Figi",
       "fresh_juice": "Świeży sok owocowy",
@@ -314,21 +349,21 @@
     "dairy": {
       "plant_milk": "Mleko roślinne (określ tutaj wzbogacone/niewzbogacone)",
       "cow_yogurt": "Jogurt z mleka krowiego",
-      "cream_cheese": "Ser śmietankowy",
+      "cream_cheese": "Serek śmietankowy",
       "feta": "Ser feta",
       "fresh_cow_milk": "Świeże mleko krowie",
       "goat_sheep_milk": "Świeże mleko kozie/owcze",
-      "kephir": "Kefir/Maślanka",
+      "kephir": "Kefir",
       "kids_yogurt": "Jogurt dla dzieci",
       "rice_milk": "Mleko ryżowe",
       "goat_sheep_yogurt": "Jogurt owczy/kozi",
       "soy_cheese": "Ser sojowy",
       "soy_milk": "Mleko sojowe",
       "soy_yogurt": "Jogurt sojowy",
-      "cheese": "Ser (np. cheddar, edamski, comte, parmezan)"
+      "cheese": "Ser (np. cheddar, edam, Comte, parmezan)"
     },
     "egg": {
-      "hard_boiled": "Jajko na twardo (gotowanie >6 min)",
+      "hard_boiled": "Jajko na twardo (gotowanie >6min)",
       "raw": "Surowe jajko",
       "partially_cooked": "Częściowo ugotowane jak jajecznica i jajko sadzone"
     },
@@ -340,28 +375,28 @@
       "nut_seed_oils": "Oleje z orzechów i nasion"
     },
     "sweets": {
-      "baby_biscuits": "Biszkopty dla niemowląt bez cukru",
-      "fruit_spread": "Dżem owocowy",
+      "baby_biscuits": "Herbatniki dla niemowląt bez cukru",
+      "fruit_spread": "Pasta owocowa (np. dżem)",
       "honey": "Miód",
-      "sweets_cake": "Słodycze, ciasto, ciastka"
+      "sweets_cake": "Słodycze, ciasto, herbatniki"
     },
     "nuts": {
       "mustard": "Musztarda",
       "sesame": "Sezam/tahini",
-      "tree_nuts": "Orzechy drzew (i masła orzechowe)"
+      "tree_nuts": "Orzechy drzewne (i masła orzechowe)"
     },
     "spices": {
       "salt": "Sól",
-      "spices_herbs": "Przyprawy/zioła (np. pieprz, cynamon itp.)"
+      "spices_herbs": "Przyprawy/zioła (np. pieprz, cynamon, itp.)"
     },
     "additional": {
-      "baby_food": "Gotowa żywność dla niemowląt - słoiczki, saszetki",
+      "baby_food": "Gotowe jedzenie dla niemowląt - słoiczki, saszetki",
       "family_meal_salt": "Wspólny posiłek rodzinny z solą",
       "family_meal_no_salt": "Wspólny posiłek rodzinny bez soli",
-      "mashed_food": "Rozgniecione jedzenie",
-      "pureed_food": "Przecier",
-      "finger_food": "Jedzenie w kawałkach i przekąski do rączki",
-      "baby_led_weaning": "Rozszerzanie diety kierowane przez dziecko"
+      "mashed_food": "Jedzenie rozdrobnione",
+      "pureed_food": "Jedzenie puree",
+      "finger_food": "Jedzenie w kawałkach i finger food",
+      "baby_led_weaning": "Odżywianie kierowane przez dziecko"
     }
   },
   "navigation": {

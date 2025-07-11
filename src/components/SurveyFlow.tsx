@@ -14,7 +14,7 @@ export default function SurveyFlow() {
   useEffect(() => {
     // Initialize with browser language or fallback to English
     const browserLang = navigator.language.toLowerCase();
-    const supportedLangs = ['en', 'el', 'pl', 'zh-tw'];
+    const supportedLangs = ['en', 'el', 'pl', 'it', 'es', 'de', 'pt', 'nl', 'fr', 'ro', 'zh-tw'];
     
     // Check for exact match first (for zh-tw), then check language part only
     let defaultLang = 'en';
