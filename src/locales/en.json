@@ -43,6 +43,13 @@
       "add_entry": "Add Entry",
       "no_plans_needed": "No food plans needed based on your previous answers."
     },
+    "foodPlanning": {
+      "foodCategories": "Food Categories",
+      "lowRiskTimeline": "Low-Risk Timeline",
+      "highRiskTimeline": "High-Risk Timeline",
+      "dragHere": "Drag foods here for {{month}}",
+      "summary": "Summary: {{count}} foods planned"
+    },
     "review": {
       "instructions": "Please review your answers before submitting the survey."
     },

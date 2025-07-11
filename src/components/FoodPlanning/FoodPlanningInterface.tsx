@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
 import type { DropResult } from '@hello-pangea/dnd';
+import { useTranslation } from 'react-i18next';
 import { foodCategories, timelineMonths } from '../../data/foodCategories';
 import type { FoodPlacement, FoodItem } from '../../data/foodCategories';
 import { Button } from '../ui/button';
@@ -20,8 +21,26 @@ export default function FoodPlanningInterface({
   onPlacementsChange,
   initialPlacements = []
 }: FoodPlanningInterfaceProps) {
+  const { t } = useTranslation();
   const [expandedCategories, setExpandedCategories] = useState<string[]>(['legumes']); // Start with legumes expanded
   const [placements, setPlacements] = useState<FoodPlacement[]>(initialPlacements);
+
+  // Mapping between category IDs and translation keys
+  const categoryTranslationMap: { [key: string]: string } = {
+    'starch': 'starch_gluten',
+    'vegetables': 'vegetables',
+    'legumes': 'legumes',
+    'meat': 'meat',
+    'fish': 'fish_shellfish',
+    'fruit': 'fruit',
+    'dairy': 'dairy',
+    'egg': 'egg',
+    'fat': 'fat_oil',
+    'sweets': 'sweets',
+    'nuts': 'nuts_seeds',
+    'spices': 'salt_spices',
+    'additional': 'additional_guidance'
+  };
 
   const toggleCategory = (categoryId: string) => {
     setExpandedCategories(prev => 
@@ -102,7 +121,7 @@ export default function FoodPlanningInterface({
           <div className="lg:col-span-2">
             <Card>
               <CardHeader className="pb-3">
-                <CardTitle className="text-base">Food Categories</CardTitle>
+                <CardTitle className="text-base">{t('survey.foodPlanning.foodCategories')}</CardTitle>
               </CardHeader>
               <CardContent className="p-0">
                 <div className="max-h-96 overflow-y-auto">
@@ -116,7 +135,7 @@ export default function FoodPlanningInterface({
                       >
                         <div className="flex items-center gap-2">
                           <i className={`fas ${category.icon} text-sm`}></i>
-                          <span className="text-sm">{category.name}</span>
+                          <span className="text-sm">{t(`foodCategories.${categoryTranslationMap[category.id] || category.id}`, category.name)}</span>
                         </div>
                         {expandedCategories.includes(category.id) ? (
                           <ChevronDown className="h-4 w-4" />
@@ -153,7 +172,7 @@ export default function FoodPlanningInterface({
                                         <div className="flex items-start justify-between gap-2">
                                           <div className="flex items-start gap-2 flex-1">
                                             <i className={`fas ${item.icon} text-gray-500 mt-0.5 flex-shrink-0`}></i>
-                                            <span className="leading-tight">{item.name}</span>
+                                            <span className="leading-tight">{t(`foodItems.${item.id}`, item.name)}</span>
                                           </div>
                                           {currentPlacement && (
                                             <span className="text-gray-400 text-xs font-medium ml-2 flex-shrink-0">
@@ -183,7 +202,7 @@ export default function FoodPlanningInterface({
             <Card>
               <CardHeader className="pb-3">
                 <CardTitle className="text-base">
-                  {riskLevel === 'low' ? 'Low-Risk Timeline' : 'High-Risk Timeline'}
+                  {riskLevel === 'low' ? t('survey.foodPlanning.lowRiskTimeline') : t('survey.foodPlanning.highRiskTimeline')}
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-0">
@@ -227,7 +246,7 @@ export default function FoodPlanningInterface({
                             
                             {monthPlacements.length === 0 && (
                               <div className="text-gray-400 text-xs italic">
-                                Drag foods here for {month.label.toLowerCase()}
+                                {t('survey.foodPlanning.dragHere', { month: month.label.toLowerCase() })}
                               </div>
                             )}
                             
@@ -245,7 +264,7 @@ export default function FoodPlanningInterface({
 
         {placements.length > 0 && (
           <div className="mt-4 p-3 bg-white border border-gray-200 rounded">
-            <div className="text-sm font-medium mb-2">Summary: {placements.length} foods planned</div>
+            <div className="text-sm font-medium mb-2">{t('survey.foodPlanning.summary', { count: placements.length })}</div>
             <div className="text-xs text-gray-600">
               {placements.map(p => `${p.foodItemName} (${timelineMonths.find(m => m.id === p.monthId)?.label})`).join(', ')}
             </div>
