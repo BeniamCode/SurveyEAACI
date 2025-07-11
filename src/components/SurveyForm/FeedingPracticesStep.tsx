@@ -53,7 +53,7 @@ export default function FeedingPracticesStep() {
                     <Input
                       {...field}
                       type="number"
-                      placeholder="0"
+                      placeholder={t('survey.placeholders.months')}
                       className="w-24"
                     />
                   )}
@@ -78,7 +78,7 @@ export default function FeedingPracticesStep() {
                     <Input
                       {...field}
                       type="number"
-                      placeholder="0"
+                      placeholder={t('survey.placeholders.months')}
                       className="w-24"
                     />
                   )}
@@ -103,7 +103,7 @@ export default function FeedingPracticesStep() {
                     <Input
                       {...field}
                       type="number"
-                      placeholder="0"
+                      placeholder={t('survey.placeholders.months')}
                       className="w-24"
                     />
                   )}
@@ -525,7 +525,7 @@ export default function FeedingPracticesStep() {
           {/* Q15-Q18 - Introduction intervals */}
           <div className="space-y-6">
             <h3 className="text-lg font-semibold text-gray-800">Introduction Intervals</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-6">
               <div className="space-y-3">
                 <Label className="text-base font-semibold">
                   {t('survey.questions.q15.title')} *
@@ -536,7 +536,7 @@ export default function FeedingPracticesStep() {
                   render={({ field }) => (
                     <Select value={field.value} onValueChange={field.onChange}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select interval..." />
+                        <SelectValue placeholder={t('survey.placeholders.selectInterval')} />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value={OriginalChoices.intervals.one_day}>{t('survey.questions.q15.choices.1_day')}</SelectItem>
@@ -561,7 +561,7 @@ export default function FeedingPracticesStep() {
                   render={({ field }) => (
                     <Select value={field.value} onValueChange={field.onChange}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select interval..." />
+                        <SelectValue placeholder={t('survey.placeholders.selectInterval')} />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value={OriginalChoices.intervals.one_day}>{t('survey.questions.q16.choices.1_day')}</SelectItem>
@@ -586,7 +586,7 @@ export default function FeedingPracticesStep() {
                   render={({ field }) => (
                     <Select value={field.value} onValueChange={field.onChange}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select interval..." />
+                        <SelectValue placeholder={t('survey.placeholders.selectInterval')} />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value={OriginalChoices.intervals.one_day}>{t('survey.questions.q17.choices.1_day')}</SelectItem>
@@ -611,7 +611,7 @@ export default function FeedingPracticesStep() {
                   render={({ field }) => (
                     <Select value={field.value} onValueChange={field.onChange}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select interval..." />
+                        <SelectValue placeholder={t('survey.placeholders.selectInterval')} />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value={OriginalChoices.intervals.one_day}>{t('survey.questions.q18.choices.1_day')}</SelectItem>

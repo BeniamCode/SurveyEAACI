@@ -85,7 +85,7 @@ export interface SurveyFoodItem {
 }
 
 // Form step type
-export type FormStep = 'demographics' | 'feeding-practices' | 'food-plans' | 'review';
+export type FormStep = 'demographics' | 'feeding-practices';
 
 // Original survey choice values
 export const OriginalChoices = {

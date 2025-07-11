@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { Progress } from '../ui/progress';
 
 interface ProgressBarProps {
@@ -7,21 +6,13 @@ interface ProgressBarProps {
   totalSteps: number;
 }
 
-const stepLabels = [
-  'survey.steps.demographics',
-  'survey.steps.feeding_practices',
-  'survey.steps.food_plans',
-  'survey.steps.review'
-];
-
 export default function ProgressBar({ currentStep, totalSteps }: ProgressBarProps) {
-  const { t } = useTranslation();
   const percentage = (currentStep / totalSteps) * 100;
   
   return (
     <div className="mb-8">
-      <div className="flex justify-between items-center mb-4">
-        {stepLabels.map((label, index) => {
+      <div className="flex justify-center items-center gap-8 mb-4">
+        {Array.from({ length: totalSteps }, (_, index) => {
           const stepNumber = index + 1;
           const isCompleted = stepNumber < currentStep;
           const isActive = stepNumber === currentStep;
@@ -29,10 +20,10 @@ export default function ProgressBar({ currentStep, totalSteps }: ProgressBarProp
           return (
             <div 
               key={index} 
-              className="flex flex-col items-center flex-1"
+              className="flex items-center"
             >
               <div className={`
-                w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm font-semibold mb-2
+                w-10 h-10 rounded-full border-2 flex items-center justify-center text-sm font-semibold
                 ${isCompleted 
                   ? 'bg-green-500 border-green-500 text-white' 
                   : isActive 
@@ -42,17 +33,11 @@ export default function ProgressBar({ currentStep, totalSteps }: ProgressBarProp
               `}>
                 {isCompleted ? '✓' : stepNumber}
               </div>
-              <span className={`
-                text-xs text-center max-w-20 leading-tight
-                ${isActive 
-                  ? 'text-blue-600 font-semibold' 
-                  : isCompleted 
-                    ? 'text-green-600 font-semibold' 
-                    : 'text-gray-500'
-                }
-              `}>
-                {t(label)}
-              </span>
+              {index < totalSteps - 1 && (
+                <div className={`w-16 h-0.5 mx-2 ${
+                  isCompleted ? 'bg-green-500' : 'bg-gray-300'
+                }`} />
+              )}
             </div>
           );
         })}
