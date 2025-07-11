@@ -11,7 +11,7 @@ import { OriginalChoices } from '../../types/survey';
 
 export default function DemographicsStep() {
   const { t } = useTranslation();
-  const { control, watch, formState: { errors } } = useFormContext<SurveyData>();
+  const { control, watch, formState: { errors, touchedFields } } = useFormContext<SurveyData>();
   
   const q2Value = watch('q2');
   const q5Value = watch('q5');
@@ -50,7 +50,7 @@ export default function DemographicsStep() {
                 </RadioGroup>
               )}
             />
-            {errors.q1 && (
+            {touchedFields.q1 && errors.q1 && (
               <p className="text-sm text-red-600">{errors.q1.message}</p>
             )}
           </div>
@@ -89,7 +89,7 @@ export default function DemographicsStep() {
                   </Select>
                 )}
               />
-              {errors.q2 && (
+              {touchedFields.q2 && errors.q2 && (
                 <p className="text-sm text-red-600">{errors.q2.message}</p>
               )}
             </div>
@@ -131,7 +131,7 @@ export default function DemographicsStep() {
                   />
                 )}
               />
-              {errors.q3 && (
+              {touchedFields.q3 && errors.q3 && (
                 <p className="text-sm text-red-600">{errors.q3.message}</p>
               )}
             </div>
@@ -151,7 +151,7 @@ export default function DemographicsStep() {
                   />
                 )}
               />
-              {errors.q4 && (
+              {touchedFields.q4 && errors.q4 && (
                 <p className="text-sm text-red-600">{errors.q4.message}</p>
               )}
             </div>
@@ -182,7 +182,7 @@ export default function DemographicsStep() {
                 </RadioGroup>
               )}
             />
-            {errors.q5 && (
+            {touchedFields.q5 && errors.q5 && (
               <p className="text-sm text-red-600">{errors.q5.message}</p>
             )}
           </div>
@@ -265,7 +265,7 @@ export default function DemographicsStep() {
                 />
               )}
             />
-            {errors.q6 && (
+            {touchedFields.q6 && errors.q6 && (
               <p className="text-sm text-red-600">{errors.q6.message}</p>
             )}
           </div>

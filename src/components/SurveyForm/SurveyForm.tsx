@@ -26,7 +26,7 @@ export default function SurveyForm() {
   
   const methods = useForm<SurveyData>({
     resolver: zodResolver(surveySchema),
-    mode: 'onChange',
+    mode: 'onSubmit',
     defaultValues: {
       q1: '',
       q2: '',
@@ -58,27 +58,12 @@ export default function SurveyForm() {
     }
   });
   
-  const { handleSubmit, trigger } = methods;
+  const { handleSubmit, trigger, clearErrors } = methods;
   
   const currentStepIndex = steps.indexOf(currentStep);
   
   const handleNext = async () => {
-    let isValid = false;
-    
-    switch (currentStep) {
-      case 'demographics':
-        isValid = await trigger(['q1', 'q2', 'q3', 'q4', 'q5', 'q6']);
-        break;
-      case 'feeding-practices':
-        isValid = await trigger([
-          'q7a', 'q7b', 'q7c',
-          'q8', 'q9a_main', 'q9b_main', 'q10',
-          'q11', 'q14', 'q15', 'q16', 'q17', 'q18'
-        ]);
-        break;
-    }
-    
-    if (isValid && currentStepIndex < steps.length - 1) {
+    if (currentStepIndex < steps.length - 1) {
       setCurrentStep(steps[currentStepIndex + 1]);
     }
   };

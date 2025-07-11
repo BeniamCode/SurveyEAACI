@@ -85,7 +85,7 @@ export default function FeedingPracticesStep() {
                 />
                 <span className="text-sm text-gray-500">{t('survey.questions.q7.months')}</span>
               </div>
-              {touchedFields.q7b && errors.q7b && (
+              {errors.q7b && (
                 <p className="text-sm text-red-600">{errors.q7b.message}</p>
               )}
             </div>
@@ -110,7 +110,7 @@ export default function FeedingPracticesStep() {
                 />
                 <span className="text-sm text-gray-500">{t('survey.questions.q7.months')}</span>
               </div>
-              {touchedFields.q7c && errors.q7c && (
+              {errors.q7c && (
                 <p className="text-sm text-red-600">{errors.q7c.message}</p>
               )}
             </div>
@@ -153,7 +153,7 @@ export default function FeedingPracticesStep() {
                 </div>
               )}
             />
-            {touchedFields.q8 && errors.q8 && (
+            {errors.q8 && (
               <p className="text-sm text-red-600">{errors.q8.message}</p>
             )}
             
@@ -197,7 +197,7 @@ export default function FeedingPracticesStep() {
                 </RadioGroup>
               )}
             />
-            {touchedFields.q9a_main && errors.q9a_main && (
+            {errors.q9a_main && (
               <p className="text-sm text-red-600">{errors.q9a_main.message}</p>
             )}
             
@@ -285,7 +285,7 @@ export default function FeedingPracticesStep() {
                 </RadioGroup>
               )}
             />
-            {touchedFields.q9b_main && errors.q9b_main && (
+            {errors.q9b_main && (
               <p className="text-sm text-red-600">{errors.q9b_main.message}</p>
             )}
             
@@ -373,7 +373,7 @@ export default function FeedingPracticesStep() {
                 </RadioGroup>
               )}
             />
-            {touchedFields.q10 && errors.q10 && (
+            {errors.q10 && (
               <p className="text-sm text-red-600">{errors.q10.message}</p>
             )}
             
@@ -421,7 +421,7 @@ export default function FeedingPracticesStep() {
                 </RadioGroup>
               )}
             />
-            {touchedFields.q11 && errors.q11 && (
+            {errors.q11 && (
               <p className="text-sm text-red-600">{errors.q11.message}</p>
             )}
             
@@ -546,7 +546,7 @@ export default function FeedingPracticesStep() {
                     </Select>
                   )}
                 />
-                {touchedFields.q15 && errors.q15 && (
+                {errors.q15 && (
                   <p className="text-sm text-red-600">{errors.q15.message}</p>
                 )}
               </div>
@@ -571,7 +571,7 @@ export default function FeedingPracticesStep() {
                     </Select>
                   )}
                 />
-                {touchedFields.q16 && errors.q16 && (
+                {errors.q16 && (
                   <p className="text-sm text-red-600">{errors.q16.message}</p>
                 )}
               </div>
@@ -596,7 +596,7 @@ export default function FeedingPracticesStep() {
                     </Select>
                   )}
                 />
-                {touchedFields.q17 && errors.q17 && (
+                {errors.q17 && (
                   <p className="text-sm text-red-600">{errors.q17.message}</p>
                 )}
               </div>
@@ -621,7 +621,7 @@ export default function FeedingPracticesStep() {
                     </Select>
                   )}
                 />
-                {touchedFields.q18 && errors.q18 && (
+                {errors.q18 && (
                   <p className="text-sm text-red-600">{errors.q18.message}</p>
                 )}
               </div>
