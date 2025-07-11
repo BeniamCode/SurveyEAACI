@@ -1,0 +1,169 @@
+{
+  "survey": {
+    "foodPlanning": {
+      "foodCategories": "Categorii de Alimente",
+      "lowRiskTimeline": "Risc scazut Timeline",
+      "highRiskTimeline": "Risc inalt Timeline",
+      "dragHere": "Trageți alimentele aici pentru {{month}}",
+      "summary": "Rezumat: {{count}} alimente planificate"
+    },
+    "interface": {
+      "str1": "Ghid pentru introducerea alimentelor solide la bebeluși",
+      "str2": "odpowiedni czas wprowadzania pokarmów wydaje się mieć kluczowe znaczenie w zapobieganiu alergiom pokarmowym. Celem niniejszej ankiety jest zebranie informacji na temat zwyczajowych praktyk profesjonalistów medycznych z różnych krajów dotyczących kolejności wprowadzania pokarmów stałych do diety niemowląt oraz jak ta decyzja jest modyfikowana w przypadku niemowląt z niskim lub wysokim ryzyku wystąpienia alergii.",
+      "str3": "Completarea chestionarului durează aproximativ 10 minute.",
+      "str4": "Si acepta participar en la encuesta",
+      "str5": "Luna",
+      "str6": "Diversificarea alimentatiei / Alimentatie complementara",
+      "str7": "Geef de voorkeursvolgorde aan door een item van de ADVIES lijst te slepen naar één van de andere lijsten",
+      "str8": "indem Sie ein Element aus der Liste „Beratung“ berühren und gedrückt halten",
+      "str9": "ne alergic / risc scazut de allergie",
+      "str10": "Risc inalt",
+      "str11": "Risc scazut",
+      "str12": "Risc inalt",
+      "str13": "Submiteti chestionarul",
+      "str14": "Nastere",
+      "str15": "Dank voor uw deelname. Wilt u alle onderstaande vragen invullen? Klik daarna op Formulier verzenden.",
+      "str16": "Submiteti chestionarul",
+      "str17": "Informatii de baza",
+      "str18": "Ati adaugat deja acest produs in aceasta lista",
+      "str19": "Recomandari",
+      "str20": "ani",
+      "str21": "luni",
+      "str22": "Continuare",
+      "str23": "Vă rugăm să introduceți parola corectă",
+      "str24": "ma possiamo fornire un'indicazione generale su quando sia generalmente appropriato considerare l'introduzione di alimenti complementari per questi bambini."
+    },
+    "title": "Ghid pentru introducerea alimentelor solide la bebeluși",
+    "submit": "Submiteti chestionarul",
+    "thanks": "Dank voor uw deelname. Wilt u alle onderstaande vragen invullen? Klik daarna op Formulier verzenden.",
+    "months": "luni",
+    "basicInfo": "Informatii de baza"
+  },
+  "foodCategories": {
+    "starch_gluten": "CEREALE / GLUTEN",
+    "vegetables": "VEGETALE",
+    "legumes": "LEGUME",
+    "meat": "CARNE",
+    "fish_shellfish": "PESTE /FRUCTE DE MARE",
+    "fruit": "FRUCTE",
+    "dairy": "PRODUSE LACTATE/SUSTINUTE PENTRU PRODUSE LACTATE",
+    "egg": "OUA DE GAINA",
+    "fat_oil": "ULEI",
+    "sweets": "ZOETIGHEID",
+    "nuts_seeds": "ALUNE / SEMINTE",
+    "salt_spices": "SARE / CONDIMENTE",
+    "additional_guidance": "INDICATII SI RECOMANDARI SUPLIMENTARE"
+  },
+  "foodItems": {
+    "starch": {
+      "gluten_grains": "Cereale conținând gluten (grâu, orz, secară ex. paste, pâine, etc.)",
+      "gluten_free_cereals": "Cereale fără gluten (hrișcă, quinoa, ovăz)",
+      "maize_products": "Produse din porumb (ex. polenta, gustări din porumb pentru bebeluși)",
+      "potato_sweet_potato": "Cartof, Cartof dulce",
+      "rice": "Orez (inclusiv făină de orez)",
+      "rice_pudding": "Budincă de orez (conținând lapte)",
+      "semolina_pudding": "Budincă de griș (conținând lapte)",
+      "trahanas": "Trahanas"
+    },
+    "vegetables": {
+      "cabbage_broccoli": "Varză, broccoli, conopidă",
+      "carrot": "Morcov",
+      "root_vegetables": "Legume rădăcină ca țelină",
+      "leafy_vegetables": "Legume verzi cu frunze (spanac, salată etc.)",
+      "pea_beans": "Mazăre, fasole verde",
+      "pepper": "Ardei",
+      "tomato": "Roșie",
+      "zucchini": "Dovlecel sau alte dovleci"
+    },
+    "legumes": {
+      "beans": "Fasole (toate tipurile)",
+      "chickpeas": "Naut",
+      "lentils": "Linte",
+      "soya": "Soia",
+      "peanut": "Arahide/unt de arahide"
+    },
+    "meat": {
+      "poultry": "Pui/curcan/rață",
+      "processed_meat": "Carne procesată ca mezeluri/șuncă/salam",
+      "lamb": "Miel",
+      "liver_pate": "Pate de ficat",
+      "pork": "Porc",
+      "rabbit": "Iepure",
+      "beef": "Carne de vită",
+      "venison": "Vânătoare"
+    },
+    "fish": {
+      "crustaceans": "Crustacee (creveți, raci, crabi, homari)",
+      "fish": "Pește",
+      "mollusks": "Moluște (scoici, capesante, stridii, midii, caracatiță, melci, calmar, sepia)"
+    },
+    "fruit": {
+      "apple": "Măr (și produse din măr ca sosul de mere)",
+      "mango": "Mango",
+      "banana": "Banană",
+      "berries": "Fructe de pădure inclusiv căpșuni",
+      "dried_fruits": "Fructe uscate",
+      "figs": "Smochine",
+      "fresh_juice": "Suc de fructe proaspăt",
+      "fruit_juice": "Suc de fructe (cu sau fără zahăr)",
+      "grapes": "Struguri",
+      "kiwi": "Kiwi",
+      "melon": "Pepene galben, pepene verde",
+      "citrus": "Portocală, mandarină",
+      "stone_fruits": "Piersică, caisă",
+      "pear": "Pară"
+    },
+    "dairy": {
+      "plant_milk": "Lapte vegetal (specificați aici fortificat/nefortificat)",
+      "cow_yogurt": "Iaurt de lapte de vacă",
+      "cream_cheese": "Brânză cremă",
+      "feta": "Brânză feta",
+      "fresh_cow_milk": "Lapte de vacă proaspăt",
+      "goat_sheep_milk": "Lapte proaspăt de capră/oaie",
+      "kephir": "Kefir",
+      "kids_yogurt": "Iaurt pentru copii",
+      "rice_milk": "Lapte de orez",
+      "goat_sheep_yogurt": "Iaurt de oaie/capră",
+      "soy_cheese": "Brânză de soia",
+      "soy_milk": "Lapte de soia",
+      "soy_yogurt": "Iaurt de soia",
+      "cheese": "Brânză (ex. cheddar, edam, Comte, parmezan)"
+    },
+    "egg": {
+      "hard_boiled": "Ou fiert tare (fierbere >6min)",
+      "raw": "Ou crud",
+      "partially_cooked": "Parțial gătit ca ouă mențate și ou prăjit"
+    },
+    "fat": {
+      "butter": "Unt",
+      "vegetable_oils": "Ulei de porumb/uleiuri vegetale",
+      "margarine": "Margarină",
+      "olive_oil": "Ulei de măsline",
+      "nut_seed_oils": "Uleiuri de nuci și semințe"
+    },
+    "sweets": {
+      "baby_biscuits": "Biscuiți pentru bebeluși fără zahăr",
+      "fruit_spread": "Pastă de fructe (ex. gem)",
+      "honey": "Miere",
+      "sweets_cake": "Dulciuri, tort, biscuiți"
+    },
+    "nuts": {
+      "mustard": "Muștar",
+      "sesame": "Susan/tahini",
+      "tree_nuts": "Nuci (și unturile de nuci)"
+    },
+    "spices": {
+      "salt": "Sare",
+      "spices_herbs": "Condimente/ierburi (ex. piper, scorțișoară, etc.)"
+    },
+    "additional": {
+      "baby_food": "Mâncare pentru bebeluși preparată - borcane, pungi",
+      "family_meal_salt": "Împărți masa familială cu sare",
+      "family_meal_no_salt": "Împărți masa familială fără sare",
+      "mashed_food": "Mâncare pisat",
+      "pureed_food": "Mâncare piure",
+      "finger_food": "Mâncare în bucăți și finger food",
+      "baby_led_weaning": "Înțărcare condusă de bebeluș"
+    }
+  }
+}

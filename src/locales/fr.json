@@ -1,0 +1,169 @@
+{
+  "survey": {
+    "foodPlanning": {
+      "foodCategories": "Catégories d'Aliments",
+      "lowRiskTimeline": "Faible risque Timeline",
+      "highRiskTimeline": "Haut risque Timeline",
+      "dragHere": "Faites glisser les aliments ici pour {{month}}",
+      "summary": "Résumé: {{count}} aliments planifiés"
+    },
+    "interface": {
+      "str1": "Alimentation complémentaire : une enquête sur les pratiques des professionnels de la santé",
+      "str2": "systemie immunologicznym oraz procesach metabolicznych. Ponadto",
+      "str3": "Le remplissage du questionnaire prend environ 10 minutes.",
+      "str4": "inserisci il codice fornito:",
+      "str5": "Mois",
+      "str6": "Alimentation complémentaire",
+      "str7": "Indique a ordem preferida arrastando e soltando um item da lista 'CONSELHOS' para qualquer outra lista",
+      "str8": "Bitte geben Sie die gewünschte Reihenfolge an",
+      "str9": "Pas d'allergie / Faible risque",
+      "str10": "Haut risque",
+      "str11": "Faible risque",
+      "str12": "Haut risque",
+      "str13": "Soumettre le formulaire",
+      "str14": "Naissance",
+      "str15": "responda a todas as perguntas abaixo e clique no botão 'Enviar formulário'.",
+      "str16": "Soumettre le formulaire",
+      "str17": "Informations de base",
+      "str18": "Vous avez déjà ajouté cet élément à cette liste",
+      "str19": "Conseils",
+      "str20": "années",
+      "str21": "mois",
+      "str22": "Continuer",
+      "str23": "Veuillez fournir le mot de passe correct.",
+      "str24": "Comprendiamo che i consigli saranno personalizzati"
+    },
+    "title": "Alimentation complémentaire : une enquête sur les pratiques des professionnels de la santé",
+    "submit": "Soumettre le formulaire",
+    "thanks": "responda a todas as perguntas abaixo e clique no botão 'Enviar formulário'.",
+    "months": "mois",
+    "basicInfo": "Informations de base"
+  },
+  "foodCategories": {
+    "starch_gluten": "AMIDON/GLUTEN",
+    "vegetables": "LÉGUMES",
+    "legumes": "LÉGUMINEUSES",
+    "meat": "VIANDE",
+    "fish_shellfish": "POISSON/FRUITS DE MER",
+    "fruit": "FRUITS",
+    "dairy": "PRODUITS LAITIERS/SUBSTITUTS DE PRODUITS LAITIERS",
+    "egg": "ŒUF",
+    "fat_oil": "GRAISSE/HUILE",
+    "sweets": "DOCES",
+    "nuts_seeds": "NOIX/GRAINES",
+    "salt_spices": "SEL/ÉPICES",
+    "additional_guidance": "ORIENTATIONS SUPPLÉMENTAIRES"
+  },
+  "foodItems": {
+    "starch": {
+      "gluten_grains": "Céréales contenant du gluten (blé, orge, seigle ex. pâtes, pain, etc.)",
+      "gluten_free_cereals": "Céréales sans gluten (sarrasin, quinoa, avoine)",
+      "maize_products": "Produits à base de maïs (ex. polenta, collations de maïs pour bébés)",
+      "potato_sweet_potato": "Pomme de terre, Patate douce",
+      "rice": "Riz (y compris farine de riz)",
+      "rice_pudding": "Pudding de riz (contenant du lait)",
+      "semolina_pudding": "Pudding de semoule (contenant du lait)",
+      "trahanas": "Trahanas"
+    },
+    "vegetables": {
+      "cabbage_broccoli": "Chou, brocoli, chou-fleur",
+      "carrot": "Carotte",
+      "root_vegetables": "Légumes racines comme céleri",
+      "leafy_vegetables": "Légumes verts à feuilles (épinard, laitue, etc.)",
+      "pea_beans": "Petits pois, haricots verts",
+      "pepper": "Poivron",
+      "tomato": "Tomate",
+      "zucchini": "Courgette ou autres courges"
+    },
+    "legumes": {
+      "beans": "Haricots (tous types)",
+      "chickpeas": "Pois chiches",
+      "lentils": "Lentilles",
+      "soya": "Soja",
+      "peanut": "Cacahuètes/beurre de cacahuète"
+    },
+    "meat": {
+      "poultry": "Poulet/dinde/canard",
+      "processed_meat": "Viande transformée comme charcuterie/jambon/salami",
+      "lamb": "Agneau",
+      "liver_pate": "Pâté de foie",
+      "pork": "Porc",
+      "rabbit": "Lapin",
+      "beef": "Bœuf",
+      "venison": "Gibier"
+    },
+    "fish": {
+      "crustaceans": "Crustacés (crevettes, écrevisses, crabes, homards)",
+      "fish": "Poisson",
+      "mollusks": "Mollusques (palourdes, coquilles Saint-Jacques, huîtres, moules, poulpe, escargots, calmars, seiches)"
+    },
+    "fruit": {
+      "apple": "Pomme (et produits de pomme comme compote de pommes)",
+      "mango": "Mangue",
+      "banana": "Banane",
+      "berries": "Baies y compris fraises",
+      "dried_fruits": "Fruits secs",
+      "figs": "Figues",
+      "fresh_juice": "Jus de fruits frais",
+      "fruit_juice": "Jus de fruits (avec ou sans sucre)",
+      "grapes": "Raisins",
+      "kiwi": "Kiwi",
+      "melon": "Melon, pastèque",
+      "citrus": "Orange, mandarine",
+      "stone_fruits": "Pêche, abricot",
+      "pear": "Poire"
+    },
+    "dairy": {
+      "plant_milk": "Lait végétal (spécifier ici enrichi/non enrichi)",
+      "cow_yogurt": "Yaourt au lait de vache",
+      "cream_cheese": "Fromage à la crème",
+      "feta": "Fromage feta",
+      "fresh_cow_milk": "Lait de vache frais",
+      "goat_sheep_milk": "Lait frais de chèvre/brebis",
+      "kephir": "Kéfir",
+      "kids_yogurt": "Yaourt pour enfants",
+      "rice_milk": "Lait de riz",
+      "goat_sheep_yogurt": "Yaourt de brebis/chèvre",
+      "soy_cheese": "Fromage de soja",
+      "soy_milk": "Lait de soja",
+      "soy_yogurt": "Yaourt de soja",
+      "cheese": "Fromage (ex. cheddar, edam, Comte, parmesan)"
+    },
+    "egg": {
+      "hard_boiled": "Œuf dur (cuisson >6min)",
+      "raw": "Œuf cru",
+      "partially_cooked": "Partiellement cuit comme œufs brouillés et œuf au plat"
+    },
+    "fat": {
+      "butter": "Beurre",
+      "vegetable_oils": "Huile de maïs/huiles végétales",
+      "margarine": "Margarine",
+      "olive_oil": "Huile d'olive",
+      "nut_seed_oils": "Huiles de noix et graines"
+    },
+    "sweets": {
+      "baby_biscuits": "Biscuits pour bébés sans sucre",
+      "fruit_spread": "Pâte à tartiner aux fruits (ex. confiture)",
+      "honey": "Miel",
+      "sweets_cake": "Bonbons, gâteau, biscuits"
+    },
+    "nuts": {
+      "mustard": "Moutarde",
+      "sesame": "Sésame/tahini",
+      "tree_nuts": "Noix (et beurres de noix)"
+    },
+    "spices": {
+      "salt": "Sel",
+      "spices_herbs": "Épices/herbes (ex. poivre, cannelle, etc.)"
+    },
+    "additional": {
+      "baby_food": "Nourriture pour bébés préparée - pots, sachets",
+      "family_meal_salt": "Partager repas familial avec sel",
+      "family_meal_no_salt": "Partager repas familial sans sel",
+      "mashed_food": "Nourriture écrasée",
+      "pureed_food": "Nourriture en purée",
+      "finger_food": "Nourriture en morceaux et finger food",
+      "baby_led_weaning": "Sevrage dirigé par bébé"
+    }
+  }
+}

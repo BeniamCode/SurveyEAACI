@@ -386,7 +386,7 @@ export default function FeedingPracticesStep() {
                   render={({ field }) => (
                     <FoodPlanningInterface
                       riskLevel="low"
-                      title="Food Introduction Plan for Low-Risk Children"
+                      title={t('survey.food_plan.low_risk_title')}
                       onPlacementsChange={(placements) => field.onChange(placements)}
                       initialPlacements={field.value || []}
                     />
@@ -434,7 +434,7 @@ export default function FeedingPracticesStep() {
                   render={({ field }) => (
                     <FoodPlanningInterface
                       riskLevel="high"
-                      title="Food Introduction Plan for High-Risk Children"
+                      title={t('survey.food_plan.high_risk_title')}
                       onPlacementsChange={(placements) => field.onChange(placements)}
                       initialPlacements={field.value || []}
                     />

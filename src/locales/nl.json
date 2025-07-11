@@ -1,0 +1,169 @@
+{
+  "survey": {
+    "foodPlanning": {
+      "foodCategories": "Voedselcategorieën",
+      "lowRiskTimeline": "Laag risico Timeline",
+      "highRiskTimeline": "Hoog risico Timeline",
+      "dragHere": "Sleep voedingsmiddelen hier voor {{month}}",
+      "summary": "Samenvatting: {{count}} voedingsmiddelen gepland"
+    },
+    "interface": {
+      "str1": "introductie van vaste voeding: een enquête onder beroepsbeoefenaren in de gezondheidszorg",
+      "str2": "który wywołuje istotne zmiany funkcjonalne w przewodzie pokarmowym",
+      "str3": "Het invullen van de vragenlijst kost ongeveer 10 minuten",
+      "str4": "Se accetti di partecipare al sondaggio",
+      "str5": "Maand",
+      "str6": "Vaste voeding",
+      "str7": "indem Sie einen Artikel aus der Liste „RATGEBER“ per Drag & Drop in eine andere Liste ziehen",
+      "str8": "Indique el orden preferido tocando y manteniendo presionado un elemento de la lista SUGERENCIAS hasta que aparezca un contorno verde y luego arrástrelo a cualquier otra lista.",
+      "str9": "Niet allergisch/laag risico",
+      "str10": "Hoog risico",
+      "str11": "Laag risico",
+      "str12": "Hoog risico",
+      "str13": "Formulier verzenden",
+      "str14": "Geboorte",
+      "str15": "Obrigado por concordar em participar. Por favor",
+      "str16": "Formulier verzenden",
+      "str17": "Basisinformatie",
+      "str18": "U heeft dit item al aan deze lijst toegevoegd",
+      "str19": "Advies",
+      "str20": "jaar",
+      "str21": "Maanden",
+      "str22": "Doorgaan",
+      "str23": "Vul een juist password in alstublieft",
+      "str24": "kiedy zazwyczaj należy rozważyć wprowadzanie pokarmów uzupełniających do diety niemowląt."
+    },
+    "title": "introductie van vaste voeding: een enquête onder beroepsbeoefenaren in de gezondheidszorg",
+    "submit": "Formulier verzenden",
+    "thanks": "Obrigado por concordar em participar. Por favor",
+    "months": "Maanden",
+    "basicInfo": "Basisinformatie"
+  },
+  "foodCategories": {
+    "starch_gluten": "ZETMEEL/GLUTEN",
+    "vegetables": "GROENTE",
+    "legumes": "PEULVRUCHTEN",
+    "meat": "VLEES/KIP/GEVOGELTE",
+    "fish_shellfish": "VIS/SCHAAL- EN SCHELPDIEREN",
+    "fruit": "FRUIT",
+    "dairy": "ZUIVELPRODUCTEN/VERVANGERS VOOR ZUIVELPRODUCTEN",
+    "egg": "EI",
+    "fat_oil": "SMEER- EN BEREIDINGSVETTEN/OLIESOORTEN",
+    "sweets": "SÜSSIGKEITEN",
+    "nuts_seeds": "NOTEN EN ZADEN",
+    "salt_spices": "ZOUT/KRUIDEN EN SPECERIJEN",
+    "additional_guidance": "OVERIGEN"
+  },
+  "foodItems": {
+    "starch": {
+      "gluten_grains": "Glutenhoudende granen (tarwe, gerst, rogge bijv. pasta, brood, enz.)",
+      "gluten_free_cereals": "Glutenvrije granen (boekweit, quinoa, haver)",
+      "maize_products": "Maïsproducten (bijv. polenta, maïs snacks voor baby's)",
+      "potato_sweet_potato": "Aardappel, Zoete aardappel",
+      "rice": "Rijst (inclusief rijstmeel)",
+      "rice_pudding": "Rijstpudding (met melk)",
+      "semolina_pudding": "Griesmeel pudding (met melk)",
+      "trahanas": "Trahanas"
+    },
+    "vegetables": {
+      "cabbage_broccoli": "Kool, broccoli, bloemkool",
+      "carrot": "Wortel",
+      "root_vegetables": "Wortelgroenten zoals selderij",
+      "leafy_vegetables": "Groene bladgroenten (spinazie, sla enz.)",
+      "pea_beans": "Erwten, sperziebonen",
+      "pepper": "Paprika",
+      "tomato": "Tomaat",
+      "zucchini": "Courgette of andere pompoenen"
+    },
+    "legumes": {
+      "beans": "Bonen (alle soorten)",
+      "chickpeas": "Kikkererwten",
+      "lentils": "Linzen",
+      "soya": "Soja",
+      "peanut": "Pinda's/pindakaas"
+    },
+    "meat": {
+      "poultry": "Kip/kalkoen/eend",
+      "processed_meat": "Verwerkt vlees zoals vleeswaren/ham/salami",
+      "lamb": "Lam",
+      "liver_pate": "Leverpaté",
+      "pork": "Varkensvlees",
+      "rabbit": "Konijn",
+      "beef": "Rundvlees",
+      "venison": "Wild"
+    },
+    "fish": {
+      "crustaceans": "Schaaldieren (garnalen, rivierkreeften, krabben, kreeften)",
+      "fish": "Vis",
+      "mollusks": "Weekdieren (mosselen, coquilles, oesters, mossels, octopus, slakken, inktvis, pijlinktvis)"
+    },
+    "fruit": {
+      "apple": "Appel (en appelproducten zoals appelmoes)",
+      "mango": "Mango",
+      "banana": "Banaan",
+      "berries": "Bessen inclusief aardbeien",
+      "dried_fruits": "Gedroogde vruchten",
+      "figs": "Vijgen",
+      "fresh_juice": "Verse vruchtensap",
+      "fruit_juice": "Vruchtensap (met of zonder suiker)",
+      "grapes": "Druiven",
+      "kiwi": "Kiwi",
+      "melon": "Meloen, watermeloen",
+      "citrus": "Sinaasappel, mandarijn",
+      "stone_fruits": "Perzik, abrikoos",
+      "pear": "Peer"
+    },
+    "dairy": {
+      "plant_milk": "Plantaardige melk (specificeer hier verrijkt/niet verrijkt)",
+      "cow_yogurt": "Koemelk yoghurt",
+      "cream_cheese": "Roomkaas",
+      "feta": "Feta kaas",
+      "fresh_cow_milk": "Verse koemelk",
+      "goat_sheep_milk": "Verse geiten/schapenmelk",
+      "kephir": "Kefir",
+      "kids_yogurt": "Kinderyoghurt",
+      "rice_milk": "Rijstmelk",
+      "goat_sheep_yogurt": "Schapen/geiten yoghurt",
+      "soy_cheese": "Soja kaas",
+      "soy_milk": "Sojamelk",
+      "soy_yogurt": "Soja yoghurt",
+      "cheese": "Kaas (bijv. cheddar, edam, Comte, parmezaan)"
+    },
+    "egg": {
+      "hard_boiled": "Hardgekookt ei (koken >6min)",
+      "raw": "Rauw ei",
+      "partially_cooked": "Gedeeltelijk gekookt zoals roerei en spiegelei"
+    },
+    "fat": {
+      "butter": "Boter",
+      "vegetable_oils": "Maisolie/plantaardige oliën",
+      "margarine": "Margarine",
+      "olive_oil": "Olijfolie",
+      "nut_seed_oils": "Noten- en zadolie"
+    },
+    "sweets": {
+      "baby_biscuits": "Baby koekjes zonder suiker",
+      "fruit_spread": "Fruitbeleg (bijv. jam)",
+      "honey": "Honing",
+      "sweets_cake": "Snoep, taart, koekjes"
+    },
+    "nuts": {
+      "mustard": "Mosterd",
+      "sesame": "Sesam/tahini",
+      "tree_nuts": "Boomnotne (en notenpasta's)"
+    },
+    "spices": {
+      "salt": "Zout",
+      "spices_herbs": "Kruiden/specerijen (bijv. peper, kaneel, enz.)"
+    },
+    "additional": {
+      "baby_food": "Kant-en-klare babyvoeding - potjes, zakjes",
+      "family_meal_salt": "Familiemaaltijd delen met zout",
+      "family_meal_no_salt": "Familiemaaltijd delen zonder zout",
+      "mashed_food": "Geplet voedsel",
+      "pureed_food": "Gepureerd voedsel",
+      "finger_food": "Voedsel in stukjes en fingerfood",
+      "baby_led_weaning": "Baby-geleide spening"
+    }
+  }
+}

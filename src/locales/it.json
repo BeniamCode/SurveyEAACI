@@ -1,0 +1,169 @@
+{
+  "survey": {
+    "foodPlanning": {
+      "foodCategories": "Categorie Alimentari",
+      "lowRiskTimeline": "Anallergico Timeline",
+      "highRiskTimeline": "Alto rischio Timeline",
+      "dragHere": "Trascina gli alimenti qui per {{month}}",
+      "summary": "Riepilogo: {{count}} alimenti pianificati"
+    },
+    "interface": {
+      "str1": "Linee guida per l'introduzione di cibi solidi ai bambini:",
+      "str2": "Η εισαγωγή στερεών τροφών και υγρών εκτός του γάλακτος (συμπληρωματική σίτιση) είναι ένα βασικό αναπτυξιακό ορόσημο που επιφέρει ισχυρές αλλαγές όσον αφορά τις λειτουργικές αλλαγές στο γαστρεντερικό σωλήνα",
+      "str3": "La compilazione del questionario richiede circa 10 minuti.",
+      "str4": "παρακαλούμε εισάγετε τον κωδικό που σας δόθηκε:",
+      "str5": "Mese",
+      "str6": "Linee guida per l'introduzione di cibi solidi ai bambini:",
+      "str7": "przeciągając element z listy „ZALECENIA” do dowolnej innej listy",
+      "str8": "dotykając i przytrzymując element z listy 'ZALECENIA'",
+      "str9": "Anallergico / Basso rischio",
+      "str10": "Alto rischio",
+      "str11": "Anallergico",
+      "str12": "Alto rischio",
+      "str13": "Invia un questionario",
+      "str14": "Nascita",
+      "str15": "Grazie per aver accettato di partecipare. Si prega di rispondere a tutte le domande di seguito e quindi fare clic sul pulsante 'Invia questionario'.",
+      "str16": "Invia un questionario",
+      "str17": "Informazioni di base",
+      "str18": "Hai già aggiunto questo elemento a questo elenco",
+      "str19": "Istruzioni",
+      "str20": "anni",
+      "str21": "mesi",
+      "str22": "Proceed",
+      "str23": "Please provide the correct password.",
+      "str24": "παρακαλούμε παρέχετε μια γενική ένδειξη για πως συνήθως γίνεται η εισαγωγή στερεών τροφών στα βρέφη."
+    },
+    "title": "Linee guida per l'introduzione di cibi solidi ai bambini:",
+    "submit": "Invia un questionario",
+    "thanks": "Grazie per aver accettato di partecipare. Si prega di rispondere a tutte le domande di seguito e quindi fare clic sul pulsante 'Invia questionario'.",
+    "months": "mesi",
+    "basicInfo": "Informazioni di base"
+  },
+  "foodCategories": {
+    "starch_gluten": "AMIDO/GLUTINE",
+    "vegetables": "VERDURE",
+    "legumes": "LEGUMI",
+    "meat": "CARNE",
+    "fish_shellfish": "PESCE/CROSTACEI",
+    "fruit": "FRUTTA",
+    "dairy": "PRODOTTI LATTIERO-CASEARI/ SOSTITUTI DEI PRODOTTI LATTIERO-CASEARI",
+    "egg": "UOVO",
+    "fat_oil": "GRASSO/OLIO",
+    "sweets": "ΜΕΛΙ",
+    "nuts_seeds": "NOCI/SEMI",
+    "salt_spices": "SALE/SPEZIE",
+    "additional_guidance": "GUIDA AGGIUNTIVA"
+  },
+  "foodItems": {
+    "starch": {
+      "gluten_grains": "Cereali contenenti glutine (frumento, orzo, segale es. pasta, pane, ecc.)",
+      "gluten_free_cereals": "Cereali senza glutine (grano saraceno, quinoa, avena)",
+      "maize_products": "Prodotti a base di mais (es. polenta, snack di mais per bambini)",
+      "potato_sweet_potato": "Patata, Patata dolce",
+      "rice": "Riso (inclusa la farina di riso)",
+      "rice_pudding": "Budino di riso (contenente latte)",
+      "semolina_pudding": "Budino di semolino (contenente latte)",
+      "trahanas": "Trahanas"
+    },
+    "vegetables": {
+      "cabbage_broccoli": "Cavolo, broccoli, cavolfiore",
+      "carrot": "Carota",
+      "root_vegetables": "Verdure a radice come sedano",
+      "leafy_vegetables": "Verdure a foglia verde (spinaci, lattuga ecc.)",
+      "pea_beans": "Piselli, fagiolini",
+      "pepper": "Peperone",
+      "tomato": "Pomodoro",
+      "zucchini": "Zucchine o altre zucche"
+    },
+    "legumes": {
+      "beans": "Fagioli (tutti i tipi)",
+      "chickpeas": "Ceci",
+      "lentils": "Lenticchie",
+      "soya": "Soia",
+      "peanut": "Arachidi/burro di arachidi"
+    },
+    "meat": {
+      "poultry": "Pollo/tacchino/anatra",
+      "processed_meat": "Carni trasformate come salumi/prosciutto/salame",
+      "lamb": "Agnello",
+      "liver_pate": "Paté di fegato",
+      "pork": "Maiale",
+      "rabbit": "Coniglio",
+      "beef": "Manzo",
+      "venison": "Selvaggina"
+    },
+    "fish": {
+      "crustaceans": "Crostacei (gamberi, gamberi di fiume, granchi, aragoste)",
+      "fish": "Pesce",
+      "mollusks": "Molluschi (vongole, capesante, ostriche, cozze, polpo, lumache, calamari, seppie)"
+    },
+    "fruit": {
+      "apple": "Mela (e prodotti di mela come salsa di mele)",
+      "mango": "Mango",
+      "banana": "Banana",
+      "berries": "Bacche incluse fragole",
+      "dried_fruits": "Frutta secca",
+      "figs": "Fichi",
+      "fresh_juice": "Succo di frutta fresco",
+      "fruit_juice": "Succo di frutta (con o senza zucchero)",
+      "grapes": "Uva",
+      "kiwi": "Kiwi",
+      "melon": "Melone, anguria",
+      "citrus": "Arancia, mandarino",
+      "stone_fruits": "Pesca, albicocca",
+      "pear": "Pera"
+    },
+    "dairy": {
+      "plant_milk": "Latte vegetale (specificare qui fortificato/non fortificato)",
+      "cow_yogurt": "Yogurt di latte vaccino",
+      "cream_cheese": "Formaggio cremoso",
+      "feta": "Formaggio feta",
+      "fresh_cow_milk": "Latte vaccino fresco",
+      "goat_sheep_milk": "Latte fresco di capra/pecora",
+      "kephir": "Kefir",
+      "kids_yogurt": "Yogurt per bambini",
+      "rice_milk": "Latte di riso",
+      "goat_sheep_yogurt": "Yogurt di pecora/capra",
+      "soy_cheese": "Formaggio di soia",
+      "soy_milk": "Latte di soia",
+      "soy_yogurt": "Yogurt di soia",
+      "cheese": "Formaggio (es. cheddar, edam, Comte, parmigiano)"
+    },
+    "egg": {
+      "hard_boiled": "Uovo sodo (bollitura >6min)",
+      "raw": "Uovo crudo",
+      "partially_cooked": "Parzialmente cotto come uova strapazzate e uovo all'occhio di bue"
+    },
+    "fat": {
+      "butter": "Burro",
+      "vegetable_oils": "Olio di mais/oli vegetali",
+      "margarine": "Margarina",
+      "olive_oil": "Olio d'oliva",
+      "nut_seed_oils": "Oli di noci e semi"
+    },
+    "sweets": {
+      "baby_biscuits": "Biscotti per bambini senza zucchero",
+      "fruit_spread": "Spalmabile di frutta (es. marmellata)",
+      "honey": "Miele",
+      "sweets_cake": "Dolci, torta, biscotti"
+    },
+    "nuts": {
+      "mustard": "Senape",
+      "sesame": "Sesamo/tahini",
+      "tree_nuts": "Frutta secca (e burri di frutta secca)"
+    },
+    "spices": {
+      "salt": "Sale",
+      "spices_herbs": "Spezie/erbe (es. pepe, cannella, ecc.)"
+    },
+    "additional": {
+      "baby_food": "Alimenti per bambini preparati - vasetti, buste",
+      "family_meal_salt": "Condividi pasto familiare con sale",
+      "family_meal_no_salt": "Condividi pasto familiare senza sale",
+      "mashed_food": "Cibo schiacciato",
+      "pureed_food": "Cibo frullato",
+      "finger_food": "Cibo a pezzi e finger food",
+      "baby_led_weaning": "Svezzamento guidato dal bambino"
+    }
+  }
+}
