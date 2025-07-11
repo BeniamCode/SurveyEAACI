@@ -11,6 +11,41 @@
     "guidance": "Please answer all questions as accurately as possible. Your responses will remain confidential.",
     "basicInfo": "Basic Information",
     "title": "Complementary feeding: a survey on the Healthcare Professional practices",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit Survey",
+    "completed": "Survey completed successfully! Your response has been recorded.\\n\\nParticipant ID: {{participantId}}\\nSubmission ID: {{responseId}}",
+    "error": "There was an error submitting your survey. Please try again.",
+    "placeholders": {
+      "selectInterval": "Select interval...",
+      "months": "0"
+    },
+    "thankYou": {
+      "title": "Thank You!",
+      "message": "Your survey response has been successfully submitted.",
+      "participantId": "Participant ID",
+      "newSurvey": "Start New Survey"
+    },
+    "steps": {
+      "demographics": "Demographics",
+      "feeding_practices": "Feeding Practices"
+    },
+    "food_plan": {
+      "instructions": "Please specify the introduction order by adding entries for each month and food category you wish to include.",
+      "low_risk_title": "Food Introduction Plan for Low-Risk Children",
+      "high_risk_title": "Food Introduction Plan for High-Risk Children",
+      "month": "Month of Introduction",
+      "month_placeholder": "Select month",
+      "category": "Food Category",
+      "category_placeholder": "Select food category",
+      "items": "Food Items to Introduce",
+      "items_required": "Please select at least one food item",
+      "add_entry": "Add Entry",
+      "no_plans_needed": "No food plans needed based on your previous answers."
+    },
+    "review": {
+      "instructions": "Please review your answers before submitting the survey."
+    },
     "pages": {
       "basic_information": {
         "title": "Basic Information"
@@ -29,6 +64,7 @@
       },
       "q2": {
         "title": "Profession",
+        "placeholder": "Select your profession",
         "choices": {
           "paediatrician": "Paediatrician",
           "dietitian": "Dietitian",
@@ -36,13 +72,16 @@
           "nurse": "Nurse"
         },
         "other": "Other",
-        "otherPlaceholder": "Please specify"
+        "otherPlaceholder": "Please specify",
+        "other_specify": "Please specify your profession"
       },
       "q3": {
-        "title": "Age (years)"
+        "title": "Age (years)",
+        "placeholder": "Enter your age"
       },
       "q4": {
-        "title": "Years of practice within your specialty"
+        "title": "Years of practice within your specialty",
+        "placeholder": "Enter years of practice"
       },
       "q5": {
         "title": "Do you have additional education in allergy?",
@@ -60,10 +99,12 @@
           "phd": "PhD"
         },
         "other": "Other",
-        "otherPlaceholder": "Please specify"
+        "otherPlaceholder": "Please specify",
+        "other_specify": "Please describe your additional education"
       },
       "q6": {
-        "title": "Country of work"
+        "title": "Country of work",
+        "placeholder": "Enter your country"
       },
       "q7": {
         "title": "At what age do you advise the introduction of complementary food for an infant",

@@ -1,0 +1,170 @@
+.surveyForm {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.formContent {
+  min-height: 400px;
+  margin: 30px 0;
+}
+
+.formActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 30px;
+}
+
+.nextButton,
+.submitButton {
+  margin-left: auto;
+}
+
+.formSection {
+  margin-bottom: 30px;
+}
+
+.formSection h3 {
+  margin-bottom: 16px;
+  color: #1f2937;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.formRow {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.formRow > div {
+  flex: 1;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.checkboxGroup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.errorMessage {
+  color: #dc2626;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.conditionalSection {
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 3px solid #e5e7eb;
+  margin-top: 16px;
+}
+
+.foodPlanEntry {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.foodPlanEntry h4 {
+  margin-bottom: 16px;
+  color: #1f2937;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.removeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #dc2626;
+}
+
+.addButton {
+  width: 100%;
+  border: 2px dashed #d1d5db;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #6b7280;
+  background: #f9fafb;
+}
+
+.addButton:hover {
+  border-color: #1890ff;
+  color: #1890ff;
+}
+
+.reservedItem {
+  color: #6b7280;
+  font-style: italic;
+}
+
+.reservedItem [role="checkbox"] {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .surveyForm {
+    padding: 15px;
+    margin: 10px;
+  }
+  
+  .formRow {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .radioGroup {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .checkboxGroup {
+    grid-template-columns: 1fr;
+  }
+  
+  .formActions {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .formActions button {
+    width: 100%;
+  }
+}
