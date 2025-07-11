@@ -81,6 +81,15 @@ export default function FoodPlanningInterface({
     return riskLevel === 'low' ? 'border-green-200 bg-green-50' : 'border-red-200 bg-red-50';
   };
 
+  const getFoodItemPlacement = (foodItemId: string) => {
+    const placement = placements.find(p => p.foodItemId === foodItemId && p.riskLevel === riskLevel);
+    if (placement) {
+      const month = timelineMonths.find(m => m.id === placement.monthId);
+      return month?.label;
+    }
+    return null;
+  };
+
   return (
     <DragDropContext onDragEnd={handleDragEnd}>
       <div className={`border-l-4 ${riskLevel === 'low' ? 'border-green-400' : 'border-red-400'} p-4 bg-gray-50 space-y-4`}>
@@ -124,29 +133,39 @@ export default function FoodPlanningInterface({
                               {...provided.droppableProps}
                               className="pb-2"
                             >
-                              {category.items.map((item, index) => (
-                                <Draggable
-                                  key={item.id}
-                                  draggableId={item.id}
-                                  index={index}
-                                >
-                                  {(provided, snapshot) => (
-                                    <div
-                                      ref={provided.innerRef}
-                                      {...provided.draggableProps}
-                                      {...provided.dragHandleProps}
-                                      className={`mx-3 mb-1 p-2 bg-white border border-gray-200 rounded text-xs cursor-grab transition-all ${
-                                        snapshot.isDragging ? 'shadow-lg border-blue-300 bg-blue-50' : 'hover:border-gray-300 hover:shadow-sm'
-                                      }`}
-                                    >
-                                      <div className="flex items-start gap-2">
-                                        <i className={`fas ${item.icon} text-gray-500 mt-0.5 flex-shrink-0`}></i>
-                                        <span className="leading-tight">{item.name}</span>
+                              {category.items.map((item, index) => {
+                                const currentPlacement = getFoodItemPlacement(item.id);
+                                return (
+                                  <Draggable
+                                    key={item.id}
+                                    draggableId={item.id}
+                                    index={index}
+                                  >
+                                    {(provided, snapshot) => (
+                                      <div
+                                        ref={provided.innerRef}
+                                        {...provided.draggableProps}
+                                        {...provided.dragHandleProps}
+                                        className={`mx-3 mb-1 p-2 bg-white border border-gray-200 rounded text-xs cursor-grab transition-all ${
+                                          snapshot.isDragging ? 'shadow-lg border-blue-300 bg-blue-50' : 'hover:border-gray-300 hover:shadow-sm'
+                                        }`}
+                                      >
+                                        <div className="flex items-start justify-between gap-2">
+                                          <div className="flex items-start gap-2 flex-1">
+                                            <i className={`fas ${item.icon} text-gray-500 mt-0.5 flex-shrink-0`}></i>
+                                            <span className="leading-tight">{item.name}</span>
+                                          </div>
+                                          {currentPlacement && (
+                                            <span className="text-gray-400 text-xs font-medium ml-2 flex-shrink-0">
+                                              {currentPlacement}
+                                            </span>
+                                          )}
+                                        </div>
                                       </div>
-                                    </div>
-                                  )}
-                                </Draggable>
-                              ))}
+                                    )}
+                                  </Draggable>
+                                );
+                              })}
                               {provided.placeholder}
                             </div>
                           )}
