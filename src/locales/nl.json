@@ -139,7 +139,7 @@
       },
       "q2": {
         "title": "Beroep",
-        "placeholder": "Select your profession",
+        "placeholder": "Selecteer uw beroep",
         "choices": {
           "paediatrician": "Kinderarts",
           "dietitian": "Diétist",
@@ -148,15 +148,15 @@
         },
         "other": "Anders",
         "otherPlaceholder": "namelijk ",
-        "other_specify": "Please specify your profession"
+        "other_specify": "Gelieve uw beroep te specificeren"
       },
       "q3": {
         "title": "leeftijd (in jaren)",
-        "placeholder": "Enter your age"
+        "placeholder": "Voer uw leeftijd in"
       },
       "q4": {
         "title": "Aantal jaren werkzaam in uw speciaisme",
-        "placeholder": "Enter years of practice"
+        "placeholder": "Voer jaren ervaring in"
       },
       "q5a": {
         "title": "namelijk ",
@@ -169,11 +169,11 @@
         },
         "other": "anders",
         "otherPlaceholder": "namelijk ",
-        "other_specify": "Please describe your additional education"
+        "other_specify": "Gelieve uw aanvullende opleiding te beschrijven"
       },
       "q6": {
         "title": "Land waar u werkzaam bent",
-        "placeholder": "Enter your country"
+        "placeholder": "Voer uw land in"
       },
       "q7": {
         "title": "Op welke leeftijd adviseert u de ouders van een zuigeling te starten met vaste voeding?",
@@ -435,12 +435,13 @@
       "baby_led_weaning": "Baby-geleide spening"
     }
   },
-  "title": "Complementary feeding: a survey on the Healthcare Professional practices",
+  "title": "introductie van vaste voeding: een enquête onder beroepsbeoefenaren in de gezondheidszorg",
   "introduction": {
-    "description": "The introduction of solid foods and drinks other than milk (complementary feeding) is a key developmental milestone that exerts powerful changes in terms of functional changes to the gastrointestinal tract, the immune system and metabolic processes. Moreover, the timing of food introduction appears crucial for the prevention of food allergy. The aim of the current survey is to collect information on the usual practices of healthcare professionals from different countries about the order of solid foods' introduction into the infants diet and the how this differs for infants at low or high risk for development of food allergy.",
-    "duration": "Completion of the questionnaire will take approximately 10 minutes.",
-    "passwordPrompt": "If you agree to participate in this research, please type the password that was provided to you:",
-    "continue": "Continue"
+    "description": "De introductie van vaste voeding en dranken, anders dan zuigelingenvoeding, brengt belangrijke veranderingen teweeg in de darmfunctie, het immuunsysteem en metabole processen van de zuigeling .Bovendien is het tijdstip van de introductie van vaste voeding curciaal voor de primaire preventie van voedselallergie. Het doel van deze enquete is om informatie te verzamelen over de huidige adviezen die beroepsbeoefenaren in de gezondheidszorg geven ten aanzien van de introductie van vaste voeding bij zuigelingen met zowel een laag (als verhoogd risico op de ontwikkeling van allergie. ",
+    "duration": "Het invullen van de vragenlijst kost ongeveer 10 minuten",
+    "passwordPrompt": "Als u mee wilt doen aan dit onderzoek, vult u dan alstublieft het password in dat u hebt ontvangen ",
+    "continue": "Continue",
+    "extraHeader": "We begrijpen dat advies op maat belangrijk is, maar we kunnen een algemene indicatie geven van wanneer het doorgaans geschikt is om te overwegen om aanvullende voedingsmiddelen te introduceren bij deze baby's."
   },
   "navigation": {
     "home": "Home",

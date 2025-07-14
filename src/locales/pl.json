@@ -1,10 +1,11 @@
 {
-  "title": "Żywienie uzupełniające: badanie praktyk pracowników ochrony zdrowia",
+  "title": "Rozszerzanie diety: badanie praktyk profesjonalistów medycznych",
   "introduction": {
-    "description": "Wprowadzanie pokarmów stałych i napojów innych niż mleko (żywienie uzupełniające) jest kluczowym kamieniem milowym rozwojowym, który wywołuje silne zmiany w zakresie funkcjonowania przewodu pokarmowego, układu odpornościowego i procesów metabolicznych. Ponadto, czas wprowadzania pokarmów wydaje się kluczowy dla zapobiegania alergii pokarmowej. Celem niniejszego badania jest zebranie informacji na temat zwykłych praktyk pracowników ochrony zdrowia z różnych krajów dotyczących kolejności wprowadzania pokarmów stałych do diety niemowląt oraz tego, jak różni się to w przypadku niemowląt o niskim lub wysokim ryzyku rozwoju alergii pokarmowej.",
-    "duration": "Wypełnienie kwestionariusza zajmie około 10 minut.",
-    "passwordPrompt": "Jeśli zgadzasz się na udział w tym badaniu, wpisz hasło, które zostało Ci przekazane:",
-    "continue": "Kontynuuj"
+    "description": "Wprowadzanie pokarmów stałych oraz napojów innych niż mleko matki lub mleko modyfikowane do diety dziecka (rozszerzanie diety) jest kluczowym kamieniem milowym w rozwoju, który wywołuje istotne zmiany funkcjonalne w przewodzie pokarmowym, systemie immunologicznym oraz procesach metabolicznych. Ponadto, odpowiedni czas wprowadzania pokarmów wydaje się mieć kluczowe znaczenie w zapobieganiu alergiom pokarmowym. Celem niniejszej ankiety jest zebranie informacji na temat zwyczajowych praktyk profesjonalistów medycznych z różnych krajów dotyczących kolejności wprowadzania pokarmów stałych do diety niemowląt oraz jak ta decyzja jest modyfikowana w przypadku niemowląt z niskim lub wysokim ryzyku wystąpienia alergii.",
+    "duration": "Wypełnienie ankiety zajmuje około 10 minut.",
+    "passwordPrompt": "Jeśli wyraża Pani/Pan zgodę na udział w ankiecie, proszę wpisać hasło, które zostało Pani/Panu przekazane:",
+    "continue": "Kontynuuj",
+    "extraHeader": "Zdajemy sobie sprawę, że wydawane przez Panią/Pana zalecenia dotyczące rozszerzania diety są dostosowywane indywidualnie do każdego pacjenta. Prosimy, aby przedstawiła/ł Pani/Pan ogólne zasady, kiedy zazwyczaj należy rozważyć wprowadzanie pokarmów uzupełniających do diety niemowląt."
   },
   "survey": {
     "thanks": "Dziękujemy za wyrażenie zgody. Po udzieleniu odpowiedzi na wszystkie poniższe pytania proszę kliknąć przycisk „Prześlij Formularz”.",
@@ -37,16 +38,16 @@
         },
         "other": "Inny",
         "otherPlaceholder": "Proszę sprecyzuj",
-        "placeholder": "Select your profession",
-        "other_specify": "Please specify your profession"
+        "placeholder": "Wybierz swój zawód",
+        "other_specify": "Proszę określić swój zawód"
       },
       "q3": {
         "title": "Wiek (lata)",
-        "placeholder": "Enter your age"
+        "placeholder": "Podaj swój wiek"
       },
       "q4": {
         "title": "Lata praktyki w Pani/Pana specjalizacji",
-        "placeholder": "Enter years of practice"
+        "placeholder": "Podaj lata praktyki"
       },
       "q5": {
         "title": "Czy posiada Pani/Pan dodatkowe wykształcenie z zakresu alergologii?",
@@ -66,11 +67,11 @@
         },
         "other": "Inny",
         "otherPlaceholder": "Proszę sprecyzuj",
-        "other_specify": "Please describe your additional education"
+        "other_specify": "Proszę opisać dodatkowe wykształcenie"
       },
       "q6": {
         "title": "Kraj pracy",
-        "placeholder": "Enter your country"
+        "placeholder": "Podaj swój kraj"
       },
       "q7": {
         "title": "W którym miesiącu życia zaleca Pani/Pan wprowadzanie pokarmów uzupełniających do diety niemowląt?",

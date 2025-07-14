@@ -139,7 +139,7 @@
       },
       "q2": {
         "title": "Beruf",
-        "placeholder": "Select your profession",
+        "placeholder": "Wählen Sie Ihren Beruf",
         "choices": {
           "paediatrician": "Kinderarzt",
           "dietitian": "Ernährungsberater",
@@ -148,15 +148,15 @@
         },
         "other": "Andere",
         "otherPlaceholder": "Bitte angeben",
-        "other_specify": "Please specify your profession"
+        "other_specify": "Bitte geben Sie Ihren Beruf an"
       },
       "q3": {
-        "title": "Alter Jahre)",
-        "placeholder": "Enter your age"
+        "title": "Alter (Jahre)",
+        "placeholder": "Geben Sie Ihr Alter ein"
       },
       "q4": {
         "title": "Jahrelange Praxis in Ihrem Fachgebiet",
-        "placeholder": "Enter years of practice"
+        "placeholder": "Geben Sie die Jahre der Praxis ein"
       },
       "q5a": {
         "title": "Bitte angeben",
@@ -169,11 +169,11 @@
         },
         "other": "Andere",
         "otherPlaceholder": "Bitte angeben",
-        "other_specify": "Please describe your additional education"
+        "other_specify": "Bitte beschreiben Sie Ihre zusätzliche Ausbildung"
       },
       "q6": {
         "title": "Land der Arbeit",
-        "placeholder": "Enter your country"
+        "placeholder": "Geben Sie Ihr Land ein"
       },
       "q7": {
         "title": "Ab welchem Alter empfehlen Sie die Einführung von Beikost für einen Säugling?",
@@ -435,12 +435,13 @@
       "baby_led_weaning": "Babygeleitete Beikost"
     }
   },
-  "title": "Complementary feeding: a survey on the Healthcare Professional practices",
+  "title": "Ergänzungsernährung: eine Umfrage zu den Praktiken von Gesundheitsfachkräften",
   "introduction": {
-    "description": "The introduction of solid foods and drinks other than milk (complementary feeding) is a key developmental milestone that exerts powerful changes in terms of functional changes to the gastrointestinal tract, the immune system and metabolic processes. Moreover, the timing of food introduction appears crucial for the prevention of food allergy. The aim of the current survey is to collect information on the usual practices of healthcare professionals from different countries about the order of solid foods' introduction into the infants diet and the how this differs for infants at low or high risk for development of food allergy.",
-    "duration": "Completion of the questionnaire will take approximately 10 minutes.",
-    "passwordPrompt": "If you agree to participate in this research, please type the password that was provided to you:",
-    "continue": "Continue"
+    "description": "Die Einführung fester Nahrungsmittel und Getränke außer Milch (Ergänzungsfütterung) ist ein wichtiger Entwicklungsmeilenstein, der starke Veränderungen im Hinblick auf funktionelle Veränderungen im Magen-Darm-Trakt, im Immunsystem und in Stoffwechselprozessen mit sich bringt. Darüber hinaus scheint der Zeitpunkt der diätetischen Einführung entscheidend für die primäre Prävention von Nahrungsmittelallergien zu sein. Ziel der aktuellen Umfrage ist es, Informationen über die übliche Vorgehensweise von Gesundheitsfachkräften aus verschiedenen Ländern hinsichtlich der Reihenfolge fester Nahrungsmittel in der Ernährung von Säuglingen zu sammeln und darüber, wie sich diese Entscheidung bei Säuglingen mit geringem oder hohem Allergierisiko ändert.",
+    "duration": "Das Ausfüllen des Fragebogens dauert ca. 10 Minuten.",
+    "passwordPrompt": "Wenn Sie der Teilnahme an dieser Forschung zustimmen, geben Sie bitte das Passwort ein, das Sie erhalten haben:",
+    "continue": "Continue",
+    "extraHeader": "Wir verstehen, dass die Ratschläge individuell sein sollten, können aber einen allgemeinen Hinweis geben, wann es in der Regel angemessen ist, die Einführung von Beikost für diese Säuglinge in Betracht zu ziehen."
   },
   "navigation": {
     "home": "Home",

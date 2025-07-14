@@ -139,7 +139,7 @@
       },
       "q2": {
         "title": "Profession",
-        "placeholder": "Select your profession",
+        "placeholder": "Sélectionnez votre profession",
         "choices": {
           "paediatrician": "Pédiatre",
           "dietitian": "Diététicien(ne)",
@@ -148,15 +148,15 @@
         },
         "other": "Autre",
         "otherPlaceholder": "Veuillez préciser",
-        "other_specify": "Please specify your profession"
+        "other_specify": "Veuillez spécifier votre profession"
       },
       "q3": {
         "title": "Âge (années)",
-        "placeholder": "Enter your age"
+        "placeholder": "Entrez votre âge"
       },
       "q4": {
         "title": "Années de pratique dans votre spécialité",
-        "placeholder": "Enter years of practice"
+        "placeholder": "Entrez les années de pratique"
       },
       "q5a": {
         "title": "Veuillez préciser",
@@ -169,11 +169,11 @@
         },
         "other": "Autre",
         "otherPlaceholder": "Veuillez préciser",
-        "other_specify": "Please describe your additional education"
+        "other_specify": "Veuillez décrire votre formation supplémentaire"
       },
       "q6": {
         "title": "Pays de travail",
-        "placeholder": "Enter your country"
+        "placeholder": "Entrez votre pays"
       },
       "q7": {
         "title": "À quel âge conseillez-vous l'introduction d'aliments complémentaires pour un nourrisson ?",
@@ -435,12 +435,13 @@
       "baby_led_weaning": "Sevrage dirigé par bébé"
     }
   },
-  "title": "Complementary feeding: a survey on the Healthcare Professional practices",
+  "title": "Alimentation complémentaire : une enquête sur les pratiques des professionnels de la santé",
   "introduction": {
-    "description": "The introduction of solid foods and drinks other than milk (complementary feeding) is a key developmental milestone that exerts powerful changes in terms of functional changes to the gastrointestinal tract, the immune system and metabolic processes. Moreover, the timing of food introduction appears crucial for the prevention of food allergy. The aim of the current survey is to collect information on the usual practices of healthcare professionals from different countries about the order of solid foods' introduction into the infants diet and the how this differs for infants at low or high risk for development of food allergy.",
-    "duration": "Completion of the questionnaire will take approximately 10 minutes.",
-    "passwordPrompt": "If you agree to participate in this research, please type the password that was provided to you:",
-    "continue": "Continue"
+    "description": "L'introduction d'aliments solides et de boissons autres que le lait (alimentation complémentaire) est une étape clé du développement qui entraîne des changements importants en termes de modifications fonctionnelles du tractus gastro-intestinal, du système immunitaire et des processus métaboliques. De plus, le moment de l'introduction alimentaire semble crucial pour la prévention primaire des allergies alimentaires. L'objectif de l'enquête actuelle est de recueillir des informations sur les pratiques habituelles des professionnels de la santé de différents pays concernant l'ordre d'introduction des aliments solides dans l'alimentation des nourrissons et sur la manière dont cette décision est modifiée en cas de nourrissons à faible ou à haut risque d'allergie.",
+    "duration": "Le remplissage du questionnaire prend environ 10 minutes.",
+    "passwordPrompt": "Si vous acceptez de participer à cette recherche, veuillez saisir le mot de passe qui vous a été fourni :",
+    "continue": "Continue",
+    "extraHeader": "Nous comprenons que les conseils doivent être individualisés, mais nous pouvons vous donner une indication générale de quand il est généralement approprié de considérer l'introduction d'aliments complémentaires pour ces nourrissons."
   },
   "navigation": {
     "home": "Home",

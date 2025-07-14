@@ -139,7 +139,7 @@
       },
       "q2": {
         "title": "Profesie",
-        "placeholder": "Select your profession",
+        "placeholder": "Selectați profesia dvs.",
         "choices": {
           "paediatrician": "Medic Pediatru",
           "dietitian": "Dietolog - dietetician",
@@ -148,15 +148,15 @@
         },
         "other": "Alta",
         "otherPlaceholder": "\"Va rog",
-        "other_specify": "Please specify your profession"
+        "other_specify": "Vă rugăm să specificați profesia dvs."
       },
       "q3": {
         "title": "Varsta",
-        "placeholder": "Enter your age"
+        "placeholder": "Introduceți vârsta dvs."
       },
       "q4": {
         "title": "Ani de practicare a profesiei",
-        "placeholder": "Enter years of practice"
+        "placeholder": "Introduceți anii de practică"
       },
       "q5a": {
         "title": "Va rog specificati",
@@ -169,11 +169,11 @@
         },
         "other": "alt mod",
         "otherPlaceholder": "va rog specificati",
-        "other_specify": "Please describe your additional education"
+        "other_specify": "Vă rugăm să descrieți educația dvs. suplimentară"
       },
       "q6": {
         "title": "Tara in care practicati profesia",
-        "placeholder": "Enter your country"
+        "placeholder": "Introduceți țara dvs."
       },
       "q7": {
         "title": "La ce varsta recomandati diverificarea alimentatiei / introducerea alimentelor solide la sugari?",
@@ -435,12 +435,13 @@
       "baby_led_weaning": "Înțărcare condusă de bebeluș"
     }
   },
-  "title": "Complementary feeding: a survey on the Healthcare Professional practices",
+  "title": "Ghid pentru introducerea alimentelor solide la bebeluși",
   "introduction": {
-    "description": "The introduction of solid foods and drinks other than milk (complementary feeding) is a key developmental milestone that exerts powerful changes in terms of functional changes to the gastrointestinal tract, the immune system and metabolic processes. Moreover, the timing of food introduction appears crucial for the prevention of food allergy. The aim of the current survey is to collect information on the usual practices of healthcare professionals from different countries about the order of solid foods' introduction into the infants diet and the how this differs for infants at low or high risk for development of food allergy.",
-    "duration": "Completion of the questionnaire will take approximately 10 minutes.",
-    "passwordPrompt": "If you agree to participate in this research, please type the password that was provided to you:",
-    "continue": "Continue"
+    "description": "Introducerea alimentelor solide și a lichidelor, altele decât laptele (hrana complementară) este o piatră de hotar cheie în dezvoltare si aduce schimbări importante în ceea ce privește modificările funcționale ale tractului gastrointestinal, sistemului imunitar și proceselor metabolice. În plus, momentul introducerii alimentelor pare critic pentru prevenirea primară a alergiilor alimentare. Scopul acestei cercetări este de a colecta informații despre practicile obișnuite ale profesioniștilor din domeniul sănătății din diferite țări cu privire la ordinea introducerii alimentelor solide în alimentația sugarilor și la modul in care sunt influentate aceste decizii în caz de alergie sau sugari cu risc crescut de alergie. ",
+    "duration": "Completarea chestionarului durează aproximativ 10 minute.",
+    "passwordPrompt": "Dacă sunteți de acord să participați la sondaj, vă rugăm să introduceți codul care v-a fost furnizat:",
+    "continue": "Continue",
+    "extraHeader": "înțelegem că sfaturile vor fi individualizate, dar vă rugăm să oferiți o indicație despre când considerați, în general, că acești sugari sunt pregătiți să înceapă introducerea alimentelor Solide /complementare."
   },
   "navigation": {
     "home": "Home",

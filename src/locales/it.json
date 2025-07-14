@@ -139,7 +139,7 @@
       },
       "q2": {
         "title": "Professione",
-        "placeholder": "Select your profession",
+        "placeholder": "Seleziona la tua professione",
         "choices": {
           "paediatrician": "Pediatra",
           "dietitian": "Dietista",
@@ -148,15 +148,15 @@
         },
         "other": "Altro",
         "otherPlaceholder": "Per favore specificare",
-        "other_specify": "Please specify your profession"
+        "other_specify": "Si prega di specificare la propria professione"
       },
       "q3": {
         "title": "Età (anni)",
-        "placeholder": "Enter your age"
+        "placeholder": "Inserisci la tua età"
       },
       "q4": {
         "title": "Anni di pratica nella tua specialità",
-        "placeholder": "Enter years of practice"
+        "placeholder": "Inserisci anni di pratica"
       },
       "q5a": {
         "title": "Per favore specificare",
@@ -169,11 +169,11 @@
         },
         "other": "Altro",
         "otherPlaceholder": "Per favore specificare",
-        "other_specify": "Please describe your additional education"
+        "other_specify": "Si prega di descrivere la formazione aggiuntiva"
       },
       "q6": {
         "title": "Paese di lavoro",
-        "placeholder": "Enter your country"
+        "placeholder": "Inserisci il tuo paese"
       },
       "q7": {
         "title": "Quando di solito introduci l'alimentazione complementare in un lattante? ",
@@ -435,12 +435,13 @@
       "baby_led_weaning": "Svezzamento guidato dal bambino"
     }
   },
-  "title": "Complementary feeding: a survey on the Healthcare Professional practices",
+  "title": "Linee guida per l'introduzione di cibi solidi ai bambini:",
   "introduction": {
-    "description": "The introduction of solid foods and drinks other than milk (complementary feeding) is a key developmental milestone that exerts powerful changes in terms of functional changes to the gastrointestinal tract, the immune system and metabolic processes. Moreover, the timing of food introduction appears crucial for the prevention of food allergy. The aim of the current survey is to collect information on the usual practices of healthcare professionals from different countries about the order of solid foods' introduction into the infants diet and the how this differs for infants at low or high risk for development of food allergy.",
-    "duration": "Completion of the questionnaire will take approximately 10 minutes.",
-    "passwordPrompt": "If you agree to participate in this research, please type the password that was provided to you:",
-    "continue": "Continue"
+    "description": "L'introduzione di alimenti e bevande solidi diversi dal latte (alimentazione complementare) è una pietra miliare dello sviluppo chiave che determina potenti cambiamenti in termini di cambiamenti funzionali nel tratto gastrointestinale, nel sistema immunitario e nei processi metabolici. Inoltre, la tempistica dell'introduzione dietetica appare critica per la prevenzione primaria dell'allergia alimentare. Lo scopo della presente ricerca è raccogliere informazioni sulle pratiche abituali degli operatori sanitari di diversi paesi in merito all'ordine degli alimenti solidi nella dieta dei neonati e su come modificare questa decisione in caso di allergia o neonati ad alto rischio di allergia.",
+    "duration": "La compilazione del questionario richiede circa 10 minuti.",
+    "passwordPrompt": "Se accetti di partecipare al sondaggio, inserisci il codice fornito:",
+    "continue": "Continue",
+    "extraHeader": "Comprendiamo che i consigli saranno personalizzati, ma possiamo fornire un'indicazione generale su quando sia generalmente appropriato considerare l'introduzione di alimenti complementari per questi bambini."
   },
   "navigation": {
     "home": "Home",
