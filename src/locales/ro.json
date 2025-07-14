@@ -37,7 +37,276 @@
     "submit": "Submiteti chestionarul",
     "thanks": "Dank voor uw deelname. Wilt u alle onderstaande vragen invullen? Klik daarna op Formulier verzenden.",
     "months": "luni",
-    "basicInfo": "Informatii de baza"
+    "basicInfo": "Informatii de baza",
+    "questions": {
+      "q5": {
+        "choices": {
+          "yes": "Da",
+          "no": "Nu"
+        },
+        "title": "Aveti o pregatire suplimentara in domeniul alergologiei?"
+      },
+      "q9a": {
+        "choices": {
+          "yes": "Da",
+          "no": "Nu"
+        },
+        "title": "Aplicati măsuri suplimentare pentru a preveni alergia alimentară la sugari și copiii mici cu risc scăzut de alergie alimentară?",
+        "elaborate": {
+          "title": "Referiti-va in detail la masurile care le aplicati",
+          "choices": {
+            "soy_formula": "Introduction de formule à base de protéines de soja au cours des 6 premiers mois de vie pour prévenir l'allergie au lait de vache",
+            "hydrolysed_formula": "Lapte praf hidrolizat partial sau extensiv ",
+            "restrict_allergens": "Limitarea consumului de potențiali alergeni alimentari în timpul sarcinii sau alăptării",
+            "emollients": "Utilizand emolienți ca barieră pentru piele",
+            "prebiotics": " probióticos o simbióticos para mujeres embarazadas y/o lactantes y/o lactantes\"",
+            "vitamin_supplements": "Supplémentation en vitamines ou en huile de poisson pendant la grossesse et/ou l'allaitement et/ou pour les nourrissons",
+            "regular_formula": "Lapte praf pentru sugari pe bază de lapte de vacă după prima săptămână de viață pentru a preveni alergiile alimentare",
+            "exclusive_breastfeeding": "Încurajati alăptarea exclusivă până la 6 luni",
+            "early_introduction": " como ovo e amendoim"
+          },
+          "other": "Alta  masura",
+          "otherPlaceholder": "Va rog precizati"
+        }
+      },
+      "q9b": {
+        "choices": {
+          "yes": "Da",
+          "no": "Nu"
+        },
+        "title": "luați măsuri suplimentare pentru a preveni alergia alimentară la sugari și copiii mici cu risc crescut de alergie alimentară?",
+        "elaborate": {
+          "title": "Referiti-va in detail la masurile care le aplicati",
+          "choices": {
+            "soy_formula": "Introduction de formule à base de protéines de soja au cours des 6 premiers mois de vie pour prévenir l'allergie au lait de vache",
+            "hydrolysed_formula": "Lapte praf hidrolizat partial sau extensiv ",
+            "restrict_allergens": "Limitarea consumului de potențiali alergeni alimentari în timpul sarcinii sau alăptării",
+            "emollients": "Utilizand emolienți ca barieră pentru piele",
+            "prebiotics": " probióticos o simbióticos para mujeres embarazadas y/o lactantes y/o lactantes\"",
+            "vitamin_supplements": "Supplémentation en vitamines ou en huile de poisson pendant la grossesse et/ou l'allaitement et/ou pour les nourrissons",
+            "regular_formula": "Lapte praf pentru sugari pe bază de lapte de vacă după prima săptămână de viață pentru a preveni alergiile alimentare",
+            "exclusive_breastfeeding": "Încurajati alăptarea exclusivă până la 6 luni",
+            "early_introduction": " como ovo e amendoim"
+          },
+          "other": "Alta  masura",
+          "otherPlaceholder": "Va rog precizati"
+        }
+      },
+      "q10": {
+        "choices": {
+          "yes": "Da",
+          "no": "Nu"
+        },
+        "title": "\"Raten Sie Eltern"
+      },
+      "q11": {
+        "choices": {
+          "yes": "Da",
+          "no": "Nu"
+        },
+        "title": "\"Raten Sie Eltern"
+      },
+      "q16": {
+        "choices": {
+          "1_day": "1 zi",
+          "1_3_days": "de la 1 zi la 3 zile",
+          "more_3_days": "mai mult de 3 zile"
+        },
+        "title": "Care este intervalul de introducere a alimentelor non-alergenice la copii cu risc crescut de alergie alimentară?"
+      },
+      "q17": {
+        "choices": {
+          "1_day": "1 zi",
+          "1_3_days": "de la 1 zi la 3 zile",
+          "more_3_days": "mai mult de 3 zile"
+        },
+        "title": "Care este intervalul de introducere a alergenilor comuni la copiii nealergici?"
+      },
+      "q18": {
+        "choices": {
+          "1_day": "1 zi",
+          "1_3_days": "de la 1 zi la 3 zile",
+          "more_3_days": "mai mult de 3 zile"
+        },
+        "title": "Care este intervalul de introducere a alergenilor comuni la copiii cu risc crescut de alergie alimentară?"
+      },
+      "q1": {
+        "title": "Sex",
+        "choices": {
+          "male": "masculin",
+          "female": "feminin"
+        }
+      },
+      "q2": {
+        "title": "Profesie",
+        "placeholder": "Selectați profesia dvs.",
+        "choices": {
+          "paediatrician": "Medic Pediatru",
+          "dietitian": "Dietolog - dietetician",
+          "allergist": "Medic Alergolog",
+          "nurse": "Asistent Medical"
+        },
+        "other": "Alta",
+        "otherPlaceholder": "\"Va rog",
+        "other_specify": "Vă rugăm să specificați profesia dvs."
+      },
+      "q3": {
+        "title": "Varsta",
+        "placeholder": "Introduceți vârsta dvs."
+      },
+      "q4": {
+        "title": "Ani de practicare a profesiei",
+        "placeholder": "Introduceți anii de practică"
+      },
+      "q5a": {
+        "title": "Va rog specificati",
+        "choices": {
+          "online_course": "cursuri on line",
+          "university_course": "curs universitar",
+          "msc": "master",
+          "phd": "doctorat",
+          "conference_attendance": "participare la conferinte si congrese"
+        },
+        "other": "alt mod",
+        "otherPlaceholder": "va rog specificati",
+        "other_specify": "Vă rugăm să descrieți educația dvs. suplimentară"
+      },
+      "q6": {
+        "title": "Tara in care practicati profesia",
+        "placeholder": "Introduceți țara dvs."
+      },
+      "q7": {
+        "title": "La ce varsta recomandati diverificarea alimentatiei / introducerea alimentelor solide la sugari?",
+        "breast_fed": "La sugarul alimentat la san",
+        "formula_fed": "Nourrisson nourri au biberon/nourrisson nourri au sein mixte :",
+        "increased_risk": "À risque accru de développer une allergie alimentaire",
+        "months": "months"
+      },
+      "q8": {
+        "title": "\"Wanneer heeft een kind een \"\"verhoogd risico op het ontwikkelen van voedselallergie?\"\"  (meerder antwoorden mogelijk)\"",
+        "choices": {
+          "eczema": "Coexistenta unei eczeme (dermatitei atopice)",
+          "bronchiolitis": "Bronsiolite recidivante/ suierat",
+          "family_history": " rodzeństwo) chorób alergicznych"
+        },
+        "other": "Altele",
+        "otherPlaceholder": "Va rog specificati"
+      },
+      "food_plan_low_risk": {
+        "title": "Please specify the introduction order for a low-risk child.",
+        "description": "Add an entry for each month and category you wish to specify."
+      },
+      "food_plan_high_risk": {
+        "title": "Please specify the introduction order for a high-risk child.",
+        "description": "Add an entry for each month and category you wish to specify."
+      },
+      "q12": {
+        "title": "\"Bitte gib hier jegliche Nahrungsmittel an (z.B. traditionelle Speisen aus deiner Region)"
+      },
+      "q14": {
+        "title": " lesquels recommanderiez-vous pour un enfant présentant un risque élevé de développer une allergie ?\"",
+        "choices": {
+          "iron": "Fier",
+          "multivitamin": "Multivitamine",
+          "omega3": "Omega-3",
+          "probiotic": "Probiotice",
+          "prebiotic": "Prebiotice ",
+          "synbiotic": "Simbiotice",
+          "vitamin_a": "Vitamina A",
+          "vitamin_c": "Vitamina C",
+          "vitamin_d": "Vitamina D",
+          "no_supplements": "Fara suplimente alimentare"
+        },
+        "other": "Altele",
+        "otherPlaceholder": "Va rog precizati"
+      },
+      "q15": {
+        "title": "Care este intervalul de introducere a alimentelor non-alergenice la copiii nealergici?",
+        "choices": {
+          "1_day": "1 zi",
+          "1_3_days": "de la 1 zi la 3 zile",
+          "more_3_days": "mai mult de 3 zile"
+        }
+      }
+    },
+    "guidance": "Please answer all questions as accurately as possible. Your responses will remain confidential.",
+    "next": "Next",
+    "previous": "Previous",
+    "completed": "Survey completed successfully! Your response has been recorded.\\n\\nParticipant ID: {{participantId}}\\nSubmission ID: {{responseId}}",
+    "error": "There was an error submitting your survey. Please try again.",
+    "placeholders": {
+      "selectInterval": "Select interval...",
+      "months": "0"
+    },
+    "thankYou": {
+      "title": "Thank You!",
+      "message": "Your survey response has been successfully submitted.",
+      "participantId": "Participant ID",
+      "newSurvey": "Start New Survey"
+    },
+    "steps": {
+      "demographics": "Demographics",
+      "feeding_practices": "Feeding Practices"
+    },
+    "food_plan": {
+      "instructions": "Please specify the introduction order by adding entries for each month and food category you wish to include.",
+      "low_risk_title": "Food Introduction Plan for Low-Risk Children",
+      "high_risk_title": "Food Introduction Plan for High-Risk Children",
+      "month": "Month of Introduction",
+      "month_placeholder": "Select month",
+      "category": "Food Category",
+      "category_placeholder": "Select food category",
+      "items": "Food Items to Introduce",
+      "items_required": "Please select at least one food item",
+      "add_entry": "Add Entry",
+      "no_plans_needed": "No food plans needed based on your previous answers."
+    },
+    "review": {
+      "instructions": "Please review your answers before submitting the survey."
+    },
+    "pages": {
+      "basic_information": {
+        "title": "Basic Information"
+      },
+      "complementary_feeding": {
+        "title": "Complementary feeding"
+      }
+    },
+    "dynamic_panel": {
+      "month": {
+        "title": "Month of Introduction",
+        "choices": {
+          "birth": "Birth",
+          "month_1": "Month 1",
+          "month_2": "Month 2",
+          "month_3": "Month 3",
+          "month_4": "Month 4",
+          "month_5": "Month 5",
+          "month_6": "Month 6",
+          "month_7": "Month 7",
+          "month_8": "Month 8",
+          "month_9": "Month 9",
+          "month_10": "Month 10",
+          "month_11": "Month 11",
+          "month_12": "Month 12",
+          "month_13": "Month 13",
+          "month_14": "Month 14",
+          "month_15": "Month 15",
+          "month_16": "Month 16",
+          "month_17": "Month 17",
+          "month_18": "Month 18"
+        }
+      },
+      "food_category": {
+        "title": "Food Category"
+      },
+      "food_items": {
+        "title": "Food Items to Introduce",
+        "description": "Select one or more items from the list. Items will appear based on the selected food category."
+      },
+      "add_entry": "Add Entry",
+      "remove_entry": "Remove Entry"
+    }
   },
   "foodCategories": {
     "starch_gluten": "CEREALE / GLUTEN",
@@ -165,5 +434,22 @@
       "finger_food": "Mâncare în bucăți și finger food",
       "baby_led_weaning": "Înțărcare condusă de bebeluș"
     }
+  },
+  "title": "Ghid pentru introducerea alimentelor solide la bebeluși",
+  "introduction": {
+    "description": "Introducerea alimentelor solide și a lichidelor, altele decât laptele (hrana complementară) este o piatră de hotar cheie în dezvoltare si aduce schimbări importante în ceea ce privește modificările funcționale ale tractului gastrointestinal, sistemului imunitar și proceselor metabolice. În plus, momentul introducerii alimentelor pare critic pentru prevenirea primară a alergiilor alimentare. Scopul acestei cercetări este de a colecta informații despre practicile obișnuite ale profesioniștilor din domeniul sănătății din diferite țări cu privire la ordinea introducerii alimentelor solide în alimentația sugarilor și la modul in care sunt influentate aceste decizii în caz de alergie sau sugari cu risc crescut de alergie. ",
+    "duration": "Completarea chestionarului durează aproximativ 10 minute.",
+    "passwordPrompt": "Dacă sunteți de acord să participați la sondaj, vă rugăm să introduceți codul care v-a fost furnizat:",
+    "continue": "Continue",
+    "extraHeader": "înțelegem că sfaturile vor fi individualizate, dar vă rugăm să oferiți o indicație despre când considerați, în general, că acești sugari sunt pregătiți să înceapă introducerea alimentelor Solide /complementare."
+  },
+  "navigation": {
+    "home": "Home",
+    "survey": "Survey"
+  },
+  "common": {
+    "loading": "Loading survey...",
+    "required": "This field is required",
+    "optional": "Optional"
   }
 }

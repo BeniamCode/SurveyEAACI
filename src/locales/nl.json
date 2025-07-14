@@ -37,7 +37,276 @@
     "submit": "Formulier verzenden",
     "thanks": "Obrigado por concordar em participar. Por favor",
     "months": "Maanden",
-    "basicInfo": "Basisinformatie"
+    "basicInfo": "Basisinformatie",
+    "questions": {
+      "q5": {
+        "choices": {
+          "yes": "ja",
+          "no": "nee"
+        },
+        "title": "Heeft u aanvullende opleiding genoten over allergie?"
+      },
+      "q9a": {
+        "choices": {
+          "yes": "ja",
+          "no": "nee"
+        },
+        "title": "Adviseert u nog iets anders ter voorkoming van voedselallergie bij zuigelingen en jonge kinderen met een hoog risico op het ontwikkelen van voedselallergie?",
+        "elaborate": {
+          "title": "Graag aangeven welke andere adviezen u geeft",
+          "choices": {
+            "soy_formula": "Introdução de fórmula à base de proteína de soja nos primeiros 6 meses de vida para prevenir a alergia ao leite de vaca",
+            "hydrolysed_formula": "Hypoallergene flesvoeding (partieel gehydrolyseerd) of intensief gehydrolyseerde flesvoeding",
+            "restrict_allergens": "Beperken van sterk allergene voedingsmiddelen in het dieet van de moeder gedurende de zwangerschap of tijdens het geven van borstvoeding",
+            "emollients": "Gebruik van vette zalf voor de huidbarrière",
+            "prebiotics": " probiotici o simbiotici per donne in gravidanza e/o allattamento e/o neonati\"",
+            "vitamin_supplements": "\"Vitamine of visolie suppletie gedurende de zwangerschap",
+            "regular_formula": "Standaard flesvoeding op basis van koemelk vanaf 1 week na de geboort om voedselllergie te voorkomen",
+            "exclusive_breastfeeding": "Uitsluitend borstvoeding gedurende 6 maanden ",
+            "early_introduction": "Häufige Allergene wie Eier und Erdnüsse frühzeitig in die Ernährung des Säuglings einführen (d. h. zwischen dem 4. und 6. Monat)"
+          },
+          "other": "anders",
+          "otherPlaceholder": "graag toelichten"
+        }
+      },
+      "q9b": {
+        "choices": {
+          "yes": "ja",
+          "no": "nee"
+        },
+        "title": "Adviseert u nog iets anders ter voorkoming van voedselallergie bij zuigelingen en jonge kinderen met een laag  risico op het ontwikkelen van voedselallergie?",
+        "elaborate": {
+          "title": "Graag aangeven welke andere adviezen u geeft",
+          "choices": {
+            "soy_formula": "Introdução de fórmula à base de proteína de soja nos primeiros 6 meses de vida para prevenir a alergia ao leite de vaca",
+            "hydrolysed_formula": "Hypoallergene flesvoeding (partieel gehydrolyseerd) of intensief gehydrolyseerde flesvoeding",
+            "restrict_allergens": "Beperken van sterk allergene voedingsmiddelen in het dieet van de moeder gedurende de zwangerschap of tijdens het geven van borstvoeding",
+            "emollients": "Gebruik van vette zalf voor de huidbarrière",
+            "prebiotics": " probiotici o simbiotici per donne in gravidanza e/o allattamento e/o neonati\"",
+            "vitamin_supplements": "\"Vitamine of visolie suppletie gedurende de zwangerschap",
+            "regular_formula": "Standaard flesvoeding op basis van koemelk vanaf 1 week na de geboort om voedselllergie te voorkomen",
+            "exclusive_breastfeeding": "Uitsluitend borstvoeding gedurende 6 maanden ",
+            "early_introduction": "Häufige Allergene wie Eier und Erdnüsse frühzeitig in die Ernährung des Säuglings einführen (d. h. zwischen dem 4. und 6. Monat)"
+          },
+          "other": "anders",
+          "otherPlaceholder": "graag toelichten"
+        }
+      },
+      "q10": {
+        "choices": {
+          "yes": "ja",
+          "no": "nee"
+        },
+        "title": "\"¿Aconseja a los padres introducir los alimentos durante la alimentación complementaria en un orden específico"
+      },
+      "q11": {
+        "choices": {
+          "yes": "ja",
+          "no": "nee"
+        },
+        "title": "\"¿Aconseja a los padres introducir los alimentos durante la alimentación complementaria en un orden específico"
+      },
+      "q16": {
+        "choices": {
+          "1_day": "1 dag",
+          "1_3_days": "1-3 dagen",
+          "more_3_days": "> 3 dagen"
+        },
+        "title": "Welk tijdsinterval adviseert u voor de introductie van laag-allergene vaste voeding bij kinderen met een hoog risico op het ontwikkelen van allergie?"
+      },
+      "q17": {
+        "choices": {
+          "1_day": "1 dag",
+          "1_3_days": "1-3 dagen",
+          "more_3_days": "> 3 dagen"
+        },
+        "title": "Welk tijdsinterval adviseert u voor de introductie van sterk allergene voedingsmiddelen bij kinderen met een laag risico op het ontwikkelen van allergie?"
+      },
+      "q18": {
+        "choices": {
+          "1_day": "1 dag",
+          "1_3_days": "1-3 dagen",
+          "more_3_days": "> 3 dagen"
+        },
+        "title": "Welk tijdsinterval adviseert u voor de introductie van sterk allergene voedingsmiddelen bij kinderen met een hoog risico op het ontwikkelen van allergie?"
+      },
+      "q1": {
+        "title": "Geslacht",
+        "choices": {
+          "male": "Man",
+          "female": "Vrouw"
+        }
+      },
+      "q2": {
+        "title": "Beroep",
+        "placeholder": "Selecteer uw beroep",
+        "choices": {
+          "paediatrician": "Kinderarts",
+          "dietitian": "Diétist",
+          "allergist": "Allergoloog",
+          "nurse": "Verpleegkundige"
+        },
+        "other": "Anders",
+        "otherPlaceholder": "namelijk ",
+        "other_specify": "Gelieve uw beroep te specificeren"
+      },
+      "q3": {
+        "title": "leeftijd (in jaren)",
+        "placeholder": "Voer uw leeftijd in"
+      },
+      "q4": {
+        "title": "Aantal jaren werkzaam in uw speciaisme",
+        "placeholder": "Voer jaren ervaring in"
+      },
+      "q5a": {
+        "title": "namelijk ",
+        "choices": {
+          "online_course": "Online cursus",
+          "university_course": "Cursus aan de Universiteit",
+          "msc": "MSc",
+          "phd": "PhD",
+          "conference_attendance": "Bijwonen van nascholingen en congressen"
+        },
+        "other": "anders",
+        "otherPlaceholder": "namelijk ",
+        "other_specify": "Gelieve uw aanvullende opleiding te beschrijven"
+      },
+      "q6": {
+        "title": "Land waar u werkzaam bent",
+        "placeholder": "Voer uw land in"
+      },
+      "q7": {
+        "title": "Op welke leeftijd adviseert u de ouders van een zuigeling te starten met vaste voeding?",
+        "breast_fed": "Borstgevoede zuigeling",
+        "formula_fed": "Lactente alimentado com fórmula/alimentação mista:",
+        "increased_risk": "Lactente com risco aumentado de desenvolver alergia alimentar",
+        "months": "months"
+      },
+      "q8": {
+        "title": " eine Nahrungsmittelallergie zu entwickeln“? (Mehrfachauswahl möglich)\"",
+        "choices": {
+          "eczema": "aanwezigheid van eczeem",
+          "bronchiolitis": "terugkerende luchtweginfecties/ piepen",
+          "family_history": " άσθμα ή αλλεργικής ρινoεπιπεφυκίτιδας.\""
+        },
+        "other": "anders",
+        "otherPlaceholder": "namelijk "
+      },
+      "food_plan_low_risk": {
+        "title": "Please specify the introduction order for a low-risk child.",
+        "description": "Add an entry for each month and category you wish to specify."
+      },
+      "food_plan_high_risk": {
+        "title": "Please specify the introduction order for a high-risk child.",
+        "description": "Add an entry for each month and category you wish to specify."
+      },
+      "q12": {
+        "title": " menciona aquí cualquier alimento (por ejemplo"
+      },
+      "q14": {
+        "title": "Welke supplementen adviseert u een kind met een hoog risico op het ontwikkelen van allergie?",
+        "choices": {
+          "iron": "IJzer",
+          "multivitamin": "Multivitamine",
+          "omega3": "Omega 3",
+          "probiotic": "Probiotica",
+          "prebiotic": "Prebiotica",
+          "synbiotic": "Synbiotica",
+          "vitamin_a": "Vitamine A",
+          "vitamin_c": "Vitamine C",
+          "vitamin_d": "Vitamine  D",
+          "no_supplements": "Geen supplementen"
+        },
+        "other": "anders",
+        "otherPlaceholder": "namelijk "
+      },
+      "q15": {
+        "title": "Welk tijdsinterval adviseert u voor de introductie van laag-allergene vaste voeding bij kinderen met een laag risico op het ontwikkelen van allergie?",
+        "choices": {
+          "1_day": "1 dag",
+          "1_3_days": "1-3 dagen",
+          "more_3_days": "> 3 dagen"
+        }
+      }
+    },
+    "guidance": "Please answer all questions as accurately as possible. Your responses will remain confidential.",
+    "next": "Next",
+    "previous": "Previous",
+    "completed": "Survey completed successfully! Your response has been recorded.\\n\\nParticipant ID: {{participantId}}\\nSubmission ID: {{responseId}}",
+    "error": "There was an error submitting your survey. Please try again.",
+    "placeholders": {
+      "selectInterval": "Select interval...",
+      "months": "0"
+    },
+    "thankYou": {
+      "title": "Thank You!",
+      "message": "Your survey response has been successfully submitted.",
+      "participantId": "Participant ID",
+      "newSurvey": "Start New Survey"
+    },
+    "steps": {
+      "demographics": "Demographics",
+      "feeding_practices": "Feeding Practices"
+    },
+    "food_plan": {
+      "instructions": "Please specify the introduction order by adding entries for each month and food category you wish to include.",
+      "low_risk_title": "Food Introduction Plan for Low-Risk Children",
+      "high_risk_title": "Food Introduction Plan for High-Risk Children",
+      "month": "Month of Introduction",
+      "month_placeholder": "Select month",
+      "category": "Food Category",
+      "category_placeholder": "Select food category",
+      "items": "Food Items to Introduce",
+      "items_required": "Please select at least one food item",
+      "add_entry": "Add Entry",
+      "no_plans_needed": "No food plans needed based on your previous answers."
+    },
+    "review": {
+      "instructions": "Please review your answers before submitting the survey."
+    },
+    "pages": {
+      "basic_information": {
+        "title": "Basic Information"
+      },
+      "complementary_feeding": {
+        "title": "Complementary feeding"
+      }
+    },
+    "dynamic_panel": {
+      "month": {
+        "title": "Month of Introduction",
+        "choices": {
+          "birth": "Birth",
+          "month_1": "Month 1",
+          "month_2": "Month 2",
+          "month_3": "Month 3",
+          "month_4": "Month 4",
+          "month_5": "Month 5",
+          "month_6": "Month 6",
+          "month_7": "Month 7",
+          "month_8": "Month 8",
+          "month_9": "Month 9",
+          "month_10": "Month 10",
+          "month_11": "Month 11",
+          "month_12": "Month 12",
+          "month_13": "Month 13",
+          "month_14": "Month 14",
+          "month_15": "Month 15",
+          "month_16": "Month 16",
+          "month_17": "Month 17",
+          "month_18": "Month 18"
+        }
+      },
+      "food_category": {
+        "title": "Food Category"
+      },
+      "food_items": {
+        "title": "Food Items to Introduce",
+        "description": "Select one or more items from the list. Items will appear based on the selected food category."
+      },
+      "add_entry": "Add Entry",
+      "remove_entry": "Remove Entry"
+    }
   },
   "foodCategories": {
     "starch_gluten": "ZETMEEL/GLUTEN",
@@ -165,5 +434,22 @@
       "finger_food": "Voedsel in stukjes en fingerfood",
       "baby_led_weaning": "Baby-geleide spening"
     }
+  },
+  "title": "introductie van vaste voeding: een enquête onder beroepsbeoefenaren in de gezondheidszorg",
+  "introduction": {
+    "description": "De introductie van vaste voeding en dranken, anders dan zuigelingenvoeding, brengt belangrijke veranderingen teweeg in de darmfunctie, het immuunsysteem en metabole processen van de zuigeling .Bovendien is het tijdstip van de introductie van vaste voeding curciaal voor de primaire preventie van voedselallergie. Het doel van deze enquete is om informatie te verzamelen over de huidige adviezen die beroepsbeoefenaren in de gezondheidszorg geven ten aanzien van de introductie van vaste voeding bij zuigelingen met zowel een laag (als verhoogd risico op de ontwikkeling van allergie. ",
+    "duration": "Het invullen van de vragenlijst kost ongeveer 10 minuten",
+    "passwordPrompt": "Als u mee wilt doen aan dit onderzoek, vult u dan alstublieft het password in dat u hebt ontvangen ",
+    "continue": "Continue",
+    "extraHeader": "We begrijpen dat advies op maat belangrijk is, maar we kunnen een algemene indicatie geven van wanneer het doorgaans geschikt is om te overwegen om aanvullende voedingsmiddelen te introduceren bij deze baby's."
+  },
+  "navigation": {
+    "home": "Home",
+    "survey": "Survey"
+  },
+  "common": {
+    "loading": "Loading survey...",
+    "required": "This field is required",
+    "optional": "Optional"
   }
 }
