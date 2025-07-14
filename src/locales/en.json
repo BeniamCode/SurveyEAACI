@@ -103,7 +103,8 @@
           "online_course": "Online Course",
           "university_course": "University Course",
           "msc": "MSc",
-          "phd": "PhD"
+          "phd": "PhD",
+          "conference_attendance": "Conference attendance"
         },
         "other": "Other",
         "otherPlaceholder": "Please specify",
@@ -117,15 +118,15 @@
         "title": "At what age do you advise the introduction of complementary food for an infant",
         "breast_fed": "Breast-fed infant:",
         "formula_fed": "Formula-fed/mixed feed infant:",
-        "increased_risk": "At increased risk to develop food allergy:",
+        "increased_risk": "At increased risk to develop food allergy",
         "months": "months"
       },
       "q8": {
         "title": "When do you consider an infant at 'increased risk to develop food allergy'? (multiple choices possible)",
         "choices": {
-          "eczema": "Coexisting eczema",
+          "eczema": "Coexisting eczema ",
           "bronchiolitis": "Recurrent Bronchiolitis/wheeze",
-          "family_history": "Direct family history (i.e. parents, siblings) of any allergy, atopic dermatitis, asthma or rhinoconjuctivitis"
+          "family_history": "\"Direct family history (i.e. parents"
         },
         "other": "Other",
         "otherPlaceholder": "Please specify"
@@ -143,10 +144,11 @@
             "hydrolysed_formula": "Partially or extensively hydrolysed formula",
             "restrict_allergens": "Restricting consumption of potential food allergens during pregnancy or breastfeeding",
             "emollients": "Using emollients as skin barriers",
-            "prebiotics": "Prebiotics, probiotics or synbiotics for pregnant and/or breastfeeding women and/ or infants",
+            "prebiotics": "\"Prebiotics",
             "vitamin_supplements": "Vitamin supplementation or fish oil supplementation during pregnancy and/or breastfeeding women and/or infants",
             "regular_formula": "Regular cow's milk–based infant formula after the first week of life to prevent food allergy",
-            "exclusive_breastfeeding": "Motivate exclusive breastfeeding until 6 months"
+            "exclusive_breastfeeding": "Motivate exclusive breastfeeding until 6 months ",
+            "early_introduction": "Introducing common allergens such as egg and peanut early into the infant's diet (i.e. between 4-6months)"
           },
           "other": "Other",
           "otherPlaceholder": "Please explain"
@@ -165,24 +167,25 @@
             "hydrolysed_formula": "Partially or extensively hydrolysed formula",
             "restrict_allergens": "Restricting consumption of potential food allergens during pregnancy or breastfeeding",
             "emollients": "Using emollients as skin barriers",
-            "prebiotics": "Prebiotics, probiotics or synbiotics for pregnant and/or breastfeeding women and/ or infants",
+            "prebiotics": "\"Prebiotics",
             "vitamin_supplements": "Vitamin supplementation or fish oil supplementation during pregnancy and/or breastfeeding women and/or infants",
             "regular_formula": "Regular cow's milk–based infant formula after the first week of life to prevent food allergy",
-            "exclusive_breastfeeding": "Motivate exclusive breastfeeding until 6 months"
+            "exclusive_breastfeeding": "Motivate exclusive breastfeeding until 6 months ",
+            "early_introduction": "Introducing common allergens such as egg and peanut early into the infant's diet (i.e. between 4-6months)"
           },
           "other": "Other",
           "otherPlaceholder": "Please explain"
         }
       },
       "q10": {
-        "title": "Do you advise parents to introduce foods during complementary feeding in a specific order, when the child is not allergic or is at low risk for food allergy?",
+        "title": "\"Do you advise parents to introduce foods during complementary feeding in a specific order",
         "choices": {
           "yes": "Yes",
           "no": "No"
         }
       },
       "q11": {
-        "title": "Do you advise parents to introduce foods during complementary feeding in a specific order, when the child is at high risk for food allergy?",
+        "title": "\"Do you advise parents to introduce foods during complementary feeding in a specific order",
         "choices": {
           "yes": "Yes",
           "no": "No"
@@ -217,7 +220,7 @@
         "otherPlaceholder": "Please define"
       },
       "q15": {
-        "title": "What is the interval for introducing low-allergenic foods in non-allergic children?",
+        "title": "What is the interval for introducing low-allergenic foods in non-allergic children? ",
         "choices": {
           "1_day": "1 day",
           "1_3_days": "1-3 days",

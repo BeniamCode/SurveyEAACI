@@ -37,7 +37,276 @@
     "submit": "Enviar formulário",
     "thanks": "dass Sie der Teilnahme zugestimmt haben. Bitte beantworten Sie alle untenstehenden Fragen und klicken Sie anschließend auf die Schaltfläche „Formular absenden“.",
     "months": "meses",
-    "basicInfo": "Informação geral"
+    "basicInfo": "Informação geral",
+    "questions": {
+      "q5": {
+        "choices": {
+          "yes": "Sim",
+          "no": "Não"
+        },
+        "title": "Tem formação adicional na área da alergia alimentar?"
+      },
+      "q9a": {
+        "choices": {
+          "yes": "Sim",
+          "no": "Não"
+        },
+        "title": "Adota outras medidas para prevenir a alergia alimentar em bebés e crianças pequenas com baixo risco de desenvolver alergia alimentar?",
+        "elaborate": {
+          "title": "Indique as medidas aplicadas:",
+          "choices": {
+            "soy_formula": " um einer Kuhmilchallergie vorzubeugen\"",
+            "hydrolysed_formula": "Fórmula parcialmente ou extensamente hidrolisada",
+            "restrict_allergens": "Restrição do consumo de potenciais alergénios alimentares durante a gravidez ou amamentação",
+            "emollients": "Uso de emolientes como barreiras cutâneas",
+            "prebiotics": "\"Prebiotici",
+            "vitamin_supplements": "Suplementação vitamínica ou suplementação com óleo de peixe durante a gravidez e/ou lactantes e/ou lactentes",
+            "regular_formula": "Fórmula infantil regular à base de leite de vaca após a primeira semana de vida para prevenir alergia alimentar",
+            "exclusive_breastfeeding": "Promover a amamentação exclusiva até os 6 meses ",
+            "early_introduction": " entre los 4 y 6 meses)\""
+          },
+          "other": "Outro",
+          "otherPlaceholder": "Por favor indique qual"
+        }
+      },
+      "q9b": {
+        "choices": {
+          "yes": "Sim",
+          "no": "Não"
+        },
+        "title": "Aplica outras medidas para prevenir alergia alimentar em bebés e crianças pequenas com alto risco de desenvolver alergia alimentar?",
+        "elaborate": {
+          "title": "Indique as medidas aplicadas:",
+          "choices": {
+            "soy_formula": " um einer Kuhmilchallergie vorzubeugen\"",
+            "hydrolysed_formula": "Fórmula parcialmente ou extensamente hidrolisada",
+            "restrict_allergens": "Restrição do consumo de potenciais alergénios alimentares durante a gravidez ou amamentação",
+            "emollients": "Uso de emolientes como barreiras cutâneas",
+            "prebiotics": "\"Prebiotici",
+            "vitamin_supplements": "Suplementação vitamínica ou suplementação com óleo de peixe durante a gravidez e/ou lactantes e/ou lactentes",
+            "regular_formula": "Fórmula infantil regular à base de leite de vaca após a primeira semana de vida para prevenir alergia alimentar",
+            "exclusive_breastfeeding": "Promover a amamentação exclusiva até os 6 meses ",
+            "early_introduction": " entre los 4 y 6 meses)\""
+          },
+          "other": "Outro",
+          "otherPlaceholder": "Por favor indique qual"
+        }
+      },
+      "q10": {
+        "choices": {
+          "yes": "Sim",
+          "no": "Não"
+        },
+        "title": " quando il bambino non è allergico o è a basso rischio di allergia alimentare?\""
+      },
+      "q11": {
+        "choices": {
+          "yes": "Sim",
+          "no": "Não"
+        },
+        "title": " quando il bambino è ad alto rischio di allergia alimentare?\""
+      },
+      "q16": {
+        "choices": {
+          "1_day": "1 dia",
+          "1_3_days": "1-3 dias",
+          "more_3_days": ">3 dias"
+        },
+        "title": "Qual o intervalo para introdução de alimentos pouco alergénicos em crianças de alto risco para alergia alimentar?"
+      },
+      "q17": {
+        "choices": {
+          "1_day": "1 dia",
+          "1_3_days": "1-3 dias",
+          "more_3_days": ">3 dias"
+        },
+        "title": "Qual o intervalo para introdução de alimentos altamente alergénicos em crianças não alérgicas?"
+      },
+      "q18": {
+        "choices": {
+          "1_day": "1 dia",
+          "1_3_days": "1-3 dias",
+          "more_3_days": ">3 dias"
+        },
+        "title": "Qual o intervalo para introdução de alimentos altamente alergénicos em crianças de alto risco para alergia alimentar?"
+      },
+      "q1": {
+        "title": "Sexo",
+        "choices": {
+          "male": "Masculino",
+          "female": "Feminino"
+        }
+      },
+      "q2": {
+        "title": "Profissão",
+        "placeholder": "Select your profession",
+        "choices": {
+          "paediatrician": "Pediatra",
+          "dietitian": "Nutricionista",
+          "allergist": "Imunoalergologista",
+          "nurse": "Enfermeiro"
+        },
+        "other": "Outro",
+        "otherPlaceholder": "Por favor especifique",
+        "other_specify": "Please specify your profession"
+      },
+      "q3": {
+        "title": "Idade",
+        "placeholder": "Enter your age"
+      },
+      "q4": {
+        "title": "Anos de prática dentro da sua especialidade",
+        "placeholder": "Enter years of practice"
+      },
+      "q5a": {
+        "title": "Por favor especifique",
+        "choices": {
+          "online_course": "Curso online",
+          "university_course": "Curso universitário ",
+          "msc": "Mestrado",
+          "phd": "Doutoramento",
+          "conference_attendance": "Presença em conferência"
+        },
+        "other": "Outro",
+        "otherPlaceholder": "Por favor especifique",
+        "other_specify": "Please describe your additional education"
+      },
+      "q6": {
+        "title": "País de trabalho",
+        "placeholder": "Enter your country"
+      },
+      "q7": {
+        "title": "A partir de que idade aconselha a introdução de alimentação complementar ao lactente",
+        "breast_fed": "Lactente amamentado:",
+        "formula_fed": " die mit Säuglingsnahrung/Mischnahrung ernährt werden:\"",
+        "increased_risk": " eine Nahrungsmittelallergie zu entwickeln\"",
+        "months": "months"
+      },
+      "q8": {
+        "title": "\"Ab wann besteht bei einem Säugling ein „erhöhtes Risiko",
+        "choices": {
+          "eczema": "Eczema coexistente",
+          "bronchiolitis": "Bronquiolite recorrente/ jadear",
+          "family_history": " ατοπική δερματίτιδα"
+        },
+        "other": "Outro",
+        "otherPlaceholder": "Por favor especifique"
+      },
+      "food_plan_low_risk": {
+        "title": "Please specify the introduction order for a low-risk child.",
+        "description": "Add an entry for each month and category you wish to specify."
+      },
+      "food_plan_high_risk": {
+        "title": "Please specify the introduction order for a high-risk child.",
+        "description": "Add an entry for each month and category you wish to specify."
+      },
+      "q12": {
+        "title": "\"Por favor"
+      },
+      "q14": {
+        "title": "Qual dos seguintes suplementos alimentares recomendaria para uma criança com alto risco de desenvolver alergia?",
+        "choices": {
+          "iron": "Ferro",
+          "multivitamin": "multivitamínico",
+          "omega3": "Ómega-3",
+          "probiotic": "Probiótico",
+          "prebiotic": "Prebiótico",
+          "synbiotic": "simbiótico",
+          "vitamin_a": "Vitamina A",
+          "vitamin_c": "Vitamina C",
+          "vitamin_d": "Vitamina D",
+          "no_supplements": "Nenhum suplemento"
+        },
+        "other": "Outro",
+        "otherPlaceholder": "Por favor indique qual"
+      },
+      "q15": {
+        "title": "Qual o intervalo para introdução de alimentos pouco alergénicos em crianças não alérgicas?",
+        "choices": {
+          "1_day": "1 dia",
+          "1_3_days": "1-3 dias",
+          "more_3_days": ">3 dias"
+        }
+      }
+    },
+    "guidance": "Please answer all questions as accurately as possible. Your responses will remain confidential.",
+    "next": "Next",
+    "previous": "Previous",
+    "completed": "Survey completed successfully! Your response has been recorded.\\n\\nParticipant ID: {{participantId}}\\nSubmission ID: {{responseId}}",
+    "error": "There was an error submitting your survey. Please try again.",
+    "placeholders": {
+      "selectInterval": "Select interval...",
+      "months": "0"
+    },
+    "thankYou": {
+      "title": "Thank You!",
+      "message": "Your survey response has been successfully submitted.",
+      "participantId": "Participant ID",
+      "newSurvey": "Start New Survey"
+    },
+    "steps": {
+      "demographics": "Demographics",
+      "feeding_practices": "Feeding Practices"
+    },
+    "food_plan": {
+      "instructions": "Please specify the introduction order by adding entries for each month and food category you wish to include.",
+      "low_risk_title": "Food Introduction Plan for Low-Risk Children",
+      "high_risk_title": "Food Introduction Plan for High-Risk Children",
+      "month": "Month of Introduction",
+      "month_placeholder": "Select month",
+      "category": "Food Category",
+      "category_placeholder": "Select food category",
+      "items": "Food Items to Introduce",
+      "items_required": "Please select at least one food item",
+      "add_entry": "Add Entry",
+      "no_plans_needed": "No food plans needed based on your previous answers."
+    },
+    "review": {
+      "instructions": "Please review your answers before submitting the survey."
+    },
+    "pages": {
+      "basic_information": {
+        "title": "Basic Information"
+      },
+      "complementary_feeding": {
+        "title": "Complementary feeding"
+      }
+    },
+    "dynamic_panel": {
+      "month": {
+        "title": "Month of Introduction",
+        "choices": {
+          "birth": "Birth",
+          "month_1": "Month 1",
+          "month_2": "Month 2",
+          "month_3": "Month 3",
+          "month_4": "Month 4",
+          "month_5": "Month 5",
+          "month_6": "Month 6",
+          "month_7": "Month 7",
+          "month_8": "Month 8",
+          "month_9": "Month 9",
+          "month_10": "Month 10",
+          "month_11": "Month 11",
+          "month_12": "Month 12",
+          "month_13": "Month 13",
+          "month_14": "Month 14",
+          "month_15": "Month 15",
+          "month_16": "Month 16",
+          "month_17": "Month 17",
+          "month_18": "Month 18"
+        }
+      },
+      "food_category": {
+        "title": "Food Category"
+      },
+      "food_items": {
+        "title": "Food Items to Introduce",
+        "description": "Select one or more items from the list. Items will appear based on the selected food category."
+      },
+      "add_entry": "Add Entry",
+      "remove_entry": "Remove Entry"
+    }
   },
   "foodCategories": {
     "starch_gluten": "AMIDO/GLÚTEN",
@@ -165,5 +434,21 @@
       "finger_food": "Comida em pedaços e finger food",
       "baby_led_weaning": "Desmame liderado pelo bebê"
     }
+  },
+  "title": "Complementary feeding: a survey on the Healthcare Professional practices",
+  "introduction": {
+    "description": "The introduction of solid foods and drinks other than milk (complementary feeding) is a key developmental milestone that exerts powerful changes in terms of functional changes to the gastrointestinal tract, the immune system and metabolic processes. Moreover, the timing of food introduction appears crucial for the prevention of food allergy. The aim of the current survey is to collect information on the usual practices of healthcare professionals from different countries about the order of solid foods' introduction into the infants diet and the how this differs for infants at low or high risk for development of food allergy.",
+    "duration": "Completion of the questionnaire will take approximately 10 minutes.",
+    "passwordPrompt": "If you agree to participate in this research, please type the password that was provided to you:",
+    "continue": "Continue"
+  },
+  "navigation": {
+    "home": "Home",
+    "survey": "Survey"
+  },
+  "common": {
+    "loading": "Loading survey...",
+    "required": "This field is required",
+    "optional": "Optional"
   }
 }

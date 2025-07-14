@@ -88,6 +88,10 @@ export const getTranslatedSurveyJson = () => {
               },
               { text: t("survey.questions.q5a.choices.msc"), value: "q5a_a3" },
               { text: t("survey.questions.q5a.choices.phd"), value: "q5a_a4" },
+              {
+                text: t("survey.questions.q5a.choices.conference_attendance"),
+                value: "q5a_a5",
+              },
             ],
             showOtherItem: true,
             otherText: t("survey.questions.q5a.other"),
@@ -218,6 +222,12 @@ export const getTranslatedSurveyJson = () => {
                 ),
                 value: "q9a_a8",
               },
+              {
+                text: t(
+                  "survey.questions.q9a.elaborate.choices.early_introduction"
+                ),
+                value: "q9a_a9",
+              },
             ],
             showOtherItem: true,
             otherText: t("survey.questions.q9a.elaborate.other"),
@@ -283,6 +293,12 @@ export const getTranslatedSurveyJson = () => {
                   "survey.questions.q9b.elaborate.choices.exclusive_breastfeeding"
                 ),
                 value: "q9b_a8",
+              },
+              {
+                text: t(
+                  "survey.questions.q9b.elaborate.choices.early_introduction"
+                ),
+                value: "q9b_a9",
               },
             ],
             showOtherItem: true,

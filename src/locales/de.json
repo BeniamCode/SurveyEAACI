@@ -37,7 +37,276 @@
     "submit": "Formular abschicken",
     "thanks": "Vielen Dank",
     "months": "Monate",
-    "basicInfo": "Grundinformation"
+    "basicInfo": "Grundinformation",
+    "questions": {
+      "q5": {
+        "choices": {
+          "yes": "Ja",
+          "no": "Nein"
+        },
+        "title": "Verfügen Sie über eine Zusatzausbildung zum Thema Allergie?"
+      },
+      "q9a": {
+        "choices": {
+          "yes": "Ja",
+          "no": "Nein"
+        },
+        "title": "Ergreifen Sie weitere Maßnahmen zur Vorbeugung einer Nahrungsmittelallergie bei Säuglingen und Kleinkindern mit geringem Risiko einer Nahrungsmittelallergie?",
+        "elaborate": {
+          "title": "Bitte erläutern Sie die angewandten Maßnahmen:",
+          "choices": {
+            "soy_formula": "\"Einführung einer auf Sojaprotein basierenden Formel in den ersten 6 Lebensmonaten",
+            "hydrolysed_formula": "Teilweise oder weitgehend hydrolysierte Formel",
+            "restrict_allergens": "Einschränkung des Verzehrs potenzieller Nahrungsmittelallergene während der Schwangerschaft oder Stillzeit",
+            "emollients": "Verwendung von Weichmachern als Hautbarriere",
+            "prebiotics": " probiotyków lub symbiotyków u kobiet w ciąży i/lub karmiących piersią i/lub niemowląt\"",
+            "vitamin_supplements": "Vitaminergänzung oder Fischölergänzung während der Schwangerschaft und/oder stillenden Frauen und/oder Säuglingen",
+            "regular_formula": "Regelmäßige Säuglingsnahrung auf Kuhmilchbasis nach der ersten Lebenswoche zur Vorbeugung von Nahrungsmittelallergien",
+            "exclusive_breastfeeding": "Motivieren Sie zum ausschließlichen Stillen bis zum 6. ",
+            "early_introduction": "\"Introducir alérgenos comunes como el huevo y el maní temprano en la dieta del bebé (es decir"
+          },
+          "other": "Andere",
+          "otherPlaceholder": "Bitte erkläre"
+        }
+      },
+      "q9b": {
+        "choices": {
+          "yes": "Ja",
+          "no": "Nein"
+        },
+        "title": "Ergreifen Sie weitere Maßnahmen zur Vorbeugung einer Nahrungsmittelallergie bei Säuglingen und Kleinkindern mit einem hohen Risiko für eine Nahrungsmittelallergie?",
+        "elaborate": {
+          "title": "Bitte erläutern Sie die angewandten Maßnahmen:",
+          "choices": {
+            "soy_formula": "\"Einführung einer auf Sojaprotein basierenden Formel in den ersten 6 Lebensmonaten",
+            "hydrolysed_formula": "Teilweise oder weitgehend hydrolysierte Formel",
+            "restrict_allergens": "Einschränkung des Verzehrs potenzieller Nahrungsmittelallergene während der Schwangerschaft oder Stillzeit",
+            "emollients": "Verwendung von Weichmachern als Hautbarriere",
+            "prebiotics": " probiotyków lub symbiotyków u kobiet w ciąży i/lub karmiących piersią i/lub niemowląt\"",
+            "vitamin_supplements": "Vitaminergänzung oder Fischölergänzung während der Schwangerschaft und/oder stillenden Frauen und/oder Säuglingen",
+            "regular_formula": "Regelmäßige Säuglingsnahrung auf Kuhmilchbasis nach der ersten Lebenswoche zur Vorbeugung von Nahrungsmittelallergien",
+            "exclusive_breastfeeding": "Motivieren Sie zum ausschließlichen Stillen bis zum 6. ",
+            "early_introduction": "\"Introducir alérgenos comunes como el huevo y el maní temprano en la dieta del bebé (es decir"
+          },
+          "other": "Andere",
+          "otherPlaceholder": "Bitte erkläre"
+        }
+      },
+      "q10": {
+        "choices": {
+          "yes": "Ja",
+          "no": "Nein"
+        },
+        "title": "\"Consigli ai genitori di introdurre gli alimenti durante l'alimentazione complementare in un ordine specifico"
+      },
+      "q11": {
+        "choices": {
+          "yes": "Ja",
+          "no": "Nein"
+        },
+        "title": "\"Consigli ai genitori di introdurre gli alimenti durante l'alimentazione complementare in un ordine specifico"
+      },
+      "q16": {
+        "choices": {
+          "1_day": "1 Tag",
+          "1_3_days": "1-3 Tage",
+          "more_3_days": ">3 Tage"
+        },
+        "title": "Wie groß ist der Zeitabstand für die Einführung allergenarmer Nahrungsmittel bei Kindern mit hohem Risiko für Nahrungsmittelallergien?"
+      },
+      "q17": {
+        "choices": {
+          "1_day": "1 Tag",
+          "1_3_days": "1-3 Tage",
+          "more_3_days": ">3 Tage"
+        },
+        "title": "Wie groß ist der Zeitabstand für die Einführung hochallergener Lebensmittel bei nicht allergischen Kindern?"
+      },
+      "q18": {
+        "choices": {
+          "1_day": "1 Tag",
+          "1_3_days": "1-3 Tage",
+          "more_3_days": ">3 Tage"
+        },
+        "title": "Wie groß ist der Zeitabstand für die Einführung hochallergener Lebensmittel bei Kindern mit hohem Risiko für Lebensmittelallergien?"
+      },
+      "q1": {
+        "title": "Sex",
+        "choices": {
+          "male": "Männlich",
+          "female": "Weiblich"
+        }
+      },
+      "q2": {
+        "title": "Beruf",
+        "placeholder": "Select your profession",
+        "choices": {
+          "paediatrician": "Kinderarzt",
+          "dietitian": "Ernährungsberater",
+          "allergist": "Allergologe",
+          "nurse": "Krankenschwester"
+        },
+        "other": "Andere",
+        "otherPlaceholder": "Bitte angeben",
+        "other_specify": "Please specify your profession"
+      },
+      "q3": {
+        "title": "Alter Jahre)",
+        "placeholder": "Enter your age"
+      },
+      "q4": {
+        "title": "Jahrelange Praxis in Ihrem Fachgebiet",
+        "placeholder": "Enter years of practice"
+      },
+      "q5a": {
+        "title": "Bitte angeben",
+        "choices": {
+          "online_course": "Online Kurs",
+          "university_course": "Universitätslehrgang",
+          "msc": "MSc",
+          "phd": "Doktortitel",
+          "conference_attendance": "Teilnahme an der Konferenz"
+        },
+        "other": "Andere",
+        "otherPlaceholder": "Bitte angeben",
+        "other_specify": "Please describe your additional education"
+      },
+      "q6": {
+        "title": "Land der Arbeit",
+        "placeholder": "Enter your country"
+      },
+      "q7": {
+        "title": "Ab welchem Alter empfehlen Sie die Einführung von Beikost für einen Säugling?",
+        "breast_fed": "Gestillter Säugling:",
+        "formula_fed": "\"Säuglinge",
+        "increased_risk": "\"Es besteht ein erhöhtes Risiko",
+        "months": "months"
+      },
+      "q8": {
+        "title": "¿Cuándo considera que un bebé tiene 'mayor riesgo de desarrollar alergia alimentaria'? (múltiples opciones posibles)",
+        "choices": {
+          "eczema": "Begleitendes Ekzem",
+          "bronchiolitis": "wiederkehrende Bronchiolitis/ keuchen",
+          "family_history": " αδέρφια) με  οποιαδήποτε αλλεργία"
+        },
+        "other": "Andere",
+        "otherPlaceholder": "Bitte angeben"
+      },
+      "food_plan_low_risk": {
+        "title": "Please specify the introduction order for a low-risk child.",
+        "description": "Add an entry for each month and category you wish to specify."
+      },
+      "food_plan_high_risk": {
+        "title": "Please specify the introduction order for a high-risk child.",
+        "description": "Add an entry for each month and category you wish to specify."
+      },
+      "q12": {
+        "title": " menziona qui eventuali cibi (ad esempio cibo tradizionale della tua zona) che vengono introdotti nel primo anno di vita e non sono stati menzionati sopra:\""
+      },
+      "q14": {
+        "title": "Welches der folgenden Nahrungsergänzungsmittel würden Sie einem Kind mit einem hohen Allergierisiko empfehlen?",
+        "choices": {
+          "iron": "Eisen",
+          "multivitamin": "Multivitamin",
+          "omega3": "Omega-3",
+          "probiotic": "Probiotisch",
+          "prebiotic": "Präbiotisch",
+          "synbiotic": "Synbiotisch",
+          "vitamin_a": "Vitamin A",
+          "vitamin_c": "Vitamin C",
+          "vitamin_d": "Vitamin-D",
+          "no_supplements": "Keine Zuschläge"
+        },
+        "other": "Andere",
+        "otherPlaceholder": "Bitte definiere"
+      },
+      "q15": {
+        "title": "Wie groß ist der Zeitabstand für die Einführung allergenarmer Lebensmittel bei nicht allergischen Kindern?",
+        "choices": {
+          "1_day": "1 Tag",
+          "1_3_days": "1-3 Tage",
+          "more_3_days": ">3 Tage"
+        }
+      }
+    },
+    "guidance": "Please answer all questions as accurately as possible. Your responses will remain confidential.",
+    "next": "Next",
+    "previous": "Previous",
+    "completed": "Survey completed successfully! Your response has been recorded.\\n\\nParticipant ID: {{participantId}}\\nSubmission ID: {{responseId}}",
+    "error": "There was an error submitting your survey. Please try again.",
+    "placeholders": {
+      "selectInterval": "Select interval...",
+      "months": "0"
+    },
+    "thankYou": {
+      "title": "Thank You!",
+      "message": "Your survey response has been successfully submitted.",
+      "participantId": "Participant ID",
+      "newSurvey": "Start New Survey"
+    },
+    "steps": {
+      "demographics": "Demographics",
+      "feeding_practices": "Feeding Practices"
+    },
+    "food_plan": {
+      "instructions": "Please specify the introduction order by adding entries for each month and food category you wish to include.",
+      "low_risk_title": "Food Introduction Plan for Low-Risk Children",
+      "high_risk_title": "Food Introduction Plan for High-Risk Children",
+      "month": "Month of Introduction",
+      "month_placeholder": "Select month",
+      "category": "Food Category",
+      "category_placeholder": "Select food category",
+      "items": "Food Items to Introduce",
+      "items_required": "Please select at least one food item",
+      "add_entry": "Add Entry",
+      "no_plans_needed": "No food plans needed based on your previous answers."
+    },
+    "review": {
+      "instructions": "Please review your answers before submitting the survey."
+    },
+    "pages": {
+      "basic_information": {
+        "title": "Basic Information"
+      },
+      "complementary_feeding": {
+        "title": "Complementary feeding"
+      }
+    },
+    "dynamic_panel": {
+      "month": {
+        "title": "Month of Introduction",
+        "choices": {
+          "birth": "Birth",
+          "month_1": "Month 1",
+          "month_2": "Month 2",
+          "month_3": "Month 3",
+          "month_4": "Month 4",
+          "month_5": "Month 5",
+          "month_6": "Month 6",
+          "month_7": "Month 7",
+          "month_8": "Month 8",
+          "month_9": "Month 9",
+          "month_10": "Month 10",
+          "month_11": "Month 11",
+          "month_12": "Month 12",
+          "month_13": "Month 13",
+          "month_14": "Month 14",
+          "month_15": "Month 15",
+          "month_16": "Month 16",
+          "month_17": "Month 17",
+          "month_18": "Month 18"
+        }
+      },
+      "food_category": {
+        "title": "Food Category"
+      },
+      "food_items": {
+        "title": "Food Items to Introduce",
+        "description": "Select one or more items from the list. Items will appear based on the selected food category."
+      },
+      "add_entry": "Add Entry",
+      "remove_entry": "Remove Entry"
+    }
   },
   "foodCategories": {
     "starch_gluten": "STÄRKE/GLUTEN",
@@ -165,5 +434,21 @@
       "finger_food": "Fingerfood",
       "baby_led_weaning": "Babygeleitete Beikost"
     }
+  },
+  "title": "Complementary feeding: a survey on the Healthcare Professional practices",
+  "introduction": {
+    "description": "The introduction of solid foods and drinks other than milk (complementary feeding) is a key developmental milestone that exerts powerful changes in terms of functional changes to the gastrointestinal tract, the immune system and metabolic processes. Moreover, the timing of food introduction appears crucial for the prevention of food allergy. The aim of the current survey is to collect information on the usual practices of healthcare professionals from different countries about the order of solid foods' introduction into the infants diet and the how this differs for infants at low or high risk for development of food allergy.",
+    "duration": "Completion of the questionnaire will take approximately 10 minutes.",
+    "passwordPrompt": "If you agree to participate in this research, please type the password that was provided to you:",
+    "continue": "Continue"
+  },
+  "navigation": {
+    "home": "Home",
+    "survey": "Survey"
+  },
+  "common": {
+    "loading": "Loading survey...",
+    "required": "This field is required",
+    "optional": "Optional"
   }
 }
