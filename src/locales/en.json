@@ -179,14 +179,14 @@
         }
       },
       "q10": {
-        "title": "\"Do you advise parents to introduce foods during complementary feeding in a specific order",
+        "title": "Do you advise parents to introduce foods during complementary feeding in a specific order, when the child is not allergic or is at low risk for food allergy?",
         "choices": {
           "yes": "Yes",
           "no": "No"
         }
       },
       "q11": {
-        "title": "\"Do you advise parents to introduce foods during complementary feeding in a specific order",
+        "title": "Do you advise parents to introduce foods during complementary feeding in a specific order, when the child is at high risk for food allergy?",
         "choices": {
           "yes": "Yes",
           "no": "No"
