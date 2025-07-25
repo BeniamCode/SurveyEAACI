@@ -67,14 +67,14 @@
           "yes": "ja",
           "no": "nee"
         },
-        "title": "Adviseert u ouders om vaste voeding in een specifieke volgorde te introduceren bij een niet allergisch kind of een kind met een laag risico op het ontwikkelen van voedselallergie?"
+        "title": "\"¿Aconseja a los padres introducir los alimentos durante la alimentación complementaria en un orden específico"
       },
       "q11": {
         "choices": {
           "yes": "ja",
           "no": "nee"
         },
-        "title": "Adviseert u ouders om vaste voeding in een specifieke volgorde te introduceren bij een niet allergisch kind of een kind met een hoog risico op het ontwikkelen van voedselallergie?"
+        "title": "\"¿Aconseja a los padres introducir los alimentos durante la alimentación complementaria en un orden específico"
       },
       "q16": {
         "title": "Welk tijdsinterval adviseert u voor de introductie van laag-allergene vaste voeding bij kinderen met een hoog risico op het ontwikkelen van allergie?"
@@ -114,7 +114,7 @@
         "placeholder": "Voer jaren ervaring in"
       },
       "q5a": {
-        "title": "namelijk",
+        "title": "namelijk ",
         "choices": {
           "online_course": "Online cursus",
           "university_course": "Cursus aan de Universiteit",
@@ -133,22 +133,22 @@
       "q7": {
         "title": "Op welke leeftijd adviseert u de ouders van een zuigeling te starten met vaste voeding?",
         "breast_fed": "Borstgevoede zuigeling",
-        "formula_fed": "Flesgevoede zuigeling",
-        "increased_risk": "met verhoogd risico op het ontwikkelen van voedselallergie",
+        "formula_fed": "Lactente alimentado com fórmula/alimentação mista:",
+        "increased_risk": "Lactente com risco aumentado de desenvolver alergia alimentar",
         "months": "months"
       },
       "q8": {
-        "title": "Wanneer heeft een kind een \"verhoogd risico op het ontwikkelen van voedselallergie?\"  (meerder antwoorden mogelijk)",
+        "title": " eine Nahrungsmittelallergie zu entwickeln“? (Mehrfachauswahl möglich)\"",
         "choices": {
           "eczema": "aanwezigheid van eczeem",
           "bronchiolitis": "terugkerende luchtweginfecties/ piepen",
-          "family_history": "1e graads familieleden (ouders, broertjes of zusjes) met een allergie, zoals eczeem, astma, hooikoorts"
+          "family_history": " άσθμα ή αλλεργικής ρινoεπιπεφυκίτιδας.\""
         },
         "other": "anders",
         "otherPlaceholder": "namelijk "
       },
       "q12": {
-        "title": "Geef hier alsjeblieft aan welk voedsel dan ook (bijvoorbeeld traditioneel voedsel uit jouw regio) dat in het eerste levensjaar wordt geïntroduceerd en niet hierboven is genoemd:"
+        "title": " menciona aquí cualquier alimento (por ejemplo"
       },
       "q14": {
         "title": "Welke supplementen adviseert u een kind met een hoog risico op het ontwikkelen van allergie?",
@@ -173,15 +173,15 @@
       "q9_elaborate": {
         "title": "Graag aangeven welke andere adviezen u geeft",
         "choices": {
-          "soy_formula": "Introduceren van zuigelingenvoeding op sojabasis gedurende de eerste 6 maanden ter voorkoming van koemelkallergie",
+          "soy_formula": "Introdução de fórmula à base de proteína de soja nos primeiros 6 meses de vida para prevenir a alergia ao leite de vaca",
           "hydrolysed_formula": "Hypoallergene flesvoeding (partieel gehydrolyseerd) of intensief gehydrolyseerde flesvoeding",
           "restrict_allergens": "Beperken van sterk allergene voedingsmiddelen in het dieet van de moeder gedurende de zwangerschap of tijdens het geven van borstvoeding",
           "emollients": "Gebruik van vette zalf voor de huidbarrière",
-          "prebiotics": "Gebruik van prebiotica, probiotica of synbiotica tijdens de zwangerschap, borstvoedingsperiode of door de zuigeling",
-          "vitamin_supplements": "Vitamine of visolie suppletie gedurende de zwangerschap, borstvoedingsperiode  of door de zuigeling",
+          "prebiotics": " probiotici o simbiotici per donne in gravidanza e/o allattamento e/o neonati\"",
+          "vitamin_supplements": "\"Vitamine of visolie suppletie gedurende de zwangerschap",
           "regular_formula": "Standaard flesvoeding op basis van koemelk vanaf 1 week na de geboort om voedselllergie te voorkomen",
-          "exclusive_breastfeeding": "Uitsluitend borstvoeding gedurende 6 maanden",
-          "early_introduction": "introductie van veel voorkomende allergenen zoals ei en pinda in het dieet van het kind, tussen 4 en 6 maanden"
+          "exclusive_breastfeeding": "Uitsluitend borstvoeding gedurende 6 maanden ",
+          "early_introduction": "Häufige Allergene wie Eier und Erdnüsse frühzeitig in die Ernährung des Säuglings einführen (d. h. zwischen dem 4. und 6. Monat)"
         },
         "other": "anders",
         "otherPlaceholder": "graag toelichten"
@@ -324,11 +324,11 @@
   "common": {
     "yes": "ja",
     "no": "nee",
-    "other": "anders",
+    "other": "Anders",
     "placeholders": {
-      "specify": "namelijk",
+      "specify": "namelijk ",
       "explain": "graag toelichten",
-      "define": "namelijk"
+      "define": "namelijk "
     },
     "time": {
       "month_singular": "Maand",

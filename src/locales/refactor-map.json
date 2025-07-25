@@ -1,0 +1,151 @@
+{
+  "documentation": "This file maps the old, duplicated keys from the original 'en.json' to the new, refactored keys. Use it as a guide to update your application code.",
+  
+  "key_merges": {
+    "documentation": "Each new key in this section replaces multiple old keys to eliminate duplication.",
+    
+    "common.yes": {
+      "replaces": [
+        "survey.questions.q5.choices.yes",
+        "survey.questions.q9a.choices.yes",
+        "survey.questions.q9b.choices.yes",
+        "survey.questions.q10.choices.yes",
+        "survey.questions.q11.choices.yes"
+      ],
+      "original_csv_code": "yes"
+    },
+    "common.no": {
+      "replaces": [
+        "survey.questions.q5.choices.no",
+        "survey.questions.q9a.choices.no",
+        "survey.questions.q9b.choices.no",
+        "survey.questions.q10.choices.no",
+        "survey.questions.q11.choices.no"
+      ],
+      "original_csv_code": "no"
+    },
+    "common.other": {
+      "replaces": [
+        "survey.questions.q2.other",
+        "survey.questions.q5a.other",
+        "survey.questions.q8.other",
+        "survey.questions.q9a.elaborate.other",
+        "survey.questions.q14.other"
+      ],
+      "original_csv_codes": ["q2_aother", "q5a_aother", "q8_aother", "q9_aother", "q14_aother"]
+    },
+    "common.placeholders.specify": {
+      "replaces": [
+        "survey.questions.q2.otherPlaceholder",
+        "survey.questions.q5a.otherPlaceholder",
+        "survey.questions.q8.otherPlaceholder"
+      ],
+      "original_csv_codes": ["q2_aother_placeh", "q5a_aother_placeh", "q8_aother_placeh"]
+    },
+    "common.placeholders.explain": {
+      "replaces": [
+        "survey.questions.q9a.elaborate.otherPlaceholder"
+      ],
+      "original_csv_code": "q9_aother_placeh"
+    },
+    "common.placeholders.define": {
+      "replaces": [
+        "survey.questions.q14.otherPlaceholder"
+      ],
+      "original_csv_code": "q14_aother_placeh"
+    },
+    "survey.submit": {
+      "replaces": [
+        "survey.submit", 
+        "survey.interface.str13",
+        "survey.interface.str16"
+      ],
+      "original_csv_codes": ["str13", "str16"]
+    }
+  },
+
+  "key_renames": {
+    "documentation": "Direct 1-to-1 remapping of old keys to new, more descriptive keys.",
+    
+    "title": "str1",
+    "introduction.description": "str2",
+    "introduction.duration": "str3",
+    "introduction.passwordPrompt": "str4",
+    "common.time.month_singular": "str5",
+    "survey.pages.complementary_feeding.title": "str6",
+    "survey.interface.dragDrop.desktop": "str7",
+    "survey.interface.dragDrop.mobile": "str8",
+    "survey.interface.foodPicker.lowRiskLabel": "str9",
+    "survey.interface.foodPicker.highRiskLabel": "str10",
+    "survey.interface.mobileVersion.lowRisk": "str11",
+    "survey.interface.mobileVersion.highRisk": "str12",
+    "survey.interface.timeline.birth": "str14",
+    "survey.thanks": "str15",
+    "survey.basicInfo": "str17",
+    "survey.interface.errors.duplicateItem": "str18",
+    "survey.interface.foodPicker.adviceLabel": "str19",
+    "common.time.years": "str20",
+    "common.time.months_plural": "str21",
+    "introduction.continue": "str22",
+    "introduction.errors.incorrectPassword": "str23",
+    "introduction.extraHeader": "str24",
+    
+    "foodItems.nuts.mustard": "g_nuts_1",
+    "foodItems.nuts.sesame": "g_nuts_2",
+    "foodItems.nuts.tree_nuts": "g_nuts_3",
+    "foodItems.spices.salt": "g_spices_1",
+    "foodItems.spices.spices_herbs": "g_spices_2",
+    "foodItems.additional.baby_food": "g_additional_1",
+    "foodItems.additional.family_meal_salt": "g_additional_2",
+    "foodItems.additional.family_meal_no_salt": "g_additional_3",
+    "foodItems.additional.mashed_food": "g_additional_4",
+    "foodItems.additional.pureed_food": "g_additional_5",
+    "foodItems.additional.finger_food": "g_additional_6",
+    "foodItems.additional.baby_led_weaning": "g_additional_7",
+
+    "survey.questions.q9_elaborate.title": "q9_el",
+    "survey.questions.q9_elaborate.choices.soy_formula": "q9_a1",
+    "survey.questions.q9_elaborate.choices.hydrolysed_formula": "q9_a2",
+    "survey.questions.q9_elaborate.choices.restrict_allergens": "q9_a3",
+    "survey.questions.q9_elaborate.choices.emollients": "q9_a4",
+    "survey.questions.q9_elaborate.choices.prebiotics": "q9_a5",
+    "survey.questions.q9_elaborate.choices.vitamin_supplements": "q9_a6",
+    "survey.questions.q9_elaborate.choices.regular_formula": "q9_a7",
+    "survey.questions.q9_elaborate.choices.exclusive_breastfeeding": "q9_a8"
+  },
+
+  "new_keys_added": {
+    "documentation": "These keys correspond to content from the CSVs that was missing in the original JSON files.",
+    "survey.questions.q5a.choices.conference_attendance": {
+      "original_csv_code": "q5a_a5"
+    },
+    "survey.questions.q9_elaborate.choices.early_introduction": {
+      "original_csv_code": "q9_a9"
+    },
+    "foodItems.fruit.avocado": {
+      "original_csv_code": "g_fruit_15"
+    }
+  },
+
+  "structural_changes": [
+    {
+      "change": "Consolidated common text into a 'common' object.",
+      "details": "Keys for 'yes', 'no', 'other', and various placeholders are now centralized in `common` to avoid repetition. See the `key_merges` section for specifics."
+    },
+    {
+      "change": "Created a shared object for interval choices.",
+      "old_structure": "Each question (q15, q16, q17, q18) had its own `choices` object with identical text (e.g., `q15.choices.1_day`, `q16.choices.1_day`).",
+      "new_structure": "A single shared object `survey.questions.interval_choices` now holds these options (`.d1`, `.d1_3`, `.d_gt3`). Your code should reference this object for all four interval questions.",
+      "mapping": {
+        "survey.questions.interval_choices.d1": "q15_18_a1",
+        "survey.questions.interval_choices.d1_3": "q15_18_a2",
+        "survey.questions.interval_choices.d_gt3": "q15_18_a3"
+      }
+    },
+    {
+      "change": "Standardized the 'elaborate' section for question Q9.",
+      "old_structure": "Both q9a and q9b had their own nested `elaborate` object (`q9a.elaborate...`, `q9b.elaborate...`).",
+      "new_structure": "Since the choices are identical for both low-risk and high-risk scenarios, they have been consolidated into a single `survey.questions.q9_elaborate` object. Your code can now use this single object regardless of the answer to q9a or q9b."
+    }
+  ]
+}

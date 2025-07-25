@@ -81,7 +81,7 @@
         "choices": {
           "online_course": "Kurs online",
           "university_course": "Kurs uniwersytecki",
-          "msc": "stopień naukowy magistra / magistra inżyniera (MSc)",
+          "msc": "stopień naukowy magistra / magistra inżyniera (MSc) ",
           "phd": "stopień naukowy doktora (PhD)",
           "conference_attendance": "Udział w konferencjach"
         },
@@ -101,11 +101,11 @@
         "months": "miesiące"
       },
       "q8": {
-        "title": "Które czynniki według Pani/Pana sprawiają, że niemowlę znajduje się w grupie podwyższonego ryzyka wystąpienia alergii pokarmowej? (możliwe wiele wyborów)",
+        "title": "\"Które czynniki według Pani/Pana sprawiają",
         "choices": {
           "eczema": "Współistniejący wyprysk / atopowe zapalenie skóry",
           "bronchiolitis": "Nawracające zapalenia oskrzeli / oskrzelików / świsty",
-          "family_history": "Występowanie u najbliższych krewnych (np. rodzice, rodzeństwo) chorób alergicznych, atopowego zapalenia skóry, astmy, alergicznego nieżytu nosa i spojówek"
+          "family_history": " atopic dermatitis"
         },
         "other": "Inne",
         "otherPlaceholder": "Proszę sprecyzuj"
@@ -125,21 +125,21 @@
         }
       },
       "q10": {
-        "title": "Czy zaleca Pani/Pan rodzicom wprowadzanie pokarmów podczas rozszerzania diety w określonej kolejności u dzieci bez alergii lub z niskim ryzykiem wystąpienia alergii pokarmowej?",
+        "title": "\"Συμβουλεύετε τους γονείς κατά την εισαγωγή των στερεών τροφών  να εισάγουν τις τροφές με συγκεκριμένη σειρά",
         "choices": {
           "yes": "Tak",
           "no": "Nie"
         }
       },
       "q11": {
-        "title": "Czy zaleca Pani/Pan rodzicom wprowadzanie pokarmów podczas rozszerzania diety w określonej kolejności u dzieci z wysokim ryzykiem wystąpienia alergii pokarmowej?",
+        "title": "\"Συμβουλεύετε τους γονείς κατά την εισαγωγή των στερεών τροφών να εισάγουν τροφές με συγκεκριμένη σειρά",
         "choices": {
           "yes": "Tak",
           "no": "Nie"
         }
       },
       "q12": {
-        "title": "Proszę o podanie poniżej jedzenia (np. tradycyjne danie z Pani/Pana regionu), które wprowadza się w pierwszym roku życia i nie zostało wymienione powyżej:"
+        "title": "\"Proszę o podanie poniżej jedzenia (np. tradycyjne danie z Pani/Pana regionu)"
       },
       "q14": {
         "title": "Które z poniższych suplementów zaleciłaby/zaleciłby Pani/Pan dziecku z wysokim ryzykiem wystąpienia alergii?",
@@ -171,17 +171,17 @@
         "title": "W jakim odstępie czasowym zaleca Pani/Pan wprowadzanie do diety pokarmów potencjalnie alergizujących u dzieci z wysokim ryzykiem alergii pokarmowej?"
       },
       "q9_elaborate": {
-        "title": "Proszę opisać bardziej szczegółowo co Pani/Pan zaleca:",
+        "title": "Proszę opisać bardziej szczegółowo co Pani/Pan zaleca: ",
         "choices": {
           "soy_formula": "Wprowadzanie mleka modyfikowanego na bazie białka sojowego w pierwszych 6 miesiącach życia w celu zapobiegania alergii na białko mleka krowiego",
           "hydrolysed_formula": "Częściowo lub całkowicie hydrolizowane mleko modyfikowane",
           "restrict_allergens": "Ograniczenie spożycia potencjalnie alergizujących pokarmów w trakcie ciąży lub karmienia piersią",
           "emollients": "Stosowanie emolientów jako bariery ochronnej dla skóry",
-          "prebiotics": "Stosowanie prebiotyków, probiotyków lub symbiotyków u kobiet w ciąży i/lub karmiących piersią i/lub niemowląt",
+          "prebiotics": "\"Πρεβιοτικά",
           "vitamin_supplements": "Suplementację witamin lub oleju rybiego u kobiet w ciąży i/lub karmiących piersią i/lub niemowląt",
           "regular_formula": "Mleko modyfikowane na bazie białka mleka krowiego po pierwszym tygodniu życia w celu zapobiegania alergii pokarmowej",
           "exclusive_breastfeeding": "Motywowanie do wyłącznego karmienia piersią przez pierwsze 6 miesięcy",
-          "early_introduction": "Wczesne wprowadzanie do diety dziecka powszechnych alergenów, takich jak jaja i orzeszki ziemne (tj. pomiędzy 4-6 miesiącem życia)"
+          "early_introduction": "\"Wczesne wprowadzanie do diety dziecka powszechnych alergenów"
         },
         "other": "Inne",
         "otherPlaceholder": "Proszę opisać"
@@ -324,7 +324,7 @@
   "common": {
     "yes": "Tak",
     "no": "Nie",
-    "other": "Inne",
+    "other": "Inny",
     "placeholders": {
       "specify": "Proszę sprecyzuj",
       "explain": "Proszę opisać",

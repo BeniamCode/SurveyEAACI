@@ -67,14 +67,14 @@
           "yes": "SÌ",
           "no": "NO"
         },
-        "title": "Consigli ai genitori di introdurre gli alimenti durante l'alimentazione complementare in un ordine specifico, quando il bambino non è allergico o è a basso rischio di allergia alimentare?"
+        "title": " όταν το παιδί δεν είναι αλλεργικό ή είναι χαμηλού κινδύνου για τροφική αλλεργία;\""
       },
       "q11": {
         "choices": {
           "yes": "SÌ",
           "no": "NO"
         },
-        "title": "Consigli ai genitori di introdurre gli alimenti durante l'alimentazione complementare in un ordine specifico, quando il bambino è ad alto rischio di allergia alimentare?"
+        "title": " όταν το παιδί διατρέχει υψηλό κίνδυνο τροφικής αλλεργίας;\""
       },
       "q16": {
         "title": "Qual è l'intervallo per l'introduzione di alimenti a basso contenuto allergenico per i bambini ad alto rischio  per allergia alimentare?"
@@ -131,24 +131,24 @@
         "placeholder": "Inserisci il tuo paese"
       },
       "q7": {
-        "title": "Quando di solito introduci l'alimentazione complementare in un lattante?",
+        "title": "Quando di solito introduci l'alimentazione complementare in un lattante? ",
         "breast_fed": "Neonato allattato al seno:",
         "formula_fed": "Neonato alimentato con formula lattea / alimentazione mista:",
         "increased_risk": "A maggior rischio di sviluppare allergie alimentari",
         "months": "months"
       },
       "q8": {
-        "title": "Quali condizioni consideri 'a maggior rischio di sviluppare allergia alimentare'? (possibili scelte multiple)",
+        "title": " że niemowlę znajduje się w grupie podwyższonego ryzyka wystąpienia alergii pokarmowej? (możliwe wiele wyborów)\"",
         "choices": {
           "eczema": "Eczema (comorbidità)",
           "bronchiolitis": "bronchiolite ricorrente",
-          "family_history": "Parenti stretti (genitori, fratelli/sorelle) con anamnesi di qualsiasi malattia allergia, dermatite atopica, asma o rinite."
+          "family_history": " asthma or rhinoconjuctivitis \""
         },
         "other": "Altro",
         "otherPlaceholder": "Per favore specificare"
       },
       "q12": {
-        "title": "Per favore, menziona qui eventuali cibi (ad esempio cibo tradizionale della tua zona) che vengono introdotti nel primo anno di vita e non sono stati menzionati sopra:"
+        "title": " które wprowadza się w pierwszym roku życia i nie zostało wymienione powyżej:\""
       },
       "q14": {
         "title": "Quale dei seguenti integratori alimentari consiglieresti per un bambino ad alto rischio di allergia?",
@@ -177,11 +177,11 @@
           "hydrolysed_formula": "Formula parzialmente o ampiamente idrolizzata",
           "restrict_allergens": "Limitazione del consumo di potenziali allergeni alimentari durante la gravidanza o l'allattamento",
           "emollients": "Utilizzo di emollienti come barriere cutanee",
-          "prebiotics": "Prebiotici, probiotici o simbiotici per donne in gravidanza e/o allattamento e/o neonati",
+          "prebiotics": " προβιοτικά ή συνβιοτικά για έγκυες ή/και θηλάζουσες γυναίκες και/ή βρέφη\"",
           "vitamin_supplements": "Integrazione vitaminica o integrazione di olio di pesce in donne sane in gravidanza e/o in allattamento e/o neonati",
           "regular_formula": "Formula standard per lattanti a base di latte vaccino dopo la prima settimana di vita per prevenire allergie alimentari",
-          "exclusive_breastfeeding": "Motivare l'allattamento al seno esclusivo nei primi 6 mesi",
-          "early_introduction": "Introdurre precocemente allergeni comuni come uova e arachidi nella dieta del bambino (cioè tra i 4 e i 6 mesi)"
+          "exclusive_breastfeeding": "Motivare l'allattamento al seno esclusivo nei primi 6 mesi ",
+          "early_introduction": " takich jak jaja i orzeszki ziemne (tj. pomiędzy 4-6 miesiącem życia)\""
         },
         "other": "Altro",
         "otherPlaceholder": "Spiega per favore"

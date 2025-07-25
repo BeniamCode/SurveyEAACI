@@ -67,14 +67,14 @@
           "yes": "Sim",
           "no": "Não"
         },
-        "title": "Aconselha os pais a introduzir os alimentos na alimentação complementar numa ordem específica, quando a criança não é alérgica ou tem baixo risco de alergia alimentar?"
+        "title": " quando il bambino non è allergico o è a basso rischio di allergia alimentare?\""
       },
       "q11": {
         "choices": {
           "yes": "Sim",
           "no": "Não"
         },
-        "title": "Aconselha os pais a introduzir os alimentos durante a alimentação complementar numa ordem específica, quando a criança apresenta alto risco de alergia alimentar?"
+        "title": " quando il bambino è ad alto rischio di allergia alimentare?\""
       },
       "q16": {
         "title": "Qual o intervalo para introdução de alimentos pouco alergénicos em crianças de alto risco para alergia alimentar?"
@@ -117,7 +117,7 @@
         "title": "Por favor especifique",
         "choices": {
           "online_course": "Curso online",
-          "university_course": "Curso universitário",
+          "university_course": "Curso universitário ",
           "msc": "Mestrado",
           "phd": "Doutoramento",
           "conference_attendance": "Presença em conferência"
@@ -133,22 +133,22 @@
       "q7": {
         "title": "A partir de que idade aconselha a introdução de alimentação complementar ao lactente",
         "breast_fed": "Lactente amamentado:",
-        "formula_fed": "Lactente alimentado com fórmula/alimentação mista:",
-        "increased_risk": "Lactente com risco aumentado de desenvolver alergia alimentar",
+        "formula_fed": " die mit Säuglingsnahrung/Mischnahrung ernährt werden:\"",
+        "increased_risk": " eine Nahrungsmittelallergie zu entwickeln\"",
         "months": "months"
       },
       "q8": {
-        "title": "Em que situações considera uma criança como tendo 'risco aumentado de desenvolver alergia alimentar'? (múltiplas escolhas possíveis)",
+        "title": "\"Ab wann besteht bei einem Säugling ein „erhöhtes Risiko",
         "choices": {
           "eczema": "Eczema coexistente",
           "bronchiolitis": "Bronquiolite recorrente/ jadear",
-          "family_history": "Familiar de primeiro grau (ou seja, pais, irmãos) com histórico de qualquer alergia, dermatite atópica, asma ou febre do feno."
+          "family_history": " ατοπική δερματίτιδα"
         },
         "other": "Outro",
         "otherPlaceholder": "Por favor especifique"
       },
       "q12": {
-        "title": "Por favor, menciona aqui qualquer alimento (por exemplo, comida tradicional da tua região) que seja introduzido no primeiro ano de vida e que não tenha sido mencionado acima:"
+        "title": "\"Por favor"
       },
       "q14": {
         "title": "Qual dos seguintes suplementos alimentares recomendaria para uma criança com alto risco de desenvolver alergia?",
@@ -173,15 +173,15 @@
       "q9_elaborate": {
         "title": "Indique as medidas aplicadas:",
         "choices": {
-          "soy_formula": "Introdução de fórmula à base de proteína de soja nos primeiros 6 meses de vida para prevenir a alergia ao leite de vaca",
+          "soy_formula": " um einer Kuhmilchallergie vorzubeugen\"",
           "hydrolysed_formula": "Fórmula parcialmente ou extensamente hidrolisada",
           "restrict_allergens": "Restrição do consumo de potenciais alergénios alimentares durante a gravidez ou amamentação",
           "emollients": "Uso de emolientes como barreiras cutâneas",
-          "prebiotics": "Prebióticos, probióticos ou simbióticos para grávidas e/ou lactantes e/ou lactentes",
+          "prebiotics": "\"Prebiotici",
           "vitamin_supplements": "Suplementação vitamínica ou suplementação com óleo de peixe durante a gravidez e/ou lactantes e/ou lactentes",
           "regular_formula": "Fórmula infantil regular à base de leite de vaca após a primeira semana de vida para prevenir alergia alimentar",
-          "exclusive_breastfeeding": "Promover a amamentação exclusiva até os 6 meses",
-          "early_introduction": "Introduzir alérgenos comuns, como ovo e amendoim, precocemente na dieta do bebê (ou seja, entre 4 e 6 meses)"
+          "exclusive_breastfeeding": "Promover a amamentação exclusiva até os 6 meses ",
+          "early_introduction": " entre los 4 y 6 meses)\""
         },
         "other": "Outro",
         "otherPlaceholder": "Por favor indique qual"
