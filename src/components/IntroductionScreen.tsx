@@ -87,13 +87,6 @@ export default function IntroductionScreen({ onPasswordSubmit, onLanguageChange 
             {t('introduction.duration')}
           </p>
           
-          {/* str24 - Individualized guidance message */}
-          <div className="bg-yellow-50 border border-yellow-200 rounded-md p-4 mb-6">
-            <p className={`${isMobile ? 'text-sm' : 'text-base'} text-yellow-800 text-justify leading-relaxed`}>
-              {t('introduction.extraHeader')}
-            </p>
-          </div>
-          
           <div className="text-center">
             <p className={`${isMobile ? 'text-sm' : 'text-base'} mb-5`}>
               {t('introduction.passwordPrompt')}
@@ -102,7 +95,7 @@ export default function IntroductionScreen({ onPasswordSubmit, onLanguageChange 
             <div className={`flex flex-col items-center gap-6 w-full ${isMobile ? 'max-w-xs' : 'max-w-sm'} mx-auto`}>
               <Input
                 type="password"
-                placeholder="Enter password"
+                placeholder={t('introduction.errors.incorrectPassword')}
                 className={`${isMobile ? 'h-10' : 'h-12'} text-center`}
                 value={password}
                 onChange={(e) => {
