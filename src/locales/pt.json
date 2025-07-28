@@ -129,9 +129,9 @@
           "university_course": "Curso universitário",
           "msc": "Mestrado",
           "phd": "Doutoramento",
-          "conference_attendance": "Presença em conferência"
+          "conference_attendance": "Presença em conferência",
+          "other": "Outro"
         },
-        "other": "Outro",
         "otherPlaceholder": "Por favor especifique",
         "other_specify": "Por favor descreva sua educação adicional"
       },

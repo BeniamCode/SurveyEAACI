@@ -92,9 +92,9 @@
           "university_course": "Kurs uniwersytecki",
           "msc": "stopień naukowy magistra / magistra inżyniera (MSc)",
           "phd": "stopień naukowy doktora (PhD)",
-          "conference_attendance": "Udział w konferencjach"
+          "conference_attendance": "Udział w konferencjach",
+          "other": "Inny"
         },
-        "other": "Inny",
         "otherPlaceholder": "Proszę sprecyzuj",
         "other_specify": "Proszę opisać dodatkowe wykształcenie"
       },

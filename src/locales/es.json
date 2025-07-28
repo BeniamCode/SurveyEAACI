@@ -129,9 +129,9 @@
           "university_course": "Curso universitario",
           "msc": "maestría",
           "phd": "Doctor",
-          "conference_attendance": "Asistencias a conferencias"
+          "conference_attendance": "Asistencias a conferencias",
+          "other": "Otro"
         },
-        "other": "Otro",
         "otherPlaceholder": "Por favor especifica",
         "other_specify": "Por favor describe tu educación adicional"
       },

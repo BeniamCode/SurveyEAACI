@@ -92,9 +92,9 @@
           "university_course": "Πανεπιστημιακό μάθημα",
           "msc": "MSc",
           "phd": "PhD",
-          "conference_attendance": "Παρακολούθηση συνεδρίου"
+          "conference_attendance": "Παρακολούθηση συνεδρίου",
+          "other": "Αλλα"
         },
-        "other": "Αλλα",
         "otherPlaceholder": "Παρακαλώ διευκρινίστε",
         "other_specify": "Παρακαλώ περιγράψτε την πρόσθετη εκπαίδευσή σας"
       },

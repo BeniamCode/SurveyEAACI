@@ -155,9 +155,9 @@
           "university_course": "University Course",
           "msc": "MSc",
           "phd": "PhD",
-          "conference_attendance": "Conference attendance"
+          "conference_attendance": "Conference attendance",
+          "other": "Other"
         },
-        "other": "Other",
         "otherPlaceholder": "Please specify",
         "other_specify": "Please describe your additional education"
       },

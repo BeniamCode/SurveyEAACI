@@ -88,9 +88,9 @@
           "university_course": "大學課程",
           "msc": "碩士學位",
           "phd": "博士學位",
-          "conference_attendance": "出席研討會"
+          "conference_attendance": "出席研討會",
+          "other": "其他"
         },
-        "other": "其他",
         "otherPlaceholder": "請註明"
       },
       "q6": {

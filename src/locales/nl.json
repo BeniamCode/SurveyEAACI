@@ -129,9 +129,9 @@
           "university_course": "Cursus aan de Universiteit",
           "msc": "MSc",
           "phd": "PhD",
-          "conference_attendance": "Bijwonen van nascholingen en congressen"
+          "conference_attendance": "Bijwonen van nascholingen en congressen",
+          "other": "anders"
         },
-        "other": "anders",
         "otherPlaceholder": "namelijk ",
         "other_specify": "Gelieve uw aanvullende opleiding te beschrijven"
       },

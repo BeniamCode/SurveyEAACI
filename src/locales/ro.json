@@ -129,9 +129,9 @@
           "university_course": "curs universitar",
           "msc": "master",
           "phd": "doctorat",
-          "conference_attendance": "participare la conferinte si congrese"
+          "conference_attendance": "participare la conferinte si congrese",
+          "other": "alt mod"
         },
-        "other": "alt mod",
         "otherPlaceholder": "va rog specificati",
         "other_specify": "Vă rugăm să descrieți educația dvs. suplimentară"
       },

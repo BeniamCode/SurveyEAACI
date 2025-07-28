@@ -129,9 +129,9 @@
           "university_course": "Cours universitaire",
           "msc": "MSc (Master of Science)",
           "phd": "PhD (Doctorat)",
-          "conference_attendance": "Participation à des conférences"
+          "conference_attendance": "Participation à des conférences",
+          "other": "Autre"
         },
-        "other": "Autre",
         "otherPlaceholder": "Veuillez préciser",
         "other_specify": "Veuillez décrire votre formation supplémentaire"
       },

@@ -129,9 +129,9 @@
           "university_course": "Universitätslehrgang",
           "msc": "MSc",
           "phd": "Doktortitel",
-          "conference_attendance": "Teilnahme an der Konferenz"
+          "conference_attendance": "Teilnahme an der Konferenz",
+          "other": "Andere"
         },
-        "other": "Andere",
         "otherPlaceholder": "Bitte angeben",
         "other_specify": "Bitte beschreiben Sie Ihre zusätzliche Ausbildung"
       },
