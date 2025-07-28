@@ -21,8 +21,15 @@ export default function DemographicsStep() {
     <div className="space-y-8">
       <div>
         <h2 className="text-2xl font-bold text-gray-900 mb-6">
-          {t('survey.pages.basic_information.title')}
+          {t('survey.basicInfo')}
         </h2>
+        
+        {/* str15 - Thank you message */}
+        <div className="bg-blue-50 border border-blue-200 rounded-md p-4 mb-6">
+          <p className="text-blue-800 text-sm">
+            {t('survey.thanks')}
+          </p>
+        </div>
         
         <div className="space-y-6">
           {/* Q1 - Sex */}
