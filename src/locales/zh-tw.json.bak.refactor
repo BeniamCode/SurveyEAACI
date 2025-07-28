@@ -5,43 +5,19 @@
     "duration": "完成問卷大約需要 10 分鐘。",
     "passwordPrompt": "如果您同意參與本研究，請輸入提供給您的密碼：",
     "continue": "繼續",
-    "extraHeader": "我們明白個人化指引的重要性，但請提供在普遍情況下，何時合適為嬰幼兒添加不同種類的輔食食物。",
-    "errors": {
-      "incorrectPassword": "請提供正確的密碼"
-    }
+    "extraHeader": "我們明白個人化指引的重要性，但請提供在普遍情況下，何時合適為嬰幼兒添加不同種類的輔食食物。"
   },
   "survey": {
     "thanks": "感謝您同意參加。請回答以下所有問題，然後點擊「提交表格」按鈕",
+    "guidance": "感謝您同意參加。請回答以下所有問題，然後點擊「提交表格」按鈕",
     "basicInfo": "基本資料",
-    "submit": "提交表格",
+    "title": "輔食餵養(Complementary Feeding)：醫護及專職醫療人員實務操作調查",
     "pages": {
+      "basic_information": {
+        "title": "基本資料"
+      },
       "complementary_feeding": {
         "title": "輔食餵養"
-      }
-    },
-    "food_plan": {
-      "low_risk_title": "沒有食物過敏 / 低風險",
-      "high_risk_title": "高風險"
-    },
-    "interface": {
-      "dragDrop": {
-        "desktop": "請將選項從「建議」清單拖曳到任何其他列表，以示優先次序",
-        "mobile": "請長按「建議」清單中的任何選項直至綠色邊框出現，並拖曳至叧一列表中，以示您的首選次序"
-      },
-      "foodPicker": {
-        "lowRiskLabel": "沒有食物過敏 / 低風險",
-        "highRiskLabel": "高風險",
-        "adviceLabel": "建議"
-      },
-      "mobileVersion": {
-        "lowRisk": "低風險",
-        "highRisk": "高風險"
-      },
-      "timeline": {
-        "birth": "出生"
-      },
-      "errors": {
-        "duplicateItem": "您已經將此選項加入此清單"
       }
     },
     "questions": {
@@ -82,8 +58,7 @@
           "online_course": "線上課程",
           "university_course": "大學課程",
           "msc": "碩士學位",
-          "phd": "博士學位",
-          "conference_attendance": "出席研討會"
+          "phd": "博士學位"
         },
         "other": "其他",
         "otherPlaceholder": "請註明"
@@ -101,9 +76,9 @@
       "q8": {
         "title": "您認為以下哪些情況會提升嬰兒出現食物過敏的風險？",
         "choices": {
-          "eczema": "並存的濕疹",
+          "eczema": "同時患有濕疹",
           "bronchiolitis": "反復性細支氣管炎/喘鳴",
-          "family_history": "直系家屬（即父母及兄弟姐妹）有任何過敏史、異位性皮膚炎(Atopic Dermatitis) 、哮喘(Asthma) 或 鼻結膜炎(rhinoconjunctivitis)"
+          "family_history": "直系親屬（即父母、兄弟姐妹）有任何過敏症、異位性皮炎、哮喘或過敏性鼻結膜炎病史"
         },
         "other": "其他",
         "otherPlaceholder": "請註明"
@@ -113,6 +88,21 @@
         "choices": {
           "yes": "是",
           "no": "否"
+        },
+        "elaborate": {
+          "title": "請詳細闡述您所採取的措施：",
+          "choices": {
+            "soy_formula": "在出生後六個月內引入大豆蛋白配方奶以預防牛奶過敏",
+            "hydrolysed_formula": "部分水解或完全水解配方奶",
+            "restrict_allergens": "限制在懷孕及母乳餵哺期間進食潛在食物致敏原",
+            "emollients": "使用潤膚膏(emollients)作為皮膚屏障",
+            "prebiotics": "為孕婦和/或哺乳母親和/或嬰兒提供益生元、益生菌或合生元",
+            "vitamin_supplements": "在懷孕期間及／或母乳餵哺的母親及／或嬰兒 使用維他命補充劑或魚油補充劑",
+            "regular_formula": "在嬰兒出生第一周後定期食用含牛奶成分的嬰兒配方奶以預防食物過敏",
+            "exclusive_breastfeeding": "推動純母乳餵養至6個月"
+          },
+          "other": "其他",
+          "otherPlaceholder": "請註明"
         }
       },
       "q9b": {
@@ -120,6 +110,21 @@
         "choices": {
           "yes": "是",
           "no": "否"
+        },
+        "elaborate": {
+          "title": "請詳細闡述您所採取的措施：",
+          "choices": {
+            "soy_formula": "在出生後六個月內引入大豆蛋白配方奶以預防牛奶過敏",
+            "hydrolysed_formula": "部分水解或完全水解配方奶",
+            "restrict_allergens": "限制在懷孕及母乳餵哺期間進食潛在食物致敏原",
+            "emollients": "使用潤膚膏(emollients)作為皮膚屏障",
+            "prebiotics": "為孕婦和/或哺乳母親和/或嬰兒提供益生元、益生菌或合生元",
+            "vitamin_supplements": "在懷孕期間及／或母乳餵哺的母親及／或嬰兒 使用維他命補充劑或魚油補充劑",
+            "regular_formula": "在嬰兒出生第一周後定期食用含牛奶成分的嬰兒配方奶以預防食物過敏",
+            "exclusive_breastfeeding": "推動純母乳餵養至6個月"
+          },
+          "other": "其他",
+          "otherPlaceholder": "請註明"
         }
       },
       "q10": {
@@ -135,6 +140,14 @@
           "yes": "是",
           "no": "否"
         }
+      },
+      "food_plan_low_risk": {
+        "title": "請詳述低風險兒童的引進順序。",
+        "description": "為您希望指定的每個月份和類別添加一個條目。"
+      },
+      "food_plan_high_risk": {
+        "title": "請詳述高風險兒童的引進順序。",
+        "description": "為您希望指定的每個月份和類別添加一個條目。"
       },
       "q12": {
         "title": "如果有任何食物在您所居住地區會在１歲前引入 （如傳統食物）， 但上述並未提及，請在此列出："
@@ -157,39 +170,108 @@
         "otherPlaceholder": "請註明"
       },
       "q15": {
-        "title": "對於低食物過敏風險兒童，你會建議每隔多少天引進低致敏食物？"
+        "title": "在非過敏兒童中引進低致敏性食物的間隔時間是多少？",
+        "choices": {
+          "1_day": "１天",
+          "1_3_days": "１－３天",
+          "more_3_days": "＞３天"
+        }
       },
       "q16": {
-        "title": "對於高食物過敏風險兒童，你會建議每隔多少天引進低致敏食物？"
+        "title": "對於高食物過敏風險兒童，你會建議每隔多少天引進低致敏食物？",
+        "choices": {
+          "1_day": "１天",
+          "1_3_days": "１－３天",
+          "more_3_days": "＞３天"
+        }
       },
       "q17": {
-        "title": "對於低食物過敏風險兒童，你會建議每隔多少天引進高致敏食物？"
+        "title": "對於低食物過敏風險兒童，你會建議每隔多少天引進高致敏食物？",
+        "choices": {
+          "1_day": "１天",
+          "1_3_days": "１－３天",
+          "more_3_days": "＞３天"
+        }
       },
       "q18": {
-        "title": "對於高食物過敏風險兒童，你會建議每隔多少天引進高致敏食物？"
-      },
-      "q9_elaborate": {
-        "title": "請詳細闡述您所採取的措施：",
+        "title": "對於高食物過敏風險兒童，你會建議每隔多少天引進高致敏食物？",
         "choices": {
-          "soy_formula": "在出生後六個月內引入大豆蛋白配方奶以預防牛奶過敏",
-          "hydrolysed_formula": "部分水解或完全水解配方奶",
-          "restrict_allergens": "限制在懷孕及母乳餵哺期間進食潛在食物致敏原",
-          "emollients": "使用潤膚膏(emollients)作為皮膚屏障",
-          "prebiotics": "益生菌，益生元或合生元 給懷孕及／或母乳餵哺的母親及／或嬰兒",
-          "vitamin_supplements": "在懷孕期間及／或母乳餵哺的母親及／或嬰兒 使用維他命補充劑或魚油補充劑",
-          "regular_formula": "在嬰兒出生第一周後定期食用含牛奶成分的嬰兒配方奶以預防食物過敏",
-          "exclusive_breastfeeding": "鼓勵純母乳餵哺至6個月",
-          "early_introduction": "在嬰兒早期的飲食（在４－６個月期間）引入常見的食物致敏原：如雞蛋和花生"
-        },
-        "other": "其他",
-        "otherPlaceholder": "請註明"
-      },
-      "interval_choices": {
-        "d1": "１天",
-        "d1_3": "１－３天",
-        "d_gt3": "＞３天"
+          "1_day": "１天",
+          "1_3_days": "１－３天",
+          "more_3_days": "＞３天"
+        }
       }
-    }
+    },
+    "dynamic_panel": {
+      "month": {
+        "title": "引進月份",
+        "choices": {
+          "birth": "出生",
+          "month_1": "第1個月",
+          "month_2": "第2個月",
+          "month_3": "第3個月",
+          "month_4": "第4個月",
+          "month_5": "第5個月",
+          "month_6": "第6個月",
+          "month_7": "第7個月",
+          "month_8": "第8個月",
+          "month_9": "第9個月",
+          "month_10": "第10個月",
+          "month_11": "第11個月",
+          "month_12": "第12個月",
+          "month_13": "第13個月",
+          "month_14": "第14個月",
+          "month_15": "第15個月",
+          "month_16": "第16個月",
+          "month_17": "第17個月",
+          "month_18": "第18個月"
+        }
+      },
+      "food_category": {
+        "title": "食物類別"
+      },
+      "food_items": {
+        "title": "要引進的食物項目",
+        "description": "從清單中選擇一個或多個項目。項目將根據所選的食物類別顯示。"
+      },
+      "add_entry": "添加條目",
+      "remove_entry": "移除條目"
+    },
+    "foodPlanning": {
+      "foodCategories": "食物類別",
+      "lowRiskTimeline": "低風險 Timeline",
+      "highRiskTimeline": "高風險 Timeline",
+      "dragHere": "將食物拖拽到此處用於{{month}}",
+      "summary": "摘要：已計劃{{count}}種食物"
+    },
+    "interface": {
+      "str1": "輔食餵養(Complementary Feeding)：醫護及專職醫療人員實務操作調查",
+      "str2": "L'introduzione di alimenti e bevande solidi diversi dal latte (alimentazione complementare) è una pietra miliare dello sviluppo chiave che determina potenti cambiamenti in termini di cambiamenti funzionali nel tratto gastrointestinale",
+      "str3": "完成問卷大約需要 10 分鐘。",
+      "str4": "ingrese el código proporcionado:",
+      "str5": "月份",
+      "str6": "輔食餵養",
+      "str7": "請將選項從「建議」清單拖曳到任何其他列表，以示優先次序",
+      "str8": "請長按「建議」清單中的任何選項直至綠色邊框出現，並拖曳至叧一列表中，以示您的首選次序",
+      "str9": "沒有食物過敏 / 低風險",
+      "str10": "高風險",
+      "str11": "低風險",
+      "str12": "高風險",
+      "str13": "提交表格",
+      "str14": "出生",
+      "str15": "感謝您同意參加。請回答以下所有問題，然後點擊「提交表格」按鈕",
+      "str16": "提交表格",
+      "str17": "基本資料",
+      "str18": "您已經將此選項加入此清單",
+      "str19": "建議",
+      "str20": "年份",
+      "str21": "月份",
+      "str22": "繼續",
+      "str23": "請提供正確的密碼",
+      "str24": "Entendemos que los consejos serán personalizados"
+    },
+    "submit": "提交表格",
+    "months": "月份"
   },
   "foodCategories": {
     "starch_gluten": "澱粉質/麩質",
@@ -208,7 +290,7 @@
   },
   "foodItems": {
     "starch": {
-      "gluten_grains": "含有麩質的穀物（小麥、大麥、黑麥，例如意粉、麵包等）",
+      "gluten_grains": "含麩質穀物（小麥、大麥、黑麥 如義大利麵、麵包等）",
       "gluten_free_cereals": "無麩質的穀物（蕎麥、藜麥、燕麥）",
       "maize_products": "粟米產品（即粟米粥、嬰兒粟米小食)",
       "potato_sweet_potato": "薯仔、蕃薯",
@@ -263,8 +345,7 @@
       "melon": "蜜瓜，西瓜",
       "citrus": "橙，柑",
       "stone_fruits": "桃，杏桃",
-      "pear": "梨",
-      "avocado": "牛油果"
+      "pear": "梨"
     },
     "dairy": {
       "plant_milk": "植物奶 (請註明有添加 或沒有添加礦物質/維他命)",
@@ -319,19 +400,13 @@
       "baby_led_weaning": "兒童主導斷奶 (BLW - Baby-led Weaning)"
     }
   },
+  "navigation": {
+    "home": "主頁",
+    "survey": "調查"
+  },
   "common": {
-    "yes": "是",
-    "no": "否",
-    "other": "其他",
-    "placeholders": {
-      "specify": "請註明",
-      "explain": "請註明",
-      "define": "請註明"
-    },
-    "time": {
-      "month_singular": "月份",
-      "months_plural": "月份",
-      "years": "年份"
-    }
+    "loading": "正在載入調查...",
+    "required": "此欄必填",
+    "optional": "可選"
   }
 }

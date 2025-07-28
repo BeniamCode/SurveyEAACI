@@ -19,10 +19,6 @@
         "title": "Alimentation complémentaire"
       }
     },
-    "food_plan": {
-      "low_risk_title": "Pas d'allergie / Faible risque",
-      "high_risk_title": "Haut risque"
-    },
     "interface": {
       "dragDrop": {
         "desktop": "Veuillez indiquer l'ordre préféré en faisant glisser un élément de la liste « CONSEILS » vers n'importe quelle autre liste",
@@ -71,14 +67,14 @@
           "yes": "Oui",
           "no": "Non"
         },
-        "title": "Conseillez-vous aux parents d'introduire des aliments dans un ordre spécifique pendant l'alimentation complémentaire lorsque l'enfant n'est pas allergique ou présente un faible risque d'allergie alimentaire ?"
+        "title": " cuando el niño no es alérgico o tiene bajo riesgo de alergia alimentaria?\""
       },
       "q11": {
         "choices": {
           "yes": "Oui",
           "no": "Non"
         },
-        "title": "Conseillez-vous aux parents d'introduire des aliments dans un ordre spécifique pendant l'alimentation complémentaire lorsque l'enfant présente un risque élevé d'allergie alimentaire ?"
+        "title": " cuando el niño tiene un alto riesgo de alergia alimentaria?\""
       },
       "q16": {
         "title": "Quel est l'intervalle pour l'introduction d'aliments peu allergènes chez les enfants à haut risque d'allergie alimentaire ?"
@@ -137,25 +133,25 @@
       "q7": {
         "title": "À quel âge conseillez-vous l'introduction d'aliments complémentaires pour un nourrisson ?",
         "breast_fed": "Nourrisson allaité au sein :",
-        "formula_fed": "Nourrisson nourri au biberon/nourrisson nourri au sein mixte :",
-        "increased_risk": "À risque accru de développer une allergie alimentaire",
+        "formula_fed": "Flesgevoede zuigeling",
+        "increased_risk": "met verhoogd risico op het ontwikkelen van voedselallergie",
         "months": "months"
       },
       "q8": {
-        "title": "Quand considérez-vous qu'un nourrisson est à 'risque accru de développer une allergie alimentaire' ? (plusieurs choix possibles)",
+        "title": "Em que situações considera uma criança como tendo 'risco aumentado de desenvolver alergia alimentar'? (múltiplas escolhas possíveis)",
         "choices": {
           "eczema": "Présence d'eczéma concomitant",
           "bronchiolitis": "Bronchiolite récurrente/ respiration sifflante",
-          "family_history": "Antécédents familiaux directs immédiats (c'est-à-dire parents, frères et sœurs) d'allergie, de dermatite atopique, d'asthme ou de rhinite allergique"
+          "family_history": "\"Występowanie u najbliższych krewnych (np. rodzice"
         },
         "other": "Autre",
         "otherPlaceholder": "Veuillez préciser"
       },
       "q12": {
-        "title": "Veuillez mentionner ici tout aliment (par exemple, une nourriture traditionnelle de votre région) introduit au cours de la première année de vie et qui n'a pas été mentionné ci-dessus:"
+        "title": " comida tradicional de tu área) que se introduzca en el primer año de vida y que no se haya mencionado anteriormente:\""
       },
       "q14": {
-        "title": "Parmi les compléments alimentaires suivants, lesquels recommanderiez-vous pour un enfant présentant un risque élevé de développer une allergie ?",
+        "title": "\"Parmi les compléments alimentaires suivants",
         "choices": {
           "iron": "Fer",
           "multivitamin": "Multivitamines",
@@ -177,15 +173,15 @@
       "q9_elaborate": {
         "title": "Veuillez expliquer les mesures appliquées :",
         "choices": {
-          "soy_formula": "Introduction de formule à base de protéines de soja au cours des 6 premiers mois de vie pour prévenir l'allergie au lait de vache",
+          "soy_formula": "Introduceren van zuigelingenvoeding op sojabasis gedurende de eerste 6 maanden ter voorkoming van koemelkallergie",
           "hydrolysed_formula": "Formule partiellement ou totalement hydrolysée",
           "restrict_allergens": "Restriction de la consommation d'aliments potentiellement allergènes pendant la grossesse ou l'allaitement",
           "emollients": "Utilisation d'émollients comme barrières cutanées",
-          "prebiotics": "Prébiotiques, probiotiques ou synbiotiques pour les femmes enceintes et/ou allaitantes et/ou les nourrissons",
-          "vitamin_supplements": "Supplémentation en vitamines ou en huile de poisson pendant la grossesse et/ou l'allaitement et/ou pour les nourrissons",
+          "prebiotics": "\"Prebióticos",
+          "vitamin_supplements": " borstvoedingsperiode  of door de zuigeling\"",
           "regular_formula": "Formule infantile à base de lait de vache ordinaire après la première semaine de vie pour prévenir les allergies alimentaires",
           "exclusive_breastfeeding": "Encouragement à l'allaitement exclusif jusqu'à 6 mois",
-          "early_introduction": "Introduction précoce d'allergènes courants tels que l'œuf et l'arachide dans l'alimentation du nourrisson (c'est-à-dire entre 4 et 6 mois)"
+          "early_introduction": "\"Introduzir alérgenos comuns"
         },
         "other": "Autre",
         "otherPlaceholder": "Veuillez expliquer"

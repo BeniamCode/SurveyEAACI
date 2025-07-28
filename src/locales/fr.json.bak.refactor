@@ -1,0 +1,455 @@
+{
+  "survey": {
+    "foodPlanning": {
+      "foodCategories": "Catégories d'Aliments",
+      "lowRiskTimeline": "Faible risque Timeline",
+      "highRiskTimeline": "Haut risque Timeline",
+      "dragHere": "Faites glisser les aliments ici pour {{month}}",
+      "summary": "Résumé: {{count}} aliments planifiés"
+    },
+    "interface": {
+      "str1": "Alimentation complémentaire : une enquête sur les pratiques des professionnels de la santé",
+      "str2": "systemie immunologicznym oraz procesach metabolicznych. Ponadto",
+      "str3": "Le remplissage du questionnaire prend environ 10 minutes.",
+      "str4": "inserisci il codice fornito:",
+      "str5": "Mois",
+      "str6": "Alimentation complémentaire",
+      "str7": "Indique a ordem preferida arrastando e soltando um item da lista 'CONSELHOS' para qualquer outra lista",
+      "str8": "Bitte geben Sie die gewünschte Reihenfolge an",
+      "str9": "Pas d'allergie / Faible risque",
+      "str10": "Haut risque",
+      "str11": "Faible risque",
+      "str12": "Haut risque",
+      "str13": "Soumettre le formulaire",
+      "str14": "Naissance",
+      "str15": "responda a todas as perguntas abaixo e clique no botão 'Enviar formulário'.",
+      "str16": "Soumettre le formulaire",
+      "str17": "Informations de base",
+      "str18": "Vous avez déjà ajouté cet élément à cette liste",
+      "str19": "Conseils",
+      "str20": "années",
+      "str21": "mois",
+      "str22": "Continuer",
+      "str23": "Veuillez fournir le mot de passe correct.",
+      "str24": "Comprendiamo che i consigli saranno personalizzati"
+    },
+    "title": "Alimentation complémentaire : une enquête sur les pratiques des professionnels de la santé",
+    "submit": "Soumettre le formulaire",
+    "thanks": "responda a todas as perguntas abaixo e clique no botão 'Enviar formulário'.",
+    "months": "mois",
+    "basicInfo": "Informations de base",
+    "questions": {
+      "q5": {
+        "choices": {
+          "yes": "Oui",
+          "no": "Non"
+        },
+        "title": "Avez-vous une formation supplémentaire en allergie ?"
+      },
+      "q9a": {
+        "choices": {
+          "yes": "Oui",
+          "no": "Non"
+        },
+        "title": "Appliquez-vous d'autres mesures pour prévenir les allergies alimentaires chez les nourrissons et les jeunes enfants à faible risque d'allergie alimentaire ?",
+        "elaborate": {
+          "title": "Veuillez expliquer les mesures appliquées :",
+          "choices": {
+            "soy_formula": "Introduceren van zuigelingenvoeding op sojabasis gedurende de eerste 6 maanden ter voorkoming van koemelkallergie",
+            "hydrolysed_formula": "Formule partiellement ou totalement hydrolysée",
+            "restrict_allergens": "Restriction de la consommation d'aliments potentiellement allergènes pendant la grossesse ou l'allaitement",
+            "emollients": "Utilisation d'émollients comme barrières cutanées",
+            "prebiotics": "\"Prebióticos",
+            "vitamin_supplements": " borstvoedingsperiode  of door de zuigeling\"",
+            "regular_formula": "Formule infantile à base de lait de vache ordinaire après la première semaine de vie pour prévenir les allergies alimentaires",
+            "exclusive_breastfeeding": "Encouragement à l'allaitement exclusif jusqu'à 6 mois",
+            "early_introduction": "\"Introduzir alérgenos comuns"
+          },
+          "other": "Autre",
+          "otherPlaceholder": "Veuillez expliquer"
+        }
+      },
+      "q9b": {
+        "choices": {
+          "yes": "Oui",
+          "no": "Non"
+        },
+        "title": "Appliquez-vous d'autres mesures pour prévenir les allergies alimentaires chez les nourrissons et les jeunes enfants à haut risque d'allergie alimentaire ?",
+        "elaborate": {
+          "title": "Veuillez expliquer les mesures appliquées :",
+          "choices": {
+            "soy_formula": "Introduceren van zuigelingenvoeding op sojabasis gedurende de eerste 6 maanden ter voorkoming van koemelkallergie",
+            "hydrolysed_formula": "Formule partiellement ou totalement hydrolysée",
+            "restrict_allergens": "Restriction de la consommation d'aliments potentiellement allergènes pendant la grossesse ou l'allaitement",
+            "emollients": "Utilisation d'émollients comme barrières cutanées",
+            "prebiotics": "\"Prebióticos",
+            "vitamin_supplements": " borstvoedingsperiode  of door de zuigeling\"",
+            "regular_formula": "Formule infantile à base de lait de vache ordinaire après la première semaine de vie pour prévenir les allergies alimentaires",
+            "exclusive_breastfeeding": "Encouragement à l'allaitement exclusif jusqu'à 6 mois",
+            "early_introduction": "\"Introduzir alérgenos comuns"
+          },
+          "other": "Autre",
+          "otherPlaceholder": "Veuillez expliquer"
+        }
+      },
+      "q10": {
+        "choices": {
+          "yes": "Oui",
+          "no": "Non"
+        },
+        "title": " cuando el niño no es alérgico o tiene bajo riesgo de alergia alimentaria?\""
+      },
+      "q11": {
+        "choices": {
+          "yes": "Oui",
+          "no": "Non"
+        },
+        "title": " cuando el niño tiene un alto riesgo de alergia alimentaria?\""
+      },
+      "q16": {
+        "choices": {
+          "1_day": "1 jour",
+          "1_3_days": "1 à 3 jours",
+          "more_3_days": "Plus de 3 jours"
+        },
+        "title": "Quel est l'intervalle pour l'introduction d'aliments peu allergènes chez les enfants à haut risque d'allergie alimentaire ?"
+      },
+      "q17": {
+        "choices": {
+          "1_day": "1 jour",
+          "1_3_days": "1 à 3 jours",
+          "more_3_days": "Plus de 3 jours"
+        },
+        "title": "Quel est l'intervalle pour l'introduction d'aliments très allergènes chez les enfants non allergiques ?"
+      },
+      "q18": {
+        "choices": {
+          "1_day": "1 jour",
+          "1_3_days": "1 à 3 jours",
+          "more_3_days": "Plus de 3 jours"
+        },
+        "title": "Quel est l'intervalle pour l'introduction d'aliments très allergènes chez les enfants à haut risque d'allergie alimentaire ?"
+      },
+      "q1": {
+        "title": "Sexe",
+        "choices": {
+          "male": "Homme",
+          "female": "Femme"
+        }
+      },
+      "q2": {
+        "title": "Profession",
+        "placeholder": "Sélectionnez votre profession",
+        "choices": {
+          "paediatrician": "Pédiatre",
+          "dietitian": "Diététicien(ne)",
+          "allergist": "Allergologue",
+          "nurse": "Infirmier(ère)"
+        },
+        "other": "Autre",
+        "otherPlaceholder": "Veuillez préciser",
+        "other_specify": "Veuillez spécifier votre profession"
+      },
+      "q3": {
+        "title": "Âge (années)",
+        "placeholder": "Entrez votre âge"
+      },
+      "q4": {
+        "title": "Années de pratique dans votre spécialité",
+        "placeholder": "Entrez les années de pratique"
+      },
+      "q5a": {
+        "title": "Veuillez préciser",
+        "choices": {
+          "online_course": "Cours en ligne",
+          "university_course": "Cours universitaire",
+          "msc": "MSc (Master of Science)",
+          "phd": "PhD (Doctorat)",
+          "conference_attendance": "Participation à des conférences"
+        },
+        "other": "Autre",
+        "otherPlaceholder": "Veuillez préciser",
+        "other_specify": "Veuillez décrire votre formation supplémentaire"
+      },
+      "q6": {
+        "title": "Pays de travail",
+        "placeholder": "Entrez votre pays"
+      },
+      "q7": {
+        "title": "À quel âge conseillez-vous l'introduction d'aliments complémentaires pour un nourrisson ?",
+        "breast_fed": "Nourrisson allaité au sein :",
+        "formula_fed": "Flesgevoede zuigeling",
+        "increased_risk": "met verhoogd risico op het ontwikkelen van voedselallergie",
+        "months": "months"
+      },
+      "q8": {
+        "title": "Em que situações considera uma criança como tendo 'risco aumentado de desenvolver alergia alimentar'? (múltiplas escolhas possíveis)",
+        "choices": {
+          "eczema": "Présence d'eczéma concomitant",
+          "bronchiolitis": "Bronchiolite récurrente/ respiration sifflante",
+          "family_history": "\"Występowanie u najbliższych krewnych (np. rodzice"
+        },
+        "other": "Autre",
+        "otherPlaceholder": "Veuillez préciser"
+      },
+      "food_plan_low_risk": {
+        "title": "Please specify the introduction order for a low-risk child.",
+        "description": "Add an entry for each month and category you wish to specify."
+      },
+      "food_plan_high_risk": {
+        "title": "Please specify the introduction order for a high-risk child.",
+        "description": "Add an entry for each month and category you wish to specify."
+      },
+      "q12": {
+        "title": " comida tradicional de tu área) que se introduzca en el primer año de vida y que no se haya mencionado anteriormente:\""
+      },
+      "q14": {
+        "title": "\"Parmi les compléments alimentaires suivants",
+        "choices": {
+          "iron": "Fer",
+          "multivitamin": "Multivitamines",
+          "omega3": "Oméga-3",
+          "probiotic": "Probiotique",
+          "prebiotic": "Prébiotique",
+          "synbiotic": "Synbiotique",
+          "vitamin_a": "Vitamine A",
+          "vitamin_c": "Vitamine C",
+          "vitamin_d": "Vitamine D",
+          "no_supplements": "Aucun complément alimentaire"
+        },
+        "other": "Autre",
+        "otherPlaceholder": "Veuillez préciser"
+      },
+      "q15": {
+        "title": "Quel est l'intervalle pour l'introduction d'aliments peu allergènes chez les enfants non allergiques ?",
+        "choices": {
+          "1_day": "1 jour",
+          "1_3_days": "1 à 3 jours",
+          "more_3_days": "Plus de 3 jours"
+        }
+      }
+    },
+    "guidance": "Please answer all questions as accurately as possible. Your responses will remain confidential.",
+    "next": "Next",
+    "previous": "Previous",
+    "completed": "Survey completed successfully! Your response has been recorded.\\n\\nParticipant ID: {{participantId}}\\nSubmission ID: {{responseId}}",
+    "error": "There was an error submitting your survey. Please try again.",
+    "placeholders": {
+      "selectInterval": "Select interval...",
+      "months": "0"
+    },
+    "thankYou": {
+      "title": "Thank You!",
+      "message": "Your survey response has been successfully submitted.",
+      "participantId": "Participant ID",
+      "newSurvey": "Start New Survey"
+    },
+    "steps": {
+      "demographics": "Demographics",
+      "feeding_practices": "Feeding Practices"
+    },
+    "food_plan": {
+      "instructions": "Please specify the introduction order by adding entries for each month and food category you wish to include.",
+      "low_risk_title": "Food Introduction Plan for Low-Risk Children",
+      "high_risk_title": "Food Introduction Plan for High-Risk Children",
+      "month": "Month of Introduction",
+      "month_placeholder": "Select month",
+      "category": "Food Category",
+      "category_placeholder": "Select food category",
+      "items": "Food Items to Introduce",
+      "items_required": "Please select at least one food item",
+      "add_entry": "Add Entry",
+      "no_plans_needed": "No food plans needed based on your previous answers."
+    },
+    "review": {
+      "instructions": "Please review your answers before submitting the survey."
+    },
+    "pages": {
+      "basic_information": {
+        "title": "Basic Information"
+      },
+      "complementary_feeding": {
+        "title": "Complementary feeding"
+      }
+    },
+    "dynamic_panel": {
+      "month": {
+        "title": "Month of Introduction",
+        "choices": {
+          "birth": "Birth",
+          "month_1": "Month 1",
+          "month_2": "Month 2",
+          "month_3": "Month 3",
+          "month_4": "Month 4",
+          "month_5": "Month 5",
+          "month_6": "Month 6",
+          "month_7": "Month 7",
+          "month_8": "Month 8",
+          "month_9": "Month 9",
+          "month_10": "Month 10",
+          "month_11": "Month 11",
+          "month_12": "Month 12",
+          "month_13": "Month 13",
+          "month_14": "Month 14",
+          "month_15": "Month 15",
+          "month_16": "Month 16",
+          "month_17": "Month 17",
+          "month_18": "Month 18"
+        }
+      },
+      "food_category": {
+        "title": "Food Category"
+      },
+      "food_items": {
+        "title": "Food Items to Introduce",
+        "description": "Select one or more items from the list. Items will appear based on the selected food category."
+      },
+      "add_entry": "Add Entry",
+      "remove_entry": "Remove Entry"
+    }
+  },
+  "foodCategories": {
+    "starch_gluten": "AMIDON/GLUTEN",
+    "vegetables": "LÉGUMES",
+    "legumes": "LÉGUMINEUSES",
+    "meat": "VIANDE",
+    "fish_shellfish": "POISSON/FRUITS DE MER",
+    "fruit": "FRUITS",
+    "dairy": "PRODUITS LAITIERS/SUBSTITUTS DE PRODUITS LAITIERS",
+    "egg": "ŒUF",
+    "fat_oil": "GRAISSE/HUILE",
+    "sweets": "DOCES",
+    "nuts_seeds": "NOIX/GRAINES",
+    "salt_spices": "SEL/ÉPICES",
+    "additional_guidance": "ORIENTATIONS SUPPLÉMENTAIRES"
+  },
+  "foodItems": {
+    "starch": {
+      "gluten_grains": "Céréales contenant du gluten (blé, orge, seigle ex. pâtes, pain, etc.)",
+      "gluten_free_cereals": "Céréales sans gluten (sarrasin, quinoa, avoine)",
+      "maize_products": "Produits à base de maïs (ex. polenta, collations de maïs pour bébés)",
+      "potato_sweet_potato": "Pomme de terre, Patate douce",
+      "rice": "Riz (y compris farine de riz)",
+      "rice_pudding": "Pudding de riz (contenant du lait)",
+      "semolina_pudding": "Pudding de semoule (contenant du lait)",
+      "trahanas": "Trahanas"
+    },
+    "vegetables": {
+      "cabbage_broccoli": "Chou, brocoli, chou-fleur",
+      "carrot": "Carotte",
+      "root_vegetables": "Légumes racines comme céleri",
+      "leafy_vegetables": "Légumes verts à feuilles (épinard, laitue, etc.)",
+      "pea_beans": "Petits pois, haricots verts",
+      "pepper": "Poivron",
+      "tomato": "Tomate",
+      "zucchini": "Courgette ou autres courges"
+    },
+    "legumes": {
+      "beans": "Haricots (tous types)",
+      "chickpeas": "Pois chiches",
+      "lentils": "Lentilles",
+      "soya": "Soja",
+      "peanut": "Cacahuètes/beurre de cacahuète"
+    },
+    "meat": {
+      "poultry": "Poulet/dinde/canard",
+      "processed_meat": "Viande transformée comme charcuterie/jambon/salami",
+      "lamb": "Agneau",
+      "liver_pate": "Pâté de foie",
+      "pork": "Porc",
+      "rabbit": "Lapin",
+      "beef": "Bœuf",
+      "venison": "Gibier"
+    },
+    "fish": {
+      "crustaceans": "Crustacés (crevettes, écrevisses, crabes, homards)",
+      "fish": "Poisson",
+      "mollusks": "Mollusques (palourdes, coquilles Saint-Jacques, huîtres, moules, poulpe, escargots, calmars, seiches)"
+    },
+    "fruit": {
+      "apple": "Pomme (et produits de pomme comme compote de pommes)",
+      "mango": "Mangue",
+      "banana": "Banane",
+      "berries": "Baies y compris fraises",
+      "dried_fruits": "Fruits secs",
+      "figs": "Figues",
+      "fresh_juice": "Jus de fruits frais",
+      "fruit_juice": "Jus de fruits (avec ou sans sucre)",
+      "grapes": "Raisins",
+      "kiwi": "Kiwi",
+      "melon": "Melon, pastèque",
+      "citrus": "Orange, mandarine",
+      "stone_fruits": "Pêche, abricot",
+      "pear": "Poire"
+    },
+    "dairy": {
+      "plant_milk": "Lait végétal (spécifier ici enrichi/non enrichi)",
+      "cow_yogurt": "Yaourt au lait de vache",
+      "cream_cheese": "Fromage à la crème",
+      "feta": "Fromage feta",
+      "fresh_cow_milk": "Lait de vache frais",
+      "goat_sheep_milk": "Lait frais de chèvre/brebis",
+      "kephir": "Kéfir",
+      "kids_yogurt": "Yaourt pour enfants",
+      "rice_milk": "Lait de riz",
+      "goat_sheep_yogurt": "Yaourt de brebis/chèvre",
+      "soy_cheese": "Fromage de soja",
+      "soy_milk": "Lait de soja",
+      "soy_yogurt": "Yaourt de soja",
+      "cheese": "Fromage (ex. cheddar, edam, Comte, parmesan)"
+    },
+    "egg": {
+      "hard_boiled": "Œuf dur (cuisson >6min)",
+      "raw": "Œuf cru",
+      "partially_cooked": "Partiellement cuit comme œufs brouillés et œuf au plat"
+    },
+    "fat": {
+      "butter": "Beurre",
+      "vegetable_oils": "Huile de maïs/huiles végétales",
+      "margarine": "Margarine",
+      "olive_oil": "Huile d'olive",
+      "nut_seed_oils": "Huiles de noix et graines"
+    },
+    "sweets": {
+      "baby_biscuits": "Biscuits pour bébés sans sucre",
+      "fruit_spread": "Pâte à tartiner aux fruits (ex. confiture)",
+      "honey": "Miel",
+      "sweets_cake": "Bonbons, gâteau, biscuits"
+    },
+    "nuts": {
+      "mustard": "Moutarde",
+      "sesame": "Sésame/tahini",
+      "tree_nuts": "Noix (et beurres de noix)"
+    },
+    "spices": {
+      "salt": "Sel",
+      "spices_herbs": "Épices/herbes (ex. poivre, cannelle, etc.)"
+    },
+    "additional": {
+      "baby_food": "Nourriture pour bébés préparée - pots, sachets",
+      "family_meal_salt": "Partager repas familial avec sel",
+      "family_meal_no_salt": "Partager repas familial sans sel",
+      "mashed_food": "Nourriture écrasée",
+      "pureed_food": "Nourriture en purée",
+      "finger_food": "Nourriture en morceaux et finger food",
+      "baby_led_weaning": "Sevrage dirigé par bébé"
+    }
+  },
+  "title": "Alimentation complémentaire : une enquête sur les pratiques des professionnels de la santé",
+  "introduction": {
+    "description": "L'introduction d'aliments solides et de boissons autres que le lait (alimentation complémentaire) est une étape clé du développement qui entraîne des changements importants en termes de modifications fonctionnelles du tractus gastro-intestinal, du système immunitaire et des processus métaboliques. De plus, le moment de l'introduction alimentaire semble crucial pour la prévention primaire des allergies alimentaires. L'objectif de l'enquête actuelle est de recueillir des informations sur les pratiques habituelles des professionnels de la santé de différents pays concernant l'ordre d'introduction des aliments solides dans l'alimentation des nourrissons et sur la manière dont cette décision est modifiée en cas de nourrissons à faible ou à haut risque d'allergie.",
+    "duration": "Le remplissage du questionnaire prend environ 10 minutes.",
+    "passwordPrompt": "Si vous acceptez de participer à cette recherche, veuillez saisir le mot de passe qui vous a été fourni :",
+    "continue": "Continue",
+    "extraHeader": "Nous comprenons que les conseils doivent être individualisés, mais nous pouvons vous donner une indication générale de quand il est généralement approprié de considérer l'introduction d'aliments complémentaires pour ces nourrissons."
+  },
+  "navigation": {
+    "home": "Home",
+    "survey": "Survey"
+  },
+  "common": {
+    "loading": "Loading survey...",
+    "required": "This field is required",
+    "optional": "Optional"
+  }
+}

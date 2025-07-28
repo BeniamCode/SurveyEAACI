@@ -1,8 +1,9 @@
+// Updated FoodPlanningInterface.tsx with proper drag and drop instructions
 import React, { useState, useEffect } from 'react';
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
 import type { DropResult } from '@hello-pangea/dnd';
 import { useTranslation } from 'react-i18next';
-import { foodCategories, generateTimelineMonths } from '../../data/foodCategories';
+import { foodCategories, timelineMonths } from '../../data/foodCategories';
 import type { FoodPlacement, FoodItem } from '../../data/foodCategories';
 import { Button } from '../ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
@@ -22,8 +23,7 @@ export default function FoodPlanningInterface({
   initialPlacements = []
 }: FoodPlanningInterfaceProps) {
   const { t } = useTranslation();
-  const timelineMonths = generateTimelineMonths(t);
-  const [expandedCategories, setExpandedCategories] = useState<string[]>(['legumes']); // Start with legumes expanded
+  const [expandedCategories, setExpandedCategories] = useState<string[]>(['legumes']);
   const [placements, setPlacements] = useState<FoodPlacement[]>(initialPlacements);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -38,7 +38,6 @@ export default function FoodPlanningInterface({
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-
   const toggleCategory = (categoryId: string) => {
     setExpandedCategories(prev => 
       prev.includes(categoryId) 
@@ -52,7 +51,6 @@ export default function FoodPlanningInterface({
 
     const { source, destination, draggableId } = result;
     
-    // If dropped on a month
     if (destination.droppableId.startsWith('month-')) {
       const foodItem = findFoodItemById(draggableId);
       if (!foodItem) return;
@@ -64,7 +62,6 @@ export default function FoodPlanningInterface({
         riskLevel
       };
 
-      // Remove existing placement of this food item (if any) and add new one
       const updatedPlacements = [
         ...placements.filter(p => p.foodItemId !== draggableId),
         newPlacement
@@ -93,10 +90,6 @@ export default function FoodPlanningInterface({
     return placements.filter(p => p.monthId === monthId && p.riskLevel === riskLevel);
   };
 
-  const getColorForRiskLevel = () => {
-    return riskLevel === 'low' ? 'border-green-200 bg-green-50' : 'border-red-200 bg-red-50';
-  };
-
   const getFoodItemPlacement = (foodItemId: string) => {
     const placement = placements.find(p => p.foodItemId === foodItemId && p.riskLevel === riskLevel);
     if (placement) {
@@ -113,12 +106,26 @@ export default function FoodPlanningInterface({
           {title}
         </h4>
         
-        {/* Drag and Drop Instructions */}
+        {/* ADD DRAG AND DROP INSTRUCTIONS HERE */}
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
           <div className="flex items-start gap-3">
             <Info className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-            <div className="text-sm text-blue-800">
-              {t('survey.interface.dragDrop.mobile')}
+            <div className="space-y-2">
+              <h5 className="font-medium text-blue-900">{t('survey.foodPlanning.instructions.title')}</h5>
+              <p className="text-sm text-blue-800">
+                {t('survey.foodPlanning.instructions.general')}
+              </p>
+              {isMobile ? (
+                <div className="flex items-start gap-2 p-2 bg-green-100 border border-green-300 rounded">
+                  <div className="text-xs text-green-800">
+                    📱 <strong>Mobile:</strong> {t('survey.interface.dragDrop.mobile')}
+                  </div>
+                </div>
+              ) : (
+                <div className="text-xs text-blue-700">
+                  🖱️ <strong>Desktop:</strong> {t('survey.interface.dragDrop.desktop')}
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -228,7 +235,7 @@ export default function FoodPlanningInterface({
                             ref={provided.innerRef}
                             {...provided.droppableProps}
                             className={`min-h-12 border-2 border-dashed rounded p-2 transition-colors ${
-                              snapshot.isDraggingOver 
+                              snapshot.isDraggedOver 
                                 ? `${riskLevel === 'low' ? 'border-green-400 bg-green-100' : 'border-red-400 bg-red-100'}`
                                 : 'border-gray-300 bg-white hover:border-gray-400'
                             }`}
@@ -242,7 +249,7 @@ export default function FoodPlanningInterface({
                                   riskLevel === 'low' ? 'bg-green-100 border-green-300 text-green-800' : 'bg-red-100 border-red-300 text-red-800'
                                 }`}
                               >
-                                <span className="truncate max-w-40">{t(`foodItems.${placement.foodItemName}`)}</span>
+                                <span className="truncate max-w-40">{placement.foodItemName}</span>
                                 <Button
                                   type="button"
                                   variant="ghost"
@@ -277,7 +284,7 @@ export default function FoodPlanningInterface({
           <div className="mt-4 p-3 bg-white border border-gray-200 rounded">
             <div className="text-sm font-medium mb-2">{t('survey.foodPlanning.summary')}</div>
             <div className="text-xs text-gray-600">
-              {placements.map(p => `${t(`foodItems.${p.foodItemName}`)} (${timelineMonths.find(m => m.id === p.monthId)?.label})`).join(', ')}
+              {placements.map(p => `${p.foodItemName} (${timelineMonths.find(m => m.id === p.monthId)?.label})`).join(', ')}
             </div>
           </div>
         )}

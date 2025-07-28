@@ -19,10 +19,6 @@
         "title": "Diversificarea alimentatiei / Alimentatie complementara"
       }
     },
-    "food_plan": {
-      "low_risk_title": "ne alergic / risc scazut de allergie",
-      "high_risk_title": "Risc inalt"
-    },
     "interface": {
       "dragDrop": {
         "desktop": "Vă rugăm să indicați ordinea preferată trăgând și plasând un cuvant din lista \"Recomandari\" în cealtă listă",
@@ -71,14 +67,14 @@
           "yes": "Da",
           "no": "Nu"
         },
-        "title": "Recomandati parintilor atunci cand introduc alimentele solide sa introduca alimentele intr-o anumita ordine atunci cand copilul nu este alergic sau prezinta risc scazut de alergie alimentara?"
+        "title": "\"Raten Sie Eltern"
       },
       "q11": {
         "choices": {
           "yes": "Da",
           "no": "Nu"
         },
-        "title": "Recomandati parintilor atunci cand introduc alimentele solide sa introduca alimentele intr-o anumita ordine atunci cand copilul  prezinta risc crescut de alergie alimentara?"
+        "title": "\"Raten Sie Eltern"
       },
       "q16": {
         "title": "Care este intervalul de introducere a alimentelor non-alergenice la copii cu risc crescut de alergie alimentară?"
@@ -137,31 +133,31 @@
       "q7": {
         "title": "La ce varsta recomandati diverificarea alimentatiei / introducerea alimentelor solide la sugari?",
         "breast_fed": "La sugarul alimentat la san",
-        "formula_fed": "La sugarul alimentat cu lapte praf sau mixt (san si lapte praf)",
-        "increased_risk": "La sugarul cu risc crescut de a dezvolta alergii",
+        "formula_fed": "Nourrisson nourri au biberon/nourrisson nourri au sein mixte :",
+        "increased_risk": "À risque accru de développer une allergie alimentaire",
         "months": "months"
       },
       "q8": {
-        "title": "Când considerați că un sugar are „risc crescut de a dezvolta o alergie alimentară”? (sunt posibile mai multe opțiuni)",
+        "title": "\"Wanneer heeft een kind een \"\"verhoogd risico op het ontwikkelen van voedselallergie?\"\"  (meerder antwoorden mogelijk)\"",
         "choices": {
           "eczema": "Coexistenta unei eczeme (dermatitei atopice)",
           "bronchiolitis": "Bronsiolite recidivante/ suierat",
-          "family_history": "Prezenta in antecedente familiale (părinți, frați) a oricarui tip de alergie, dermatită atopică, astm sau rinoconjunctivită alergică."
+          "family_history": " rodzeństwo) chorób alergicznych"
         },
         "other": "Altele",
         "otherPlaceholder": "Va rog specificati"
       },
       "q12": {
-        "title": "Te rog menționează aici orice aliment (de exemplu, mâncare tradițională din zona ta) pe care îl introduci în primul an de viață și care nu a fost menționat mai sus:"
+        "title": "\"Bitte gib hier jegliche Nahrungsmittel an (z.B. traditionelle Speisen aus deiner Region)"
       },
       "q14": {
-        "title": "Care dintre următoarele suplimente alimentare le-ați recomanda unui copil cu risc crescut de a dezvolta o alergie?",
+        "title": " lesquels recommanderiez-vous pour un enfant présentant un risque élevé de développer une allergie ?\"",
         "choices": {
           "iron": "Fier",
           "multivitamin": "Multivitamine",
           "omega3": "Omega-3",
           "probiotic": "Probiotice",
-          "prebiotic": "Prebiotice",
+          "prebiotic": "Prebiotice ",
           "synbiotic": "Simbiotice",
           "vitamin_a": "Vitamina A",
           "vitamin_c": "Vitamina C",
@@ -177,15 +173,15 @@
       "q9_elaborate": {
         "title": "Referiti-va in detail la masurile care le aplicati",
         "choices": {
-          "soy_formula": "Introducerea formulei pe bază de proteine ​​din soia în primele 6 luni de viață pentru a preveni alergia la laptele de vacă",
-          "hydrolysed_formula": "Lapte praf hidrolizat partial sau extensiv",
+          "soy_formula": "Introduction de formule à base de protéines de soja au cours des 6 premiers mois de vie pour prévenir l'allergie au lait de vache",
+          "hydrolysed_formula": "Lapte praf hidrolizat partial sau extensiv ",
           "restrict_allergens": "Limitarea consumului de potențiali alergeni alimentari în timpul sarcinii sau alăptării",
           "emollients": "Utilizand emolienți ca barieră pentru piele",
-          "prebiotics": "Prebiotice, probiotice sau sibiotice pentru femeile însărcinate și/sau care alăptează și/sau sugari",
-          "vitamin_supplements": "Supliment de vitamine sau supliment de ulei de pește în timpul sarcinii și/sau femeilor care alăptează și/sau sugari",
+          "prebiotics": " probióticos o simbióticos para mujeres embarazadas y/o lactantes y/o lactantes\"",
+          "vitamin_supplements": "Supplémentation en vitamines ou en huile de poisson pendant la grossesse et/ou l'allaitement et/ou pour les nourrissons",
           "regular_formula": "Lapte praf pentru sugari pe bază de lapte de vacă după prima săptămână de viață pentru a preveni alergiile alimentare",
           "exclusive_breastfeeding": "Încurajati alăptarea exclusivă până la 6 luni",
-          "early_introduction": "Introducerea alergenilor obișnuiți, cum ar fi ouă și arahide, la începutul dietei sugarilor (adică între 4-6 luni)"
+          "early_introduction": " como ovo e amendoim"
         },
         "other": "Alta  masura",
         "otherPlaceholder": "Va rog precizati"
@@ -328,9 +324,9 @@
   "common": {
     "yes": "Da",
     "no": "Nu",
-    "other": "Altele",
+    "other": "Alta",
     "placeholders": {
-      "specify": "Va rog specificati",
+      "specify": "\"Va rog",
       "explain": "Va rog precizati",
       "define": "Va rog precizati"
     },
