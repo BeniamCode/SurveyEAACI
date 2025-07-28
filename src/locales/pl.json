@@ -24,6 +24,10 @@
         "desktop": "Proszę wskazać preferowaną kolejność, przeciągając element z listy „ZALECENIA” do dowolnej innej listy",
         "mobile": "Proszę wskazać preferowaną kolejność, dotykając i przytrzymując element z listy 'ZALECENIA', aż pojawi się zielona ramka, a następnie przeciągnij go do dowolnej innej listy."
       },
+      "food_plan": {
+        "low_risk_title": "brak alergii / niskie ryzyko alergii pokarmowej",
+        "high_risk_title": "wysokie ryzyko alergii pokarmowej"
+      },
       "foodPicker": {
         "lowRiskLabel": "brak alergii / niskie ryzyko alergii pokarmowej",
         "highRiskLabel": "wysokie ryzyko alergii pokarmowej",

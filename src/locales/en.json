@@ -50,8 +50,8 @@
       }
     },
     "food_plan": {
-      "low_risk_title": "Food Plan - Low Risk",
-      "high_risk_title": "Food Plan - High Risk"
+      "low_risk_title": "Not Allergic / Low-risk",
+      "high_risk_title": "High-risk"
     },
     "dynamic_panel": {
       "add_entry": "Add Entry",

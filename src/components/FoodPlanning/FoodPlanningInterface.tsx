@@ -116,22 +116,8 @@ export default function FoodPlanningInterface({
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
           <div className="flex items-start gap-3">
             <Info className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-            <div className="space-y-2">
-              <h5 className="font-medium text-blue-900">{t('survey.foodPlanning.instructions.title')}</h5>
-              <p className="text-sm text-blue-800">
-                {t('survey.foodPlanning.instructions.general')}
-              </p>
-              {isMobile ? (
-                <div className="flex items-start gap-2 p-2 bg-green-100 border border-green-300 rounded">
-                  <div className="text-xs text-green-800">
-                    📱 <strong>Mobile:</strong> {t('survey.interface.dragDrop.mobile')}
-                  </div>
-                </div>
-              ) : (
-                <div className="text-xs text-blue-700">
-                  🖱️ <strong>Desktop:</strong> {t('survey.interface.dragDrop.desktop')}
-                </div>
-              )}
+            <div className="text-sm text-blue-800">
+              {t('survey.interface.dragDrop.mobile')}
             </div>
           </div>
         </div>
