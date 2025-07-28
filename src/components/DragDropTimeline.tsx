@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import type { DropResult } from "@hello-pangea/dnd";
+import { useTranslation } from 'react-i18next';
 
 interface FoodItem {
   label: string;
@@ -33,7 +34,7 @@ interface DragDropTimelineProps {
   surveyData?: any;
 }
 
-const months = ["Birth", "Month 1", "Month 2", "Month 3", "Month 4", "Month 5", "Month 6"];
+// Months will be generated dynamically with translations
 
 export default function DragDropTimeline({
   foodGroups,
@@ -43,7 +44,14 @@ export default function DragDropTimeline({
   value = {},
   surveyData = {},
 }: DragDropTimelineProps) {
+  const { t } = useTranslation();
   console.log("DragDropTimeline props:", { foodGroups, targetLists, sourceListTitle, value });
+  
+  // Generate months array with translations
+  const months = [
+    t('survey.interface.timeline.birth'),
+    ...Array.from({ length: 6 }, (_, i) => `${t('common.time.month_singular')} ${i + 1}`)
+  ];
   
   const [placements, setPlacements] = useState<{
     [month: string]: FoodItem[];
@@ -156,7 +164,7 @@ export default function DragDropTimeline({
             color: "#0050b3",
             fontWeight: "500",
           }}>
-            Drag & drop food items from the 'Advice' list to the appropriate month timeline(s)
+            Drag & drop food items from the '{t('survey.interface.foodPicker.adviceLabel')}' list to the appropriate month timeline(s)
           </p>
         </div>
 

@@ -94,7 +94,7 @@ export default function FoodPlansStep() {
                       {/* Month Selection */}
                       <div className="space-y-2">
                         <Label className="text-sm font-medium">
-                          Month of Introduction *
+                          {t('common.time.month_singular')} of Introduction *
                         </Label>
                         <Controller
                           name={`${fieldName}.${index}.month`}
@@ -231,7 +231,7 @@ export default function FoodPlansStep() {
         <>
           {renderFoodPlanSection(
             'low_risk',
-            'Food Introduction Plan for Low-Risk Children',
+            t('survey.interface.foodPicker.lowRiskLabel'),
             lowRiskArray.fields,
             () => handleAddEntry('low_risk'),
             (index) => handleRemoveEntry('low_risk', index)
@@ -243,7 +243,7 @@ export default function FoodPlansStep() {
         <>
           {renderFoodPlanSection(
             'high_risk',
-            'Food Introduction Plan for High-Risk Children',
+            t('survey.interface.foodPicker.highRiskLabel'),
             highRiskArray.fields,
             () => handleAddEntry('high_risk'),
             (index) => handleRemoveEntry('high_risk', index)

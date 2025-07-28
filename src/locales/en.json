@@ -38,9 +38,9 @@
     },
     "foodPlanning": {
       "dragHere": "Drag foods here",
-      "foodCategories": "Food Categories",
-      "lowRiskTimeline": "Low Risk Timeline",
-      "highRiskTimeline": "High Risk Timeline",
+      "foodCategories": "Advice",
+      "lowRiskTimeline": "Not Allergic / Low-risk",
+      "highRiskTimeline": "High-risk",
       "summary": "Summary",
       "instructions": {
         "title": "How to use this food planning tool:",
