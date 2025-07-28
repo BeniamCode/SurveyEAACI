@@ -41,7 +41,13 @@
       "foodCategories": "Food Categories",
       "lowRiskTimeline": "Low Risk Timeline",
       "highRiskTimeline": "High Risk Timeline",
-      "summary": "Summary"
+      "summary": "Summary",
+      "instructions": {
+        "title": "How to use this food planning tool:",
+        "desktop": "Click and drag food items from the categories on the left to the appropriate month on the timeline.",
+        "mobile": "Touch and hold a food item until you see a green border, then drag it to the month when you would introduce it.",
+        "general": "Expand food categories by clicking on them, then drag individual food items to the timeline months when you would recommend introducing them."
+      }
     },
     "food_plan": {
       "low_risk_title": "Food Plan - Low Risk",
@@ -85,7 +91,10 @@
     "interface": {
       "dragDrop": {
         "desktop": "Please indicate the preferred order by dragging & dropping an item from the 'ADVICE' list to any other list",
-        "mobile": "Please indicate the preferred order by touching and holding an item from the 'Advice' list until a green border appears and then dragging it to any other list"
+        "mobile": "Please indicate the preferred order by touching and holding an item from the 'Advice' list until a green border appears and then dragging it to any other list",
+        "instructions": "Drag and drop food items from the categories on the left to the appropriate month timeline on the right to create your food introduction plan.",
+        "mobileInstructions": "Touch and hold any food item until a green border appears, then drag it to the month when you would introduce it.",
+        "desktopInstructions": "Click and drag food items from the categories to the month timeline."
       },
       "foodPicker": {
         "lowRiskLabel": "Not Allergic / Low-risk",
