@@ -44,6 +44,11 @@
         "duplicateItem": "您已經將此選項加入此清單"
       }
     },
+    "foodPlanning": {
+      "foodCategories": "建議",
+      "lowRiskTimeline": "沒有食物過敏 / 低風險",
+      "highRiskTimeline": "高風險"
+    },
     "questions": {
       "q1": {
         "title": "性別",

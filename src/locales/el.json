@@ -44,6 +44,11 @@
         "duplicateItem": "Έχετε ήδη προσθέσει αυτό το αντικείμενο σε αυτή τη λίστα"
       }
     },
+    "foodPlanning": {
+      "foodCategories": "Οδηγίες",
+      "lowRiskTimeline": "Μη αλλεργικό / Χαμηλού κινδύνου",
+      "highRiskTimeline": "Υψηλού κινδύνου"
+    },
     "questions": {
       "q1": {
         "title": "Φύλο",

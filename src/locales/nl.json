@@ -44,6 +44,11 @@
         "duplicateItem": "U heeft dit item al aan deze lijst toegevoegd"
       }
     },
+    "foodPlanning": {
+      "foodCategories": "Advies",
+      "lowRiskTimeline": "Niet allergisch/laag risico",
+      "highRiskTimeline": "Hoog risico"
+    },
     "questions": {
       "q5": {
         "choices": {

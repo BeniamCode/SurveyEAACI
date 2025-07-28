@@ -44,6 +44,11 @@
         "duplicateItem": "Já adicionou este item a esta lista"
       }
     },
+    "foodPlanning": {
+      "foodCategories": "Conselho",
+      "lowRiskTimeline": "Não Alérgico / Baixo risco",
+      "highRiskTimeline": "Alto risco"
+    },
     "questions": {
       "q5": {
         "choices": {

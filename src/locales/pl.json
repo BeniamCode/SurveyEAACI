@@ -44,6 +44,11 @@
         "duplicateItem": "Ten element został już dodany do tej listy"
       }
     },
+    "foodPlanning": {
+      "foodCategories": "Zalecenia",
+      "lowRiskTimeline": "brak alergii / niskie ryzyko alergii pokarmowej",
+      "highRiskTimeline": "wysokie ryzyko alergii pokarmowej"
+    },
     "questions": {
       "q1": {
         "title": "Płeć",

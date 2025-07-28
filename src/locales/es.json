@@ -44,6 +44,11 @@
         "duplicateItem": "Ya has añadido este artículo a esta lista"
       }
     },
+    "foodPlanning": {
+      "foodCategories": "Instrucciones",
+      "lowRiskTimeline": "No alergénico / Bajo riesgo",
+      "highRiskTimeline": "Alto riesgo"
+    },
     "questions": {
       "q5": {
         "choices": {

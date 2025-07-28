@@ -44,6 +44,11 @@
         "duplicateItem": "Sie haben diesen Artikel bereits zu dieser Liste hinzugefügt"
       }
     },
+    "foodPlanning": {
+      "foodCategories": "Beratung",
+      "lowRiskTimeline": "Nicht allergisch/geringes Risiko",
+      "highRiskTimeline": "Hohes Risiko"
+    },
     "questions": {
       "q5": {
         "choices": {
