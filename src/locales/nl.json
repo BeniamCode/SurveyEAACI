@@ -19,14 +19,14 @@
         "title": "Vaste voeding"
       }
     },
+    "food_plan": {
+      "low_risk_title": "Niet allergisch/laag risico",
+      "high_risk_title": "Hoog risico"
+    },
     "interface": {
       "dragDrop": {
         "desktop": "Geef de voorkeursvolgorde aan door een item van de \"ADVIES\" lijst te slepen naar één van de andere lijsten",
         "mobile": "Geef de voorkeursvolgorde aan door een item van de \"ADVIES\" groep aan te raken, vast te houden tot een groene rand verschijnt, en het item vervolgens te slepen naar een van de andere lijsten. "
-      },
-      "food_plan": {
-        "low_risk_title": "Niet allergisch/laag risico",
-        "high_risk_title": "Hoog risico"
       },
       "foodPicker": {
         "lowRiskLabel": "Niet allergisch/laag risico",

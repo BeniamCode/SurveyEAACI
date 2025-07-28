@@ -228,7 +228,7 @@ export default function FoodPlanningInterface({
                             ref={provided.innerRef}
                             {...provided.droppableProps}
                             className={`min-h-12 border-2 border-dashed rounded p-2 transition-colors ${
-                              snapshot.isDraggedOver 
+                              snapshot.isDraggingOver 
                                 ? `${riskLevel === 'low' ? 'border-green-400 bg-green-100' : 'border-red-400 bg-red-100'}`
                                 : 'border-gray-300 bg-white hover:border-gray-400'
                             }`}

@@ -19,14 +19,14 @@
         "title": "Ergänzungsfütterung"
       }
     },
+    "food_plan": {
+      "low_risk_title": "Nicht allergisch/geringes Risiko",
+      "high_risk_title": "Hohes Risiko"
+    },
     "interface": {
       "dragDrop": {
         "desktop": "Bitte geben Sie die gewünschte Reihenfolge an, indem Sie einen Artikel aus der Liste „RATGEBER“ per Drag & Drop in eine andere Liste ziehen",
         "mobile": "Bitte geben Sie die gewünschte Reihenfolge an, indem Sie ein Element aus der Liste „Beratung“ berühren und gedrückt halten, bis ein grüner Rand erscheint, und es dann in eine andere Liste ziehen"
-      },
-      "food_plan": {
-        "low_risk_title": "Nicht allergisch/geringes Risiko",
-        "high_risk_title": "Hohes Risiko"
       },
       "foodPicker": {
         "lowRiskLabel": "Nicht allergisch/geringes Risiko",

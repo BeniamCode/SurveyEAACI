@@ -19,14 +19,14 @@
         "title": "Pautas para la introducción de alimentos sólidos a los bebés:"
       }
     },
+    "food_plan": {
+      "low_risk_title": "No alergénico / Bajo riesgo",
+      "high_risk_title": "Alto riesgo"
+    },
     "interface": {
       "dragDrop": {
         "desktop": "Indique el orden preferido arrastrando y soltando un elemento de la lista \"SUGERENCIAS' a cualquier otra lista",
         "mobile": "Indique el orden preferido tocando y manteniendo presionado un elemento de la lista SUGERENCIAS hasta que aparezca un contorno verde y luego arrástrelo a cualquier otra lista."
-      },
-      "food_plan": {
-        "low_risk_title": "No alergénico / Bajo riesgo",
-        "high_risk_title": "Alto riesgo"
       },
       "foodPicker": {
         "lowRiskLabel": "No alergénico / Bajo riesgo",

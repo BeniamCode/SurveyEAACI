@@ -19,14 +19,14 @@
         "title": "Alimentation complémentaire"
       }
     },
+    "food_plan": {
+      "low_risk_title": "Pas d'allergie / Faible risque",
+      "high_risk_title": "Haut risque"
+    },
     "interface": {
       "dragDrop": {
         "desktop": "Veuillez indiquer l'ordre préféré en faisant glisser un élément de la liste « CONSEILS » vers n'importe quelle autre liste",
         "mobile": "Veuillez indiquer l'ordre préféré en touchant et en maintenant enfoncé un élément de la liste « Conseils » jusqu'à ce qu'une bordure verte apparaisse, puis en le faisant glisser vers n'importe quelle autre liste"
-      },
-      "food_plan": {
-        "low_risk_title": "Pas d'allergie / Faible risque",
-        "high_risk_title": "Haut risque"
       },
       "foodPicker": {
         "lowRiskLabel": "Pas d'allergie / Faible risque",

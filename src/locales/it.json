@@ -19,14 +19,14 @@
         "title": "Linee guida per l'introduzione di cibi solidi ai bambini:"
       }
     },
+    "food_plan": {
+      "low_risk_title": "Anallergico / Basso rischio",
+      "high_risk_title": "Alto rischio"
+    },
     "interface": {
       "dragDrop": {
         "desktop": "Si prega di indicare l'ordine preferito trascinando e rilasciando un articolo dall'elenco 'INDICAZIONI' a qualsiasi altro elenco",
         "mobile": "Indica il tuo ordine preferito toccando e tenendo premuto un elemento dall'elenco INDICAZIONI fino a quando non viene visualizzato un contorno verde e quindi trascinandolo in qualsiasi altro elenco."
-      },
-      "food_plan": {
-        "low_risk_title": "Anallergico / Basso rischio",
-        "high_risk_title": "Alto rischio"
       },
       "foodPicker": {
         "lowRiskLabel": "Anallergico / Basso rischio",

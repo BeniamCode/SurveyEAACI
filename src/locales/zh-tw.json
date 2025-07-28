@@ -19,14 +19,14 @@
         "title": "輔食餵養"
       }
     },
+    "food_plan": {
+      "low_risk_title": "沒有食物過敏 / 低風險",
+      "high_risk_title": "高風險"
+    },
     "interface": {
       "dragDrop": {
         "desktop": "請將選項從「建議」清單拖曳到任何其他列表，以示優先次序",
         "mobile": "請長按「建議」清單中的任何選項直至綠色邊框出現，並拖曳至叧一列表中，以示您的首選次序"
-      },
-      "food_plan": {
-        "low_risk_title": "沒有食物過敏 / 低風險",
-        "high_risk_title": "高風險"
       },
       "foodPicker": {
         "lowRiskLabel": "沒有食物過敏 / 低風險",

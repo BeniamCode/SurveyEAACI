@@ -19,14 +19,14 @@
         "title": "Diversificarea alimentatiei / Alimentatie complementara"
       }
     },
+    "food_plan": {
+      "low_risk_title": "ne alergic / risc scazut de allergie",
+      "high_risk_title": "Risc inalt"
+    },
     "interface": {
       "dragDrop": {
         "desktop": "Vă rugăm să indicați ordinea preferată trăgând și plasând un cuvant din lista \"Recomandari\" în cealtă listă",
         "mobile": "Vă rugăm să indicați ordinea preferată atingând și menținând apăsat un produs din lista „RECOMANDARI” până când apare un contur verde, apoi trăgând-l în cealtă listă."
-      },
-      "food_plan": {
-        "low_risk_title": "ne alergic / risc scazut de allergie",
-        "high_risk_title": "Risc inalt"
       },
       "foodPicker": {
         "lowRiskLabel": "ne alergic / risc scazut de allergie",

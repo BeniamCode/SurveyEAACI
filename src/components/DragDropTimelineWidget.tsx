@@ -2,6 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { CustomWidgetCollection, Question, Serializer, ElementFactory } from "survey-core";
 import DragDropTimeline from "./DragDropTimeline";
+import { useTranslation } from 'react-i18next';
+
+// Wrapper component to handle translations
+const DragDropTimelineWrapper = (props: any) => {
+  const { t } = useTranslation();
+  return React.createElement(DragDropTimeline, {
+    ...props,
+    sourceListTitle: t('survey.interface.foodPicker.adviceLabel')
+  });
+};
 
 // Custom widget for SurveyJS integration
 const dragDropTimelineWidget = {
@@ -88,10 +98,9 @@ const dragDropTimelineWidget = {
               border: "1px solid #e0e0e0",
             },
           },
-          React.createElement(DragDropTimeline, {
+          React.createElement(DragDropTimelineWrapper, {
             foodGroups: food_categories,
             targetLists: [],
-            sourceListTitle: "Advice",
             onChange: handleChange,
             value: question.value || {},
             surveyData: surveyData,
