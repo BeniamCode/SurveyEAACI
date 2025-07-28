@@ -198,6 +198,16 @@ export const foodCategories: FoodCategory[] = [
   },
 ];
 
+// Function to generate timeline months with translations
+export const generateTimelineMonths = (t: any) => [
+  { id: 'month-0', label: t('survey.interface.timeline.birth') },
+  ...Array.from({ length: 18 }, (_, i) => ({
+    id: `month-${i + 1}`,
+    label: `${t('common.time.month_singular')} ${i + 1}`
+  }))
+];
+
+// Static timeline months for components that can't use translations
 export const timelineMonths = [
   { id: 'month-0', label: 'Birth' },
   { id: 'month-1', label: 'Month 1' },

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
 import type { DropResult } from '@hello-pangea/dnd';
 import { useTranslation } from 'react-i18next';
-import { foodCategories, timelineMonths } from '../../data/foodCategories';
+import { foodCategories, generateTimelineMonths } from '../../data/foodCategories';
 import type { FoodPlacement, FoodItem } from '../../data/foodCategories';
 import { Button } from '../ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
@@ -22,6 +22,7 @@ export default function FoodPlanningInterface({
   initialPlacements = []
 }: FoodPlanningInterfaceProps) {
   const { t } = useTranslation();
+  const timelineMonths = generateTimelineMonths(t);
   const [expandedCategories, setExpandedCategories] = useState<string[]>(['legumes']); // Start with legumes expanded
   const [placements, setPlacements] = useState<FoodPlacement[]>(initialPlacements);
   const [isMobile, setIsMobile] = useState(false);
@@ -241,7 +242,7 @@ export default function FoodPlanningInterface({
                                   riskLevel === 'low' ? 'bg-green-100 border-green-300 text-green-800' : 'bg-red-100 border-red-300 text-red-800'
                                 }`}
                               >
-                                <span className="truncate max-w-40">{placement.foodItemName}</span>
+                                <span className="truncate max-w-40">{t(`foodItems.${placement.foodItemName}`)}</span>
                                 <Button
                                   type="button"
                                   variant="ghost"
@@ -276,7 +277,7 @@ export default function FoodPlanningInterface({
           <div className="mt-4 p-3 bg-white border border-gray-200 rounded">
             <div className="text-sm font-medium mb-2">{t('survey.foodPlanning.summary')}</div>
             <div className="text-xs text-gray-600">
-              {placements.map(p => `${p.foodItemName} (${timelineMonths.find(m => m.id === p.monthId)?.label})`).join(', ')}
+              {placements.map(p => `${t(`foodItems.${p.foodItemName}`)} (${timelineMonths.find(m => m.id === p.monthId)?.label})`).join(', ')}
             </div>
           </div>
         )}
