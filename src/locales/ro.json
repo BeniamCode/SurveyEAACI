@@ -44,6 +44,11 @@
         "duplicateItem": "Ati adaugat deja acest produs in aceasta lista"
       }
     },
+    "foodPlanning": {
+      "foodCategories": "Recomandari",
+      "lowRiskTimeline": "ne alergic / risc scazut de allergie",
+      "highRiskTimeline": "Risc inalt"
+    },
     "questions": {
       "q5": {
         "choices": {
@@ -124,9 +129,9 @@
           "university_course": "curs universitar",
           "msc": "master",
           "phd": "doctorat",
-          "conference_attendance": "participare la conferinte si congrese"
+          "conference_attendance": "participare la conferinte si congrese",
+          "other": "alt mod"
         },
-        "other": "alt mod",
         "otherPlaceholder": "va rog specificati",
         "other_specify": "Vă rugăm să descrieți educația dvs. suplimentară"
       },
@@ -185,7 +190,8 @@
           "vitamin_supplements": "Supliment de vitamine sau supliment de ulei de pește în timpul sarcinii și/sau femeilor care alăptează și/sau sugari",
           "regular_formula": "Lapte praf pentru sugari pe bază de lapte de vacă după prima săptămână de viață pentru a preveni alergiile alimentare",
           "exclusive_breastfeeding": "Încurajati alăptarea exclusivă până la 6 luni",
-          "early_introduction": "Introducerea alergenilor obișnuiți, cum ar fi ouă și arahide, la începutul dietei sugarilor (adică între 4-6 luni)"
+          "early_introduction": "Introducerea alergenilor obișnuiți, cum ar fi ouă și arahide, la începutul dietei sugarilor (adică între 4-6 luni)",
+          "complementary_timing": "Recomandarea începerii alimentației complementare la 6 luni"
         },
         "other": "Alta  masura",
         "otherPlaceholder": "Va rog precizati"

@@ -44,6 +44,11 @@
         "duplicateItem": "Vous avez déjà ajouté cet élément à cette liste"
       }
     },
+    "foodPlanning": {
+      "foodCategories": "Conseils",
+      "lowRiskTimeline": "Pas d'allergie / Faible risque",
+      "highRiskTimeline": "Haut risque"
+    },
     "questions": {
       "q5": {
         "choices": {
@@ -124,9 +129,9 @@
           "university_course": "Cours universitaire",
           "msc": "MSc (Master of Science)",
           "phd": "PhD (Doctorat)",
-          "conference_attendance": "Participation à des conférences"
+          "conference_attendance": "Participation à des conférences",
+          "other": "Autre"
         },
-        "other": "Autre",
         "otherPlaceholder": "Veuillez préciser",
         "other_specify": "Veuillez décrire votre formation supplémentaire"
       },
@@ -185,7 +190,8 @@
           "vitamin_supplements": "Supplémentation en vitamines ou en huile de poisson pendant la grossesse et/ou l'allaitement et/ou pour les nourrissons",
           "regular_formula": "Formule infantile à base de lait de vache ordinaire après la première semaine de vie pour prévenir les allergies alimentaires",
           "exclusive_breastfeeding": "Encouragement à l'allaitement exclusif jusqu'à 6 mois",
-          "early_introduction": "Introduction précoce d'allergènes courants tels que l'œuf et l'arachide dans l'alimentation du nourrisson (c'est-à-dire entre 4 et 6 mois)"
+          "early_introduction": "Introduction précoce d'allergènes courants tels que l'œuf et l'arachide dans l'alimentation du nourrisson (c'est-à-dire entre 4 et 6 mois)",
+          "complementary_timing": "Recommander de commencer l'alimentation complémentaire à 6 mois"
         },
         "other": "Autre",
         "otherPlaceholder": "Veuillez expliquer"

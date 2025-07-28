@@ -44,6 +44,11 @@
         "duplicateItem": "Hai già aggiunto questo elemento a questo elenco"
       }
     },
+    "foodPlanning": {
+      "foodCategories": "Istruzioni",
+      "lowRiskTimeline": "Anallergico / Basso rischio",
+      "highRiskTimeline": "Alto rischio"
+    },
     "questions": {
       "q5": {
         "choices": {
@@ -124,9 +129,9 @@
           "university_course": "Corso universitario",
           "msc": "MSc",
           "phd": "dottorato di ricerca",
-          "conference_attendance": "Partecipazione alla conferenza"
+          "conference_attendance": "Partecipazione alla conferenza",
+          "other": "Altro"
         },
-        "other": "Altro",
         "otherPlaceholder": "Per favore specificare",
         "other_specify": "Si prega di descrivere la formazione aggiuntiva"
       },
@@ -185,7 +190,8 @@
           "vitamin_supplements": "Integrazione vitaminica o integrazione di olio di pesce in donne sane in gravidanza e/o in allattamento e/o neonati",
           "regular_formula": "Formula standard per lattanti a base di latte vaccino dopo la prima settimana di vita per prevenire allergie alimentari",
           "exclusive_breastfeeding": "Motivare l'allattamento al seno esclusivo nei primi 6 mesi",
-          "early_introduction": "Introdurre precocemente allergeni comuni come uova e arachidi nella dieta del bambino (cioè tra i 4 e i 6 mesi)"
+          "early_introduction": "Introdurre precocemente allergeni comuni come uova e arachidi nella dieta del bambino (cioè tra i 4 e i 6 mesi)",
+          "complementary_timing": "Raccomandare di iniziare l'alimentazione complementare a 6 mesi"
         },
         "other": "Altro",
         "otherPlaceholder": "Spiega per favore"

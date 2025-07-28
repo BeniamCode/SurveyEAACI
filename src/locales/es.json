@@ -44,6 +44,11 @@
         "duplicateItem": "Ya has añadido este artículo a esta lista"
       }
     },
+    "foodPlanning": {
+      "foodCategories": "Instrucciones",
+      "lowRiskTimeline": "No alergénico / Bajo riesgo",
+      "highRiskTimeline": "Alto riesgo"
+    },
     "questions": {
       "q5": {
         "choices": {
@@ -124,9 +129,9 @@
           "university_course": "Curso universitario",
           "msc": "maestría",
           "phd": "Doctor",
-          "conference_attendance": "Asistencias a conferencias"
+          "conference_attendance": "Asistencias a conferencias",
+          "other": "Otro"
         },
-        "other": "Otro",
         "otherPlaceholder": "Por favor especifica",
         "other_specify": "Por favor describe tu educación adicional"
       },
@@ -185,7 +190,8 @@
           "vitamin_supplements": "Suplementos vitamínicos o suplementos de aceite de pescado durante el embarazo y/o mujeres lactantes y/o lactantes",
           "regular_formula": "Fórmula infantil regular a base de leche de vaca después de la primera semana de vida para prevenir la alergia alimentaria",
           "exclusive_breastfeeding": "Motivar la lactancia materna exclusiva hasta los 6 meses",
-          "early_introduction": "Introducir alérgenos comunes como el huevo y el maní temprano en la dieta del bebé (es decir, entre los 4 y 6 meses)"
+          "early_introduction": "Introducir alérgenos comunes como el huevo y el maní temprano en la dieta del bebé (es decir, entre los 4 y 6 meses)",
+          "complementary_timing": "Recomendar comenzar la alimentación complementaria a los 6 meses"
         },
         "other": "Otro",
         "otherPlaceholder": "Por favor explique"

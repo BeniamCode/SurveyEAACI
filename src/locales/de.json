@@ -44,6 +44,11 @@
         "duplicateItem": "Sie haben diesen Artikel bereits zu dieser Liste hinzugefügt"
       }
     },
+    "foodPlanning": {
+      "foodCategories": "Beratung",
+      "lowRiskTimeline": "Nicht allergisch/geringes Risiko",
+      "highRiskTimeline": "Hohes Risiko"
+    },
     "questions": {
       "q5": {
         "choices": {
@@ -124,9 +129,9 @@
           "university_course": "Universitätslehrgang",
           "msc": "MSc",
           "phd": "Doktortitel",
-          "conference_attendance": "Teilnahme an der Konferenz"
+          "conference_attendance": "Teilnahme an der Konferenz",
+          "other": "Andere"
         },
-        "other": "Andere",
         "otherPlaceholder": "Bitte angeben",
         "other_specify": "Bitte beschreiben Sie Ihre zusätzliche Ausbildung"
       },
@@ -185,7 +190,8 @@
           "vitamin_supplements": "Vitaminergänzung oder Fischölergänzung während der Schwangerschaft und/oder stillenden Frauen und/oder Säuglingen",
           "regular_formula": "Regelmäßige Säuglingsnahrung auf Kuhmilchbasis nach der ersten Lebenswoche zur Vorbeugung von Nahrungsmittelallergien",
           "exclusive_breastfeeding": "Motivieren Sie zum ausschließlichen Stillen bis zum 6.",
-          "early_introduction": "Häufige Allergene wie Eier und Erdnüsse frühzeitig in die Ernährung des Säuglings einführen (d. h. zwischen dem 4. und 6. Monat)"
+          "early_introduction": "Häufige Allergene wie Eier und Erdnüsse frühzeitig in die Ernährung des Säuglings einführen (d. h. zwischen dem 4. und 6. Monat)",
+          "complementary_timing": "Empfehlen Sie, mit der Ergänzungsfütterung mit 6 Monaten zu beginnen"
         },
         "other": "Andere",
         "otherPlaceholder": "Bitte erkläre"
