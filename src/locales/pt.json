@@ -190,7 +190,8 @@
           "vitamin_supplements": "Suplementação vitamínica ou suplementação com óleo de peixe durante a gravidez e/ou lactantes e/ou lactentes",
           "regular_formula": "Fórmula infantil regular à base de leite de vaca após a primeira semana de vida para prevenir alergia alimentar",
           "exclusive_breastfeeding": "Promover a amamentação exclusiva até os 6 meses",
-          "early_introduction": "Introduzir alérgenos comuns, como ovo e amendoim, precocemente na dieta do bebê (ou seja, entre 4 e 6 meses)"
+          "early_introduction": "Introduzir alérgenos comuns, como ovo e amendoim, precocemente na dieta do bebê (ou seja, entre 4 e 6 meses)",
+          "complementary_timing": "Recomendar o início da alimentação complementar aos 6 meses"
         },
         "other": "Outro",
         "otherPlaceholder": "Por favor indique qual"

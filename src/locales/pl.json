@@ -190,7 +190,8 @@
           "vitamin_supplements": "Suplementację witamin lub oleju rybiego u kobiet w ciąży i/lub karmiących piersią i/lub niemowląt",
           "regular_formula": "Mleko modyfikowane na bazie białka mleka krowiego po pierwszym tygodniu życia w celu zapobiegania alergii pokarmowej",
           "exclusive_breastfeeding": "Motywowanie do wyłącznego karmienia piersią przez pierwsze 6 miesięcy",
-          "early_introduction": "Wczesne wprowadzanie do diety dziecka powszechnych alergenów, takich jak jaja i orzeszki ziemne (tj. pomiędzy 4-6 miesiącem życia)"
+          "early_introduction": "Wczesne wprowadzanie do diety dziecka powszechnych alergenów, takich jak jaja i orzeszki ziemne (tj. pomiędzy 4-6 miesiącem życia)",
+          "complementary_timing": "Zalecanie rozpoczęcia żywienia uzupełniającego w 6 miesiącu"
         },
         "other": "Inne",
         "otherPlaceholder": "Proszę opisać"

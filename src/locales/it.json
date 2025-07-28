@@ -190,7 +190,8 @@
           "vitamin_supplements": "Integrazione vitaminica o integrazione di olio di pesce in donne sane in gravidanza e/o in allattamento e/o neonati",
           "regular_formula": "Formula standard per lattanti a base di latte vaccino dopo la prima settimana di vita per prevenire allergie alimentari",
           "exclusive_breastfeeding": "Motivare l'allattamento al seno esclusivo nei primi 6 mesi",
-          "early_introduction": "Introdurre precocemente allergeni comuni come uova e arachidi nella dieta del bambino (cioè tra i 4 e i 6 mesi)"
+          "early_introduction": "Introdurre precocemente allergeni comuni come uova e arachidi nella dieta del bambino (cioè tra i 4 e i 6 mesi)",
+          "complementary_timing": "Raccomandare di iniziare l'alimentazione complementare a 6 mesi"
         },
         "other": "Altro",
         "otherPlaceholder": "Spiega per favore"

@@ -190,7 +190,8 @@
           "vitamin_supplements": "Vitamine of visolie suppletie gedurende de zwangerschap, borstvoedingsperiode  of door de zuigeling",
           "regular_formula": "Standaard flesvoeding op basis van koemelk vanaf 1 week na de geboort om voedselllergie te voorkomen",
           "exclusive_breastfeeding": "Uitsluitend borstvoeding gedurende 6 maanden",
-          "early_introduction": "introductie van veel voorkomende allergenen zoals ei en pinda in het dieet van het kind, tussen 4 en 6 maanden"
+          "early_introduction": "introductie van veel voorkomende allergenen zoals ei en pinda in het dieet van het kind, tussen 4 en 6 maanden",
+          "complementary_timing": "Aanbevelen om te beginnen met aanvullende voeding op 6 maanden"
         },
         "other": "anders",
         "otherPlaceholder": "graag toelichten"

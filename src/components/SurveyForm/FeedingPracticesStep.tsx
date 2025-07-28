@@ -204,22 +204,23 @@ export default function FeedingPracticesStep() {
             {/* Q9a Elaborate (conditional) */}
             {q9aMainValue === 'yes' && (
               <div className="ml-6 p-4 border-l-4 border-blue-200 bg-blue-50 space-y-4">
-                <Label className="text-base font-semibold">{t('survey.questions.q9a.elaborate.title')} *</Label>
+                <Label className="text-base font-semibold">{t('survey.questions.q9_elaborate.title')} *</Label>
                 <Controller
                   name="q9a_elaborate"
                   control={control}
                   render={({ field }) => (
                     <div className="space-y-3">
                       {[
-                        { value: OriginalChoices.q9a_elaborate.soy_formula, label: t('survey.questions.q9a.elaborate.choices.soy_formula') },
-                        { value: OriginalChoices.q9a_elaborate.hydrolysed_formula, label: t('survey.questions.q9a.elaborate.choices.hydrolysed_formula') },
-                        { value: OriginalChoices.q9a_elaborate.restrict_allergens, label: t('survey.questions.q9a.elaborate.choices.restrict_allergens') },
-                        { value: OriginalChoices.q9a_elaborate.emollients, label: t('survey.questions.q9a.elaborate.choices.emollients') },
-                        { value: OriginalChoices.q9a_elaborate.prebiotics, label: t('survey.questions.q9a.elaborate.choices.prebiotics') },
-                        { value: OriginalChoices.q9a_elaborate.vitamin_supplements, label: t('survey.questions.q9a.elaborate.choices.vitamin_supplements') },
-                        { value: OriginalChoices.q9a_elaborate.regular_formula, label: t('survey.questions.q9a.elaborate.choices.regular_formula') },
-                        { value: OriginalChoices.q9a_elaborate.exclusive_breastfeeding, label: t('survey.questions.q9a.elaborate.choices.exclusive_breastfeeding') },
-                        { value: OriginalChoices.q9a_elaborate.other, label: t('survey.questions.q9a.elaborate.other') },
+                        { value: OriginalChoices.q9a_elaborate.soy_formula, label: t('survey.questions.q9_elaborate.choices.soy_formula') },
+                        { value: OriginalChoices.q9a_elaborate.hydrolysed_formula, label: t('survey.questions.q9_elaborate.choices.hydrolysed_formula') },
+                        { value: OriginalChoices.q9a_elaborate.restrict_allergens, label: t('survey.questions.q9_elaborate.choices.restrict_allergens') },
+                        { value: OriginalChoices.q9a_elaborate.emollients, label: t('survey.questions.q9_elaborate.choices.emollients') },
+                        { value: OriginalChoices.q9a_elaborate.prebiotics, label: t('survey.questions.q9_elaborate.choices.prebiotics') },
+                        { value: OriginalChoices.q9a_elaborate.vitamin_supplements, label: t('survey.questions.q9_elaborate.choices.vitamin_supplements') },
+                        { value: OriginalChoices.q9a_elaborate.regular_formula, label: t('survey.questions.q9_elaborate.choices.regular_formula') },
+                        { value: OriginalChoices.q9a_elaborate.exclusive_breastfeeding, label: t('survey.questions.q9_elaborate.choices.exclusive_breastfeeding') },
+                        { value: OriginalChoices.q9a_elaborate.early_introduction, label: t('survey.questions.q9_elaborate.choices.early_introduction') },
+                        { value: OriginalChoices.q9a_elaborate.other, label: t('survey.questions.q9_elaborate.other') },
                       ].map((option) => (
                         <div key={option.value} className="flex items-start space-x-2">
                           <Checkbox
@@ -246,12 +247,12 @@ export default function FeedingPracticesStep() {
                 {/* Q9a Other specification */}
                 {q9aElaborateValues.includes(OriginalChoices.q9a_elaborate.other) && (
                   <div className="space-y-3">
-                    <Label className="text-base font-semibold">{t('survey.questions.q9a.elaborate.otherPlaceholder')}</Label>
+                    <Label className="text-base font-semibold">{t('survey.questions.q9_elaborate.otherPlaceholder')}</Label>
                     <Controller
                       name="q9a_elaborate_other"
                       control={control}
                       render={({ field }) => (
-                        <Input {...field} placeholder={t('survey.questions.q9a.elaborate.otherPlaceholder')} />
+                        <Input {...field} placeholder={t('survey.questions.q9_elaborate.otherPlaceholder')} />
                       )}
                     />
                   </div>
@@ -292,22 +293,23 @@ export default function FeedingPracticesStep() {
             {/* Q9b Elaborate (conditional) */}
             {q9bMainValue === 'yes' && (
               <div className="ml-6 p-4 border-l-4 border-blue-200 bg-blue-50 space-y-4">
-                <Label className="text-base font-semibold">{t('survey.questions.q9b.elaborate.title')} *</Label>
+                <Label className="text-base font-semibold">{t('survey.questions.q9_elaborate.title')} *</Label>
                 <Controller
                   name="q9b_elaborate"
                   control={control}
                   render={({ field }) => (
                     <div className="space-y-4">
                       {[
-                        { value: OriginalChoices.q9b_elaborate.soy_formula, label: t('survey.questions.q9b.elaborate.choices.soy_formula') },
-                        { value: OriginalChoices.q9b_elaborate.hydrolysed_formula, label: t('survey.questions.q9b.elaborate.choices.hydrolysed_formula') },
-                        { value: OriginalChoices.q9b_elaborate.restrict_allergens, label: t('survey.questions.q9b.elaborate.choices.restrict_allergens') },
-                        { value: OriginalChoices.q9b_elaborate.emollients, label: t('survey.questions.q9b.elaborate.choices.emollients') },
-                        { value: OriginalChoices.q9b_elaborate.prebiotics, label: t('survey.questions.q9b.elaborate.choices.prebiotics') },
-                        { value: OriginalChoices.q9b_elaborate.vitamin_supplements, label: t('survey.questions.q9b.elaborate.choices.vitamin_supplements') },
-                        { value: OriginalChoices.q9b_elaborate.regular_formula, label: t('survey.questions.q9b.elaborate.choices.regular_formula') },
-                        { value: OriginalChoices.q9b_elaborate.exclusive_breastfeeding, label: t('survey.questions.q9b.elaborate.choices.exclusive_breastfeeding') },
-                        { value: OriginalChoices.q9b_elaborate.other, label: t('survey.questions.q9b.elaborate.other') },
+                        { value: OriginalChoices.q9b_elaborate.soy_formula, label: t('survey.questions.q9_elaborate.choices.soy_formula') },
+                        { value: OriginalChoices.q9b_elaborate.hydrolysed_formula, label: t('survey.questions.q9_elaborate.choices.hydrolysed_formula') },
+                        { value: OriginalChoices.q9b_elaborate.restrict_allergens, label: t('survey.questions.q9_elaborate.choices.restrict_allergens') },
+                        { value: OriginalChoices.q9b_elaborate.emollients, label: t('survey.questions.q9_elaborate.choices.emollients') },
+                        { value: OriginalChoices.q9b_elaborate.prebiotics, label: t('survey.questions.q9_elaborate.choices.prebiotics') },
+                        { value: OriginalChoices.q9b_elaborate.vitamin_supplements, label: t('survey.questions.q9_elaborate.choices.vitamin_supplements') },
+                        { value: OriginalChoices.q9b_elaborate.regular_formula, label: t('survey.questions.q9_elaborate.choices.regular_formula') },
+                        { value: OriginalChoices.q9b_elaborate.exclusive_breastfeeding, label: t('survey.questions.q9_elaborate.choices.exclusive_breastfeeding') },
+                        { value: OriginalChoices.q9b_elaborate.early_introduction, label: t('survey.questions.q9_elaborate.choices.early_introduction') },
+                        { value: OriginalChoices.q9b_elaborate.other, label: t('survey.questions.q9_elaborate.other') },
                       ].map((option) => (
                         <div key={option.value} className="flex items-start space-x-2">
                           <Checkbox
@@ -334,12 +336,12 @@ export default function FeedingPracticesStep() {
                 {/* Q9b Other specification */}
                 {q9bElaborateValues.includes(OriginalChoices.q9b_elaborate.other) && (
                   <div className="space-y-3">
-                    <Label className="text-base font-semibold">{t('survey.questions.q9b.elaborate.otherPlaceholder')}</Label>
+                    <Label className="text-base font-semibold">{t('survey.questions.q9_elaborate.otherPlaceholder')}</Label>
                     <Controller
                       name="q9b_elaborate_other"
                       control={control}
                       render={({ field }) => (
-                        <Input {...field} placeholder={t('survey.questions.q9b.elaborate.otherPlaceholder')} />
+                        <Input {...field} placeholder={t('survey.questions.q9_elaborate.otherPlaceholder')} />
                       )}
                     />
                   </div>

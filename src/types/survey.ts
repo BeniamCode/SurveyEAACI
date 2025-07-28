@@ -122,6 +122,7 @@ export const OriginalChoices = {
     vitamin_supplements: 'q9a_a6',
     regular_formula: 'q9a_a7',
     exclusive_breastfeeding: 'q9a_a8',
+    early_introduction: 'q9a_a9',
     other: 'other'
   },
   q9b_elaborate: {
@@ -133,6 +134,7 @@ export const OriginalChoices = {
     vitamin_supplements: 'q9b_a6',
     regular_formula: 'q9b_a7',
     exclusive_breastfeeding: 'q9b_a8',
+    early_introduction: 'q9b_a9',
     other: 'other'
   },
   q14: {
