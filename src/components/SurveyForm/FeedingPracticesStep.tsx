@@ -71,9 +71,6 @@ export default function FeedingPracticesStep() {
                   {t("survey.questions.q7.months")}
                 </span>
               </div>
-              {touchedFields.q7a && errors.q7a && (
-                <p className="text-sm text-red-600">{errors.q7a.message}</p>
-              )}
             </div>
 
             {/* Q7b - Formula-fed infant */}
@@ -97,9 +94,6 @@ export default function FeedingPracticesStep() {
                   {t("survey.questions.q7.months")}
                 </span>
               </div>
-              {touchedFields.q7b && errors.q7b && (
-                <p className="text-sm text-red-600">{errors.q7b.message}</p>
-              )}
             </div>
 
             {/* Q7c - At increased risk */}
@@ -123,9 +117,6 @@ export default function FeedingPracticesStep() {
                   {t("survey.questions.q7.months")}
                 </span>
               </div>
-              {touchedFields.q7c && errors.q7c && (
-                <p className="text-sm text-red-600">{errors.q7c.message}</p>
-              )}
             </div>
           </div>
 
